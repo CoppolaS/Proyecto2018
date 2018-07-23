@@ -6,7 +6,7 @@ Public Class ABM
 
     Function AgregaCliente(ByVal txt As String) As String
         Try
-            Dim comand As OdbcCommand = New OdbcCommand("{call AA-Pruebas (?)}", connection.cn)
+            Dim comand As OdbcCommand = New OdbcCommand("{call prueba (?)}", connection.cn)
             comand.CommandType = CommandType.StoredProcedure
             comand.Parameters.AddWithValue("Descripcion", txt)
             connection.cn.Open()
