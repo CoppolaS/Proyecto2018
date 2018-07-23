@@ -173,3 +173,6 @@ C:\Users\Usuario.DESKTOP-OHLN61P\Documents\programacion\cursos\programacionIII\2
 C:\Users\--\Desktop\ProyectoVisual\ProyectoVisual\obj\x86\Debug\ProyectoVisual.exe
 C:\Users\--\Desktop\ProyectoVisual\ProyectoVisual\obj\x86\Debug\ProyectoVisual.xml
 C:\Users\--\Desktop\ProyectoVisual\ProyectoVisual\obj\x86\Debug\ProyectoVisual.pdb
+C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\obj\x86\Debug\ProyectoVisual.exe
+C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\obj\x86\Debug\ProyectoVisual.xml
+C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\obj\x86\Debug\ProyectoVisual.pdb
