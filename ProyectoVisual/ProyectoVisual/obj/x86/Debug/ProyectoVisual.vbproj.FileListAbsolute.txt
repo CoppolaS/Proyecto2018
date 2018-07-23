@@ -221,3 +221,6 @@ C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\ProyectoVi
 C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\obj\x86\Debug\Proyecto.ProductoIntermedio_Transacciones.resources
 C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\obj\x86\Debug\Proyecto.ProductoIntermedio_Transportes.resources
 C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\obj\x86\Debug\ProyectoVisual.vbproj.GenerateResource.Cache
+D:\Repos GitHub\Proyecto\Proyecto2018\ProyectoVisual\ProyectoVisual\obj\x86\Debug\ProyectoVisual.exe
+D:\Repos GitHub\Proyecto\Proyecto2018\ProyectoVisual\ProyectoVisual\obj\x86\Debug\ProyectoVisual.xml
+D:\Repos GitHub\Proyecto\Proyecto2018\ProyectoVisual\ProyectoVisual\obj\x86\Debug\ProyectoVisual.pdb
