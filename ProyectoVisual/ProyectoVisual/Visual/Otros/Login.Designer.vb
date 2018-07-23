@@ -40,6 +40,7 @@ Partial Class Login
         Me.userTB.Name = "userTB"
         Me.userTB.Size = New System.Drawing.Size(192, 26)
         Me.userTB.TabIndex = 2
+        Me.userTB.Text = "pepepepepe"
         '
         'passTB
         '

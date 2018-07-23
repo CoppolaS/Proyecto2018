@@ -176,3 +176,6 @@ C:\Users\jmpac\Dropbox\Proyecto\ProyectoVisual\ProyectoVisual\obj\x86\Debug\Proy
 C:\Users\tiago\Dropbox\Proyecto\ProyectoVisual\ProyectoVisual\obj\x86\Debug\ProyectoVisual.exe
 C:\Users\tiago\Dropbox\Proyecto\ProyectoVisual\ProyectoVisual\obj\x86\Debug\ProyectoVisual.xml
 C:\Users\tiago\Dropbox\Proyecto\ProyectoVisual\ProyectoVisual\obj\x86\Debug\ProyectoVisual.pdb
+C:\Users\--\Documents\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\obj\x86\Debug\ProyectoVisual.exe
+C:\Users\--\Documents\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\obj\x86\Debug\ProyectoVisual.xml
+C:\Users\--\Documents\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\obj\x86\Debug\ProyectoVisual.pdb
