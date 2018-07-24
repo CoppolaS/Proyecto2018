@@ -10,7 +10,7 @@ Public Class ABM
             connection.cn.Open()
             comand.ExecuteNonQuery()
             connection.cn.Close()
-            MsgBox("El cliente se agrego correctamente")
+            MsgBox("Se agrego correctamente")
         Catch ex As OdbcException
             Return False
         Finally
