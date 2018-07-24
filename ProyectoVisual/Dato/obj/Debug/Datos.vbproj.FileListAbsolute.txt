@@ -1,8 +1,0 @@
-C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\Dato\bin\Debug\Dato.dll
-C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\Dato\bin\Debug\Dato.pdb
-C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\Dato\bin\Debug\Dato.xml
-C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\Dato\obj\Debug\Dato.Resources.resources
-C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\Dato\obj\Debug\Datos.vbproj.GenerateResource.Cache
-C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\Dato\obj\Debug\Dato.dll
-C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\Dato\obj\Debug\Dato.xml
-C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\Dato\obj\Debug\Dato.pdb
