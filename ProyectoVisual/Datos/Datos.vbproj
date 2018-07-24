@@ -7,7 +7,7 @@
     </ProductVersion>
     <SchemaVersion>
     </SchemaVersion>
-    <ProjectGuid>{A692138A-88E2-43A0-9C72-68BBE4F0738E}</ProjectGuid>
+    <ProjectGuid>{40E7D46F-2A01-4B26-82F6-B8FDAACE26AD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>Datos</RootNamespace>
     <AssemblyName>Datos</AssemblyName>
@@ -64,7 +64,7 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.vb" />
+    <Compile Include="Conexion.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
