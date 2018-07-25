@@ -1,7 +1,11 @@
-﻿Public Class Menu
-    'debajo: eventos de los botones del menustrip1
-    Dim tipo As Integer = 1
+﻿Imports Datos.UsuarioLogeado
 
+Public Class Menu
+    'debajo: eventos de los botones del menustrip1
+
+    Private Sub Menu_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Label1.Text = Datos.UsuarioLogeado.User & vbNewLine & Datos.UsuarioLogeado.Cargo
+    End Sub
 
     Private Sub InicioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InicioToolStripMenuItem.Click
         If (ParentForm.Name = "Inicio") Then
@@ -300,6 +304,11 @@
         End If
     End Sub
 
+    Private Sub CerrarSesiónToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles CerrarSesiónToolStripMenuItem.Click
+        Login.Show()
+        ParentForm.Close()
+    End Sub
+
     'Private Sub ReportarUnErrorToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ReportarUnErrorToolStripMenuItem.Click
 
     'End Sub
@@ -308,12 +317,4 @@
 
     'End Sub
 
-    'Public Sub New()
-
-    '    If (tipo = 1) Then
-
-    '    ElseIf (tipo = 2) Then
-    '        EstadísticasToolStripMenuItem.Enabled = False
-    '    End If
-    'End Sub
 End Class

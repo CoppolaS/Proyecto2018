@@ -474,6 +474,14 @@
       <Project>{40E7D46F-2A01-4B26-82F6-B8FDAACE26AD}</Project>
       <Name>Datos</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Encapsuladoras\Encapsuladoras.vbproj">
+      <Project>{31BB0398-3782-4661-95BE-D8EEAAC810A3}</Project>
+      <Name>Encapsuladoras</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.vbproj">
+      <Project>{EC917023-4509-4DF7-857C-A4D0300677F4}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
