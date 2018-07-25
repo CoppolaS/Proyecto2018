@@ -1,5 +1,5 @@
 ﻿Public Class Verificar
-    Public Sub VerificarLogin(ByVal Usuario As String, ByVal Contrasena As String)
-        
+    Public Sub VerificarLogin(ByVal encapsuladora As Encapsuladoras.Login)
+
     End Sub
 End Class

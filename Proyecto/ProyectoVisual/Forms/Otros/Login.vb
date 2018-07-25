@@ -1,7 +1,9 @@
 ﻿Imports Negocio.Verificar
+Imports Encapsuladoras.Login
 
 Public Class Login
     Dim Verificar As New Negocio.Verificar
+    Dim encapsuladora As Encapsuladoras.Login = New Encapsuladoras.Login
 
     Private Sub Enabler(ByVal sender As Object, ByVal e As System.EventArgs) Handles userTB.TextChanged, passTB.TextChanged
         If userTB.Text <> "" And passTB.Text <> "" Then
@@ -12,11 +14,11 @@ Public Class Login
     End Sub
 
     Private Sub iniciarsesion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles iniciarsesion.Click
-        Verificar.VerificarLogin(userTB.Text, passTB.Text)
-    End Sub
-
-    Private Sub Login_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
+        encapsuladora.UsuarioLogin = userTB.Text
+        encapsuladora.ContrasenaLogin = passTB.Text
+        Verificar.VerificarLogin(encapsuladora)
+        userTB.Clear()
+        passTB.Clear()
     End Sub
 
 End Class
