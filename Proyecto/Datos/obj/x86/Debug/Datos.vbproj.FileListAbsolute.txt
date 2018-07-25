@@ -1,0 +1,8 @@
+C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\Datos\bin\x86\Debug\Datos.dll
+C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\Datos\bin\x86\Debug\Datos.pdb
+C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\Datos\bin\x86\Debug\Datos.xml
+C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.Resources.resources
+C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.vbproj.GenerateResource.Cache
+C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.dll
+C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.xml
+C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.pdb
