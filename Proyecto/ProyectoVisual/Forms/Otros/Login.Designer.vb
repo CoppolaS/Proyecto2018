@@ -22,13 +22,12 @@ Partial Class Login
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.userTB = New System.Windows.Forms.TextBox()
         Me.passTB = New System.Windows.Forms.TextBox()
         Me.iniciarsesion = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.userlabel = New System.Windows.Forms.Label()
         Me.passlabel = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'userTB
@@ -58,15 +57,6 @@ Partial Class Login
         Me.iniciarsesion.Text = "Iniciar sesión"
         Me.iniciarsesion.UseVisualStyleBackColor = True
         '
-        'Label1
-        '
-        Me.Label1.AutoEllipsis = True
-        Me.Label1.Image = CType(resources.GetObject("Label1.Image"), System.Drawing.Image)
-        Me.Label1.Location = New System.Drawing.Point(12, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(290, 233)
-        Me.Label1.TabIndex = 1
-        '
         'userlabel
         '
         Me.userlabel.AutoSize = True
@@ -86,6 +76,15 @@ Partial Class Login
         Me.passlabel.Size = New System.Drawing.Size(96, 20)
         Me.passlabel.TabIndex = 6
         Me.passlabel.Text = "Contraseña:"
+        '
+        'Label1
+        '
+        Me.Label1.AutoEllipsis = True
+        Me.Label1.Image = Global.Proyecto.My.Resources.Resources.Logo_Final
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(290, 233)
+        Me.Label1.TabIndex = 1
         '
         'Login
         '

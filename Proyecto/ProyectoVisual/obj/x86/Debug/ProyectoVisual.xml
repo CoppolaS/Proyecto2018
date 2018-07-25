@@ -31,6 +31,10 @@ ProyectoVisual
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Proyecto.My.Resources.Resources.Logo_Final">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Proyecto.My.Resources.Resources.Logo1">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.

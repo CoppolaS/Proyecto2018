@@ -6,3 +6,15 @@ C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Dat
 C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.dll
 C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.xml
 C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.pdb
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\bin\x86\Debug\Datos.dll
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\bin\x86\Debug\Datos.pdb
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\bin\x86\Debug\Datos.xml
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\bin\x86\Debug\Encapsuladoras.dll
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\bin\x86\Debug\Encapsuladoras.pdb
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\bin\x86\Debug\Encapsuladoras.xml
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.vbprojResolveAssemblyReference.cache
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.Resources.resources
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.vbproj.GenerateResource.Cache
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.dll
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.xml
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.pdb

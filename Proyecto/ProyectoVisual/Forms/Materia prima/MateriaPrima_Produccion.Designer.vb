@@ -27,10 +27,16 @@ Partial Class MateriaPrima_Produccion
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
@@ -38,12 +44,6 @@ Partial Class MateriaPrima_Produccion
         Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Menu1 = New Proyecto.Menu()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -102,6 +102,15 @@ Partial Class MateriaPrima_Produccion
         Me.ComboBox2.TabIndex = 10
         Me.ComboBox2.Text = "Proceso Nuevo"
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(233, 121)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(14, 15)
+        Me.Label1.TabIndex = 9
+        Me.Label1.Text = ">"
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -146,6 +155,48 @@ Partial Class MateriaPrima_Produccion
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Administrar"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(20, 78)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(97, 15)
+        Me.Label3.TabIndex = 35
+        Me.Label3.Text = "Estado Sanitario"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(123, 75)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(333, 21)
+        Me.TextBox3.TabIndex = 34
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(243, 114)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(207, 23)
+        Me.ComboBox3.TabIndex = 33
+        Me.ComboBox3.Text = "Proceso Nuevo"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(227, 119)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(14, 15)
+        Me.Label2.TabIndex = 32
+        Me.Label2.Text = ">"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(19, 116)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(207, 21)
+        Me.TextBox2.TabIndex = 31
+        Me.TextBox2.Text = "Proceso viejo"
         '
         'Button3
         '
@@ -206,57 +257,6 @@ Partial Class MateriaPrima_Produccion
         Me.Menu1.Name = "Menu1"
         Me.Menu1.Size = New System.Drawing.Size(1240, 32)
         Me.Menu1.TabIndex = 15
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(233, 121)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(14, 15)
-        Me.Label1.TabIndex = 9
-        Me.Label1.Text = ">"
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(243, 114)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(207, 23)
-        Me.ComboBox3.TabIndex = 33
-        Me.ComboBox3.Text = "Proceso Nuevo"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(227, 119)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(14, 15)
-        Me.Label2.TabIndex = 32
-        Me.Label2.Text = ">"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(19, 116)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(207, 21)
-        Me.TextBox2.TabIndex = 31
-        Me.TextBox2.Text = "Proceso viejo"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(20, 78)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(97, 15)
-        Me.Label3.TabIndex = 35
-        Me.Label3.Text = "Estado Sanitario"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(123, 75)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(333, 21)
-        Me.TextBox3.TabIndex = 34
         '
         'MateriaPrima_Produccion
         '
