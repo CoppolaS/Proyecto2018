@@ -179,9 +179,6 @@ C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\ProyectoVi
 C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\bin\Debug\ProyectoVisual.exe
 C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\bin\Debug\ProyectoVisual.pdb
 C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\bin\Debug\ProyectoVisual.xml
-C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\bin\Debug\Dato.dll
-C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\bin\Debug\Dato.pdb
-C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\bin\Debug\Dato.xml
 C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\obj\x86\Debug\ProyectoVisual.vbprojResolveAssemblyReference.cache
 C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\obj\x86\Debug\Proyecto.Resources.resources
 C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\obj\x86\Debug\Proyecto.Prueba.resources
@@ -221,3 +218,6 @@ C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\ProyectoVi
 C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\obj\x86\Debug\Proyecto.ProductoIntermedio_Transacciones.resources
 C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\obj\x86\Debug\Proyecto.ProductoIntermedio_Transportes.resources
 C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\obj\x86\Debug\ProyectoVisual.vbproj.GenerateResource.Cache
+C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\bin\Debug\Datos.dll
+C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\bin\Debug\Datos.pdb
+C:\Users\jmpac\OneDrive\Documentos\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\bin\Debug\Datos.xml
