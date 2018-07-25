@@ -45,3 +45,6 @@ C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\ob
 C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\obj\x86\Debug\ProyectoVisual.exe
 C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\obj\x86\Debug\ProyectoVisual.xml
 C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\obj\x86\Debug\ProyectoVisual.pdb
+C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\ProyectoVisual.exe
+C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\ProyectoVisual.xml
+C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\ProyectoVisual.pdb
