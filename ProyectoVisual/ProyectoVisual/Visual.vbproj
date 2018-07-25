@@ -91,64 +91,64 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Visual\Empresa\Empresa_Cargos.Designer.vb">
+    <Compile Include="Forms\Empresa\Empresa_Cargos.Designer.vb">
       <DependentUpon>Empresa_Cargos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Empresa\Empresa_Cargos.vb">
+    <Compile Include="Forms\Empresa\Empresa_Cargos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Empresa\Empresa_Compradores.Designer.vb">
+    <Compile Include="Forms\Empresa\Empresa_Compradores.Designer.vb">
       <DependentUpon>Empresa_Compradores.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Empresa\Empresa_Compradores.vb">
+    <Compile Include="Forms\Empresa\Empresa_Compradores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Empresa\Empresa_Sucursales.Designer.vb">
+    <Compile Include="Forms\Empresa\Empresa_Sucursales.Designer.vb">
       <DependentUpon>Empresa_Sucursales.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Empresa\Empresa_Sucursales.vb">
+    <Compile Include="Forms\Empresa\Empresa_Sucursales.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Empresa\Empresa_TiposDeAsesores.Designer.vb">
+    <Compile Include="Forms\Empresa\Empresa_TiposDeAsesores.Designer.vb">
       <DependentUpon>Empresa_TiposDeAsesores.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Empresa\Empresa_TiposDeAsesores.vb">
+    <Compile Include="Forms\Empresa\Empresa_TiposDeAsesores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Empresa\Empresa_Vendedores.Designer.vb">
+    <Compile Include="Forms\Empresa\Empresa_Vendedores.Designer.vb">
       <DependentUpon>Empresa_Vendedores.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Empresa\Empresa_Vendedores.vb">
+    <Compile Include="Forms\Empresa\Empresa_Vendedores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Empresa\Empresa_AsesoresProfesionales.Designer.vb">
+    <Compile Include="Forms\Empresa\Empresa_AsesoresProfesionales.Designer.vb">
       <DependentUpon>Empresa_AsesoresProfesionales.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Empresa\Empresa_AsesoresProfesionales.vb">
+    <Compile Include="Forms\Empresa\Empresa_AsesoresProfesionales.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Empresa\Empresa_Personal.Designer.vb">
+    <Compile Include="Forms\Empresa\Empresa_Personal.Designer.vb">
       <DependentUpon>Empresa_Personal.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Empresa\Empresa_Personal.vb">
+    <Compile Include="Forms\Empresa\Empresa_Personal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Otros\Estadisticas.Designer.vb">
+    <Compile Include="Forms\Otros\Estadisticas.Designer.vb">
       <DependentUpon>Estadisticas.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Otros\Estadisticas.vb">
+    <Compile Include="Forms\Otros\Estadisticas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Otros\Inicio.Designer.vb">
+    <Compile Include="Forms\Otros\Inicio.Designer.vb">
       <DependentUpon>Inicio.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Otros\Inicio.vb">
+    <Compile Include="Forms\Otros\Inicio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Otros\Login.vb">
+    <Compile Include="Forms\Otros\Login.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Otros\Login.Designer.vb">
+    <Compile Include="Forms\Otros\Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
@@ -167,154 +167,154 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Visual\Materia prima\MateriaPrima_Datos.Designer.vb">
+    <Compile Include="Forms\Materia prima\MateriaPrima_Datos.Designer.vb">
       <DependentUpon>MateriaPrima_Datos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Materia prima\MateriaPrima_Datos.vb">
+    <Compile Include="Forms\Materia prima\MateriaPrima_Datos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Materia prima\MateriaPrima_Produccion.Designer.vb">
+    <Compile Include="Forms\Materia prima\MateriaPrima_Produccion.Designer.vb">
       <DependentUpon>MateriaPrima_Produccion.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Materia prima\MateriaPrima_Produccion.vb">
+    <Compile Include="Forms\Materia prima\MateriaPrima_Produccion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Materia prima\MateriaPrima_Reservas.Designer.vb">
+    <Compile Include="Forms\Materia prima\MateriaPrima_Reservas.Designer.vb">
       <DependentUpon>MateriaPrima_Reservas.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Materia prima\MateriaPrima_Reservas.vb">
+    <Compile Include="Forms\Materia prima\MateriaPrima_Reservas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Materia prima\MateriaPrima_Transacciones.Designer.vb">
+    <Compile Include="Forms\Materia prima\MateriaPrima_Transacciones.Designer.vb">
       <DependentUpon>MateriaPrima_Transacciones.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Materia prima\MateriaPrima_Transacciones.vb">
+    <Compile Include="Forms\Materia prima\MateriaPrima_Transacciones.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Materia prima\MateriaPrima_Transportes.Designer.vb">
+    <Compile Include="Forms\Materia prima\MateriaPrima_Transportes.Designer.vb">
       <DependentUpon>MateriaPrima_Transportes.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Materia prima\MateriaPrima_Transportes.vb">
+    <Compile Include="Forms\Materia prima\MateriaPrima_Transportes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Otros\Menu.Designer.vb">
+    <Compile Include="Forms\Otros\Menu.Designer.vb">
       <DependentUpon>Menu.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Otros\Menu.vb">
+    <Compile Include="Forms\Otros\Menu.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Visual\Otros\RegistroHistorico.Designer.vb">
+    <Compile Include="Forms\Otros\RegistroHistorico.Designer.vb">
       <DependentUpon>RegistroHistorico.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Otros\RegistroHistorico.vb">
+    <Compile Include="Forms\Otros\RegistroHistorico.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Parámetros\Parametros_Barricas.Designer.vb">
+    <Compile Include="Forms\Parámetros\Parametros_Barricas.Designer.vb">
       <DependentUpon>Parametros_Barricas.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Parámetros\Parametros_Barricas.vb">
+    <Compile Include="Forms\Parámetros\Parametros_Barricas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Parámetros\Parametros_Datos.Designer.vb">
+    <Compile Include="Forms\Parámetros\Parametros_Datos.Designer.vb">
       <DependentUpon>Parametros_Datos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Parámetros\Parametros_Datos.vb">
+    <Compile Include="Forms\Parámetros\Parametros_Datos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Parámetros\Parametros_Procesos.Designer.vb">
+    <Compile Include="Forms\Parámetros\Parametros_Procesos.Designer.vb">
       <DependentUpon>Parametros_Procesos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Parámetros\Parametros_Procesos.vb">
+    <Compile Include="Forms\Parámetros\Parametros_Procesos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Parámetros\Parametros_Tanques.Designer.vb">
+    <Compile Include="Forms\Parámetros\Parametros_Tanques.Designer.vb">
       <DependentUpon>Parametros_Tanques.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Parámetros\Parametros_Tanques.vb">
+    <Compile Include="Forms\Parámetros\Parametros_Tanques.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Parámetros\Parametros_Transportes.Designer.vb">
+    <Compile Include="Forms\Parámetros\Parametros_Transportes.Designer.vb">
       <DependentUpon>Parametros_Transportes.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Parámetros\Parametros_Transportes.vb">
+    <Compile Include="Forms\Parámetros\Parametros_Transportes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Plantaciones\Plantaciones_Cepas.Designer.vb">
+    <Compile Include="Forms\Plantaciones\Plantaciones_Cepas.Designer.vb">
       <DependentUpon>Plantaciones_Cepas.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Plantaciones\Plantaciones_Cepas.vb">
+    <Compile Include="Forms\Plantaciones\Plantaciones_Cepas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Plantaciones\Plantaciones_Datos.Designer.vb">
+    <Compile Include="Forms\Plantaciones\Plantaciones_Datos.Designer.vb">
       <DependentUpon>Plantaciones_Datos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Plantaciones\Plantaciones_Datos.vb">
+    <Compile Include="Forms\Plantaciones\Plantaciones_Datos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Plantaciones\Plantaciones_Hectareas.Designer.vb">
+    <Compile Include="Forms\Plantaciones\Plantaciones_Hectareas.Designer.vb">
       <DependentUpon>Plantaciones_Hectareas.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Plantaciones\Plantaciones_Hectareas.vb">
+    <Compile Include="Forms\Plantaciones\Plantaciones_Hectareas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Plantaciones\Plantaciones_Parcelas.Designer.vb">
+    <Compile Include="Forms\Plantaciones\Plantaciones_Parcelas.Designer.vb">
       <DependentUpon>Plantaciones_Parcelas.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Plantaciones\Plantaciones_Parcelas.vb">
+    <Compile Include="Forms\Plantaciones\Plantaciones_Parcelas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Producto final\ProductoFinal_Reservas.Designer.vb">
+    <Compile Include="Forms\Producto final\ProductoFinal_Reservas.Designer.vb">
       <DependentUpon>ProductoFinal_Reservas.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Producto final\ProductoFinal_Reservas.vb">
+    <Compile Include="Forms\Producto final\ProductoFinal_Reservas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Producto final\ProductoFinal_Transacciones.Designer.vb">
+    <Compile Include="Forms\Producto final\ProductoFinal_Transacciones.Designer.vb">
       <DependentUpon>ProductoFinal_Transacciones.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Producto final\ProductoFinal_Transacciones.vb">
+    <Compile Include="Forms\Producto final\ProductoFinal_Transacciones.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Producto final\ProductoFinal_Transportes.Designer.vb">
+    <Compile Include="Forms\Producto final\ProductoFinal_Transportes.Designer.vb">
       <DependentUpon>ProductoFinal_Transportes.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Producto final\ProductoFinal_Transportes.vb">
+    <Compile Include="Forms\Producto final\ProductoFinal_Transportes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Producto final\ProductoFinal_Vinos.Designer.vb">
+    <Compile Include="Forms\Producto final\ProductoFinal_Vinos.Designer.vb">
       <DependentUpon>ProductoFinal_Vinos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Producto final\ProductoFinal_Vinos.vb">
+    <Compile Include="Forms\Producto final\ProductoFinal_Vinos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Producto intermedio\ProductoIntermedio_Datos.Designer.vb">
+    <Compile Include="Forms\Producto intermedio\ProductoIntermedio_Datos.Designer.vb">
       <DependentUpon>ProductoIntermedio_Datos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Producto intermedio\ProductoIntermedio_Datos.vb">
+    <Compile Include="Forms\Producto intermedio\ProductoIntermedio_Datos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Producto intermedio\ProductoIntermedio_Produccion.Designer.vb">
+    <Compile Include="Forms\Producto intermedio\ProductoIntermedio_Produccion.Designer.vb">
       <DependentUpon>ProductoIntermedio_Produccion.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Producto intermedio\ProductoIntermedio_Produccion.vb">
+    <Compile Include="Forms\Producto intermedio\ProductoIntermedio_Produccion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Producto intermedio\ProductoIntermedio_Reservas.Designer.vb">
+    <Compile Include="Forms\Producto intermedio\ProductoIntermedio_Reservas.Designer.vb">
       <DependentUpon>ProductoIntermedio_Reservas.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Producto intermedio\ProductoIntermedio_Reservas.vb">
+    <Compile Include="Forms\Producto intermedio\ProductoIntermedio_Reservas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Producto intermedio\ProductoIntermedio_Transacciones.Designer.vb">
+    <Compile Include="Forms\Producto intermedio\ProductoIntermedio_Transacciones.Designer.vb">
       <DependentUpon>ProductoIntermedio_Transacciones.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Producto intermedio\ProductoIntermedio_Transacciones.vb">
+    <Compile Include="Forms\Producto intermedio\ProductoIntermedio_Transacciones.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visual\Producto intermedio\ProductoIntermedio_Transportes.Designer.vb">
+    <Compile Include="Forms\Producto intermedio\ProductoIntermedio_Transportes.Designer.vb">
       <DependentUpon>ProductoIntermedio_Transportes.vb</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Producto intermedio\ProductoIntermedio_Transportes.vb">
+    <Compile Include="Forms\Producto intermedio\ProductoIntermedio_Transportes.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -325,109 +325,109 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Empresa\Empresa_Cargos.resx">
+    <EmbeddedResource Include="Forms\Empresa\Empresa_Cargos.resx">
       <DependentUpon>Empresa_Cargos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Empresa\Empresa_Compradores.resx">
+    <EmbeddedResource Include="Forms\Empresa\Empresa_Compradores.resx">
       <DependentUpon>Empresa_Compradores.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Empresa\Empresa_Sucursales.resx">
+    <EmbeddedResource Include="Forms\Empresa\Empresa_Sucursales.resx">
       <DependentUpon>Empresa_Sucursales.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Empresa\Empresa_TiposDeAsesores.resx">
+    <EmbeddedResource Include="Forms\Empresa\Empresa_TiposDeAsesores.resx">
       <DependentUpon>Empresa_TiposDeAsesores.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Empresa\Empresa_Vendedores.resx">
+    <EmbeddedResource Include="Forms\Empresa\Empresa_Vendedores.resx">
       <DependentUpon>Empresa_Vendedores.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Empresa\Empresa_AsesoresProfesionales.resx">
+    <EmbeddedResource Include="Forms\Empresa\Empresa_AsesoresProfesionales.resx">
       <DependentUpon>Empresa_AsesoresProfesionales.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Empresa\Empresa_Personal.resx">
+    <EmbeddedResource Include="Forms\Empresa\Empresa_Personal.resx">
       <DependentUpon>Empresa_Personal.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Otros\Estadisticas.resx">
+    <EmbeddedResource Include="Forms\Otros\Estadisticas.resx">
       <DependentUpon>Estadisticas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Otros\Inicio.resx">
+    <EmbeddedResource Include="Forms\Otros\Inicio.resx">
       <DependentUpon>Inicio.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Otros\Login.resx">
+    <EmbeddedResource Include="Forms\Otros\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Materia prima\MateriaPrima_Datos.resx">
+    <EmbeddedResource Include="Forms\Materia prima\MateriaPrima_Datos.resx">
       <DependentUpon>MateriaPrima_Datos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Materia prima\MateriaPrima_Produccion.resx">
+    <EmbeddedResource Include="Forms\Materia prima\MateriaPrima_Produccion.resx">
       <DependentUpon>MateriaPrima_Produccion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Materia prima\MateriaPrima_Reservas.resx">
+    <EmbeddedResource Include="Forms\Materia prima\MateriaPrima_Reservas.resx">
       <DependentUpon>MateriaPrima_Reservas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Materia prima\MateriaPrima_Transacciones.resx">
+    <EmbeddedResource Include="Forms\Materia prima\MateriaPrima_Transacciones.resx">
       <DependentUpon>MateriaPrima_Transacciones.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Materia prima\MateriaPrima_Transportes.resx">
+    <EmbeddedResource Include="Forms\Materia prima\MateriaPrima_Transportes.resx">
       <DependentUpon>MateriaPrima_Transportes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Otros\Menu.resx">
+    <EmbeddedResource Include="Forms\Otros\Menu.resx">
       <DependentUpon>Menu.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Otros\RegistroHistorico.resx">
+    <EmbeddedResource Include="Forms\Otros\RegistroHistorico.resx">
       <DependentUpon>RegistroHistorico.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Parámetros\Parametros_Barricas.resx">
+    <EmbeddedResource Include="Forms\Parámetros\Parametros_Barricas.resx">
       <DependentUpon>Parametros_Barricas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Parámetros\Parametros_Datos.resx">
+    <EmbeddedResource Include="Forms\Parámetros\Parametros_Datos.resx">
       <DependentUpon>Parametros_Datos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Parámetros\Parametros_Procesos.resx">
+    <EmbeddedResource Include="Forms\Parámetros\Parametros_Procesos.resx">
       <DependentUpon>Parametros_Procesos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Parámetros\Parametros_Tanques.resx">
+    <EmbeddedResource Include="Forms\Parámetros\Parametros_Tanques.resx">
       <DependentUpon>Parametros_Tanques.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Parámetros\Parametros_Transportes.resx">
+    <EmbeddedResource Include="Forms\Parámetros\Parametros_Transportes.resx">
       <DependentUpon>Parametros_Transportes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Plantaciones\Plantaciones_Cepas.resx">
+    <EmbeddedResource Include="Forms\Plantaciones\Plantaciones_Cepas.resx">
       <DependentUpon>Plantaciones_Cepas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Plantaciones\Plantaciones_Datos.resx">
+    <EmbeddedResource Include="Forms\Plantaciones\Plantaciones_Datos.resx">
       <DependentUpon>Plantaciones_Datos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Plantaciones\Plantaciones_Hectareas.resx">
+    <EmbeddedResource Include="Forms\Plantaciones\Plantaciones_Hectareas.resx">
       <DependentUpon>Plantaciones_Hectareas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Plantaciones\Plantaciones_Parcelas.resx">
+    <EmbeddedResource Include="Forms\Plantaciones\Plantaciones_Parcelas.resx">
       <DependentUpon>Plantaciones_Parcelas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Producto final\ProductoFinal_Reservas.resx">
+    <EmbeddedResource Include="Forms\Producto final\ProductoFinal_Reservas.resx">
       <DependentUpon>ProductoFinal_Reservas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Producto final\ProductoFinal_Transacciones.resx">
+    <EmbeddedResource Include="Forms\Producto final\ProductoFinal_Transacciones.resx">
       <DependentUpon>ProductoFinal_Transacciones.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Producto final\ProductoFinal_Transportes.resx">
+    <EmbeddedResource Include="Forms\Producto final\ProductoFinal_Transportes.resx">
       <DependentUpon>ProductoFinal_Transportes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Producto final\ProductoFinal_Vinos.resx">
+    <EmbeddedResource Include="Forms\Producto final\ProductoFinal_Vinos.resx">
       <DependentUpon>ProductoFinal_Vinos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Producto intermedio\ProductoIntermedio_Datos.resx">
+    <EmbeddedResource Include="Forms\Producto intermedio\ProductoIntermedio_Datos.resx">
       <DependentUpon>ProductoIntermedio_Datos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Producto intermedio\ProductoIntermedio_Produccion.resx">
+    <EmbeddedResource Include="Forms\Producto intermedio\ProductoIntermedio_Produccion.resx">
       <DependentUpon>ProductoIntermedio_Produccion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Producto intermedio\ProductoIntermedio_Reservas.resx">
+    <EmbeddedResource Include="Forms\Producto intermedio\ProductoIntermedio_Reservas.resx">
       <DependentUpon>ProductoIntermedio_Reservas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Producto intermedio\ProductoIntermedio_Transacciones.resx">
+    <EmbeddedResource Include="Forms\Producto intermedio\ProductoIntermedio_Transacciones.resx">
       <DependentUpon>ProductoIntermedio_Transacciones.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Producto intermedio\ProductoIntermedio_Transportes.resx">
+    <EmbeddedResource Include="Forms\Producto intermedio\ProductoIntermedio_Transportes.resx">
       <DependentUpon>ProductoIntermedio_Transportes.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
