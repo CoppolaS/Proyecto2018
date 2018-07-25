@@ -469,7 +469,12 @@
     <None Include="Resources\Custom-Icon-Design-Mono-General-4-Eye.ico" />
     <Content Include="Resources\favicon1.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Datos\Datos.vbproj">
+      <Project>{40E7D46F-2A01-4B26-82F6-B8FDAACE26AD}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
