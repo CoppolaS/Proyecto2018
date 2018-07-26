@@ -1,9 +1,0 @@
-C:\Users\7iago-PC\AppData\Local\Temporary Projects\Proyecto\bin\Debug\Proyecto.exe
-C:\Users\7iago-PC\AppData\Local\Temporary Projects\Proyecto\bin\Debug\Proyecto.pdb
-C:\Users\7iago-PC\AppData\Local\Temporary Projects\Proyecto\bin\Debug\Proyecto.xml
-C:\Users\7iago-PC\AppData\Local\Temporary Projects\Proyecto\obj\x86\Debug\Proyecto.Resources.resources
-C:\Users\7iago-PC\AppData\Local\Temporary Projects\Proyecto\obj\x86\Debug\Proyecto.Login.resources
-C:\Users\7iago-PC\AppData\Local\Temporary Projects\Proyecto\obj\x86\Debug\Proyecto.vbproj.GenerateResource.Cache
-C:\Users\7iago-PC\AppData\Local\Temporary Projects\Proyecto\obj\x86\Debug\Proyecto.exe
-C:\Users\7iago-PC\AppData\Local\Temporary Projects\Proyecto\obj\x86\Debug\Proyecto.xml
-C:\Users\7iago-PC\AppData\Local\Temporary Projects\Proyecto\obj\x86\Debug\Proyecto.pdb
