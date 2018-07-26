@@ -12,14 +12,7 @@
         End If
     End Sub
 
-    Private Sub CepasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CepasToolStripMenuItem.Click
-        If (ParentForm.Name = "Plantaciones_Cepas") Then
-            Exit Sub
-        Else
-            Plantaciones_Cepas.Show()
-            ParentForm.Close()
-        End If
-    End Sub
+    
 
     Private Sub DatosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DatosToolStripMenuItem.Click
         If (ParentForm.Name = "Plantaciones_Datos") Then
@@ -316,4 +309,17 @@
     '        EstadísticasToolStripMenuItem.Enabled = False
     '    End If
     'End Sub
+
+    Private Sub CepasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CepasToolStripMenuItem.Click
+        If (ParentForm.Name = "Plantaciones_Cepas") Then
+            Exit Sub
+        Else
+            Plantaciones_Cepas.Show()
+            ParentForm.Close()
+        End If
+    End Sub
+
+    Private Sub ProductoIntermedioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProductoIntermedioToolStripMenuItem.Click
+
+    End Sub
 End Class

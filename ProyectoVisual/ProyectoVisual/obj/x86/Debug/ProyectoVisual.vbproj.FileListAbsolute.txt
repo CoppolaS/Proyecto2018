@@ -265,3 +265,6 @@ C:\Users\--\Desktop\ProyectoVisual\ProyectoVisual\obj\x86\Debug\Proyecto.Product
 C:\Users\--\Desktop\ProyectoVisual\ProyectoVisual\obj\x86\Debug\Proyecto.ProductoIntermedio_Transacciones.resources
 C:\Users\--\Desktop\ProyectoVisual\ProyectoVisual\obj\x86\Debug\Proyecto.ProductoIntermedio_Transportes.resources
 C:\Users\--\Desktop\ProyectoVisual\ProyectoVisual\obj\x86\Debug\ProyectoVisual.vbproj.GenerateResource.Cache
+C:\Users\--\Documents\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\obj\x86\Debug\ProyectoVisual.exe
+C:\Users\--\Documents\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\obj\x86\Debug\ProyectoVisual.xml
+C:\Users\--\Documents\GitHub\Proyecto2018\ProyectoVisual\ProyectoVisual\obj\x86\Debug\ProyectoVisual.pdb
