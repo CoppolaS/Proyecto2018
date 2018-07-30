@@ -17,6 +17,9 @@ Public Class LoginDatos
             UsuarioLogeado.User = dr.GetString(0)
             UsuarioLogeado.Pass = dr.GetString(1)
             UsuarioLogeado.Cargo = dr.GetString(2)
+            UsuarioLogeado.Ventana1 = dr.GetInt32(3)
+            UsuarioLogeado.Ventana2 = dr.GetInt32(4)
+            UsuarioLogeado.Ventana3 = dr.GetInt32(5)
             UsuarioLogeado.Logeado = True
             dr.Close()
         Catch ex As Exception

@@ -54,7 +54,7 @@ Partial Class Inicio
         'ComboBox3
         '
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {"Tabla1", "Tabla2", "Tabla3"})
+        Me.ComboBox3.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6"})
         Me.ComboBox3.Location = New System.Drawing.Point(838, 8)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(392, 21)
@@ -63,7 +63,7 @@ Partial Class Inicio
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Tabla1", "Tabla2", "Tabla3"})
+        Me.ComboBox2.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6"})
         Me.ComboBox2.Location = New System.Drawing.Point(396, 8)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(436, 21)
@@ -72,7 +72,7 @@ Partial Class Inicio
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Tabla1", "Tabla2", "Tabla3"})
+        Me.ComboBox1.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6"})
         Me.ComboBox1.Location = New System.Drawing.Point(8, 8)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(382, 21)
