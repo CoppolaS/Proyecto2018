@@ -1,7 +1,7 @@
 ﻿Imports Datos
 
-Public Class Verificar
-    Dim LoginD As New Datos.LoginDatos
+Public Class VerificarOtros
+    Dim LoginD As New Datos.DatosOtros
 
     Public Sub VerificarLogin(ByVal UsuarioPrograma As String, ByVal ContrasenaPrograma As String)
         LoginD.LoginPrograma(UsuarioPrograma, ContrasenaPrograma)
@@ -11,5 +11,11 @@ Public Class Verificar
             MsgBox("Combinación de usuario y contraseña incorrectos")
         End If
     End Sub
+
+    Public Function ValidoLista() As ArrayList
+        Dim AL As New ArrayList
+        AL = LoginD.ListaSucursales
+        Return AL
+    End Function
 
 End Class

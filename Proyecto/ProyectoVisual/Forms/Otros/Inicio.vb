@@ -1,4 +1,6 @@
-﻿Public Class Inicio
+﻿Imports Negocio.VerificarOtros
+
+Public Class Inicio
 
     Private Sub Inicio_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 

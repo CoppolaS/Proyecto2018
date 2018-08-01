@@ -209,34 +209,34 @@
     <Compile Include="Forms\Otros\RegistroHistorico.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Parámetros\Parametros_Barricas.Designer.vb">
+    <Compile Include="Forms\Parametros\Parametros_Barricas.Designer.vb">
       <DependentUpon>Parametros_Barricas.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Parámetros\Parametros_Barricas.vb">
+    <Compile Include="Forms\Parametros\Parametros_Barricas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Parámetros\Parametros_Datos.Designer.vb">
+    <Compile Include="Forms\Parametros\Parametros_Datos.Designer.vb">
       <DependentUpon>Parametros_Datos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Parámetros\Parametros_Datos.vb">
+    <Compile Include="Forms\Parametros\Parametros_Datos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Parámetros\Parametros_Procesos.Designer.vb">
+    <Compile Include="Forms\Parametros\Parametros_Procesos.Designer.vb">
       <DependentUpon>Parametros_Procesos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Parámetros\Parametros_Procesos.vb">
+    <Compile Include="Forms\Parametros\Parametros_Procesos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Parámetros\Parametros_Tanques.Designer.vb">
+    <Compile Include="Forms\Parametros\Parametros_Tanques.Designer.vb">
       <DependentUpon>Parametros_Tanques.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Parámetros\Parametros_Tanques.vb">
+    <Compile Include="Forms\Parametros\Parametros_Tanques.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Parámetros\Parametros_Transportes.Designer.vb">
+    <Compile Include="Forms\Parametros\Parametros_Transportes.Designer.vb">
       <DependentUpon>Parametros_Transportes.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Parámetros\Parametros_Transportes.vb">
+    <Compile Include="Forms\Parametros\Parametros_Transportes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Plantaciones\Plantaciones_Cepas.Designer.vb">
@@ -376,19 +376,19 @@
     <EmbeddedResource Include="Forms\Otros\RegistroHistorico.resx">
       <DependentUpon>RegistroHistorico.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Parámetros\Parametros_Barricas.resx">
+    <EmbeddedResource Include="Forms\Parametros\Parametros_Barricas.resx">
       <DependentUpon>Parametros_Barricas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Parámetros\Parametros_Datos.resx">
+    <EmbeddedResource Include="Forms\Parametros\Parametros_Datos.resx">
       <DependentUpon>Parametros_Datos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Parámetros\Parametros_Procesos.resx">
+    <EmbeddedResource Include="Forms\Parametros\Parametros_Procesos.resx">
       <DependentUpon>Parametros_Procesos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Parámetros\Parametros_Tanques.resx">
+    <EmbeddedResource Include="Forms\Parametros\Parametros_Tanques.resx">
       <DependentUpon>Parametros_Tanques.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Parámetros\Parametros_Transportes.resx">
+    <EmbeddedResource Include="Forms\Parametros\Parametros_Transportes.resx">
       <DependentUpon>Parametros_Transportes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Plantaciones\Plantaciones_Cepas.resx">

@@ -33,17 +33,17 @@ Partial Class Empresa_Sucursales
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Menu1 = New Proyecto.Menu()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Menu1 = New Proyecto.Menu()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -164,50 +164,6 @@ Partial Class Empresa_Sucursales
         Me.TabPage2.Text = "Administrar"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(13, 214)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(203, 23)
-        Me.Button3.TabIndex = 30
-        Me.Button3.Text = "Modificar fila seleccionada"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(253, 214)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(203, 23)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Eliminar fila seleccionada"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(13, 10)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(235, 15)
-        Me.Label7.TabIndex = 0
-        Me.Label7.Text = "Seleccionar una celda de la tabla primero"
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(779, 329)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(473, 339)
-        Me.GroupBox1.TabIndex = 14
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Información del campo seleccionado"
-        '
-        'Menu1
-        '
-        Me.Menu1.Location = New System.Drawing.Point(12, 7)
-        Me.Menu1.Name = "Menu1"
-        Me.Menu1.Size = New System.Drawing.Size(1240, 32)
-        Me.Menu1.TabIndex = 15
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -256,6 +212,50 @@ Partial Class Empresa_Sucursales
         Me.Label6.Size = New System.Drawing.Size(52, 15)
         Me.Label6.TabIndex = 31
         Me.Label6.Text = "Nombre"
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(13, 214)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(203, 23)
+        Me.Button3.TabIndex = 30
+        Me.Button3.Text = "Modificar fila seleccionada"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(253, 214)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(203, 23)
+        Me.Button2.TabIndex = 1
+        Me.Button2.Text = "Eliminar fila seleccionada"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(13, 10)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(235, 15)
+        Me.Label7.TabIndex = 0
+        Me.Label7.Text = "Seleccionar una celda de la tabla primero"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(779, 329)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(473, 339)
+        Me.GroupBox1.TabIndex = 14
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Información del campo seleccionado"
+        '
+        'Menu1
+        '
+        Me.Menu1.Location = New System.Drawing.Point(12, 7)
+        Me.Menu1.Name = "Menu1"
+        Me.Menu1.Size = New System.Drawing.Size(1240, 32)
+        Me.Menu1.TabIndex = 15
         '
         'Empresa_Sucursales
         '

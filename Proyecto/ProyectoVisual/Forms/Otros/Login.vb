@@ -1,8 +1,8 @@
-﻿Imports Negocio.Verificar
+﻿Imports Negocio.VerificarOtros
 Imports Datos.UsuarioLogeado
 
 Public Class Login
-    Dim Verificar As New Negocio.Verificar
+    Dim Verificar As New Negocio.VerificarOtros
 
     Private Sub Enabler(ByVal sender As Object, ByVal e As System.EventArgs) Handles userTB.TextChanged, passTB.TextChanged
         If userTB.Text <> "" And passTB.Text <> "" Then
