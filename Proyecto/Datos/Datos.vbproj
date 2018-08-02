@@ -88,8 +88,13 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexion.vb" />
-    <Compile Include="LoginDatos.vb" />
+    <Compile Include="DatosEmpresa.vb" />
+    <Compile Include="DatosMateria_prima.vb" />
+    <Compile Include="DatosParametros.vb" />
+    <Compile Include="DatosPlantaciones.vb" />
+    <Compile Include="DatosProducto_intermedio.vb" />
+    <Compile Include="Varios\Conexion.vb" />
+    <Compile Include="DatosOtros.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -105,7 +110,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="UsuarioLogeado.vb" />
+    <Compile Include="DatosProducto_final.vb" />
+    <Compile Include="Varios\UsuarioLogeado.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

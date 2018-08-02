@@ -227,7 +227,7 @@ Public Class Menu
         If (ParentForm.Name = "Empresa_Personal") Then
             Exit Sub
         Else
-            Empresa_Personal.Show()
+            Empresa_Funcionarios.Show()
             ParentForm.Close()
         End If
     End Sub
