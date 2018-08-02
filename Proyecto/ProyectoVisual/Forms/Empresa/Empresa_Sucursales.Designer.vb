@@ -25,29 +25,28 @@ Partial Class Empresa_Sucursales
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.ingresar_BTN = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.ingresar_direccionTB = New System.Windows.Forms.TextBox()
+        Me.ingresar_nombreTB = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.administrar_direccionTB = New System.Windows.Forms.TextBox()
+        Me.administrar_nombreTB = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.modificar_BTN = New System.Windows.Forms.Button()
+        Me.eliminar_BTN = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Menu1 = New Proyecto.Menu()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -72,12 +71,10 @@ Partial Class Empresa_Sucursales
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.Button1)
-        Me.TabPage1.Controls.Add(Me.Label3)
-        Me.TabPage1.Controls.Add(Me.TextBox3)
+        Me.TabPage1.Controls.Add(Me.ingresar_BTN)
         Me.TabPage1.Controls.Add(Me.Label2)
-        Me.TabPage1.Controls.Add(Me.TextBox2)
-        Me.TabPage1.Controls.Add(Me.TextBox1)
+        Me.TabPage1.Controls.Add(Me.ingresar_direccionTB)
+        Me.TabPage1.Controls.Add(Me.ingresar_nombreTB)
         Me.TabPage1.Controls.Add(Me.Label1)
         Me.TabPage1.Location = New System.Drawing.Point(4, 24)
         Me.TabPage1.Name = "TabPage1"
@@ -87,59 +84,43 @@ Partial Class Empresa_Sucursales
         Me.TabPage1.Text = "Ingresar"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'Button1
+        'ingresar_BTN
         '
-        Me.Button1.Location = New System.Drawing.Point(289, 214)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(167, 23)
-        Me.Button1.TabIndex = 8
-        Me.Button1.Text = "Ingresar"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(13, 126)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(51, 15)
-        Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Gerente"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(64, 123)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(392, 21)
-        Me.TextBox3.TabIndex = 6
+        Me.ingresar_BTN.Location = New System.Drawing.Point(253, 214)
+        Me.ingresar_BTN.Name = "ingresar_BTN"
+        Me.ingresar_BTN.Size = New System.Drawing.Size(203, 23)
+        Me.ingresar_BTN.TabIndex = 4
+        Me.ingresar_BTN.Text = "Ingresar"
+        Me.ingresar_BTN.UseVisualStyleBackColor = True
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(13, 43)
+        Me.Label2.Location = New System.Drawing.Point(13, 56)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(59, 15)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Direccion"
         '
-        'TextBox2
+        'ingresar_direccionTB
         '
-        Me.TextBox2.Location = New System.Drawing.Point(64, 63)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(392, 54)
-        Me.TextBox2.TabIndex = 2
+        Me.ingresar_direccionTB.Location = New System.Drawing.Point(78, 40)
+        Me.ingresar_direccionTB.Multiline = True
+        Me.ingresar_direccionTB.Name = "ingresar_direccionTB"
+        Me.ingresar_direccionTB.Size = New System.Drawing.Size(378, 54)
+        Me.ingresar_direccionTB.TabIndex = 2
         '
-        'TextBox1
+        'ingresar_nombreTB
         '
-        Me.TextBox1.Location = New System.Drawing.Point(64, 13)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(392, 21)
-        Me.TextBox1.TabIndex = 1
+        Me.ingresar_nombreTB.Location = New System.Drawing.Point(78, 13)
+        Me.ingresar_nombreTB.Name = "ingresar_nombreTB"
+        Me.ingresar_nombreTB.Size = New System.Drawing.Size(378, 21)
+        Me.ingresar_nombreTB.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 16)
+        Me.Label1.Location = New System.Drawing.Point(20, 16)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(52, 15)
         Me.Label1.TabIndex = 0
@@ -147,14 +128,12 @@ Partial Class Empresa_Sucursales
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.Label4)
-        Me.TabPage2.Controls.Add(Me.TextBox4)
         Me.TabPage2.Controls.Add(Me.Label5)
-        Me.TabPage2.Controls.Add(Me.TextBox5)
-        Me.TabPage2.Controls.Add(Me.TextBox6)
+        Me.TabPage2.Controls.Add(Me.administrar_direccionTB)
+        Me.TabPage2.Controls.Add(Me.administrar_nombreTB)
         Me.TabPage2.Controls.Add(Me.Label6)
-        Me.TabPage2.Controls.Add(Me.Button3)
-        Me.TabPage2.Controls.Add(Me.Button2)
+        Me.TabPage2.Controls.Add(Me.modificar_BTN)
+        Me.TabPage2.Controls.Add(Me.eliminar_BTN)
         Me.TabPage2.Controls.Add(Me.Label7)
         Me.TabPage2.Location = New System.Drawing.Point(4, 24)
         Me.TabPage2.Name = "TabPage2"
@@ -164,72 +143,56 @@ Partial Class Empresa_Sucursales
         Me.TabPage2.Text = "Administrar"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(13, 155)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(51, 15)
-        Me.Label4.TabIndex = 36
-        Me.Label4.Text = "Gerente"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(64, 152)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(392, 21)
-        Me.TextBox4.TabIndex = 35
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(13, 72)
+        Me.Label5.Location = New System.Drawing.Point(13, 91)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(59, 15)
         Me.Label5.TabIndex = 34
         Me.Label5.Text = "Direccion"
         '
-        'TextBox5
+        'administrar_direccionTB
         '
-        Me.TextBox5.Location = New System.Drawing.Point(64, 92)
-        Me.TextBox5.Multiline = True
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(392, 54)
-        Me.TextBox5.TabIndex = 33
+        Me.administrar_direccionTB.Location = New System.Drawing.Point(78, 75)
+        Me.administrar_direccionTB.Multiline = True
+        Me.administrar_direccionTB.Name = "administrar_direccionTB"
+        Me.administrar_direccionTB.Size = New System.Drawing.Size(378, 54)
+        Me.administrar_direccionTB.TabIndex = 33
         '
-        'TextBox6
+        'administrar_nombreTB
         '
-        Me.TextBox6.Location = New System.Drawing.Point(64, 42)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(392, 21)
-        Me.TextBox6.TabIndex = 32
+        Me.administrar_nombreTB.Location = New System.Drawing.Point(78, 48)
+        Me.administrar_nombreTB.Name = "administrar_nombreTB"
+        Me.administrar_nombreTB.Size = New System.Drawing.Size(378, 21)
+        Me.administrar_nombreTB.TabIndex = 32
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(13, 45)
+        Me.Label6.Location = New System.Drawing.Point(20, 51)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(52, 15)
         Me.Label6.TabIndex = 31
         Me.Label6.Text = "Nombre"
         '
-        'Button3
+        'modificar_BTN
         '
-        Me.Button3.Location = New System.Drawing.Point(13, 214)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(203, 23)
-        Me.Button3.TabIndex = 30
-        Me.Button3.Text = "Modificar fila seleccionada"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.modificar_BTN.Location = New System.Drawing.Point(13, 214)
+        Me.modificar_BTN.Name = "modificar_BTN"
+        Me.modificar_BTN.Size = New System.Drawing.Size(203, 23)
+        Me.modificar_BTN.TabIndex = 30
+        Me.modificar_BTN.Text = "Modificar fila seleccionada"
+        Me.modificar_BTN.UseVisualStyleBackColor = True
         '
-        'Button2
+        'eliminar_BTN
         '
-        Me.Button2.Location = New System.Drawing.Point(253, 214)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(203, 23)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Eliminar fila seleccionada"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.eliminar_BTN.Location = New System.Drawing.Point(253, 214)
+        Me.eliminar_BTN.Name = "eliminar_BTN"
+        Me.eliminar_BTN.Size = New System.Drawing.Size(203, 23)
+        Me.eliminar_BTN.TabIndex = 1
+        Me.eliminar_BTN.Text = "Eliminar fila seleccionada"
+        Me.eliminar_BTN.UseVisualStyleBackColor = True
         '
         'Label7
         '
@@ -242,13 +205,14 @@ Partial Class Empresa_Sucursales
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.DataGridView2)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(779, 329)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(473, 339)
         Me.GroupBox1.TabIndex = 14
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Información del campo seleccionado"
+        Me.GroupBox1.Text = "Funcionarios de la sucursal seleccionada"
         '
         'Menu1
         '
@@ -256,6 +220,14 @@ Partial Class Empresa_Sucursales
         Me.Menu1.Name = "Menu1"
         Me.Menu1.Size = New System.Drawing.Size(1240, 32)
         Me.Menu1.TabIndex = 15
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(6, 20)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(461, 313)
+        Me.DataGridView2.TabIndex = 0
         '
         'Empresa_Sucursales
         '
@@ -277,6 +249,8 @@ Partial Class Empresa_Sucursales
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -286,20 +260,17 @@ Partial Class Empresa_Sucursales
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents ingresar_nombreTB As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents ingresar_direccionTB As System.Windows.Forms.TextBox
+    Friend WithEvents eliminar_BTN As System.Windows.Forms.Button
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents modificar_BTN As System.Windows.Forms.Button
     Friend WithEvents Menu1 As Proyecto.Menu
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
+    Friend WithEvents administrar_direccionTB As System.Windows.Forms.TextBox
+    Friend WithEvents administrar_nombreTB As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents ingresar_BTN As System.Windows.Forms.Button
+    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
 End Class

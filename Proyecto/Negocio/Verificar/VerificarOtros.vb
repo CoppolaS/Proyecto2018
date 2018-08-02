@@ -12,10 +12,4 @@ Public Class VerificarOtros
         End If
     End Sub
 
-    Public Function ValidoLista() As ArrayList
-        Dim AL As New ArrayList
-        AL = LoginD.ListaSucursales
-        Return AL
-    End Function
-
 End Class

@@ -118,7 +118,6 @@ D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proy
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Empresa_TiposDeAsesores.resources
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Empresa_Vendedores.resources
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Empresa_AsesoresProfesionales.resources
-D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Empresa_Personal.resources
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Estadisticas.resources
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Inicio.resources
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Login.resources
@@ -148,3 +147,4 @@ D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proy
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.ProductoIntermedio_Transacciones.resources
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.ProductoIntermedio_Transportes.resources
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Visual.vbproj.GenerateResource.Cache
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Empresa_Funcionarios.resources
