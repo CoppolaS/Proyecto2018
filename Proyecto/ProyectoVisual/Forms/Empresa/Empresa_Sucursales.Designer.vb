@@ -23,6 +23,7 @@ Partial Class Empresa_Sucursales
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataSet1 = New System.Data.DataSet()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.ingresar_BTN = New System.Windows.Forms.Button()
@@ -41,26 +42,27 @@ Partial Class Empresa_Sucursales
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.Menu1 = New Proyecto.Menu()
-        Me.DataSet1 = New System.Data.DataSet()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
         '
-        Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.DataSource = Me.DataSet1
         Me.DataGridView1.Location = New System.Drawing.Point(12, 45)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 3, 5, 3)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(755, 623)
         Me.DataGridView1.TabIndex = 11
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "NewDataSet"
         '
         'TabControl1
         '
@@ -233,10 +235,6 @@ Partial Class Empresa_Sucursales
         Me.Menu1.Size = New System.Drawing.Size(1240, 32)
         Me.Menu1.TabIndex = 15
         '
-        'DataSet1
-        '
-        Me.DataSet1.DataSetName = "NewDataSet"
-        '
         'Empresa_Sucursales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -252,6 +250,7 @@ Partial Class Empresa_Sucursales
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Empresa - Sucursales / SI.GES.VI"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
@@ -259,7 +258,6 @@ Partial Class Empresa_Sucursales
         Me.TabPage2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

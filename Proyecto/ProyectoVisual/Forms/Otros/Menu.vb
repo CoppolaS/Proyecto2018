@@ -5,6 +5,7 @@ Public Class Menu
 
     Private Sub Menu_Load(sender As Object, e As EventArgs) Handles Me.Load
         Label1.Text = Datos.UsuarioLogeado.User & vbNewLine & Datos.UsuarioLogeado.Cargo
+        
     End Sub
 
     Private Sub InicioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InicioToolStripMenuItem.Click

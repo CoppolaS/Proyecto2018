@@ -28,3 +28,20 @@ D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\obj\x86\Debug\Negocio.vbp
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\obj\x86\Debug\Negocio.dll
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\obj\x86\Debug\Negocio.xml
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\obj\x86\Debug\Negocio.pdb
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Negocio.dll
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Negocio.pdb
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Negocio.xml
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Datos.dll
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Encapsuladoras.dll
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\MySql.Data.dll
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Datos.pdb
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Datos.xml
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Encapsuladoras.pdb
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Encapsuladoras.xml
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\MySql.Data.xml
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Negocio\obj\x86\Debug\Negocio.vbprojResolveAssemblyReference.cache
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Negocio\obj\x86\Debug\Negocio.Resources.resources
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Negocio\obj\x86\Debug\Negocio.vbproj.GenerateResource.Cache
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Negocio\obj\x86\Debug\Negocio.dll
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Negocio\obj\x86\Debug\Negocio.xml
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Negocio\obj\x86\Debug\Negocio.pdb

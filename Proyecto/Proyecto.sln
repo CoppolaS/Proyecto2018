@@ -9,6 +9,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Negocio", "Negocio\Negocio.
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Encapsuladoras", "Encapsuladoras\Encapsuladoras.vbproj", "{31BB0398-3782-4661-95BE-D8EEAAC810A3}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Web", "Web\Web.vbproj", "{59979577-EA3F-43D2-BCB7-D14CD66A7270}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +64,17 @@ Global
 		{31BB0398-3782-4661-95BE-D8EEAAC810A3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{31BB0398-3782-4661-95BE-D8EEAAC810A3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{31BB0398-3782-4661-95BE-D8EEAAC810A3}.Release|x86.ActiveCfg = Release|Any CPU
+		{59979577-EA3F-43D2-BCB7-D14CD66A7270}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59979577-EA3F-43D2-BCB7-D14CD66A7270}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59979577-EA3F-43D2-BCB7-D14CD66A7270}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{59979577-EA3F-43D2-BCB7-D14CD66A7270}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{59979577-EA3F-43D2-BCB7-D14CD66A7270}.Debug|x86.ActiveCfg = Debug|x86
+		{59979577-EA3F-43D2-BCB7-D14CD66A7270}.Debug|x86.Build.0 = Debug|x86
+		{59979577-EA3F-43D2-BCB7-D14CD66A7270}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59979577-EA3F-43D2-BCB7-D14CD66A7270}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59979577-EA3F-43D2-BCB7-D14CD66A7270}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{59979577-EA3F-43D2-BCB7-D14CD66A7270}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{59979577-EA3F-43D2-BCB7-D14CD66A7270}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
