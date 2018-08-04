@@ -6,16 +6,15 @@ Public Class Empresa_Sucursales
     Dim dgv As New DataGridView
 
     Private Sub Empresa_Sucursales_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        dgv = PropTablas.PropiedadesTabla1
-
-        dgv.Columns.Add("id_s", "ID de Sucursal")
-        dgv.Columns.Add("nombre_s", "Nombre de sucursal")
-        dgv.Columns.Add("direccion_s", "Dirección de sucursal")
-        dgv.Rows.Add("1", "Sida", "Sidaco")
-        dgv.Rows.Add("2", "Sida", "Sidaco")
-        dgv.Rows.Add("3", "Sida", "Sidaco")
-        'CargarTabla()
-        DataGridView1 = dgv
+        'dgv = PropTablas.PropiedadesTabla1
+        DataGridView1.Columns.Add("id_s", "ID de Sucursal")
+        DataGridView1.Columns.Add("nombre_s", "Nombre de sucursal")
+        DataGridView1.Columns.Add("direccion_s", "Dirección de sucursal")
+        'dgv.Rows.Add("1", "Sida", "Sidaco")
+        'dgv.Rows.Add("2", "Sida", "Sidaco")
+        'dgv.Rows.Add("3", "Sida", "Sidaco")
+        CargarTabla()
+        'DataGridView1 = dgv
     End Sub
 
     Private Sub CargarTabla()
