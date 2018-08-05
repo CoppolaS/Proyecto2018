@@ -1,40 +1,59 @@
-﻿Imports Negocio
-'revisar
+﻿'https://www.youtube.com/watch?v=171skzi5BKc
+
+Imports Negocio
+
 Public Class Empresa_Sucursales
     Dim Verif As New Negocio.VerificarEmpresa
-    Dim PropTablas As New Negocio.PropiedadesTablas
-    Dim dgv As New DataGridView
 
     Private Sub Empresa_Sucursales_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        'dgv = PropTablas.PropiedadesTabla1
-        DataGridView1.Columns.Add("id_s", "ID de Sucursal")
-        DataGridView1.Columns.Add("nombre_s", "Nombre de sucursal")
-        DataGridView1.Columns.Add("direccion_s", "Dirección de sucursal")
-        'dgv.Rows.Add("1", "Sida", "Sidaco")
-        'dgv.Rows.Add("2", "Sida", "Sidaco")
-        'dgv.Rows.Add("3", "Sida", "Sidaco")
+        Tabla1.DataGridView1.Columns.Add("id_s", "ID de Sucursal")
+        Tabla1.DataGridView1.Columns.Add("nombre", "Nombre de sucursal")
+        Tabla1.DataGridView1.Columns.Add("direccion", "Dirección de sucursal")
+        Tabla2.DataGridView1.Columns.Add("a", "ID")
+        Tabla2.DataGridView1.Columns.Add("b", "Nombre")
+        Tabla2.DataGridView1.Columns.Add("c", "Apellido")
+        Tabla2.DataGridView1.Columns.Add("d", "Teléfono")
+        Tabla2.DataGridView1.Columns.Add("e", "Mail")
+        Tabla2.DataGridView1.Columns.Add("f", "Cargo")
+        Tabla2.DataGridView1.Columns.Add("g", "Usuario")
+        Dim c As DataGridViewColumn
+        For Each c In Tabla1.DataGridView1.Columns
+            Dim i As Integer
+            ComboBox1.Items.Add(Tabla1.DataGridView1.Columns(i).HeaderText.ToString.Insert(0, i.ToString & " " & "-" & " "))
+            i = i + 1
+        Next
         CargarTabla()
-        'DataGridView1 = dgv
     End Sub
 
     Private Sub CargarTabla()
-        DataGridView1.Rows.Clear()
+        Tabla1.DataGridView1.Rows.Clear()
         For Each itemSucursal As Encapsuladoras.Sucursales In Verif.ValidoListaSucursales
-            DataGridView1.Rows.Add(itemSucursal.IDSucursal, itemSucursal.NombreSucursal, itemSucursal.DireccionSucursal)
+            Tabla1.DataGridView1.Rows.Add(itemSucursal.IDSucursal, itemSucursal.NombreSucursal, itemSucursal.DireccionSucursal)
         Next
-        DataGridView1.ClearSelection()
+        Tabla1.DataGridView1.ClearSelection()
     End Sub
 
-    Private Sub Enabler(ByVal sender As Object, ByVal e As System.EventArgs) Handles DataGridView1.CellClick
-        Dim Fila As Integer = DataGridView1.CurrentRow.Index
-        Dim ID_S As Integer = DataGridView1.Rows(Fila).Cells(0).Value
-        If DataGridView1.SelectedRows.Count > 0 Then
-            DataGridView2.Rows.Clear()
-            For Each itemFuncionario As Encapsuladoras.Funcionarios In Verif.ValidoListaFuncionarios(ID_S)
-                DataGridView2.Rows.Add(itemFuncionario.IDFuncionario, itemFuncionario.NombreFuncionario, itemFuncionario.ApellidoFuncionario, itemFuncionario.TelefonoFuncionario, itemFuncionario.MailFuncionario, itemFuncionario.CargoFuncionario, itemFuncionario.UsuarioFuncionario)
-            Next
-            DataGridView2.ClearSelection()
+    Private Sub Enabler(sender As Object, e As System.Windows.Forms.PaintEventArgs) Handles Tabla1.Paint
+        If Tabla.ID > 0 Then
+            If Tabla1.DataGridView1.SelectedRows.Count > 0 Then
+                Tabla2.DataGridView1.Rows.Clear()
+                For Each itemFuncionario As Encapsuladoras.Funcionarios In Verif.ValidoListaFuncionarios(Tabla.ID)
+                    Tabla2.DataGridView1.Rows.Add(itemFuncionario.IDFuncionario, itemFuncionario.NombreFuncionario, itemFuncionario.ApellidoFuncionario, itemFuncionario.TelefonoFuncionario.ToString.Insert(0, "0"), itemFuncionario.MailFuncionario, itemFuncionario.CargoFuncionario, itemFuncionario.UsuarioFuncionario)
+                Next
+                Tabla2.DataGridView1.ClearSelection()
+            End If
         End If
     End Sub
 
+    'terminar el filtrador
+    Private Sub Filtrar(sender As Object, e As System.EventArgs) Handles buscador.TextChanged
+        Dim fila As Integer
+        Dim columna As Integer
+        columna = Integer.Parse(ComboBox1.SelectedItem.ToString.Substring(0, 1))
+        For Each DataGridViewRow In Tabla1.DataGridView1.Rows
+            If Tabla1.DataGridView1.Item(columna, fila).ToString.Contains(buscador.Text.ToString) = False Then
+                Tabla1.DataGridView1.Rows(fila).Visible = False
+            End If
+        Next
+    End Sub
 End Class

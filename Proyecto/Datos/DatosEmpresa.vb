@@ -30,12 +30,12 @@ Public Class DatosEmpresa
         Return arr
     End Function
 
-    Public Function ListaFuncionarios() As ArrayList
+    Public Function ListaFuncionarios(Optional ByVal ID As Integer = 0) As ArrayList
         Dim arr As New ArrayList
         Try
-            Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Funcionarios (?,?,?,?)}", Con.cn)
+            Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Funcionarios (?,?,?,?,?,?,?,?,?)}", Con.cn)
             cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.AddWithValue("opcion", 1)
+            cmd.Parameters.AddWithValue("opcion", 5)
             cmd.Parameters.AddWithValue("ID_F", 0)
             cmd.Parameters.AddWithValue("nombre", "")
             cmd.Parameters.AddWithValue("apellido", "")
@@ -43,6 +43,7 @@ Public Class DatosEmpresa
             cmd.Parameters.AddWithValue("mail", "")
             cmd.Parameters.AddWithValue("cargo", "")
             cmd.Parameters.AddWithValue("usuario", "")
+            cmd.Parameters.AddWithValue("id_sucursal", ID)
             Con.cn.Open()
             cmd.ExecuteNonQuery()
             Dim dr As OdbcDataReader = cmd.ExecuteReader()

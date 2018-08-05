@@ -98,7 +98,6 @@ C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\bin\Debu
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\ProyectoVisual.exe
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\ProyectoVisual.xml
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\ProyectoVisual.pdb
-D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\bin\Debug\ProyectoVisual.exe
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\bin\Debug\ProyectoVisual.pdb
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\bin\Debug\ProyectoVisual.xml
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\bin\Debug\Datos.dll
@@ -148,3 +147,4 @@ D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proy
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.ProductoIntermedio_Transportes.resources
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Visual.vbproj.GenerateResource.Cache
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Empresa_Funcionarios.resources
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Tabla.resources

@@ -50,10 +50,10 @@
 
     Public Property TelefonoFuncionario() As Integer
         Get
-            Return Me.ID_Funcionarios
+            Return Me.Telefono
         End Get
         Set(ByVal value As Integer)
-            Me.ID_Funcionarios = value
+            Me.Telefono = value
         End Set
     End Property
 
