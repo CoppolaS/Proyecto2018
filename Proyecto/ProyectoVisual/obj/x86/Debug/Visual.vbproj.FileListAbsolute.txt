@@ -148,3 +148,6 @@ D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proy
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Visual.vbproj.GenerateResource.Cache
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Empresa_Funcionarios.resources
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Tabla.resources
+C:\Users\tiago\Downloads\Proyecto2018-b5ba96cf1d3f4e6e43df75c18877a3f9a148b134\Proyecto\ProyectoVisual\obj\x86\Debug\ProyectoVisual.exe
+C:\Users\tiago\Downloads\Proyecto2018-b5ba96cf1d3f4e6e43df75c18877a3f9a148b134\Proyecto\ProyectoVisual\obj\x86\Debug\ProyectoVisual.xml
+C:\Users\tiago\Downloads\Proyecto2018-b5ba96cf1d3f4e6e43df75c18877a3f9a148b134\Proyecto\ProyectoVisual\obj\x86\Debug\ProyectoVisual.pdb
