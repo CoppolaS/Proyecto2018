@@ -148,6 +148,7 @@ Partial Class Empresa_Sucursales
         '
         'administrar_direccionTB
         '
+        Me.administrar_direccionTB.Enabled = False
         Me.administrar_direccionTB.Location = New System.Drawing.Point(78, 75)
         Me.administrar_direccionTB.Multiline = True
         Me.administrar_direccionTB.Name = "administrar_direccionTB"
@@ -156,6 +157,7 @@ Partial Class Empresa_Sucursales
         '
         'administrar_nombreTB
         '
+        Me.administrar_nombreTB.Enabled = False
         Me.administrar_nombreTB.Location = New System.Drawing.Point(78, 48)
         Me.administrar_nombreTB.Name = "administrar_nombreTB"
         Me.administrar_nombreTB.Size = New System.Drawing.Size(378, 21)

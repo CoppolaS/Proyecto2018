@@ -1,6 +1,6 @@
 ﻿Public Class Tabla
     Public Shared ID As Integer
-
+    'ver como hacer para cambiarle esto de los eventos
     Private Sub Tabla_Load(sender As Object, e As System.EventArgs) Handles Me.Load
         DataGridView1.ReadOnly = True
         DataGridView1.AllowUserToAddRows = False

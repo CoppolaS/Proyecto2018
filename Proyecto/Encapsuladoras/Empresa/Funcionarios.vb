@@ -6,8 +6,10 @@
     Private Mail As String
     Private Cargo As String
     Private Usuario As String
+    Private Eliminado As Boolean
+    Private Cedula As Integer
 
-    Public Sub New(ByVal ID_Funcionarios As Integer, ByVal Nombre As String, ByVal Apellido As String, ByVal Telefono As Integer, ByVal Mail As String, ByVal Cargo As String, ByVal Usuario As String)
+    Public Sub New(ByVal ID_Funcionarios As Integer, ByVal Nombre As String, ByVal Apellido As String, ByVal Telefono As Integer, ByVal Mail As String, ByVal Cargo As String, ByVal Usuario As String, ByVal Eliminado As Boolean, ByVal Cedula As Integer)
         Me.ID_Funcionarios = ID_Funcionarios
         Me.Nombre = Nombre
         Me.Apellido = Apellido
@@ -15,6 +17,8 @@
         Me.Mail = Mail
         Me.Cargo = Cargo
         Me.Usuario = Usuario
+        Me.Eliminado = Eliminado
+        Me.Cedula = Cedula
     End Sub
 
     Public Sub New()
@@ -81,6 +85,24 @@
         End Get
         Set(ByVal value As String)
             Me.Usuario = value
+        End Set
+    End Property
+
+    Public Property EliminadoFuncionario() As Boolean
+        Get
+            Return Me.Eliminado
+        End Get
+        Set(ByVal value As Boolean)
+            Me.Eliminado = value
+        End Set
+    End Property
+
+    Public Property CedulaFuncionario() As Integer
+        Get
+            Return Me.Cedula
+        End Get
+        Set(ByVal value As Integer)
+            Me.Cedula = value
         End Set
     End Property
 

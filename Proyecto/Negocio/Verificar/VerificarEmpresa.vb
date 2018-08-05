@@ -11,4 +11,19 @@ Public Class VerificarEmpresa
         Return DatosE.ListaFuncionarios(ID)
     End Function
 
+    Public Function ValidoIngresoSucursales(ByVal encapsuladora As Encapsuladoras.Sucursales)
+        DatosE.IngresoSucursal(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoEliminarSucursales(ByVal encapsuladora As Encapsuladoras.Sucursales)
+        DatosE.EliminoSucursal(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoModificarSucursales(ByVal encapsuladora As Encapsuladoras.Sucursales)
+        DatosE.ModificoSucursal(encapsuladora)
+        Return Nothing
+    End Function
+
 End Class
