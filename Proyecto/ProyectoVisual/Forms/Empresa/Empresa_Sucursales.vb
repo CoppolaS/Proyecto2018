@@ -40,6 +40,8 @@ Public Class Empresa_Sucursales
             If Tabla1.DataGridView1.SelectedRows.Count > 0 Then
                 administrar_nombreTB.Enabled = True
                 administrar_direccionTB.Enabled = True
+                eliminar_BTN.Enabled = True
+                modificar_BTN.Enabled = True
                 administrar_nombreTB.Text = Tabla1.DataGridView1(1, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
                 administrar_direccionTB.Text = Tabla1.DataGridView1(2, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
                 Tabla2.DataGridView1.Rows.Clear()
@@ -91,6 +93,14 @@ Public Class Empresa_Sucursales
         administrar_direccionTB.Enabled = False
         modificar_BTN.Focus()
         CargarTabla()
+    End Sub
+
+    Private Sub habilitar_ingreso(sender As Object, e As System.EventArgs) Handles ingresar_nombreTB.TextChanged, ingresar_direccionTB.TextChanged
+        If ingresar_nombreTB.TextLength > 0 And ingresar_direccionTB.TextLength > 0 Then
+            ingresar_BTN.Enabled = True
+        Else
+            ingresar_BTN.Enabled = False
+        End If
     End Sub
 
 End Class

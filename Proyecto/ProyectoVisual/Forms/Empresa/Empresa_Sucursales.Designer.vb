@@ -80,6 +80,7 @@ Partial Class Empresa_Sucursales
         '
         'ingresar_BTN
         '
+        Me.ingresar_BTN.Enabled = False
         Me.ingresar_BTN.Location = New System.Drawing.Point(253, 214)
         Me.ingresar_BTN.Name = "ingresar_BTN"
         Me.ingresar_BTN.Size = New System.Drawing.Size(203, 23)
@@ -174,6 +175,7 @@ Partial Class Empresa_Sucursales
         '
         'modificar_BTN
         '
+        Me.modificar_BTN.Enabled = False
         Me.modificar_BTN.Location = New System.Drawing.Point(13, 214)
         Me.modificar_BTN.Name = "modificar_BTN"
         Me.modificar_BTN.Size = New System.Drawing.Size(203, 23)
@@ -183,6 +185,7 @@ Partial Class Empresa_Sucursales
         '
         'eliminar_BTN
         '
+        Me.eliminar_BTN.Enabled = False
         Me.eliminar_BTN.Location = New System.Drawing.Point(253, 214)
         Me.eliminar_BTN.Name = "eliminar_BTN"
         Me.eliminar_BTN.Size = New System.Drawing.Size(203, 23)
