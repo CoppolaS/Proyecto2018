@@ -98,7 +98,6 @@ C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\bin\Debu
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\ProyectoVisual.exe
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\ProyectoVisual.xml
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\ProyectoVisual.pdb
-D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\bin\Debug\ProyectoVisual.exe
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\bin\Debug\ProyectoVisual.pdb
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\bin\Debug\ProyectoVisual.xml
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\bin\Debug\Datos.dll
@@ -148,58 +147,7 @@ D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proy
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.ProductoIntermedio_Transportes.resources
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Visual.vbproj.GenerateResource.Cache
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Empresa_Funcionarios.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\ProyectoVisual.exe
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\ProyectoVisual.xml
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\ProyectoVisual.pdb
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\bin\Debug\ProyectoVisual.exe
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\bin\Debug\ProyectoVisual.pdb
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\bin\Debug\ProyectoVisual.xml
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\bin\Debug\Datos.dll
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\bin\Debug\Encapsuladoras.dll
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\bin\Debug\Negocio.dll
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\bin\Debug\MySql.Data.dll
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\bin\Debug\Datos.pdb
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\bin\Debug\Datos.xml
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\bin\Debug\Encapsuladoras.pdb
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\bin\Debug\Encapsuladoras.xml
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\bin\Debug\Negocio.pdb
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\bin\Debug\Negocio.xml
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\bin\Debug\MySql.Data.xml
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Visual.vbprojResolveAssemblyReference.cache
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Resources.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Empresa_Cargos.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Empresa_Compradores.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Empresa_Sucursales.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Empresa_TiposDeAsesores.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Empresa_Vendedores.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Empresa_AsesoresProfesionales.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Empresa_Funcionarios.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Estadisticas.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Inicio.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Login.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.MateriaPrima_Datos.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.MateriaPrima_Produccion.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.MateriaPrima_Reservas.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.MateriaPrima_Transacciones.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.MateriaPrima_Transportes.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Menu.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.RegistroHistorico.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Parametros_Barricas.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Parametros_Datos.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Parametros_Procesos.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Parametros_Tanques.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Parametros_Transportes.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Plantaciones_Cepas.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Plantaciones_Datos.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Plantaciones_Hectareas.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Plantaciones_Parcelas.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.ProductoFinal_Reservas.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.ProductoFinal_Transacciones.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.ProductoFinal_Transportes.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.ProductoFinal_Vinos.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.ProductoIntermedio_Datos.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.ProductoIntermedio_Produccion.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.ProductoIntermedio_Reservas.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.ProductoIntermedio_Transacciones.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.ProductoIntermedio_Transportes.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Visual.vbproj.GenerateResource.Cache
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Tabla.resources
+C:\Users\tiago\Downloads\Proyecto2018-b5ba96cf1d3f4e6e43df75c18877a3f9a148b134\Proyecto\ProyectoVisual\obj\x86\Debug\ProyectoVisual.exe
+C:\Users\tiago\Downloads\Proyecto2018-b5ba96cf1d3f4e6e43df75c18877a3f9a148b134\Proyecto\ProyectoVisual\obj\x86\Debug\ProyectoVisual.xml
+C:\Users\tiago\Downloads\Proyecto2018-b5ba96cf1d3f4e6e43df75c18877a3f9a148b134\Proyecto\ProyectoVisual\obj\x86\Debug\ProyectoVisual.pdb

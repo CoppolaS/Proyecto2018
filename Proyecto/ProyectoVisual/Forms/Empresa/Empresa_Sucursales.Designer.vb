@@ -22,8 +22,6 @@ Partial Class Empresa_Sucursales
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.DataSet1 = New System.Data.DataSet()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.ingresar_BTN = New System.Windows.Forms.Button()
@@ -40,29 +38,19 @@ Partial Class Empresa_Sucursales
         Me.eliminar_BTN = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.buscador = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Tabla1 = New Proyecto.Tabla()
         Me.Menu1 = New Proyecto.Menu()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Tabla2 = New Proyecto.Tabla()
+        Me.DataGridView1 = New Proyecto.Tabla()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 45)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 3, 5, 3)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(755, 623)
-        Me.DataGridView1.TabIndex = 11
-        '
-        'DataSet1
-        '
-        Me.DataSet1.DataSetName = "NewDataSet"
         '
         'TabControl1
         '
@@ -92,6 +80,7 @@ Partial Class Empresa_Sucursales
         '
         'ingresar_BTN
         '
+        Me.ingresar_BTN.Enabled = False
         Me.ingresar_BTN.Location = New System.Drawing.Point(253, 214)
         Me.ingresar_BTN.Name = "ingresar_BTN"
         Me.ingresar_BTN.Size = New System.Drawing.Size(203, 23)
@@ -160,6 +149,7 @@ Partial Class Empresa_Sucursales
         '
         'administrar_direccionTB
         '
+        Me.administrar_direccionTB.Enabled = False
         Me.administrar_direccionTB.Location = New System.Drawing.Point(78, 75)
         Me.administrar_direccionTB.Multiline = True
         Me.administrar_direccionTB.Name = "administrar_direccionTB"
@@ -168,6 +158,7 @@ Partial Class Empresa_Sucursales
         '
         'administrar_nombreTB
         '
+        Me.administrar_nombreTB.Enabled = False
         Me.administrar_nombreTB.Location = New System.Drawing.Point(78, 48)
         Me.administrar_nombreTB.Name = "administrar_nombreTB"
         Me.administrar_nombreTB.Size = New System.Drawing.Size(378, 21)
@@ -184,6 +175,7 @@ Partial Class Empresa_Sucursales
         '
         'modificar_BTN
         '
+        Me.modificar_BTN.Enabled = False
         Me.modificar_BTN.Location = New System.Drawing.Point(13, 214)
         Me.modificar_BTN.Name = "modificar_BTN"
         Me.modificar_BTN.Size = New System.Drawing.Size(203, 23)
@@ -193,6 +185,7 @@ Partial Class Empresa_Sucursales
         '
         'eliminar_BTN
         '
+        Me.eliminar_BTN.Enabled = False
         Me.eliminar_BTN.Location = New System.Drawing.Point(253, 214)
         Me.eliminar_BTN.Name = "eliminar_BTN"
         Me.eliminar_BTN.Size = New System.Drawing.Size(203, 23)
@@ -211,7 +204,7 @@ Partial Class Empresa_Sucursales
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.DataGridView2)
+        Me.GroupBox1.Controls.Add(Me.Tabla2)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(779, 329)
         Me.GroupBox1.Name = "GroupBox1"
@@ -220,13 +213,45 @@ Partial Class Empresa_Sucursales
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Funcionarios de la sucursal seleccionada"
         '
-        'DataGridView2
+        'buscador
         '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(6, 20)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(461, 313)
-        Me.DataGridView2.TabIndex = 0
+        Me.buscador.Location = New System.Drawing.Point(116, 45)
+        Me.buscador.Name = "buscador"
+        Me.buscador.Size = New System.Drawing.Size(185, 20)
+        Me.buscador.TabIndex = 17
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(12, 48)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(98, 13)
+        Me.Label3.TabIndex = 18
+        Me.Label3.Text = "Buscar en la tabla: "
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(367, 44)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(185, 21)
+        Me.ComboBox1.TabIndex = 19
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(307, 48)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(54, 13)
+        Me.Label4.TabIndex = 20
+        Me.Label4.Text = "Columna: "
+        '
+        'Tabla1
+        '
+        Me.Tabla1.Location = New System.Drawing.Point(12, 69)
+        Me.Tabla1.Name = "Tabla1"
+        Me.Tabla1.Size = New System.Drawing.Size(761, 599)
+        Me.Tabla1.TabIndex = 16
         '
         'Menu1
         '
@@ -235,33 +260,48 @@ Partial Class Empresa_Sucursales
         Me.Menu1.Size = New System.Drawing.Size(1240, 32)
         Me.Menu1.TabIndex = 15
         '
+        'Tabla2
+        '
+        Me.Tabla2.Location = New System.Drawing.Point(6, 20)
+        Me.Tabla2.Name = "Tabla2"
+        Me.Tabla2.Size = New System.Drawing.Size(461, 313)
+        Me.Tabla2.TabIndex = 0
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 45)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(761, 623)
+        Me.DataGridView1.TabIndex = 16
+        '
         'Empresa_Sucursales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.buscador)
+        Me.Controls.Add(Me.Tabla1)
         Me.Controls.Add(Me.Menu1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.TabControl1)
-        Me.Controls.Add(Me.DataGridView1)
         Me.MaximizeBox = False
         Me.Name = "Empresa_Sucursales"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Empresa - Sucursales / SI.GES.VI"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
@@ -279,6 +319,11 @@ Partial Class Empresa_Sucursales
     Friend WithEvents administrar_nombreTB As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents ingresar_BTN As System.Windows.Forms.Button
-    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
-    Friend WithEvents DataSet1 As System.Data.DataSet
+    Friend WithEvents DataGridView1 As Proyecto.Tabla
+    Friend WithEvents Tabla1 As Proyecto.Tabla
+    Friend WithEvents Tabla2 As Proyecto.Tabla
+    Friend WithEvents buscador As System.Windows.Forms.TextBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class

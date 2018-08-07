@@ -8,7 +8,7 @@ Public Class Conexion
     Sub New()
         cn = New OdbcConnection("UID=root" & _
             ";PWD=root" & _
-            ";DATABASE=proyecto_s.i.ges.vi" & _
+            ";DATABASE=proyecto" & _
             ";SERVER=127.0.0.1" & _
             ";DRIVER={MySQL ODBC 5.3 ANSI Driver};")
     End Sub

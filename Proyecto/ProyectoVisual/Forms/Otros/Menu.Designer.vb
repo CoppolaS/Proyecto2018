@@ -65,9 +65,9 @@ Partial Class Menu
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportarUnErrorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManualDeUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CerrarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AlertasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ObservacionesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CerrarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -346,6 +346,12 @@ Partial Class Menu
         Me.ManualDeUsuarioToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
         Me.ManualDeUsuarioToolStripMenuItem.Text = "Manual de usuario"
         '
+        'CerrarSesiónToolStripMenuItem
+        '
+        Me.CerrarSesiónToolStripMenuItem.Name = "CerrarSesiónToolStripMenuItem"
+        Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.CerrarSesiónToolStripMenuItem.Text = "Cerrar sesión"
+        '
         'AlertasToolStripMenuItem
         '
         Me.AlertasToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
@@ -372,16 +378,10 @@ Partial Class Menu
         Me.ObservacionesToolStripMenuItem1.Text = "0 Observaciones"
         Me.ObservacionesToolStripMenuItem1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'CerrarSesiónToolStripMenuItem
-        '
-        Me.CerrarSesiónToolStripMenuItem.Name = "CerrarSesiónToolStripMenuItem"
-        Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
-        Me.CerrarSesiónToolStripMenuItem.Text = "Cerrar sesión"
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(910, 4)
+        Me.Label1.Location = New System.Drawing.Point(879, 4)
         Me.Label1.Margin = New System.Windows.Forms.Padding(0, 4, 0, 5)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(39, 13)
