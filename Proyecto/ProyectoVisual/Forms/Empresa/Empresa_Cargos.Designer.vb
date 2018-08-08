@@ -22,7 +22,6 @@ Partial Class Empresa_Cargos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -31,29 +30,22 @@ Partial Class Empresa_Cargos
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Menu1 = New Proyecto.Menu()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Tabla1 = New Proyecto.Tabla()
+        Me.Tabla2 = New Proyecto.Tabla()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 45)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 3, 5, 3)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(755, 623)
-        Me.DataGridView1.TabIndex = 11
         '
         'TabControl1
         '
@@ -93,7 +85,7 @@ Partial Class Empresa_Cargos
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(13, 43)
+        Me.Label2.Location = New System.Drawing.Point(13, 84)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(72, 15)
         Me.Label2.TabIndex = 3
@@ -101,23 +93,23 @@ Partial Class Empresa_Cargos
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(64, 61)
+        Me.TextBox2.Location = New System.Drawing.Point(91, 61)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(392, 75)
+        Me.TextBox2.Size = New System.Drawing.Size(365, 75)
         Me.TextBox2.TabIndex = 2
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(64, 13)
+        Me.TextBox1.Location = New System.Drawing.Point(91, 13)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(392, 21)
+        Me.TextBox1.Size = New System.Drawing.Size(365, 21)
         Me.TextBox1.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 16)
+        Me.Label1.Location = New System.Drawing.Point(33, 16)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(52, 15)
         Me.Label1.TabIndex = 0
@@ -139,50 +131,6 @@ Partial Class Empresa_Cargos
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Administrar"
         Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(13, 214)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(203, 23)
-        Me.Button3.TabIndex = 30
-        Me.Button3.Text = "Modificar fila seleccionada"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(253, 214)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(203, 23)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Eliminar fila seleccionada"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(13, 10)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(235, 15)
-        Me.Label7.TabIndex = 0
-        Me.Label7.Text = "Seleccionar una celda de la tabla primero"
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(779, 329)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(473, 339)
-        Me.GroupBox1.TabIndex = 14
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Información del campo seleccionado"
-        '
-        'Menu1
-        '
-        Me.Menu1.Location = New System.Drawing.Point(12, 7)
-        Me.Menu1.Name = "Menu1"
-        Me.Menu1.Size = New System.Drawing.Size(1240, 32)
-        Me.Menu1.TabIndex = 15
         '
         'Label3
         '
@@ -217,30 +165,88 @@ Partial Class Empresa_Cargos
         Me.Label4.TabIndex = 31
         Me.Label4.Text = "Nombre"
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(13, 214)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(203, 23)
+        Me.Button3.TabIndex = 30
+        Me.Button3.Text = "Modificar fila seleccionada"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(253, 214)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(203, 23)
+        Me.Button2.TabIndex = 1
+        Me.Button2.Text = "Eliminar fila seleccionada"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(13, 10)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(235, 15)
+        Me.Label7.TabIndex = 0
+        Me.Label7.Text = "Seleccionar una celda de la tabla primero"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Tabla2)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(779, 329)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(473, 339)
+        Me.GroupBox1.TabIndex = 14
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Información del campo seleccionado"
+        '
+        'Menu1
+        '
+        Me.Menu1.Location = New System.Drawing.Point(12, 7)
+        Me.Menu1.Name = "Menu1"
+        Me.Menu1.Size = New System.Drawing.Size(1240, 32)
+        Me.Menu1.TabIndex = 15
+        '
+        'Tabla1
+        '
+        Me.Tabla1.Location = New System.Drawing.Point(12, 45)
+        Me.Tabla1.Name = "Tabla1"
+        Me.Tabla1.Size = New System.Drawing.Size(761, 623)
+        Me.Tabla1.TabIndex = 16
+        '
+        'Tabla2
+        '
+        Me.Tabla2.Location = New System.Drawing.Point(6, 20)
+        Me.Tabla2.Name = "Tabla2"
+        Me.Tabla2.Size = New System.Drawing.Size(461, 313)
+        Me.Tabla2.TabIndex = 0
+        '
         'Empresa_Cargos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.Controls.Add(Me.Tabla1)
         Me.Controls.Add(Me.Menu1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.TabControl1)
-        Me.Controls.Add(Me.DataGridView1)
         Me.MaximizeBox = False
         Me.Name = "Empresa_Cargos"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Empresa - Cargos / SI.GES.VI"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
@@ -258,4 +264,6 @@ Partial Class Empresa_Cargos
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Tabla2 As Proyecto.Tabla
+    Friend WithEvents Tabla1 As Proyecto.Tabla
 End Class

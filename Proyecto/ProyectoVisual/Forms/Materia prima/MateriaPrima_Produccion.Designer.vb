@@ -22,7 +22,6 @@ Partial Class MateriaPrima_Produccion
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -44,20 +43,13 @@ Partial Class MateriaPrima_Produccion
         Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Menu1 = New Proyecto.Menu()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Tabla1 = New Proyecto.Tabla()
+        Me.Tabla2 = New Proyecto.Tabla()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 72)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 3, 5, 3)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(755, 596)
-        Me.DataGridView1.TabIndex = 11
         '
         'ComboBox1
         '
@@ -243,6 +235,7 @@ Partial Class MateriaPrima_Produccion
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Tabla2)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(779, 329)
         Me.GroupBox1.Name = "GroupBox1"
@@ -258,31 +251,44 @@ Partial Class MateriaPrima_Produccion
         Me.Menu1.Size = New System.Drawing.Size(1240, 32)
         Me.Menu1.TabIndex = 15
         '
+        'Tabla1
+        '
+        Me.Tabla1.Location = New System.Drawing.Point(12, 72)
+        Me.Tabla1.Name = "Tabla1"
+        Me.Tabla1.Size = New System.Drawing.Size(761, 596)
+        Me.Tabla1.TabIndex = 16
+        '
+        'Tabla2
+        '
+        Me.Tabla2.Location = New System.Drawing.Point(6, 19)
+        Me.Tabla2.Name = "Tabla2"
+        Me.Tabla2.Size = New System.Drawing.Size(461, 314)
+        Me.Tabla2.TabIndex = 0
+        '
         'MateriaPrima_Produccion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.Controls.Add(Me.Tabla1)
         Me.Controls.Add(Me.Menu1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.DataGridView1)
         Me.MaximizeBox = False
         Me.Name = "MateriaPrima_Produccion"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Materia prima - Producción / SI.GES.VI"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
@@ -304,4 +310,6 @@ Partial Class MateriaPrima_Produccion
     Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents Tabla2 As Proyecto.Tabla
+    Friend WithEvents Tabla1 As Proyecto.Tabla
 End Class
