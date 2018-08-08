@@ -26,25 +26,22 @@ Partial Class Inicio
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Menu1 = New Proyecto.Menu()
+        Me.Tabla1 = New Proyecto.Tabla()
+        Me.Tabla2 = New Proyecto.Tabla()
+        Me.Tabla3 = New Proyecto.Tabla()
         Me.Panel2.SuspendLayout()
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.Tabla3)
+        Me.Panel2.Controls.Add(Me.Tabla2)
+        Me.Panel2.Controls.Add(Me.Tabla1)
         Me.Panel2.Controls.Add(Me.ComboBox3)
         Me.Panel2.Controls.Add(Me.ComboBox2)
         Me.Panel2.Controls.Add(Me.ComboBox1)
-        Me.Panel2.Controls.Add(Me.DataGridView3)
-        Me.Panel2.Controls.Add(Me.DataGridView2)
-        Me.Panel2.Controls.Add(Me.DataGridView1)
         Me.Panel2.Location = New System.Drawing.Point(12, 46)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Padding = New System.Windows.Forms.Padding(5)
@@ -54,7 +51,7 @@ Partial Class Inicio
         'ComboBox3
         '
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6"})
+        Me.ComboBox3.Items.AddRange(New Object() {"1 - Funcionarios", "2 - Materia prima", "3 - Parcelas", "4 - Plantaciones", "5 - Producto final", "6 - Usuarios de web", "7 - Vendedores", "8 - Vinos"})
         Me.ComboBox3.Location = New System.Drawing.Point(838, 8)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(392, 21)
@@ -63,7 +60,7 @@ Partial Class Inicio
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6"})
+        Me.ComboBox2.Items.AddRange(New Object() {"1 - Funcionarios", "2 - Materia prima", "3 - Parcelas", "4 - Plantaciones", "5 - Producto final", "6 - Usuarios de web", "7 - Vendedores", "8 - Vinos"})
         Me.ComboBox2.Location = New System.Drawing.Point(396, 8)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(436, 21)
@@ -72,35 +69,11 @@ Partial Class Inicio
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6"})
+        Me.ComboBox1.Items.AddRange(New Object() {"1 - Funcionarios", "2 - Materia prima", "3 - Parcelas", "4 - Plantaciones", "5 - Producto final", "6 - Usuarios de web", "7 - Vendedores", "8 - Vinos"})
         Me.ComboBox1.Location = New System.Drawing.Point(8, 8)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(382, 21)
         Me.ComboBox1.TabIndex = 3
-        '
-        'DataGridView3
-        '
-        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView3.Location = New System.Drawing.Point(838, 35)
-        Me.DataGridView3.Name = "DataGridView3"
-        Me.DataGridView3.Size = New System.Drawing.Size(392, 578)
-        Me.DataGridView3.TabIndex = 2
-        '
-        'DataGridView2
-        '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(396, 35)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(436, 578)
-        Me.DataGridView2.TabIndex = 1
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(8, 35)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(382, 578)
-        Me.DataGridView1.TabIndex = 0
         '
         'Menu1
         '
@@ -108,6 +81,27 @@ Partial Class Inicio
         Me.Menu1.Name = "Menu1"
         Me.Menu1.Size = New System.Drawing.Size(1240, 32)
         Me.Menu1.TabIndex = 7
+        '
+        'Tabla1
+        '
+        Me.Tabla1.Location = New System.Drawing.Point(8, 35)
+        Me.Tabla1.Name = "Tabla1"
+        Me.Tabla1.Size = New System.Drawing.Size(382, 578)
+        Me.Tabla1.TabIndex = 6
+        '
+        'Tabla2
+        '
+        Me.Tabla2.Location = New System.Drawing.Point(396, 35)
+        Me.Tabla2.Name = "Tabla2"
+        Me.Tabla2.Size = New System.Drawing.Size(436, 578)
+        Me.Tabla2.TabIndex = 7
+        '
+        'Tabla3
+        '
+        Me.Tabla3.Location = New System.Drawing.Point(838, 35)
+        Me.Tabla3.Name = "Tabla3"
+        Me.Tabla3.Size = New System.Drawing.Size(392, 578)
+        Me.Tabla3.TabIndex = 8
         '
         'Inicio
         '
@@ -123,9 +117,6 @@ Partial Class Inicio
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Inicio / SI.GES.VI"
         Me.Panel2.ResumeLayout(False)
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -133,8 +124,8 @@ Partial Class Inicio
     Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
     Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents DataGridView3 As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents Menu1 As Proyecto.Menu
+    Friend WithEvents Tabla3 As Proyecto.Tabla
+    Friend WithEvents Tabla2 As Proyecto.Tabla
+    Friend WithEvents Tabla1 As Proyecto.Tabla
 End Class
