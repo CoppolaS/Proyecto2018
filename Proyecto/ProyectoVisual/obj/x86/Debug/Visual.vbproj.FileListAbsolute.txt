@@ -151,3 +151,6 @@ D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proy
 C:\Users\tiago\Downloads\Proyecto2018-b5ba96cf1d3f4e6e43df75c18877a3f9a148b134\Proyecto\ProyectoVisual\obj\x86\Debug\ProyectoVisual.exe
 C:\Users\tiago\Downloads\Proyecto2018-b5ba96cf1d3f4e6e43df75c18877a3f9a148b134\Proyecto\ProyectoVisual\obj\x86\Debug\ProyectoVisual.xml
 C:\Users\tiago\Downloads\Proyecto2018-b5ba96cf1d3f4e6e43df75c18877a3f9a148b134\Proyecto\ProyectoVisual\obj\x86\Debug\ProyectoVisual.pdb
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\ProyectoVisual.exe
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\ProyectoVisual.xml
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\ProyectoVisual.pdb
