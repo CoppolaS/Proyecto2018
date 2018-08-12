@@ -55,9 +55,9 @@ Partial Class Empresa_AsesoresProfesionales
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Menu1 = New Proyecto.Menu()
-        Me.Tabla1 = New Proyecto.Tabla()
         Me.Tabla2 = New Proyecto.Tabla()
+        Me.Tabla1 = New Proyecto.Tabla()
+        Me.Menu1 = New Proyecto.Menu()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -109,9 +109,9 @@ Partial Class Empresa_AsesoresProfesionales
         '
         'TextBox9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(64, 119)
+        Me.TextBox9.Location = New System.Drawing.Point(71, 119)
         Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(392, 21)
+        Me.TextBox9.Size = New System.Drawing.Size(385, 21)
         Me.TextBox9.TabIndex = 14
         '
         'Label14
@@ -126,11 +126,11 @@ Partial Class Empresa_AsesoresProfesionales
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(64, 144)
+        Me.ComboBox2.Location = New System.Drawing.Point(71, 144)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(392, 23)
+        Me.ComboBox2.Size = New System.Drawing.Size(385, 23)
         Me.ComboBox2.TabIndex = 10
-        Me.ComboBox2.Text = "Tio de Asesor Profesional"
+        Me.ComboBox2.Text = "Tipo de Asesor Profesional"
         '
         'Label5
         '
@@ -161,16 +161,16 @@ Partial Class Empresa_AsesoresProfesionales
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(64, 67)
+        Me.TextBox3.Location = New System.Drawing.Point(71, 67)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(392, 21)
+        Me.TextBox3.Size = New System.Drawing.Size(385, 21)
         Me.TextBox3.TabIndex = 6
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(64, 94)
+        Me.TextBox4.Location = New System.Drawing.Point(71, 94)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(392, 21)
+        Me.TextBox4.Size = New System.Drawing.Size(385, 21)
         Me.TextBox4.TabIndex = 5
         '
         'Label4
@@ -193,16 +193,16 @@ Partial Class Empresa_AsesoresProfesionales
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(64, 40)
+        Me.TextBox2.Location = New System.Drawing.Point(71, 40)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(392, 21)
+        Me.TextBox2.Size = New System.Drawing.Size(385, 21)
         Me.TextBox2.TabIndex = 2
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(64, 13)
+        Me.TextBox1.Location = New System.Drawing.Point(71, 13)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(392, 21)
+        Me.TextBox1.Size = New System.Drawing.Size(385, 21)
         Me.TextBox1.TabIndex = 1
         '
         'Label1
@@ -241,9 +241,9 @@ Partial Class Empresa_AsesoresProfesionales
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(64, 146)
+        Me.TextBox5.Location = New System.Drawing.Point(71, 149)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(392, 21)
+        Me.TextBox5.Size = New System.Drawing.Size(385, 21)
         Me.TextBox5.TabIndex = 42
         '
         'Label6
@@ -258,11 +258,11 @@ Partial Class Empresa_AsesoresProfesionales
         'ComboBox3
         '
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(64, 171)
+        Me.ComboBox3.Location = New System.Drawing.Point(71, 174)
         Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(392, 23)
+        Me.ComboBox3.Size = New System.Drawing.Size(385, 23)
         Me.ComboBox3.TabIndex = 40
-        Me.ComboBox3.Text = "Tio de Asesor Profesional"
+        Me.ComboBox3.Text = "Tipo de Asesor Profesional"
         '
         'Label8
         '
@@ -284,16 +284,16 @@ Partial Class Empresa_AsesoresProfesionales
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(64, 94)
+        Me.TextBox6.Location = New System.Drawing.Point(71, 97)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(392, 21)
+        Me.TextBox6.Size = New System.Drawing.Size(385, 21)
         Me.TextBox6.TabIndex = 37
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(64, 121)
+        Me.TextBox7.Location = New System.Drawing.Point(71, 124)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(392, 21)
+        Me.TextBox7.Size = New System.Drawing.Size(385, 21)
         Me.TextBox7.TabIndex = 36
         '
         'Label10
@@ -316,16 +316,16 @@ Partial Class Empresa_AsesoresProfesionales
         '
         'TextBox8
         '
-        Me.TextBox8.Location = New System.Drawing.Point(64, 67)
+        Me.TextBox8.Location = New System.Drawing.Point(71, 70)
         Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(392, 21)
+        Me.TextBox8.Size = New System.Drawing.Size(385, 21)
         Me.TextBox8.TabIndex = 33
         '
         'TextBox10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(64, 40)
+        Me.TextBox10.Location = New System.Drawing.Point(71, 43)
         Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(392, 21)
+        Me.TextBox10.Size = New System.Drawing.Size(385, 21)
         Me.TextBox10.TabIndex = 32
         '
         'Label12
@@ -375,12 +375,12 @@ Partial Class Empresa_AsesoresProfesionales
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Información del campo seleccionado"
         '
-        'Menu1
+        'Tabla2
         '
-        Me.Menu1.Location = New System.Drawing.Point(12, 7)
-        Me.Menu1.Name = "Menu1"
-        Me.Menu1.Size = New System.Drawing.Size(1240, 32)
-        Me.Menu1.TabIndex = 15
+        Me.Tabla2.Location = New System.Drawing.Point(6, 20)
+        Me.Tabla2.Name = "Tabla2"
+        Me.Tabla2.Size = New System.Drawing.Size(461, 313)
+        Me.Tabla2.TabIndex = 0
         '
         'Tabla1
         '
@@ -389,12 +389,12 @@ Partial Class Empresa_AsesoresProfesionales
         Me.Tabla1.Size = New System.Drawing.Size(761, 596)
         Me.Tabla1.TabIndex = 16
         '
-        'Tabla2
+        'Menu1
         '
-        Me.Tabla2.Location = New System.Drawing.Point(6, 20)
-        Me.Tabla2.Name = "Tabla2"
-        Me.Tabla2.Size = New System.Drawing.Size(461, 313)
-        Me.Tabla2.TabIndex = 0
+        Me.Menu1.Location = New System.Drawing.Point(12, 7)
+        Me.Menu1.Name = "Menu1"
+        Me.Menu1.Size = New System.Drawing.Size(1240, 32)
+        Me.Menu1.TabIndex = 15
         '
         'Empresa_AsesoresProfesionales
         '
