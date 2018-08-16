@@ -1,0 +1,24 @@
+C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\Encapsuladoras\bin\x86\Debug\Encapsuladoras.dll
+C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\Encapsuladoras\bin\x86\Debug\Encapsuladoras.pdb
+C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\Encapsuladoras\bin\x86\Debug\Encapsuladoras.xml
+C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\Encapsuladoras\obj\x86\Debug\Encapsuladoras.Resources.resources
+C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\Encapsuladoras\obj\x86\Debug\Encapsuladoras.vbproj.GenerateResource.Cache
+C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\Encapsuladoras\obj\x86\Debug\Encapsuladoras.dll
+C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\Encapsuladoras\obj\x86\Debug\Encapsuladoras.xml
+C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\Encapsuladoras\obj\x86\Debug\Encapsuladoras.pdb
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Encapsuladoras\bin\x86\Debug\Encapsuladoras.dll
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Encapsuladoras\bin\x86\Debug\Encapsuladoras.pdb
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Encapsuladoras\bin\x86\Debug\Encapsuladoras.xml
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Encapsuladoras\obj\x86\Debug\Encapsuladoras.Resources.resources
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Encapsuladoras\obj\x86\Debug\Encapsuladoras.vbproj.GenerateResource.Cache
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Encapsuladoras\obj\x86\Debug\Encapsuladoras.dll
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Encapsuladoras\obj\x86\Debug\Encapsuladoras.xml
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Encapsuladoras\obj\x86\Debug\Encapsuladoras.pdb
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Encapsuladoras\bin\x86\Debug\Encapsuladoras.dll
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Encapsuladoras\bin\x86\Debug\Encapsuladoras.pdb
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Encapsuladoras\bin\x86\Debug\Encapsuladoras.xml
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Encapsuladoras\obj\x86\Debug\Encapsuladoras.Resources.resources
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Encapsuladoras\obj\x86\Debug\Encapsuladoras.vbproj.GenerateResource.Cache
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Encapsuladoras\obj\x86\Debug\Encapsuladoras.dll
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Encapsuladoras\obj\x86\Debug\Encapsuladoras.xml
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Encapsuladoras\obj\x86\Debug\Encapsuladoras.pdb
