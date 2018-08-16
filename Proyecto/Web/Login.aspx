@@ -1,6 +1,8 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Login.aspx.vb" Inherits="Web.Login" %>
+﻿<%@ Page Title="Login" Language="vb" MasterPageFile="~/Site1.Master" AutoEventWireup="false" CodeBehind="Login.aspx.vb" Inherits="Web.Login" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
 <script runat="server">
     Dim datos As New Datos.UsuarioLogeadoWeb
     Dim Neg As New Negocio.VerificarOtros
@@ -28,12 +30,14 @@
         Label3.Text = "No Logeado"
     End Sub
 </script>
+<asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
+
+</asp:Content>
+
+<asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <div>
     
         <asp:Label ID="Label3" runat="server" Text="No Logeado"></asp:Label>
@@ -51,6 +55,4 @@
     <p>
         <asp:Button runat="server" Text="Aceptar" OnCLick="log"/>
     </p>
-    </form>
-</body>
-</html>
+</asp:Content>
