@@ -1,40 +1,38 @@
-﻿Imports System.Data.Odbc
-Imports System.Data.SqlClient
+﻿Imports MySql.Data.MySqlClient
+Imports System.Data.Odbc
 
 Public Class DatosEmpresa
     Public Con As Conexion = New Conexion
+    Dim sql As String
+    Dim cm As MySqlCommand
+    Dim da As MySqlDataAdapter
+    Dim ds As DataSet
 
-    Public Function ListaSucursales() As ArrayList
-        Dim arr As New ArrayList
+    Public Function ListaSucursales() As DataSet
+        sql = "CALL `proyecto`.`LABM_Sucursales`(?opcion,?ID_S,?nombre,?direccion);"
         Try
-            Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Sucursales (?,?,?,?)}", Con.cn)
-            cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.AddWithValue("opcion", 1)
-            cmd.Parameters.AddWithValue("ID_S", 0)
-            cmd.Parameters.AddWithValue("nombre", "")
-            cmd.Parameters.AddWithValue("direccion", "")
-            Con.cn.Open()
-            cmd.ExecuteNonQuery()
-            Dim dr As OdbcDataReader = cmd.ExecuteReader()
-            While dr.Read
-                Dim nodo As Encapsuladoras.Sucursales = New Encapsuladoras.Sucursales
-                nodo.IDSucursal = dr.GetInt32(0)
-                nodo.NombreSucursal = dr.GetString(1)
-                nodo.DireccionSucursal = dr.GetString(2)
-                nodo.EliminadoSucursal = dr.GetBoolean(3)
-                arr.Add(nodo)
-            End While
-            dr.Close()
+            Con.cn2.Open()
+            cm = New MySqlCommand()
+            cm.CommandText = sql
+            cm.Connection = Con.cn2
+            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
+            cm.Parameters.Add("?ID_S", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?nombre", MySqlDbType.VarChar).Value = "0"
+            cm.Parameters.Add("?direccion", MySqlDbType.VarChar).Value = "0"
+            da = New MySqlDataAdapter(cm)
+            ds = New DataSet()
+            da.Fill(ds)
         Catch ex As Exception
+            MsgBox(ex.ToString)
         End Try
-        Con.cn.Close()
-        Return arr
+        Con.cn2.Close()
+        Return ds
     End Function
 
     Public Function ListaFuncionarios(Optional ByVal ID As Integer = 0) As ArrayList
         Dim arr As New ArrayList
         Try
-            Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Funcionarios (?,?)}", Con.cn)
+            Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Funcionarios (?,?)}", Con.cn1)
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.AddWithValue("opcion", 5)
             'cmd.Parameters.AddWithValue("ID_F", 0)
@@ -45,7 +43,7 @@ Public Class DatosEmpresa
             'cmd.Parameters.AddWithValue("cargo", "")
             'cmd.Parameters.AddWithValue("usuario", "")
             cmd.Parameters.AddWithValue("id_sucursal", ID)
-            Con.cn.Open()
+            Con.cn1.Open()
             cmd.ExecuteNonQuery()
             Dim dr As OdbcDataReader = cmd.ExecuteReader()
             While dr.Read
@@ -64,25 +62,25 @@ Public Class DatosEmpresa
             dr.Close()
         Catch ex As Exception
         End Try
-        Con.cn.Close()
+        Con.cn1.Close()
         Return arr
     End Function
 
     Public Function IngresoSucursal(ByVal nodo As Encapsuladoras.Sucursales) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Sucursales (?,?,?,?)}", Con.cn)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Sucursales (?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 2)
                 cmd.Parameters.AddWithValue("ID_S", 0)
                 cmd.Parameters.AddWithValue("nombre", nodo.NombreSucursal)
                 cmd.Parameters.AddWithValue("direccion", nodo.DireccionSucursal)
-                Con.cn.Open()
+                Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
                 Return False
             Finally
-                Con.cn.Close()
+                Con.cn1.Close()
             End Try
             Return True
         Catch ex As Exception
@@ -94,18 +92,18 @@ Public Class DatosEmpresa
     Public Function EliminoSucursal(ByVal nodo As Encapsuladoras.Sucursales) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Sucursales (?,?,?,?)}", Con.cn)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Sucursales (?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 3)
                 cmd.Parameters.AddWithValue("ID_S", nodo.IDSucursal)
                 cmd.Parameters.AddWithValue("nombre", "")
                 cmd.Parameters.AddWithValue("direccion", "")
-                Con.cn.Open()
+                Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
                 Return False
             Finally
-                Con.cn.Close()
+                Con.cn1.Close()
             End Try
             Return True
         Catch ex As Exception
@@ -117,18 +115,18 @@ Public Class DatosEmpresa
     Public Function ModificoSucursal(ByVal nodo As Encapsuladoras.Sucursales) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Sucursales (?,?,?,?)}", Con.cn)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Sucursales (?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 4)
                 cmd.Parameters.AddWithValue("ID_S", nodo.IDSucursal)
                 cmd.Parameters.AddWithValue("nombre", nodo.NombreSucursal)
                 cmd.Parameters.AddWithValue("direccion", nodo.DireccionSucursal)
-                Con.cn.Open()
+                Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
                 Return False
             Finally
-                Con.cn.Close()
+                Con.cn1.Close()
             End Try
             Return True
         Catch ex As Exception

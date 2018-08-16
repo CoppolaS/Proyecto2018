@@ -6,11 +6,11 @@ Public Class DatosOtros
 
     Public Function LoginPrograma(ByVal User As String, ByVal Pass As String) As Boolean
         Try
-            Dim cmd As OdbcCommand = New OdbcCommand("{call Login_Programa (?,?)}", Con.cn)
+            Dim cmd As OdbcCommand = New OdbcCommand("{call Login_Programa (?,?)}", Con.cn1)
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.AddWithValue("usuario", User)
             cmd.Parameters.AddWithValue("contrasena", Pass)
-            Con.cn.Open()
+            Con.cn1.Open()
             cmd.ExecuteNonQuery()
             Dim dr As OdbcDataReader = cmd.ExecuteReader()
             dr.Read()
@@ -25,7 +25,7 @@ Public Class DatosOtros
         Catch ex As Exception
             UsuarioLogeado.Logeado = False
         End Try
-        Con.cn.Close()
+        Con.cn1.Close()
         Return False
     End Function
 
