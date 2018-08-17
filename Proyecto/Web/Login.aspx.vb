@@ -10,4 +10,7 @@
         Neg.VerificarLoginWeb(user, contra)
     End Sub
 
+    Protected Sub Close(ByVal sender As Object, ByVal e As EventArgs) Handles Button1.Click
+
+    End Sub
 End Class

@@ -6,7 +6,23 @@ Web
 </name>
 </assembly>
 <members>
-<member name="P:Web.My.MyWebExtension.Application">
+<member name="F:Web.Menu.form1">
+	<summary>
+control form1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:Web.Menu.ContentPlaceHolder1">
+	<summary>
+Control ContentPlaceHolder1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="P:Web.My.MyWebExtension.Application">
 	<summary>
  Devuelve información sobre la aplicación actual.
  </summary>
@@ -39,9 +55,25 @@ Web
  Módulo usado para definir las propiedades que están disponibles en el espacio de nombres My para proyectos web.
  </summary>
 	<remarks></remarks>
-</member><member name="F:Web.Index.form1">
+</member><member name="F:Web.Login.Head1">
+	<summary>
+Control Head1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:Web.Login.form1">
 	<summary>
 Control form1.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:Web.Login.NavigationMenu">
+	<summary>
+Control NavigationMenu.
 </summary>
 	<remarks>
 Campo generado automáticamente.
@@ -63,9 +95,9 @@ Control Label4.
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
-</member><member name="F:Web.Login.Button1">
+</member><member name="F:Web.Login.ButtonC">
 	<summary>
-Control Button1.
+Control ButtonC.
 </summary>
 	<remarks>
 Campo generado automáticamente.
@@ -98,6 +130,14 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 </member><member name="F:Web.Login.Contraseña">
 	<summary>
 Control Contraseña.
+</summary>
+	<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member><member name="F:Web.Login.Button1">
+	<summary>
+Control Button1.
 </summary>
 	<remarks>
 Campo generado automáticamente.
