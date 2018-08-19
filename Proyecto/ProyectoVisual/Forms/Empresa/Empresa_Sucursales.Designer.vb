@@ -42,6 +42,7 @@ Partial Class Empresa_Sucursales
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Tabla1 = New Proyecto.Tabla()
         Me.Menu1 = New Proyecto.Menu()
         Me.Tabla2 = New Proyecto.Tabla()
@@ -217,7 +218,7 @@ Partial Class Empresa_Sucursales
         '
         Me.buscador.Location = New System.Drawing.Point(116, 45)
         Me.buscador.Name = "buscador"
-        Me.buscador.Size = New System.Drawing.Size(185, 20)
+        Me.buscador.Size = New System.Drawing.Size(144, 20)
         Me.buscador.TabIndex = 17
         '
         'Label3
@@ -232,19 +233,30 @@ Partial Class Empresa_Sucursales
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(367, 44)
+        Me.ComboBox1.Location = New System.Drawing.Point(326, 44)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(185, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(144, 21)
         Me.ComboBox1.TabIndex = 19
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(307, 48)
+        Me.Label4.Location = New System.Drawing.Point(266, 48)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(54, 13)
         Me.Label4.TabIndex = 20
         Me.Label4.Text = "Columna: "
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox1.Location = New System.Drawing.Point(476, 47)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(166, 17)
+        Me.CheckBox1.TabIndex = 21
+        Me.CheckBox1.Text = "Mostrar sucursales eliminadas"
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'Tabla1
         '
@@ -279,6 +291,7 @@ Partial Class Empresa_Sucursales
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label3)
@@ -326,4 +339,5 @@ Partial Class Empresa_Sucursales
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
 End Class

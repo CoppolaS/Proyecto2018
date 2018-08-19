@@ -8,6 +8,7 @@ Public Class DatosEmpresa
     Dim da As MySqlDataAdapter
     Dim ds As DataSet
 
+    'sucursales
     Public Function ListaSucursales() As DataSet
         sql = "CALL `proyecto`.`LABM_Sucursales`(?opcion,?ID_S,?nombre,?direccion);"
         Try
@@ -27,43 +28,6 @@ Public Class DatosEmpresa
         End Try
         Con.cn2.Close()
         Return ds
-    End Function
-
-    Public Function ListaFuncionarios(Optional ByVal ID As Integer = 0) As ArrayList
-        Dim arr As New ArrayList
-        Try
-            Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Funcionarios (?,?)}", Con.cn1)
-            cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.AddWithValue("opcion", 5)
-            'cmd.Parameters.AddWithValue("ID_F", 0)
-            'cmd.Parameters.AddWithValue("nombre", "")
-            'cmd.Parameters.AddWithValue("apellido", "")
-            'cmd.Parameters.AddWithValue("telefono", 0)
-            'cmd.Parameters.AddWithValue("mail", "")
-            'cmd.Parameters.AddWithValue("cargo", "")
-            'cmd.Parameters.AddWithValue("usuario", "")
-            cmd.Parameters.AddWithValue("id_sucursal", ID)
-            Con.cn1.Open()
-            cmd.ExecuteNonQuery()
-            Dim dr As OdbcDataReader = cmd.ExecuteReader()
-            While dr.Read
-                Dim nodo As Encapsuladoras.Funcionarios = New Encapsuladoras.Funcionarios
-                nodo.IDFuncionario = dr.GetInt32(0)
-                nodo.NombreFuncionario = dr.GetString(1)
-                nodo.ApellidoFuncionario = dr.GetString(2)
-                nodo.TelefonoFuncionario = dr.GetInt32(3)
-                nodo.MailFuncionario = dr.GetString(4)
-                nodo.CedulaFuncionario = dr.GetInt32(5)
-                nodo.EliminadoFuncionario = dr.GetBoolean(6)
-                nodo.CargoFuncionario = dr.GetString(7)
-                nodo.UsuarioFuncionario = dr.GetString(8)
-                arr.Add(nodo)
-            End While
-            dr.Close()
-        Catch ex As Exception
-        End Try
-        Con.cn1.Close()
-        Return arr
     End Function
 
     Public Function IngresoSucursal(ByVal nodo As Encapsuladoras.Sucursales) As Boolean
@@ -133,6 +97,26 @@ Public Class DatosEmpresa
             MsgBox("Error al modificar la sucursal")
         End Try
         Return False
+    End Function
+
+    'funcionarios
+    Public Function ListaFuncionarios(Optional ByVal ID As Integer = 0) As DataSet
+        sql = "CALL `proyecto`.`LABM_Funcionarios`(?opcion,?id_sucursal);"
+        Try
+            Con.cn2.Open()
+            cm = New MySqlCommand()
+            cm.CommandText = sql
+            cm.Connection = Con.cn2
+            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 5
+            cm.Parameters.Add("?id_sucursal", MySqlDbType.Int32).Value = ID
+            da = New MySqlDataAdapter(cm)
+            ds = New DataSet()
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Con.cn2.Close()
+        Return ds
     End Function
 
 End Class
