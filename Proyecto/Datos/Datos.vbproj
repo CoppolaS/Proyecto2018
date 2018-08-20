@@ -112,7 +112,6 @@
     </Compile>
     <Compile Include="DatosProducto_final.vb" />
     <Compile Include="Varios\UsuarioLogeado.vb" />
-    <Compile Include="Varios\UsuarioLogeadoWeb.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

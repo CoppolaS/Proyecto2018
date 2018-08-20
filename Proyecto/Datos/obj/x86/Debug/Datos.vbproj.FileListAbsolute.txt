@@ -18,17 +18,3 @@ D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.vbproj.
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.dll
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.xml
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.pdb
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Datos\bin\x86\Debug\Datos.dll
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Datos\bin\x86\Debug\Datos.pdb
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Datos\bin\x86\Debug\Datos.xml
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Datos\bin\x86\Debug\Encapsuladoras.dll
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Datos\bin\x86\Debug\MySql.Data.dll
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Datos\bin\x86\Debug\Encapsuladoras.pdb
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Datos\bin\x86\Debug\Encapsuladoras.xml
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Datos\bin\x86\Debug\MySql.Data.xml
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.vbprojResolveAssemblyReference.cache
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.Resources.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.vbproj.GenerateResource.Cache
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.dll
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.xml
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.pdb

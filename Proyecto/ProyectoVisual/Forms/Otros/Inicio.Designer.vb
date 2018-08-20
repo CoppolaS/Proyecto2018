@@ -23,13 +23,13 @@ Partial Class Inicio
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Tabla3 = New Proyecto.Tabla()
+        Me.Tabla2 = New Proyecto.Tabla()
+        Me.Tabla1 = New Proyecto.Tabla()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Menu1 = New Proyecto.Menu()
-        Me.Tabla1 = New Proyecto.Tabla()
-        Me.Tabla2 = New Proyecto.Tabla()
-        Me.Tabla3 = New Proyecto.Tabla()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -48,8 +48,30 @@ Partial Class Inicio
         Me.Panel2.Size = New System.Drawing.Size(1240, 623)
         Me.Panel2.TabIndex = 6
         '
+        'Tabla3
+        '
+        Me.Tabla3.Location = New System.Drawing.Point(838, 35)
+        Me.Tabla3.Name = "Tabla3"
+        Me.Tabla3.Size = New System.Drawing.Size(392, 578)
+        Me.Tabla3.TabIndex = 8
+        '
+        'Tabla2
+        '
+        Me.Tabla2.Location = New System.Drawing.Point(396, 35)
+        Me.Tabla2.Name = "Tabla2"
+        Me.Tabla2.Size = New System.Drawing.Size(436, 578)
+        Me.Tabla2.TabIndex = 7
+        '
+        'Tabla1
+        '
+        Me.Tabla1.Location = New System.Drawing.Point(8, 35)
+        Me.Tabla1.Name = "Tabla1"
+        Me.Tabla1.Size = New System.Drawing.Size(382, 578)
+        Me.Tabla1.TabIndex = 6
+        '
         'ComboBox3
         '
+        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox3.FormattingEnabled = True
         Me.ComboBox3.Items.AddRange(New Object() {"1 - Funcionarios", "2 - Materia prima", "3 - Parcelas", "4 - Plantaciones", "5 - Producto final", "6 - Usuarios de web", "7 - Vendedores", "8 - Vinos"})
         Me.ComboBox3.Location = New System.Drawing.Point(838, 8)
@@ -59,6 +81,7 @@ Partial Class Inicio
         '
         'ComboBox2
         '
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"1 - Funcionarios", "2 - Materia prima", "3 - Parcelas", "4 - Plantaciones", "5 - Producto final", "6 - Usuarios de web", "7 - Vendedores", "8 - Vinos"})
         Me.ComboBox2.Location = New System.Drawing.Point(396, 8)
@@ -68,6 +91,7 @@ Partial Class Inicio
         '
         'ComboBox1
         '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"1 - Funcionarios", "2 - Materia prima", "3 - Parcelas", "4 - Plantaciones", "5 - Producto final", "6 - Usuarios de web", "7 - Vendedores", "8 - Vinos"})
         Me.ComboBox1.Location = New System.Drawing.Point(8, 8)
@@ -81,27 +105,6 @@ Partial Class Inicio
         Me.Menu1.Name = "Menu1"
         Me.Menu1.Size = New System.Drawing.Size(1240, 32)
         Me.Menu1.TabIndex = 7
-        '
-        'Tabla1
-        '
-        Me.Tabla1.Location = New System.Drawing.Point(8, 35)
-        Me.Tabla1.Name = "Tabla1"
-        Me.Tabla1.Size = New System.Drawing.Size(382, 578)
-        Me.Tabla1.TabIndex = 6
-        '
-        'Tabla2
-        '
-        Me.Tabla2.Location = New System.Drawing.Point(396, 35)
-        Me.Tabla2.Name = "Tabla2"
-        Me.Tabla2.Size = New System.Drawing.Size(436, 578)
-        Me.Tabla2.TabIndex = 7
-        '
-        'Tabla3
-        '
-        Me.Tabla3.Location = New System.Drawing.Point(838, 35)
-        Me.Tabla3.Name = "Tabla3"
-        Me.Tabla3.Size = New System.Drawing.Size(392, 578)
-        Me.Tabla3.TabIndex = 8
         '
         'Inicio
         '

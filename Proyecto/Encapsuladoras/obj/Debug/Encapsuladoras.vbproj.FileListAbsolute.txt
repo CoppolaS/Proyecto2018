@@ -1,8 +1,0 @@
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Encapsuladoras\bin\Debug\Encapsuladoras.dll
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Encapsuladoras\bin\Debug\Encapsuladoras.pdb
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Encapsuladoras\bin\Debug\Encapsuladoras.xml
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Encapsuladoras\obj\Debug\Encapsuladoras.Resources.resources
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Encapsuladoras\obj\Debug\Encapsuladoras.vbproj.GenerateResource.Cache
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Encapsuladoras\obj\Debug\Encapsuladoras.dll
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Encapsuladoras\obj\Debug\Encapsuladoras.xml
-C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Encapsuladoras\obj\Debug\Encapsuladoras.pdb
