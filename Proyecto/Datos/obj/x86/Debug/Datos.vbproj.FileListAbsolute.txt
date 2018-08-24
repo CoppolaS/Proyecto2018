@@ -18,3 +18,5 @@ D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.vbproj.
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.dll
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.xml
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.pdb
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\bin\x86\Debug\MySql.Data.dll
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\bin\x86\Debug\MySql.Data.xml
