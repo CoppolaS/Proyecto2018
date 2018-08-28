@@ -1,0 +1,40 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/Menu.Master" AutoEventWireup="false" CodeBehind="Site1.master.vb" Inherits="Web.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="~/CSS/Estilos.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="header">
+    <div class="title">
+        <h1>
+            [NOMBRE DE LA BODEGA]
+        </h1>
+    </div>
+    <div class="loginDisplay">
+    </div>
+    <div class="clear hideSkiplink">
+        <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+            <Items>
+                <asp:MenuItem NavigateUrl="~/Index.aspx" Text="Página principal"/>
+                <asp:MenuItem NavigateUrl="~/Productos.aspx" Text="Productos"/>
+                <asp:MenuItem NavigateUrl="~/Acerca.aspx" Text="Acerca de"/>
+                <asp:MenuItem NavigateUrl="~/Contacto.aspx" Text="Contacto"/>
+            </Items>
+        </asp:Menu>
+    </div>
+</div>
+    <div>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
