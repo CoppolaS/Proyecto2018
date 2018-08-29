@@ -14,6 +14,10 @@ Public Class VerificarOtros
         End If
     End Sub
 
+    Public Function VerificarLoginWeb(ByVal UsuarioPrograma As String, ByVal ContrasenaPrograma As String)
+        Return DatosD.LoginWeb(UsuarioPrograma, ContrasenaPrograma)
+    End Function
+
     Public Function VerificarVentanas(ByVal Opcion As Integer, Optional ByVal ventana As Integer = 0) As DataView
         ds = DatosD.VentanasInicio(Opcion, ventana)
         dv.RowFilter = "Eliminado = 0"

@@ -18,5 +18,15 @@ D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.vbproj.
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.dll
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.xml
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\obj\x86\Debug\Datos.pdb
-D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\bin\x86\Debug\MySql.Data.dll
-D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Datos\bin\x86\Debug\MySql.Data.xml
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Datos\bin\x86\Debug\Datos.dll
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Datos\bin\x86\Debug\Datos.pdb
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Datos\bin\x86\Debug\Datos.xml
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Datos\bin\x86\Debug\Encapsuladoras.dll
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Datos\bin\x86\Debug\Encapsuladoras.pdb
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Datos\bin\x86\Debug\Encapsuladoras.xml
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Datos\obj\x86\Debug\Datos.vbprojResolveAssemblyReference.cache
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Datos\obj\x86\Debug\Datos.Resources.resources
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Datos\obj\x86\Debug\Datos.vbproj.GenerateResource.Cache
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Datos\obj\x86\Debug\Datos.dll
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Datos\obj\x86\Debug\Datos.xml
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Datos\obj\x86\Debug\Datos.pdb

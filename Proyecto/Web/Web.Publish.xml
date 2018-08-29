@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\Users\--\Documents\web" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Perfil1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="08/16/2018 11:34:55" />
+    <file relUrl="bin/Datos.pdb" publishTime="08/16/2018 11:33:20" />
+    <file relUrl="bin/Web.xml" publishTime="08/16/2018 11:33:21" />
+    <file relUrl="bin/Datos.xml" publishTime="08/16/2018 11:33:20" />
+    <file relUrl="Login.aspx" publishTime="08/16/2018 11:17:53" />
+    <file relUrl="bin/Encapsuladoras.dll" publishTime="08/16/2018 11:33:20" />
+    <file relUrl="bin/Negocio.dll" publishTime="08/16/2018 11:33:21" />
+    <file relUrl="Menu.Master" publishTime="08/16/2018 10:57:02" />
+    <file relUrl="bin/Negocio.xml" publishTime="08/16/2018 11:33:21" />
+    <file relUrl="bin/Web.pdb" publishTime="08/16/2018 11:33:21" />
+    <file relUrl="CSS/Estilos.css" publishTime="08/16/2018 10:40:52" />
+    <file relUrl="bin/Web.dll" publishTime="08/16/2018 11:33:21" />
+    <file relUrl="bin/Negocio.pdb" publishTime="08/16/2018 11:33:21" />
+    <file relUrl="bin/Encapsuladoras.xml" publishTime="08/16/2018 11:33:20" />
+    <file relUrl="bin/Datos.dll" publishTime="08/16/2018 11:33:20" />
+    <file relUrl="bin/Encapsuladoras.pdb" publishTime="08/16/2018 11:33:20" />
+    <file relUrl="Index.aspx" publishTime="08/16/2018 10:58:47" />
+  </publishProfile>
+</publishData>

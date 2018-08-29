@@ -33,6 +33,62 @@ Public Class DatosOtros
         Return False
     End Function
 
+    Public Function LoginWeb(ByVal User As String, ByVal Pass As String) As Boolean
+        Try
+            Dim cmd2 As OdbcCommand = New OdbcCommand("{call Login_Web1 (?,?)}", Con.cn1)
+            cmd2.CommandType = CommandType.StoredProcedure
+            cmd2.Parameters.AddWithValue("usuarioV", User)
+            cmd2.Parameters.AddWithValue("contrasenaV", Pass)
+            Con.cn1.Open()
+            cmd2.ExecuteNonQuery()
+            Dim dr2 As OdbcDataReader = cmd2.ExecuteReader()
+            Dim tipo As New Integer
+            dr2.Read()
+            tipo = dr2.GetInt32(0)
+            dr2.Close()
+            Con.cn1.Close()
+            Dim cmd As OdbcCommand = New OdbcCommand("{call Login_Web2 (?,?,?)}", Con.cn1)
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("usuarioV", User)
+            cmd.Parameters.AddWithValue("contrasenaV", Pass)
+            cmd.Parameters.AddWithValue("tipo", tipo)
+            Con.cn1.Open()
+            cmd.ExecuteNonQuery()
+            Dim dr As OdbcDataReader = cmd.ExecuteReader()
+            dr.Read()
+            If (dr.GetInt32(0) = 0) Then
+                Return 2
+            ElseIf (dr.GetValue(1) = 1) Then
+                Return 3
+            Else
+                If (tipo = 1) Then
+                    UsuarioLogeadoWeb.Log = 1
+                    UsuarioLogeadoWeb.id = dr.GetInt32(0)
+                    UsuarioLogeadoWeb.Tipo = tipo
+                    UsuarioLogeadoWeb.Nombre = dr.GetString(2)
+                    UsuarioLogeadoWeb.Telefono = dr.GetString(3)
+                    UsuarioLogeadoWeb.Mail = dr.GetString(4)
+                    UsuarioLogeadoWeb.Direccion = dr.GetString(5)
+                ElseIf (tipo = 2) Then
+                    UsuarioLogeadoWeb.Log = 1
+                    UsuarioLogeadoWeb.id = dr.GetInt32(0)
+                    UsuarioLogeadoWeb.Tipo = tipo
+                    UsuarioLogeadoWeb.Nombre = dr.GetString(2)
+                    UsuarioLogeadoWeb.Apellido = dr.GetString(3)
+                    UsuarioLogeadoWeb.Telefono = dr.GetString(4)
+                    UsuarioLogeadoWeb.Cedula = dr.GetString(5)
+                    UsuarioLogeadoWeb.Mail = dr.GetString(6)
+                End If
+            End If
+            dr.Close()
+        Catch ex As Exception
+            UsuarioLogeadoWeb.Log = 0
+            Return 2
+        End Try
+        Con.cn1.Close()
+        Return 1
+    End Function
+
     Public Function VentanasInicio(ByVal Opcion As Integer, Optional ByVal ventana As Integer = 0) As DataSet
         sql = "CALL `proyecto`.`Inicio`(?opcion,?user,?pass,?ventana);"
         Try

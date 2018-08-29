@@ -1,0 +1,54 @@
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Web\bin\x86\Debug\Web.dll
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Web\bin\x86\Debug\Web.pdb
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Web\bin\x86\Debug\Web.xml
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Web\bin\x86\Debug\Datos.dll
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Web\bin\x86\Debug\Negocio.dll
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Web\bin\x86\Debug\Encapsuladoras.dll
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Web\bin\x86\Debug\Datos.pdb
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Web\bin\x86\Debug\Datos.xml
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Web\bin\x86\Debug\Negocio.pdb
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Web\bin\x86\Debug\Negocio.xml
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Web\bin\x86\Debug\Encapsuladoras.pdb
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Web\bin\x86\Debug\Encapsuladoras.xml
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Web\obj\x86\Debug\Web.vbprojResolveAssemblyReference.cache
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Web\obj\x86\Debug\Web.Resources.resources
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Web\obj\x86\Debug\Web.vbproj.GenerateResource.Cache
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Web\obj\x86\Debug\Web.dll
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Web\obj\x86\Debug\Web.xml
+C:\Users\--\Documents\GitHub\Proyecto2018\Proyecto\Web\obj\x86\Debug\Web.pdb
+C:\Users\--\Desktop\ver vieja\Proyecto\Web\bin\x86\Debug\Web.dll
+C:\Users\--\Desktop\ver vieja\Proyecto\Web\bin\x86\Debug\Web.pdb
+C:\Users\--\Desktop\ver vieja\Proyecto\Web\bin\x86\Debug\Web.xml
+C:\Users\--\Desktop\ver vieja\Proyecto\Web\bin\x86\Debug\Datos.dll
+C:\Users\--\Desktop\ver vieja\Proyecto\Web\bin\x86\Debug\Negocio.dll
+C:\Users\--\Desktop\ver vieja\Proyecto\Web\bin\x86\Debug\Encapsuladoras.dll
+C:\Users\--\Desktop\ver vieja\Proyecto\Web\bin\x86\Debug\Datos.pdb
+C:\Users\--\Desktop\ver vieja\Proyecto\Web\bin\x86\Debug\Datos.xml
+C:\Users\--\Desktop\ver vieja\Proyecto\Web\bin\x86\Debug\Negocio.pdb
+C:\Users\--\Desktop\ver vieja\Proyecto\Web\bin\x86\Debug\Negocio.xml
+C:\Users\--\Desktop\ver vieja\Proyecto\Web\bin\x86\Debug\Encapsuladoras.pdb
+C:\Users\--\Desktop\ver vieja\Proyecto\Web\bin\x86\Debug\Encapsuladoras.xml
+C:\Users\--\Desktop\ver vieja\Proyecto\Web\obj\x86\Debug\Web.vbprojResolveAssemblyReference.cache
+C:\Users\--\Desktop\ver vieja\Proyecto\Web\obj\x86\Debug\Web.Resources.resources
+C:\Users\--\Desktop\ver vieja\Proyecto\Web\obj\x86\Debug\Web.vbproj.GenerateResource.Cache
+C:\Users\--\Desktop\ver vieja\Proyecto\Web\obj\x86\Debug\Web.dll
+C:\Users\--\Desktop\ver vieja\Proyecto\Web\obj\x86\Debug\Web.xml
+C:\Users\--\Desktop\ver vieja\Proyecto\Web\obj\x86\Debug\Web.pdb
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Web\bin\x86\Debug\Web.dll
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Web\bin\x86\Debug\Web.pdb
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Web\bin\x86\Debug\Web.xml
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Web\bin\x86\Debug\Datos.dll
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Web\bin\x86\Debug\Negocio.dll
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Web\bin\x86\Debug\Encapsuladoras.dll
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Web\bin\x86\Debug\Datos.pdb
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Web\bin\x86\Debug\Datos.xml
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Web\bin\x86\Debug\Negocio.pdb
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Web\bin\x86\Debug\Negocio.xml
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Web\bin\x86\Debug\Encapsuladoras.pdb
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Web\bin\x86\Debug\Encapsuladoras.xml
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Web\obj\x86\Debug\Web.vbprojResolveAssemblyReference.cache
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Web\obj\x86\Debug\Web.Resources.resources
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Web\obj\x86\Debug\Web.vbproj.GenerateResource.Cache
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Web\obj\x86\Debug\Web.dll
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Web\obj\x86\Debug\Web.xml
+C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Web\obj\x86\Debug\Web.pdb
