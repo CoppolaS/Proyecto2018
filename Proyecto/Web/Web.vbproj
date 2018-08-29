@@ -186,11 +186,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Datos\Datos.vbproj">
+    <ProjectReference Include="..\Datos\Datos.vbproj">
       <Project>{40E7D46F-2A01-4B26-82F6-B8FDAACE26AD}</Project>
       <Name>Datos</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Negocio\Negocio.vbproj">
+    <ProjectReference Include="..\Negocio\Negocio.vbproj">
       <Project>{EC917023-4509-4DF7-857C-A4D0300677F4}</Project>
       <Name>Negocio</Name>
     </ProjectReference>
