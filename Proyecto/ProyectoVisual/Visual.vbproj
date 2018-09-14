@@ -326,6 +326,12 @@
     <Compile Include="Forms\Producto intermedio\ProductoIntermedio_Transportes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Produccion.Designer.vb">
+      <DependentUpon>Produccion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\Otros\Tabla.resx">
@@ -441,6 +447,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Producto intermedio\ProductoIntermedio_Transportes.resx">
       <DependentUpon>ProductoIntermedio_Transportes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produccion.resx">
+      <DependentUpon>Produccion.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
