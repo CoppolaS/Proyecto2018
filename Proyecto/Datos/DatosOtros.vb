@@ -20,10 +20,11 @@ Public Class DatosOtros
             dr.Read()
             UsuarioLogeado.User = dr.GetString(0)
             UsuarioLogeado.Pass = dr.GetString(1)
-            UsuarioLogeado.Cargo = dr.GetString(2)
-            UsuarioLogeado.Ventana1 = dr.GetInt32(3)
-            UsuarioLogeado.Ventana2 = dr.GetInt32(4)
-            UsuarioLogeado.Ventana3 = dr.GetInt32(5)
+            UsuarioLogeado.Privilegios = dr.GetInt32(2)
+            UsuarioLogeado.Cargo = dr.GetString(3)
+            UsuarioLogeado.Ventana1 = dr.GetInt32(4)
+            UsuarioLogeado.Ventana2 = dr.GetInt32(5)
+            UsuarioLogeado.Ventana3 = dr.GetInt32(6)
             UsuarioLogeado.Logeado = True
             dr.Close()
         Catch ex As Exception

@@ -5,21 +5,23 @@ Public Class Menu
 
     Private Sub Menu_Load(sender As Object, e As EventArgs) Handles Me.Load
         Label1.Text = Datos.UsuarioLogeado.User & vbNewLine & Datos.UsuarioLogeado.Cargo
-        Dim cargo As String = Datos.UsuarioLogeado.Cargo
-        Select Case cargo
-            Case "Técnico"
-                'MsgBox("tecnico")
-            Case "Gerente general"
-                'MsgBox("gerente general")
-            Case "Administrativo"
-                PersonalToolStripMenuItem.Enabled = False
-                CargosToolStripMenuItem.Enabled = False
-                CompradoresToolStripMenuItem.Enabled = False
-                CargosToolStripMenuItem.Enabled = False
-                SucursalesToolStripMenuItem.Enabled = False
-                TiposDeAsesoresToolStripMenuItem.Enabled = False
-                VendedoresToolStripMenuItem.Enabled = False
-        End Select
+        Dim privilegios As Integer = Datos.UsuarioLogeado.Privilegios
+        'Select Case cargo
+        '    Case 1
+        '        'MsgBox("tecnico")
+        '    Case 2
+        '        'MsgBox("gerente general")
+        '    Case 3
+        '        PersonalToolStripMenuItem.Enabled = False
+        '        CargosToolStripMenuItem.Enabled = False
+        '        CompradoresToolStripMenuItem.Enabled = False
+        '        CargosToolStripMenuItem.Enabled = False
+        '        SucursalesToolStripMenuItem.Enabled = False
+        '        TiposDeAsesoresToolStripMenuItem.Enabled = False
+        '        VendedoresToolStripMenuItem.Enabled = False
+        '   Case 4
+        '       algo
+        'End Select
     End Sub
 
     Private Sub InicioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InicioToolStripMenuItem.Click

@@ -136,6 +136,12 @@
     <Compile Include="Forms\Empresa\Empresa_Funcionarios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\Otros\ComboBoxSucursales.Designer.vb">
+      <DependentUpon>ComboBoxSucursales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Otros\ComboBoxSucursales.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Forms\Otros\Estadisticas.Designer.vb">
       <DependentUpon>Estadisticas.vb</DependentUpon>
     </Compile>
@@ -334,6 +340,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\Otros\ComboBoxSucursales.resx">
+      <DependentUpon>ComboBoxSucursales.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Otros\Tabla.resx">
       <DependentUpon>Tabla.vb</DependentUpon>
     </EmbeddedResource>

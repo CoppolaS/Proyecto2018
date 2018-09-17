@@ -204,3 +204,5 @@ C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\ProyectoVisual\obj\x86
 C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.ProductoIntermedio_Transacciones.resources
 C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.ProductoIntermedio_Transportes.resources
 C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\ProyectoVisual\obj\x86\Debug\Visual.vbproj.GenerateResource.Cache
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Produccion.resources
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.ComboBoxSucursales.resources
