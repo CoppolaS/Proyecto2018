@@ -6,10 +6,13 @@
     Private Mail As String
     Private Cargo As String
     Private Usuario As String
+    Private Contrasena As String
     Private Eliminado As Boolean
     Private Cedula As Integer
+    Private Sucursal As String
+    Private Privilegios As Integer
 
-    Public Sub New(ByVal ID_Funcionarios As Integer, ByVal Nombre As String, ByVal Apellido As String, ByVal Telefono As Integer, ByVal Mail As String, ByVal Cargo As String, ByVal Usuario As String, ByVal Eliminado As Boolean, ByVal Cedula As Integer)
+    Public Sub New(ByVal ID_Funcionarios As Integer, ByVal Nombre As String, ByVal Apellido As String, ByVal Telefono As Integer, ByVal Mail As String, ByVal Cargo As String, ByVal Usuario As String, ByVal Contrasena As String, ByVal Eliminado As Boolean, ByVal Cedula As Integer, ByVal Sucursal As String, ByVal Privilegios As Integer)
         Me.ID_Funcionarios = ID_Funcionarios
         Me.Nombre = Nombre
         Me.Apellido = Apellido
@@ -17,8 +20,11 @@
         Me.Mail = Mail
         Me.Cargo = Cargo
         Me.Usuario = Usuario
+        Me.Contrasena = Contrasena
         Me.Eliminado = Eliminado
         Me.Cedula = Cedula
+        Me.Sucursal = Sucursal
+        Me.Privilegios = Privilegios
     End Sub
 
     Public Sub New()
@@ -88,6 +94,15 @@
         End Set
     End Property
 
+    Public Property ContrasenaFuncionario() As String
+        Get
+            Return Me.Contrasena
+        End Get
+        Set(ByVal value As String)
+            Me.Contrasena = value
+        End Set
+    End Property
+
     Public Property EliminadoFuncionario() As Boolean
         Get
             Return Me.Eliminado
@@ -103,6 +118,24 @@
         End Get
         Set(ByVal value As Integer)
             Me.Cedula = value
+        End Set
+    End Property
+
+    Public Property SucursalFuncionario() As String
+        Get
+            Return Me.Sucursal
+        End Get
+        Set(ByVal value As String)
+            Me.Sucursal = value
+        End Set
+    End Property
+
+    Public Property PrivilegiosFuncionario() As Integer
+        Get
+            Return Me.Privilegios
+        End Get
+        Set(ByVal value As Integer)
+            Me.Privilegios = value
         End Set
     End Property
 

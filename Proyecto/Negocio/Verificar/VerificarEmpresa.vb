@@ -30,9 +30,34 @@ Public Class VerificarEmpresa
         Return Nothing
     End Function
 
+    'cargos
+    Public Function ValidoListaCargos() As DataView
+        ds = DatosE.ListaCargos
+        ds.Tables(0).Columns(0).ColumnName = "ID"
+        ds.Tables(0).Columns(1).ColumnName = "Nombre"
+        dv = ds.Tables(0).DefaultView
+        Return dv
+    End Function
+
     'funcionarios
-    Public Function ValidoListaFuncionarios(Optional ByVal ID As Integer = 0) As DataView
-        ds = DatosE.ListaFuncionarios(ID)
+    Public Function ValidoListaFuncionarios1() As DataView
+        ds = DatosE.ListaFuncionarios1
+        ds.Tables(0).Columns(0).ColumnName = "ID"
+        ds.Tables(0).Columns(1).ColumnName = "Nombre"
+        ds.Tables(0).Columns(2).ColumnName = "Apellido"
+        ds.Tables(0).Columns(3).ColumnName = "Teléfono"
+        ds.Tables(0).Columns(4).ColumnName = "Mail"
+        ds.Tables(0).Columns(5).ColumnName = "Cédula"
+        ds.Tables(0).Columns(6).ColumnName = "Usuario"
+        ds.Tables(0).Columns(7).ColumnName = "Contraseña"
+        ds.Tables(0).Columns(8).ColumnName = "Cargo"
+        ds.Tables(0).Columns(9).ColumnName = "Privilegios"
+        dv = ds.Tables(0).DefaultView
+        Return dv
+    End Function
+
+    Public Function ValidoListaFuncionarios2(Optional ByVal ID As Integer = 0) As DataView
+        ds = DatosE.ListaFuncionarios2(ID)
         ds.Tables(0).Columns(0).ColumnName = "ID"
         ds.Tables(0).Columns(1).ColumnName = "Nombre"
         ds.Tables(0).Columns(2).ColumnName = "Apellido"
@@ -45,6 +70,21 @@ Public Class VerificarEmpresa
         dv = ds.Tables(0).DefaultView
         dv.RowFilter = "Eliminado = 0"
         Return dv
+    End Function
+
+    Public Function ValidoIngresoFuncionarios(ByVal encapsuladora As Encapsuladoras.Funcionarios)
+        DatosE.IngresoFuncionario(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoEliminarFuncionarios(ByVal encapsuladora As Encapsuladoras.Funcionarios)
+        DatosE.EliminoFuncionario(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoModificarFuncionarios(ByVal encapsuladora As Encapsuladoras.Funcionarios)
+        DatosE.ModificoFuncionario(encapsuladora)
+        Return Nothing
     End Function
 
 End Class

@@ -4,8 +4,6 @@ Public Class Empresa_Sucursales
     Dim Verif As New Negocio.VerificarEmpresa
     Dim encapsuladora As New Encapsuladoras.Sucursales
     Dim dv As New DataView
-    Dim elim As Integer
-    'pasar logica a negocio
 
     Private Sub Empresa_Sucursales_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         ComboBox1.Items.Add("Nombre")
@@ -32,7 +30,7 @@ Public Class Empresa_Sucursales
                 modificar_BTN.Enabled = True
                 administrar_nombreTB.Text = Tabla1.DataGridView1(1, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
                 administrar_direccionTB.Text = Tabla1.DataGridView1(2, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
-                Tabla2.DataGridView1.DataSource = Verif.ValidoListaFuncionarios(Tabla.ID)
+                Tabla2.DataGridView1.DataSource = Verif.ValidoListaFuncionarios2(Tabla.ID)
                 Tabla2.DataGridView1.ClearSelection()
                 Tabla2.DataGridView1.Columns(6).Visible = False
             End If
@@ -75,23 +73,14 @@ Public Class Empresa_Sucursales
         End If
     End Sub
 
-    Private Sub Filtrar(sender As Object, e As System.EventArgs) Handles buscador.TextChanged, ComboBox1.SelectedValueChanged
+    Private Sub Filtrar(sender As Object, e As System.EventArgs) Handles buscador.TextChanged, ComboBox1.SelectedValueChanged, CheckBox1.CheckedChanged
         dv = Verif.ValidoListaSucursales
-        If elim = 1 Then
+        If CheckBox1.CheckState = CheckState.Checked Then
             dv.RowFilter = "" + ComboBox1.SelectedItem.ToString + " like '%" + buscador.Text.ToString + "%'"
         Else
             dv.RowFilter = "" + ComboBox1.SelectedItem.ToString + " like '%" + buscador.Text.ToString + "%' and Eliminado = 0"
         End If
         Tabla1.DataGridView1.DataSource = dv
         Tabla1.DataGridView1.ClearSelection()
-    End Sub
-
-    Private Sub CheckBox1_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles CheckBox1.CheckedChanged
-        If CheckBox1.CheckState = CheckState.Checked Then
-            elim = 1
-        Else
-            elim = 0
-        End If
-        Filtrar(Me, New System.EventArgs)
     End Sub
 End Class
