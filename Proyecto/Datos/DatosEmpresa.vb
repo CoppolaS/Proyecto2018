@@ -121,8 +121,8 @@ Public Class DatosEmpresa
     End Function
 
     'funcionarios
-    Public Function ListaFuncionarios1() As DataSet
-        sql = "CALL `proyecto`.`LABM_Funcionarios`(?opcion,?ID_F,?nombre,?apellido,?telefono,?mail,?cedula,?user,?pass,?cargo,?privilegios,?eliminado,?sucursal,?id_sucursal);"
+    Public Function ListaFuncionarios(Optional ByVal Sucursal As String = "0") As DataSet
+        sql = "CALL `proyecto`.`LABM_Funcionarios`(?opcion,?ID_F,?nombre,?apellido,?telefono,?mail,?cedula,?user,?pass,?cargo,?privilegios,?eliminado,?sucursal);"
         Try
             Con.cn2.Open()
             cm = New MySqlCommand()
@@ -140,39 +140,7 @@ Public Class DatosEmpresa
             cm.Parameters.Add("?cargo", MySqlDbType.VarChar).Value = "0"
             cm.Parameters.Add("?privilegios", MySqlDbType.Int32).Value = 0
             cm.Parameters.Add("?eliminado", MySqlDbType.Int32).Value = 0
-            cm.Parameters.Add("?sucursal", MySqlDbType.VarChar).Value = "0"
-            cm.Parameters.Add("?id_sucursal", MySqlDbType.Int32).Value = 0
-            da = New MySqlDataAdapter(cm)
-            ds = New DataSet()
-            da.Fill(ds)
-        Catch ex As Exception
-            MsgBox(ex.ToString)
-        End Try
-        Con.cn2.Close()
-        Return ds
-    End Function
-
-    Public Function ListaFuncionarios2(Optional ByVal ID As Integer = 0) As DataSet
-        sql = "CALL `proyecto`.`LABM_Funcionarios`(?opcion,?ID_F,?nombre,?apellido,?telefono,?mail,?cedula,?user,?pass,?cargo,?privilegios,?eliminado,?sucursal,?id_sucursal);"
-        Try
-            Con.cn2.Open()
-            cm = New MySqlCommand()
-            cm.CommandText = sql
-            cm.Connection = Con.cn2
-            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 5
-            cm.Parameters.Add("?ID_F", MySqlDbType.Int32).Value = 0
-            cm.Parameters.Add("?nombre", MySqlDbType.VarChar).Value = "0"
-            cm.Parameters.Add("?apellido", MySqlDbType.VarChar).Value = "0"
-            cm.Parameters.Add("?telefono", MySqlDbType.Int32).Value = 0
-            cm.Parameters.Add("?mail", MySqlDbType.VarChar).Value = "0"
-            cm.Parameters.Add("?cedula", MySqlDbType.Int32).Value = 0
-            cm.Parameters.Add("?user", MySqlDbType.VarChar).Value = "0"
-            cm.Parameters.Add("?pass", MySqlDbType.VarChar).Value = "0"
-            cm.Parameters.Add("?cargo", MySqlDbType.VarChar).Value = "0"
-            cm.Parameters.Add("?privilegios", MySqlDbType.Int32).Value = 0
-            cm.Parameters.Add("?eliminado", MySqlDbType.Int32).Value = 0
-            cm.Parameters.Add("?sucursal", MySqlDbType.VarChar).Value = "0"
-            cm.Parameters.Add("?id_sucursal", MySqlDbType.Int32).Value = ID
+            cm.Parameters.Add("?sucursal", MySqlDbType.VarChar).Value = Sucursal
             da = New MySqlDataAdapter(cm)
             ds = New DataSet()
             da.Fill(ds)
@@ -186,7 +154,7 @@ Public Class DatosEmpresa
     Public Function IngresoFuncionario(ByVal nodo As Encapsuladoras.Funcionarios) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Funcionarios (?,?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Funcionarios (?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 2)
                 cmd.Parameters.AddWithValue("ID_F", 0)
@@ -201,7 +169,6 @@ Public Class DatosEmpresa
                 cmd.Parameters.AddWithValue("privilegios", nodo.PrivilegiosFuncionario)
                 cmd.Parameters.AddWithValue("eliminado", 0)
                 cmd.Parameters.AddWithValue("sucursal", nodo.SucursalFuncionario)
-                cmd.Parameters.AddWithValue("id_sucursal", 0)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
@@ -219,7 +186,7 @@ Public Class DatosEmpresa
     Public Function EliminoFuncionario(ByVal nodo As Encapsuladoras.Funcionarios) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Funcionarios (?,?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Funcionarios (?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 3)
                 cmd.Parameters.AddWithValue("ID_F", nodo.IDFuncionario)
@@ -234,7 +201,6 @@ Public Class DatosEmpresa
                 cmd.Parameters.AddWithValue("privilegios", nodo.PrivilegiosFuncionario)
                 cmd.Parameters.AddWithValue("eliminado", 1)
                 cmd.Parameters.AddWithValue("sucursal", nodo.SucursalFuncionario)
-                cmd.Parameters.AddWithValue("id_sucursal", 0)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
@@ -252,7 +218,7 @@ Public Class DatosEmpresa
     Public Function ModificoFuncionario(ByVal nodo As Encapsuladoras.Funcionarios) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Funcionarios (?,?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Funcionarios (?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 4)
                 cmd.Parameters.AddWithValue("ID_F", nodo.IDFuncionario)
@@ -267,7 +233,6 @@ Public Class DatosEmpresa
                 cmd.Parameters.AddWithValue("privilegios", nodo.PrivilegiosFuncionario)
                 cmd.Parameters.AddWithValue("eliminado", 1)
                 cmd.Parameters.AddWithValue("sucursal", nodo.SucursalFuncionario)
-                cmd.Parameters.AddWithValue("id_sucursal", 0)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException

@@ -22,7 +22,6 @@ Public Class Empresa_Sucursales
     End Sub
 
     Private Sub CargarTabla2(sender As Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles Tabla1.ClickCelda
-        If Tabla.ID > 0 Then
             If Tabla1.DataGridView1.SelectedRows.Count > 0 Then
                 administrar_nombreTB.Enabled = True
                 administrar_direccionTB.Enabled = True
@@ -30,11 +29,13 @@ Public Class Empresa_Sucursales
                 modificar_BTN.Enabled = True
                 administrar_nombreTB.Text = Tabla1.DataGridView1(1, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
                 administrar_direccionTB.Text = Tabla1.DataGridView1(2, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
-                Tabla2.DataGridView1.DataSource = Verif.ValidoListaFuncionarios2(Tabla.ID)
+                Tabla2.DataGridView1.DataSource = Verif.ValidoListaFuncionarios(Tabla1.DataGridView1(1, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString)
                 Tabla2.DataGridView1.ClearSelection()
-                Tabla2.DataGridView1.Columns(6).Visible = False
+            Tabla2.DataGridView1.Columns(10).Visible = False
+            Tabla2.DataGridView1.Columns(9).Visible = False
+            Tabla2.DataGridView1.Columns(7).Visible = False
+            Tabla2.DataGridView1.Columns(5).Visible = False
             End If
-        End If
     End Sub
 
     Private Sub Ingresar(sender As System.Object, e As System.EventArgs) Handles ingresar_BTN.Click

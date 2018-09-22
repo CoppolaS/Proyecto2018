@@ -40,8 +40,8 @@ Public Class VerificarEmpresa
     End Function
 
     'funcionarios
-    Public Function ValidoListaFuncionarios1() As DataView
-        ds = DatosE.ListaFuncionarios1
+    Public Function ValidoListaFuncionarios(Optional ByVal Sucursal As String = "0") As DataView
+        ds = DatosE.ListaFuncionarios(Sucursal)
         ds.Tables(0).Columns(0).ColumnName = "ID"
         ds.Tables(0).Columns(1).ColumnName = "Nombre"
         ds.Tables(0).Columns(2).ColumnName = "Apellido"
@@ -53,22 +53,6 @@ Public Class VerificarEmpresa
         ds.Tables(0).Columns(8).ColumnName = "Cargo"
         ds.Tables(0).Columns(9).ColumnName = "Privilegios"
         dv = ds.Tables(0).DefaultView
-        Return dv
-    End Function
-
-    Public Function ValidoListaFuncionarios2(Optional ByVal ID As Integer = 0) As DataView
-        ds = DatosE.ListaFuncionarios2(ID)
-        ds.Tables(0).Columns(0).ColumnName = "ID"
-        ds.Tables(0).Columns(1).ColumnName = "Nombre"
-        ds.Tables(0).Columns(2).ColumnName = "Apellido"
-        ds.Tables(0).Columns(3).ColumnName = "Teléfono"
-        ds.Tables(0).Columns(4).ColumnName = "Mail"
-        ds.Tables(0).Columns(5).ColumnName = "Cédula"
-        ds.Tables(0).Columns(6).ColumnName = "Eliminado"
-        ds.Tables(0).Columns(7).ColumnName = "Cargo"
-        ds.Tables(0).Columns(8).ColumnName = "Usuario"
-        dv = ds.Tables(0).DefaultView
-        dv.RowFilter = "Eliminado = 0"
         Return dv
     End Function
 

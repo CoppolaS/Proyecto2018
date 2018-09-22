@@ -35,13 +35,13 @@ Public Class Inicio
 
     Private Sub ComboBox2_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox2.SelectedIndexChanged
         Datos.UsuarioLogeado.Ventana2 = ComboBox2.SelectedItem.ToString.Substring(0, 1)
-        Tabla1.DataGridView1.DataSource = Verif.VerificarVentanas(2, Datos.UsuarioLogeado.Ventana2)
+        Tabla2.DataGridView1.DataSource = Verif.VerificarVentanas(2, Datos.UsuarioLogeado.Ventana2)
         CargarTablas()
     End Sub
 
     Private Sub ComboBox3_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox3.SelectedIndexChanged
         Datos.UsuarioLogeado.Ventana3 = ComboBox3.SelectedItem.ToString.Substring(0, 1)
-        Tabla1.DataGridView1.DataSource = Verif.VerificarVentanas(3, Datos.UsuarioLogeado.Ventana3)
+        Tabla3.DataGridView1.DataSource = Verif.VerificarVentanas(3, Datos.UsuarioLogeado.Ventana3)
         CargarTablas()
     End Sub
 

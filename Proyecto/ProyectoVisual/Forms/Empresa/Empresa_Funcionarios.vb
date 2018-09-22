@@ -23,22 +23,31 @@ Public Class Empresa_Funcionarios
         dv.RowFilter = "Eliminado = 0"
         For i As Integer = 0 To dv.Count - 1
             ComboBox4.Items.Add(dv(i).Item("Nombre").ToString())
+            ComboBox7.Items.Add(dv(i).Item("Nombre").ToString())
         Next
         dv = Verif.ValidoListaCargos
         dv.RowFilter = "Eliminado = 0"
         For i As Integer = 0 To dv.Count - 1
             ComboBox2.Items.Add(dv(i).Item("Nombre").ToString())
+            ComboBox5.Items.Add(dv(i).Item("Nombre").ToString())
         Next
+        If Datos.UsuarioLogeado.Privilegios <> 4 Then
+            CheckBox2.Enabled = True
+        End If
         CargarTabla()
     End Sub
 
     Private Sub CargarTabla()
-        dv = Verif.ValidoListaFuncionarios1
+        dv = Verif.ValidoListaFuncionarios(Datos.UsuarioLogeado.Sucursal)
         Filtrar(Me, New System.EventArgs)
         Tabla1.DataGridView1.DataSource = dv
         Tabla1.DataGridView1.Columns(7).Visible = False
         Tabla1.DataGridView1.Columns(10).Visible = False
         Tabla1.DataGridView1.ClearSelection()
+    End Sub
+
+    Private Sub CargarPorSucursal(sender As System.Object, e As System.EventArgs) Handles ComboBoxSucursales1.SeleccionCambio
+        CargarTabla()
     End Sub
 
     Private Sub Ingresar(sender As System.Object, e As System.EventArgs) Handles ingresar_BTN.Click
@@ -60,9 +69,9 @@ Public Class Empresa_Funcionarios
         TextBox5.Clear()
         TextBox6.Clear()
         TextBox7.Clear()
-        ComboBox2.SelectedIndex() = 0
-        ComboBox3.SelectedIndex() = 0
-        ComboBox4.SelectedIndex() = 0
+        ComboBox2.SelectedIndex() = -1
+        ComboBox3.SelectedIndex() = -1
+        ComboBox4.SelectedIndex() = -1
         CargarTabla()
     End Sub
 
@@ -92,9 +101,9 @@ Public Class Empresa_Funcionarios
         TextBox12.Clear()
         TextBox13.Clear()
         TextBox14.Clear()
-        ComboBox5.SelectedIndex() = 0
-        ComboBox6.SelectedIndex() = 0
-        ComboBox7.SelectedIndex() = 0
+        ComboBox5.SelectedIndex() = -1
+        ComboBox6.SelectedIndex() = -1
+        ComboBox7.SelectedIndex() = -1
         TextBox8.Enabled = False
         TextBox9.Enabled = False
         TextBox10.Enabled = False
@@ -109,15 +118,34 @@ Public Class Empresa_Funcionarios
         CargarTabla()
     End Sub
 
-    Private Sub Habilitar_Ingreso(sender As Object, e As System.EventArgs) Handles TextBox1.TextChanged, TextBox2.TextChanged, TextBox3.TextChanged, TextBox4.TextChanged, TextBox5.TextChanged
-        If TextBox1.TextLength > 0 And TextBox2.TextLength > 0 And TextBox3.TextLength > 0 And TextBox4.TextLength > 0 And TextBox5.TextLength > 0 Then
-            ingresar_BTN.Enabled = True
-        Else
-            ingresar_BTN.Enabled = False
+    Private Sub CeldaSeleccionada(sender As Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles Tabla1.ClickCelda
+        If Tabla1.DataGridView1.SelectedRows.Count > 0 Then
+            eliminar_BTN.Enabled = True
+            modificar_BTN.Enabled = True
+            TextBox8.Enabled = True
+            TextBox9.Enabled = True
+            TextBox10.Enabled = True
+            TextBox11.Enabled = True
+            TextBox12.Enabled = True
+            TextBox13.Enabled = True
+            TextBox14.Enabled = True
+            ComboBox5.Enabled = True
+            ComboBox6.Enabled = True
+            ComboBox7.Enabled = True
+            TextBox8.Text = Tabla1.DataGridView1(1, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
+            TextBox9.Text = Tabla1.DataGridView1(2, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
+            TextBox10.Text = Tabla1.DataGridView1(3, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
+            TextBox11.Text = Tabla1.DataGridView1(4, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
+            TextBox12.Text = Tabla1.DataGridView1(5, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
+            TextBox13.Text = Tabla1.DataGridView1(6, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
+            TextBox14.Text = Tabla1.DataGridView1(7, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
+            ComboBox5.SelectedItem = Tabla1.DataGridView1(8, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
+            ComboBox6.SelectedItem = Tabla1.DataGridView1(9, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
+            ComboBox7.SelectedItem = Tabla1.DataGridView1(10, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
         End If
     End Sub
 
-    Private Sub Habilitar(sender As System.Object, e As System.EventArgs) Handles CheckBox3.CheckedChanged, Tabla1.ClickCelda, CheckBox2.CheckedChanged
+    Private Sub Habilitar(sender As System.Object, e As System.EventArgs) Handles CheckBox3.CheckedChanged, Tabla1.ClickCelda, CheckBox2.CheckedChanged, TextBox1.TextChanged, TextBox2.TextChanged, TextBox3.TextChanged, TextBox4.TextChanged, TextBox5.TextChanged, ComboBox2.SelectedIndexChanged, ComboBox3.SelectedIndexChanged, ComboBox4.SelectedIndexChanged
         If CheckBox3.CheckState = CheckState.Checked Then
             TextBox6.Enabled = True
             TextBox7.Enabled = True
@@ -126,16 +154,10 @@ Public Class Empresa_Funcionarios
             TextBox7.Enabled = False
         End If
 
-        If Tabla1.DataGridView1.SelectedRows.Count > 0 Then
-            eliminar_BTN.Enabled = True
-            modificar_BTN.Enabled = True
-            TextBox8.Text = Tabla1.DataGridView1(1, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
-            TextBox9.Text = Tabla1.DataGridView1(2, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
-            TextBox10.Text = Tabla1.DataGridView1(2, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
-            TextBox11.Text = Tabla1.DataGridView1(2, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
-            TextBox12.Text = Tabla1.DataGridView1(2, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
-            TextBox13.Text = Tabla1.DataGridView1(2, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
-            TextBox14.Text = Tabla1.DataGridView1(2, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
+        If TextBox1.TextLength > 0 And TextBox2.TextLength > 0 And TextBox3.TextLength > 0 And TextBox4.TextLength > 0 And TextBox5.TextLength > 0 And ComboBox2.SelectedIndex <> -1 And ComboBox3.SelectedIndex <> -1 And ComboBox4.SelectedIndex <> -1 Then
+            ingresar_BTN.Enabled = True
+        Else
+            ingresar_BTN.Enabled = False
         End If
 
         If CheckBox2.CheckState = CheckState.Checked Then
@@ -146,7 +168,7 @@ Public Class Empresa_Funcionarios
     End Sub
 
     Private Sub Filtrar(sender As Object, e As System.EventArgs) Handles buscador.TextChanged, ComboBox1.SelectedValueChanged, CheckBox1.CheckedChanged
-        dv = Verif.ValidoListaFuncionarios1
+        dv = Verif.ValidoListaFuncionarios(Datos.UsuarioLogeado.Sucursal)
         If CheckBox1.CheckState = CheckState.Checked Then
             dv.RowFilter = "" + ComboBox1.SelectedItem.ToString + " like '%" + buscador.Text.ToString + "%'"
         Else

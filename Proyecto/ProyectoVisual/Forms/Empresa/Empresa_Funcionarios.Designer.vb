@@ -79,6 +79,7 @@ Partial Class Empresa_Funcionarios
         Me.ComboBoxSucursales1 = New Proyecto.ComboBoxSucursales()
         Me.Tabla1 = New Proyecto.Tabla()
         Me.Menu1 = New Proyecto.Menu()
+        Me.Label24 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -87,7 +88,7 @@ Partial Class Empresa_Funcionarios
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(438, 49)
+        Me.Label4.Location = New System.Drawing.Point(492, 49)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(54, 13)
         Me.Label4.TabIndex = 29
@@ -96,7 +97,7 @@ Partial Class Empresa_Funcionarios
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(498, 45)
+        Me.ComboBox1.Location = New System.Drawing.Point(552, 45)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(144, 21)
         Me.ComboBox1.TabIndex = 28
@@ -104,7 +105,7 @@ Partial Class Empresa_Funcionarios
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(184, 49)
+        Me.Label3.Location = New System.Drawing.Point(238, 49)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(98, 13)
         Me.Label3.TabIndex = 27
@@ -112,7 +113,7 @@ Partial Class Empresa_Funcionarios
         '
         'buscador
         '
-        Me.buscador.Location = New System.Drawing.Point(288, 46)
+        Me.buscador.Location = New System.Drawing.Point(342, 46)
         Me.buscador.Name = "buscador"
         Me.buscador.Size = New System.Drawing.Size(144, 20)
         Me.buscador.TabIndex = 26
@@ -409,6 +410,7 @@ Partial Class Empresa_Funcionarios
         '
         'ComboBox5
         '
+        Me.ComboBox5.Enabled = False
         Me.ComboBox5.FormattingEnabled = True
         Me.ComboBox5.Location = New System.Drawing.Point(128, 228)
         Me.ComboBox5.Name = "ComboBox5"
@@ -417,6 +419,7 @@ Partial Class Empresa_Funcionarios
         '
         'ComboBox6
         '
+        Me.ComboBox6.Enabled = False
         Me.ComboBox6.FormattingEnabled = True
         Me.ComboBox6.Items.AddRange(New Object() {"1", "2", "3", "4"})
         Me.ComboBox6.Location = New System.Drawing.Point(128, 257)
@@ -426,6 +429,7 @@ Partial Class Empresa_Funcionarios
         '
         'ComboBox7
         '
+        Me.ComboBox7.Enabled = False
         Me.ComboBox7.FormattingEnabled = True
         Me.ComboBox7.Location = New System.Drawing.Point(128, 286)
         Me.ComboBox7.Name = "ComboBox7"
@@ -434,6 +438,7 @@ Partial Class Empresa_Funcionarios
         '
         'TextBox8
         '
+        Me.TextBox8.Enabled = False
         Me.TextBox8.Location = New System.Drawing.Point(128, 39)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(212, 21)
@@ -450,6 +455,7 @@ Partial Class Empresa_Funcionarios
         '
         'TextBox9
         '
+        Me.TextBox9.Enabled = False
         Me.TextBox9.Location = New System.Drawing.Point(128, 66)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.Size = New System.Drawing.Size(212, 21)
@@ -466,6 +472,7 @@ Partial Class Empresa_Funcionarios
         '
         'TextBox10
         '
+        Me.TextBox10.Enabled = False
         Me.TextBox10.Location = New System.Drawing.Point(128, 93)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(212, 21)
@@ -482,6 +489,7 @@ Partial Class Empresa_Funcionarios
         '
         'TextBox11
         '
+        Me.TextBox11.Enabled = False
         Me.TextBox11.Location = New System.Drawing.Point(128, 120)
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.Size = New System.Drawing.Size(212, 21)
@@ -498,6 +506,7 @@ Partial Class Empresa_Funcionarios
         '
         'TextBox12
         '
+        Me.TextBox12.Enabled = False
         Me.TextBox12.Location = New System.Drawing.Point(128, 147)
         Me.TextBox12.Name = "TextBox12"
         Me.TextBox12.Size = New System.Drawing.Size(212, 21)
@@ -514,6 +523,7 @@ Partial Class Empresa_Funcionarios
         '
         'TextBox13
         '
+        Me.TextBox13.Enabled = False
         Me.TextBox13.Location = New System.Drawing.Point(128, 174)
         Me.TextBox13.Name = "TextBox13"
         Me.TextBox13.Size = New System.Drawing.Size(212, 21)
@@ -530,6 +540,7 @@ Partial Class Empresa_Funcionarios
         '
         'TextBox14
         '
+        Me.TextBox14.Enabled = False
         Me.TextBox14.Location = New System.Drawing.Point(128, 201)
         Me.TextBox14.Name = "TextBox14"
         Me.TextBox14.Size = New System.Drawing.Size(212, 21)
@@ -577,7 +588,7 @@ Partial Class Empresa_Funcionarios
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.CheckBox1.Location = New System.Drawing.Point(648, 48)
+        Me.CheckBox1.Location = New System.Drawing.Point(702, 48)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(173, 17)
         Me.CheckBox1.TabIndex = 30
@@ -588,7 +599,8 @@ Partial Class Empresa_Funcionarios
         '
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.CheckBox2.Location = New System.Drawing.Point(827, 48)
+        Me.CheckBox2.Enabled = False
+        Me.CheckBox2.Location = New System.Drawing.Point(881, 48)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(197, 17)
         Me.CheckBox2.TabIndex = 31
@@ -597,7 +609,7 @@ Partial Class Empresa_Funcionarios
         '
         'ComboBoxSucursales1
         '
-        Me.ComboBoxSucursales1.Location = New System.Drawing.Point(12, 45)
+        Me.ComboBoxSucursales1.Location = New System.Drawing.Point(66, 45)
         Me.ComboBoxSucursales1.Name = "ComboBoxSucursales1"
         Me.ComboBoxSucursales1.Size = New System.Drawing.Size(166, 21)
         Me.ComboBoxSucursales1.TabIndex = 32
@@ -616,11 +628,21 @@ Partial Class Empresa_Funcionarios
         Me.Menu1.Size = New System.Drawing.Size(1240, 32)
         Me.Menu1.TabIndex = 24
         '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(12, 49)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(48, 13)
+        Me.Label24.TabIndex = 33
+        Me.Label24.Text = "Sucursal"
+        '
         'Empresa_Funcionarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.Controls.Add(Me.Label24)
         Me.Controls.Add(Me.ComboBoxSucursales1)
         Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.CheckBox1)
@@ -635,7 +657,7 @@ Partial Class Empresa_Funcionarios
         Me.Name = "Empresa_Funcionarios"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Empresa - Funcionarios / SI.GES.VI"
+        Me.Text = " "
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
@@ -702,4 +724,5 @@ Partial Class Empresa_Funcionarios
     Friend WithEvents Label23 As System.Windows.Forms.Label
     Friend WithEvents ComboBoxSucursales1 As Proyecto.ComboBoxSucursales
     Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
+    Friend WithEvents Label24 As System.Windows.Forms.Label
 End Class

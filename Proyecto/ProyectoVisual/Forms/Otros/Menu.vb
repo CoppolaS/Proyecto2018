@@ -241,7 +241,7 @@ Public Class Menu
     End Sub
 
     Private Sub PersonalToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PersonalToolStripMenuItem.Click
-        If (ParentForm.Name = "Empresa_Personal") Then
+        If (ParentForm.Name = "Empresa_Funcionarios") Then
             Exit Sub
         Else
             Empresa_Funcionarios.Show()

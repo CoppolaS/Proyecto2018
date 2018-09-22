@@ -25,6 +25,7 @@ Public Class DatosOtros
             UsuarioLogeado.Ventana1 = dr.GetInt32(4)
             UsuarioLogeado.Ventana2 = dr.GetInt32(5)
             UsuarioLogeado.Ventana3 = dr.GetInt32(6)
+            UsuarioLogeado.Sucursal = dr.GetString(7)
             UsuarioLogeado.Logeado = True
             dr.Close()
         Catch ex As Exception
