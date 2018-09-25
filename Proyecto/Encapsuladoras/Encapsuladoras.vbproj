@@ -107,6 +107,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Empresa\Sucursales.vb" />
+    <Compile Include="Parametros\Barricas.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -130,7 +131,6 @@
   <ItemGroup>
     <Folder Include="Materia prima\" />
     <Folder Include="Otros\" />
-    <Folder Include="Parametros\" />
     <Folder Include="Plantaciones\" />
     <Folder Include="Producto final\" />
     <Folder Include="Producto intermedio\" />

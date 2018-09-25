@@ -143,4 +143,5 @@ Public Class VerificarEmpresa
         DatosE.ModificoAsesorProfesional(encapsuladora)
         Return Nothing
     End Function
+
 End Class
