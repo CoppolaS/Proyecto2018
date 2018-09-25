@@ -22,9 +22,10 @@ Partial Class Empresa_AsesoresProfesionales
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
@@ -39,53 +40,52 @@ Partial Class Empresa_AsesoresProfesionales
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Tabla2 = New Proyecto.Tabla()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.buscador = New System.Windows.Forms.TextBox()
+        Me.ComboBoxSucursales1 = New Proyecto.ComboBoxSucursales()
         Me.Tabla1 = New Proyecto.Tabla()
         Me.Menu1 = New Proyecto.Menu()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(12, 45)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(761, 21)
-        Me.ComboBox1.TabIndex = 12
-        Me.ComboBox1.Text = "Sucursales"
         '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(779, 45)
+        Me.TabControl1.Location = New System.Drawing.Point(779, 72)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(477, 278)
+        Me.TabControl1.Size = New System.Drawing.Size(477, 596)
         Me.TabControl1.TabIndex = 13
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.ComboBox4)
+        Me.TabPage1.Controls.Add(Me.Label17)
         Me.TabPage1.Controls.Add(Me.TextBox9)
         Me.TabPage1.Controls.Add(Me.Label14)
         Me.TabPage1.Controls.Add(Me.ComboBox2)
@@ -102,22 +102,39 @@ Partial Class Empresa_AsesoresProfesionales
         Me.TabPage1.Location = New System.Drawing.Point(4, 24)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(10)
-        Me.TabPage1.Size = New System.Drawing.Size(469, 250)
+        Me.TabPage1.Size = New System.Drawing.Size(469, 568)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Ingresar"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'ComboBox4
+        '
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Location = New System.Drawing.Point(71, 177)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(385, 23)
+        Me.ComboBox4.TabIndex = 7
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(13, 180)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(55, 15)
+        Me.Label17.TabIndex = 15
+        Me.Label17.Text = "Sucursal"
+        '
         'TextBox9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(71, 119)
+        Me.TextBox9.Location = New System.Drawing.Point(71, 94)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.Size = New System.Drawing.Size(385, 21)
-        Me.TextBox9.TabIndex = 14
+        Me.TextBox9.TabIndex = 4
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(13, 122)
+        Me.Label14.Location = New System.Drawing.Point(13, 97)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(31, 15)
         Me.Label14.TabIndex = 13
@@ -126,16 +143,16 @@ Partial Class Empresa_AsesoresProfesionales
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(71, 144)
+        Me.ComboBox2.Location = New System.Drawing.Point(71, 148)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(385, 23)
-        Me.ComboBox2.TabIndex = 10
+        Me.ComboBox2.TabIndex = 6
         Me.ComboBox2.Text = "Tipo de Asesor Profesional"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(13, 147)
+        Me.Label5.Location = New System.Drawing.Point(13, 151)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(31, 15)
         Me.Label5.TabIndex = 9
@@ -143,9 +160,9 @@ Partial Class Empresa_AsesoresProfesionales
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(289, 214)
+        Me.Button1.Location = New System.Drawing.Point(13, 532)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(167, 23)
+        Me.Button1.Size = New System.Drawing.Size(443, 23)
         Me.Button1.TabIndex = 8
         Me.Button1.Text = "Ingresar"
         Me.Button1.UseVisualStyleBackColor = True
@@ -164,11 +181,11 @@ Partial Class Empresa_AsesoresProfesionales
         Me.TextBox3.Location = New System.Drawing.Point(71, 67)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(385, 21)
-        Me.TextBox3.TabIndex = 6
+        Me.TextBox3.TabIndex = 3
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(71, 94)
+        Me.TextBox4.Location = New System.Drawing.Point(71, 121)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(385, 21)
         Me.TextBox4.TabIndex = 5
@@ -176,7 +193,7 @@ Partial Class Empresa_AsesoresProfesionales
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(13, 97)
+        Me.Label4.Location = New System.Drawing.Point(13, 124)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(18, 15)
         Me.Label4.TabIndex = 4
@@ -216,142 +233,168 @@ Partial Class Empresa_AsesoresProfesionales
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.TextBox5)
-        Me.TabPage2.Controls.Add(Me.Label6)
         Me.TabPage2.Controls.Add(Me.ComboBox3)
+        Me.TabPage2.Controls.Add(Me.Label6)
+        Me.TabPage2.Controls.Add(Me.TextBox5)
         Me.TabPage2.Controls.Add(Me.Label8)
+        Me.TabPage2.Controls.Add(Me.ComboBox5)
         Me.TabPage2.Controls.Add(Me.Label9)
+        Me.TabPage2.Controls.Add(Me.Label10)
         Me.TabPage2.Controls.Add(Me.TextBox6)
         Me.TabPage2.Controls.Add(Me.TextBox7)
-        Me.TabPage2.Controls.Add(Me.Label10)
         Me.TabPage2.Controls.Add(Me.Label11)
+        Me.TabPage2.Controls.Add(Me.Label12)
         Me.TabPage2.Controls.Add(Me.TextBox8)
         Me.TabPage2.Controls.Add(Me.TextBox10)
-        Me.TabPage2.Controls.Add(Me.Label12)
+        Me.TabPage2.Controls.Add(Me.Label18)
         Me.TabPage2.Controls.Add(Me.Button3)
         Me.TabPage2.Controls.Add(Me.Button2)
         Me.TabPage2.Controls.Add(Me.Label7)
         Me.TabPage2.Location = New System.Drawing.Point(4, 24)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(10)
-        Me.TabPage2.Size = New System.Drawing.Size(469, 250)
+        Me.TabPage2.Size = New System.Drawing.Size(469, 568)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Administrar"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'TextBox5
+        'ComboBox3
         '
-        Me.TextBox5.Location = New System.Drawing.Point(71, 149)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(385, 21)
-        Me.TextBox5.TabIndex = 42
+        Me.ComboBox3.Enabled = False
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(71, 201)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(385, 23)
+        Me.ComboBox3.TabIndex = 38
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(13, 149)
+        Me.Label6.Location = New System.Drawing.Point(13, 204)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(31, 15)
-        Me.Label6.TabIndex = 41
-        Me.Label6.Text = "Mail"
+        Me.Label6.Size = New System.Drawing.Size(55, 15)
+        Me.Label6.TabIndex = 43
+        Me.Label6.Text = "Sucursal"
         '
-        'ComboBox3
+        'TextBox5
         '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(71, 174)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(385, 23)
-        Me.ComboBox3.TabIndex = 40
-        Me.ComboBox3.Text = "Tipo de Asesor Profesional"
+        Me.TextBox5.Enabled = False
+        Me.TextBox5.Location = New System.Drawing.Point(71, 118)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(385, 21)
+        Me.TextBox5.TabIndex = 35
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(13, 174)
+        Me.Label8.Location = New System.Drawing.Point(13, 121)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(31, 15)
-        Me.Label8.TabIndex = 39
-        Me.Label8.Text = "Tipo"
+        Me.Label8.TabIndex = 41
+        Me.Label8.Text = "Mail"
+        '
+        'ComboBox5
+        '
+        Me.ComboBox5.Enabled = False
+        Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Location = New System.Drawing.Point(71, 172)
+        Me.ComboBox5.Name = "ComboBox5"
+        Me.ComboBox5.Size = New System.Drawing.Size(385, 23)
+        Me.ComboBox5.TabIndex = 37
+        Me.ComboBox5.Text = "Tipo de Asesor Profesional"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(13, 97)
+        Me.Label9.Location = New System.Drawing.Point(13, 175)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(55, 15)
-        Me.Label9.TabIndex = 38
-        Me.Label9.Text = "Telefono"
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(71, 97)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(385, 21)
-        Me.TextBox6.TabIndex = 37
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Location = New System.Drawing.Point(71, 124)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(385, 21)
-        Me.TextBox7.TabIndex = 36
+        Me.Label9.Size = New System.Drawing.Size(31, 15)
+        Me.Label9.TabIndex = 39
+        Me.Label9.Text = "Tipo"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(13, 124)
+        Me.Label10.Location = New System.Drawing.Point(13, 94)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(18, 15)
-        Me.Label10.TabIndex = 35
-        Me.Label10.Text = "CI"
+        Me.Label10.Size = New System.Drawing.Size(55, 15)
+        Me.Label10.TabIndex = 38
+        Me.Label10.Text = "Telefono"
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Enabled = False
+        Me.TextBox6.Location = New System.Drawing.Point(71, 91)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(385, 21)
+        Me.TextBox6.TabIndex = 34
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Enabled = False
+        Me.TextBox7.Location = New System.Drawing.Point(71, 145)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(385, 21)
+        Me.TextBox7.TabIndex = 36
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(13, 70)
+        Me.Label11.Location = New System.Drawing.Point(13, 148)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(51, 15)
-        Me.Label11.TabIndex = 34
-        Me.Label11.Text = "Apellido"
+        Me.Label11.Size = New System.Drawing.Size(18, 15)
+        Me.Label11.TabIndex = 35
+        Me.Label11.Text = "CI"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(13, 67)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(51, 15)
+        Me.Label12.TabIndex = 34
+        Me.Label12.Text = "Apellido"
         '
         'TextBox8
         '
-        Me.TextBox8.Location = New System.Drawing.Point(71, 70)
+        Me.TextBox8.Enabled = False
+        Me.TextBox8.Location = New System.Drawing.Point(71, 64)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(385, 21)
         Me.TextBox8.TabIndex = 33
         '
         'TextBox10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(71, 43)
+        Me.TextBox10.Enabled = False
+        Me.TextBox10.Location = New System.Drawing.Point(71, 37)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(385, 21)
         Me.TextBox10.TabIndex = 32
         '
-        'Label12
+        'Label18
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(13, 43)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(52, 15)
-        Me.Label12.TabIndex = 31
-        Me.Label12.Text = "Nombre"
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(13, 40)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(52, 15)
+        Me.Label18.TabIndex = 31
+        Me.Label18.Text = "Nombre"
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(13, 214)
+        Me.Button3.Location = New System.Drawing.Point(16, 503)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(203, 23)
-        Me.Button3.TabIndex = 30
+        Me.Button3.Size = New System.Drawing.Size(440, 23)
+        Me.Button3.TabIndex = 39
         Me.Button3.Text = "Modificar fila seleccionada"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(253, 214)
+        Me.Button2.Location = New System.Drawing.Point(16, 532)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(203, 23)
-        Me.Button2.TabIndex = 1
+        Me.Button2.Size = New System.Drawing.Size(440, 23)
+        Me.Button2.TabIndex = 40
         Me.Button2.Text = "Eliminar fila seleccionada"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -364,23 +407,65 @@ Partial Class Empresa_AsesoresProfesionales
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Seleccionar una celda de la tabla primero"
         '
-        'GroupBox1
+        'Label13
         '
-        Me.GroupBox1.Controls.Add(Me.Tabla2)
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(779, 329)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(473, 339)
-        Me.GroupBox1.TabIndex = 14
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Información del campo seleccionado"
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(12, 49)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(48, 13)
+        Me.Label13.TabIndex = 18
+        Me.Label13.Text = "Sucursal"
         '
-        'Tabla2
+        'CheckBox1
         '
-        Me.Tabla2.Location = New System.Drawing.Point(6, 20)
-        Me.Tabla2.Name = "Tabla2"
-        Me.Tabla2.Size = New System.Drawing.Size(461, 313)
-        Me.Tabla2.TabIndex = 0
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox1.Location = New System.Drawing.Point(702, 48)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(223, 17)
+        Me.CheckBox1.TabIndex = 35
+        Me.CheckBox1.Text = "Mostrar asesores profesionales eliminados"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(492, 49)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(54, 13)
+        Me.Label15.TabIndex = 34
+        Me.Label15.Text = "Columna: "
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(552, 45)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(144, 21)
+        Me.ComboBox1.TabIndex = 33
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(238, 49)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(98, 13)
+        Me.Label16.TabIndex = 32
+        Me.Label16.Text = "Buscar en la tabla: "
+        '
+        'buscador
+        '
+        Me.buscador.Location = New System.Drawing.Point(342, 46)
+        Me.buscador.Name = "buscador"
+        Me.buscador.Size = New System.Drawing.Size(144, 20)
+        Me.buscador.TabIndex = 31
+        '
+        'ComboBoxSucursales1
+        '
+        Me.ComboBoxSucursales1.Location = New System.Drawing.Point(66, 45)
+        Me.ComboBoxSucursales1.Name = "ComboBoxSucursales1"
+        Me.ComboBoxSucursales1.Size = New System.Drawing.Size(166, 21)
+        Me.ComboBoxSucursales1.TabIndex = 17
         '
         'Tabla1
         '
@@ -401,11 +486,16 @@ Partial Class Empresa_AsesoresProfesionales
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.buscador)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.ComboBoxSucursales1)
         Me.Controls.Add(Me.Tabla1)
         Me.Controls.Add(Me.Menu1)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.TabControl1)
-        Me.Controls.Add(Me.ComboBox1)
         Me.MaximizeBox = False
         Me.Name = "Empresa_AsesoresProfesionales"
         Me.ShowIcon = False
@@ -416,15 +506,13 @@ Partial Class Empresa_AsesoresProfesionales
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
@@ -442,18 +530,28 @@ Partial Class Empresa_AsesoresProfesionales
     Friend WithEvents Menu1 As Proyecto.Menu
     Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
     Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Tabla1 As Proyecto.Tabla
+    Friend WithEvents ComboBoxSucursales1 As Proyecto.ComboBoxSucursales
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents buscador As System.Windows.Forms.TextBox
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
     Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox5 As System.Windows.Forms.ComboBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
-    Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
-    Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents Tabla2 As Proyecto.Tabla
-    Friend WithEvents Tabla1 As Proyecto.Tabla
+    Friend WithEvents Label18 As System.Windows.Forms.Label
 End Class

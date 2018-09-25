@@ -120,9 +120,166 @@ Public Class DatosEmpresa
         Return ds
     End Function
 
+    Public Function IngresoCargo(ByVal nodo As Encapsuladoras.Cargos) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Cargos (?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 2)
+                cmd.Parameters.AddWithValue("ID_C", 0)
+                cmd.Parameters.AddWithValue("nombre", nodo.NombreCargo)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al ingresar el cargo")
+        End Try
+        Return False
+    End Function
+
+    Public Function EliminoCargo(ByVal nodo As Encapsuladoras.Cargos) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Cargos (?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 3)
+                cmd.Parameters.AddWithValue("ID_C", nodo.IDCargo)
+                cmd.Parameters.AddWithValue("nombre", "")
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al eliminar el cargo")
+        End Try
+        Return False
+    End Function
+
+    Public Function ModificoCargo(ByVal nodo As Encapsuladoras.Cargos) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Cargos (?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 4)
+                cmd.Parameters.AddWithValue("ID_C", nodo.IDCargo)
+                cmd.Parameters.AddWithValue("nombre", nodo.NombreCargo)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al modificar el cargo")
+        End Try
+        Return False
+    End Function
+
+    'tiposap
+    Public Function ListaTiposAP() As DataSet
+        sql = "CALL `proyecto`.`LABM_TiposAP`(?opcion,?ID_TAP,?nombre,?alarmas);"
+        Try
+            Con.cn2.Open()
+            cm = New MySqlCommand()
+            cm.CommandText = sql
+            cm.Connection = Con.cn2
+            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
+            cm.Parameters.Add("?ID_TAP", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?nombre", MySqlDbType.VarChar).Value = "0"
+            cm.Parameters.Add("?alarmas", MySqlDbType.Int32).Value = 0
+            da = New MySqlDataAdapter(cm)
+            ds = New DataSet()
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Con.cn2.Close()
+        Return ds
+    End Function
+
+    Public Function IngresoTipoAP(ByVal nodo As Encapsuladoras.TiposAP) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_TiposAP (?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 2)
+                cmd.Parameters.AddWithValue("ID_TAP", 0)
+                cmd.Parameters.AddWithValue("nombre", nodo.NombreTipoAP)
+                cmd.Parameters.AddWithValue("alarmas", nodo.AlarmasTipoAP)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al ingresar el tipo de asesor profesional")
+        End Try
+        Return False
+    End Function
+
+    Public Function EliminoTipoAP(ByVal nodo As Encapsuladoras.TiposAP) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_TiposAP (?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 3)
+                cmd.Parameters.AddWithValue("ID_TAP", nodo.IDTipoAP)
+                cmd.Parameters.AddWithValue("nombre", "")
+                cmd.Parameters.AddWithValue("alarmas", False)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al eliminar el tipo de asesor profesional")
+        End Try
+        Return False
+    End Function
+
+    Public Function ModificoTipoAP(ByVal nodo As Encapsuladoras.TiposAP) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_TiposAP (?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 4)
+                cmd.Parameters.AddWithValue("ID_TAP", nodo.IDTipoAP)
+                cmd.Parameters.AddWithValue("nombre", nodo.NombreTipoAP)
+                cmd.Parameters.AddWithValue("alarmas", nodo.AlarmasTipoAP)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al modificar el tipo de asesor profesional")
+        End Try
+        Return False
+    End Function
+
     'funcionarios
     Public Function ListaFuncionarios(Optional ByVal Sucursal As String = "0") As DataSet
-        sql = "CALL `proyecto`.`LABM_Funcionarios`(?opcion,?ID_F,?nombre,?apellido,?telefono,?mail,?cedula,?user,?pass,?cargo,?privilegios,?eliminado,?sucursal);"
+        sql = "CALL `proyecto`.`LABM_Funcionarios`(?opcion,?ID_F,?nombre,?apellido,?telefono,?mail,?cedula,?user,?pass,?cargo,?privilegios,?sucursal);"
         Try
             Con.cn2.Open()
             cm = New MySqlCommand()
@@ -139,7 +296,6 @@ Public Class DatosEmpresa
             cm.Parameters.Add("?pass", MySqlDbType.VarChar).Value = "0"
             cm.Parameters.Add("?cargo", MySqlDbType.VarChar).Value = "0"
             cm.Parameters.Add("?privilegios", MySqlDbType.Int32).Value = 0
-            cm.Parameters.Add("?eliminado", MySqlDbType.Int32).Value = 0
             cm.Parameters.Add("?sucursal", MySqlDbType.VarChar).Value = Sucursal
             da = New MySqlDataAdapter(cm)
             ds = New DataSet()
@@ -154,7 +310,7 @@ Public Class DatosEmpresa
     Public Function IngresoFuncionario(ByVal nodo As Encapsuladoras.Funcionarios) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Funcionarios (?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Funcionarios (?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 2)
                 cmd.Parameters.AddWithValue("ID_F", 0)
@@ -167,7 +323,6 @@ Public Class DatosEmpresa
                 cmd.Parameters.AddWithValue("pass", nodo.ContrasenaFuncionario)
                 cmd.Parameters.AddWithValue("cargo", nodo.CargoFuncionario)
                 cmd.Parameters.AddWithValue("privilegios", nodo.PrivilegiosFuncionario)
-                cmd.Parameters.AddWithValue("eliminado", 0)
                 cmd.Parameters.AddWithValue("sucursal", nodo.SucursalFuncionario)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
@@ -186,7 +341,7 @@ Public Class DatosEmpresa
     Public Function EliminoFuncionario(ByVal nodo As Encapsuladoras.Funcionarios) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Funcionarios (?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Funcionarios (?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 3)
                 cmd.Parameters.AddWithValue("ID_F", nodo.IDFuncionario)
@@ -199,7 +354,6 @@ Public Class DatosEmpresa
                 cmd.Parameters.AddWithValue("pass", nodo.ContrasenaFuncionario)
                 cmd.Parameters.AddWithValue("cargo", nodo.CargoFuncionario)
                 cmd.Parameters.AddWithValue("privilegios", nodo.PrivilegiosFuncionario)
-                cmd.Parameters.AddWithValue("eliminado", 1)
                 cmd.Parameters.AddWithValue("sucursal", nodo.SucursalFuncionario)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
@@ -218,7 +372,7 @@ Public Class DatosEmpresa
     Public Function ModificoFuncionario(ByVal nodo As Encapsuladoras.Funcionarios) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Funcionarios (?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Funcionarios (?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 4)
                 cmd.Parameters.AddWithValue("ID_F", nodo.IDFuncionario)
@@ -231,7 +385,6 @@ Public Class DatosEmpresa
                 cmd.Parameters.AddWithValue("pass", nodo.ContrasenaFuncionario)
                 cmd.Parameters.AddWithValue("cargo", nodo.CargoFuncionario)
                 cmd.Parameters.AddWithValue("privilegios", nodo.PrivilegiosFuncionario)
-                cmd.Parameters.AddWithValue("eliminado", 1)
                 cmd.Parameters.AddWithValue("sucursal", nodo.SucursalFuncionario)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
@@ -243,6 +396,117 @@ Public Class DatosEmpresa
             Return True
         Catch ex As Exception
             MsgBox("Error al modificar el funcionario")
+        End Try
+        Return False
+    End Function
+
+    'asesores profesionales
+    Public Function ListaAsesoresProfesionales(Optional ByVal Sucursal As String = "0") As DataSet
+        sql = "CALL `proyecto`.`LABM_AsesoresProfesionales`(?opcion,?ID_AP,?nombre,?apellido,?telefono,?mail,?cedula,?tipo,?sucursal);"
+        Try
+            Con.cn2.Open()
+            cm = New MySqlCommand()
+            cm.CommandText = sql
+            cm.Connection = Con.cn2
+            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
+            cm.Parameters.Add("?ID_AP", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?nombre", MySqlDbType.VarChar).Value = "0"
+            cm.Parameters.Add("?apellido", MySqlDbType.VarChar).Value = "0"
+            cm.Parameters.Add("?telefono", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?mail", MySqlDbType.VarChar).Value = "0"
+            cm.Parameters.Add("?cedula", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?tipo", MySqlDbType.Int32).Value = "0"
+            cm.Parameters.Add("?sucursal", MySqlDbType.VarChar).Value = Sucursal
+            da = New MySqlDataAdapter(cm)
+            ds = New DataSet()
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Con.cn2.Close()
+        Return ds
+    End Function
+
+    Public Function IngresoAsesorProfesional(ByVal nodo As Encapsuladoras.AsesoresProfesionales) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_AsesoresProfesionales (?,?,?,?,?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 2)
+                cmd.Parameters.AddWithValue("ID_AP", 0)
+                cmd.Parameters.AddWithValue("nombre", nodo.NombreAsesorProfesional)
+                cmd.Parameters.AddWithValue("apellido", nodo.ApellidoAsesorProfesional)
+                cmd.Parameters.AddWithValue("telefono", nodo.TelefonoAsesorProfesional)
+                cmd.Parameters.AddWithValue("mail", nodo.MailAsesorProfesional)
+                cmd.Parameters.AddWithValue("cedula", nodo.CedulaAsesorProfesional)
+                cmd.Parameters.AddWithValue("tipo", nodo.TipoAsesorProfesional)
+                cmd.Parameters.AddWithValue("sucursal", nodo.SucursalAsesorProfesional)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al ingresar el asesor profesional")
+        End Try
+        Return False
+    End Function
+
+    Public Function EliminoAsesorProfesional(ByVal nodo As Encapsuladoras.AsesoresProfesionales) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_AsesoresProfesionales (?,?,?,?,?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 3)
+                cmd.Parameters.AddWithValue("ID_F", nodo.IDAsesorProfesional)
+                cmd.Parameters.AddWithValue("nombre", nodo.NombreAsesorProfesional)
+                cmd.Parameters.AddWithValue("apellido", nodo.ApellidoAsesorProfesional)
+                cmd.Parameters.AddWithValue("telefono", nodo.TelefonoAsesorProfesional)
+                cmd.Parameters.AddWithValue("mail", nodo.MailAsesorProfesional)
+                cmd.Parameters.AddWithValue("cedula", nodo.CedulaAsesorProfesional)
+                cmd.Parameters.AddWithValue("tipo", nodo.TipoAsesorProfesional)
+                cmd.Parameters.AddWithValue("sucursal", nodo.SucursalAsesorProfesional)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al eliminar el asesor profesional")
+        End Try
+        Return False
+    End Function
+
+    Public Function ModificoAsesorProfesional(ByVal nodo As Encapsuladoras.AsesoresProfesionales) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_AsesoresProfesionales (?,?,?,?,?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 4)
+                cmd.Parameters.AddWithValue("ID_F", nodo.IDAsesorProfesional)
+                cmd.Parameters.AddWithValue("nombre", nodo.NombreAsesorProfesional)
+                cmd.Parameters.AddWithValue("apellido", nodo.ApellidoAsesorProfesional)
+                cmd.Parameters.AddWithValue("telefono", nodo.TelefonoAsesorProfesional)
+                cmd.Parameters.AddWithValue("mail", nodo.MailAsesorProfesional)
+                cmd.Parameters.AddWithValue("cedula", nodo.CedulaAsesorProfesional)
+                cmd.Parameters.AddWithValue("tipo", nodo.TipoAsesorProfesional)
+                cmd.Parameters.AddWithValue("sucursal", nodo.SucursalAsesorProfesional)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al modificar el asesor profesional")
         End Try
         Return False
     End Function

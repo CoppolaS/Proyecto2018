@@ -76,10 +76,10 @@ Partial Class Empresa_Funcionarios
         Me.Label7 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.Label24 = New System.Windows.Forms.Label()
         Me.ComboBoxSucursales1 = New Proyecto.ComboBoxSucursales()
         Me.Tabla1 = New Proyecto.Tabla()
         Me.Menu1 = New Proyecto.Menu()
-        Me.Label24 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -607,6 +607,15 @@ Partial Class Empresa_Funcionarios
         Me.CheckBox2.Text = "Mostrar contraseñas de funcionarios"
         Me.CheckBox2.UseVisualStyleBackColor = True
         '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(12, 49)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(48, 13)
+        Me.Label24.TabIndex = 33
+        Me.Label24.Text = "Sucursal"
+        '
         'ComboBoxSucursales1
         '
         Me.ComboBoxSucursales1.Location = New System.Drawing.Point(66, 45)
@@ -623,19 +632,10 @@ Partial Class Empresa_Funcionarios
         '
         'Menu1
         '
-        Me.Menu1.Location = New System.Drawing.Point(10, 10)
+        Me.Menu1.Location = New System.Drawing.Point(12, 7)
         Me.Menu1.Name = "Menu1"
         Me.Menu1.Size = New System.Drawing.Size(1240, 32)
         Me.Menu1.TabIndex = 24
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(12, 49)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(48, 13)
-        Me.Label24.TabIndex = 33
-        Me.Label24.Text = "Sucursal"
         '
         'Empresa_Funcionarios
         '
@@ -657,7 +657,7 @@ Partial Class Empresa_Funcionarios
         Me.Name = "Empresa_Funcionarios"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = " "
+        Me.Text = " Empresa - Personal / S.I.GES.VI"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()

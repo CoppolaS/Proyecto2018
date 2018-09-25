@@ -19,17 +19,17 @@ Public Class Empresa_Funcionarios
         ComboBox6.DropDownStyle = ComboBoxStyle.DropDownList
         ComboBox7.DropDownStyle = ComboBoxStyle.DropDownList
         ComboBox1.SelectedIndex() = 0
-        dv = Verif.ValidoListaSucursales
-        dv.RowFilter = "Eliminado = 0"
-        For i As Integer = 0 To dv.Count - 1
-            ComboBox4.Items.Add(dv(i).Item("Nombre").ToString())
-            ComboBox7.Items.Add(dv(i).Item("Nombre").ToString())
-        Next
         dv = Verif.ValidoListaCargos
         dv.RowFilter = "Eliminado = 0"
         For i As Integer = 0 To dv.Count - 1
             ComboBox2.Items.Add(dv(i).Item("Nombre").ToString())
             ComboBox5.Items.Add(dv(i).Item("Nombre").ToString())
+        Next
+        dv = Verif.ValidoListaSucursales
+        dv.RowFilter = "Eliminado = 0"
+        For i As Integer = 0 To dv.Count - 1
+            ComboBox4.Items.Add(dv(i).Item("Nombre").ToString())
+            ComboBox7.Items.Add(dv(i).Item("Nombre").ToString())
         Next
         If Datos.UsuarioLogeado.Privilegios <> 4 Then
             CheckBox2.Enabled = True
@@ -37,17 +37,13 @@ Public Class Empresa_Funcionarios
         CargarTabla()
     End Sub
 
-    Private Sub CargarTabla()
+    Private Sub CargarTabla() Handles ComboBoxSucursales1.SeleccionCambio
         dv = Verif.ValidoListaFuncionarios(Datos.UsuarioLogeado.Sucursal)
         Filtrar(Me, New System.EventArgs)
         Tabla1.DataGridView1.DataSource = dv
         Tabla1.DataGridView1.Columns(7).Visible = False
         Tabla1.DataGridView1.Columns(10).Visible = False
         Tabla1.DataGridView1.ClearSelection()
-    End Sub
-
-    Private Sub CargarPorSucursal(sender As System.Object, e As System.EventArgs) Handles ComboBoxSucursales1.SeleccionCambio
-        CargarTabla()
     End Sub
 
     Private Sub Ingresar(sender As System.Object, e As System.EventArgs) Handles ingresar_BTN.Click

@@ -2,13 +2,11 @@
     Private ID_Sucursal As Integer
     Private Nombre As String
     Private Direccion As String
-    Private Eliminado As Boolean
 
-    Public Sub New(ByVal ID_Sucursal As Integer, ByVal Nombre As String, ByVal Direccion As String, ByVal Eliminado As Boolean)
+    Public Sub New(ByVal ID_Sucursal As Integer, ByVal Nombre As String, ByVal Direccion As String)
         Me.ID_Sucursal = ID_Sucursal
         Me.Nombre = Nombre
         Me.Direccion = Direccion
-        Me.Eliminado = Eliminado
     End Sub
 
     Public Sub New()
@@ -41,15 +39,4 @@
             Me.Direccion = value
         End Set
     End Property
-
-    Public Property EliminadoSucursal() As Boolean
-        Get
-            Return Me.Eliminado
-        End Get
-        Set(ByVal value As Boolean)
-            Me.Eliminado = value
-        End Set
-    End Property
-
-
 End Class

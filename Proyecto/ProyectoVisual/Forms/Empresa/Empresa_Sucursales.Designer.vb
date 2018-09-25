@@ -38,6 +38,7 @@ Partial Class Empresa_Sucursales
         Me.eliminar_BTN = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Tabla2 = New Proyecto.Tabla()
         Me.buscador = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -45,7 +46,6 @@ Partial Class Empresa_Sucursales
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Tabla1 = New Proyecto.Tabla()
         Me.Menu1 = New Proyecto.Menu()
-        Me.Tabla2 = New Proyecto.Tabla()
         Me.DataGridView1 = New Proyecto.Tabla()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -82,9 +82,9 @@ Partial Class Empresa_Sucursales
         'ingresar_BTN
         '
         Me.ingresar_BTN.Enabled = False
-        Me.ingresar_BTN.Location = New System.Drawing.Point(253, 214)
+        Me.ingresar_BTN.Location = New System.Drawing.Point(13, 214)
         Me.ingresar_BTN.Name = "ingresar_BTN"
-        Me.ingresar_BTN.Size = New System.Drawing.Size(203, 23)
+        Me.ingresar_BTN.Size = New System.Drawing.Size(443, 23)
         Me.ingresar_BTN.TabIndex = 4
         Me.ingresar_BTN.Text = "Ingresar"
         Me.ingresar_BTN.UseVisualStyleBackColor = True
@@ -177,9 +177,9 @@ Partial Class Empresa_Sucursales
         'modificar_BTN
         '
         Me.modificar_BTN.Enabled = False
-        Me.modificar_BTN.Location = New System.Drawing.Point(13, 214)
+        Me.modificar_BTN.Location = New System.Drawing.Point(13, 185)
         Me.modificar_BTN.Name = "modificar_BTN"
-        Me.modificar_BTN.Size = New System.Drawing.Size(203, 23)
+        Me.modificar_BTN.Size = New System.Drawing.Size(443, 23)
         Me.modificar_BTN.TabIndex = 30
         Me.modificar_BTN.Text = "Modificar fila seleccionada"
         Me.modificar_BTN.UseVisualStyleBackColor = True
@@ -187,9 +187,9 @@ Partial Class Empresa_Sucursales
         'eliminar_BTN
         '
         Me.eliminar_BTN.Enabled = False
-        Me.eliminar_BTN.Location = New System.Drawing.Point(253, 214)
+        Me.eliminar_BTN.Location = New System.Drawing.Point(13, 214)
         Me.eliminar_BTN.Name = "eliminar_BTN"
-        Me.eliminar_BTN.Size = New System.Drawing.Size(203, 23)
+        Me.eliminar_BTN.Size = New System.Drawing.Size(443, 23)
         Me.eliminar_BTN.TabIndex = 1
         Me.eliminar_BTN.Text = "Eliminar fila seleccionada"
         Me.eliminar_BTN.UseVisualStyleBackColor = True
@@ -213,6 +213,13 @@ Partial Class Empresa_Sucursales
         Me.GroupBox1.TabIndex = 14
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Funcionarios de la sucursal seleccionada"
+        '
+        'Tabla2
+        '
+        Me.Tabla2.Location = New System.Drawing.Point(6, 20)
+        Me.Tabla2.Name = "Tabla2"
+        Me.Tabla2.Size = New System.Drawing.Size(461, 313)
+        Me.Tabla2.TabIndex = 0
         '
         'buscador
         '
@@ -271,13 +278,6 @@ Partial Class Empresa_Sucursales
         Me.Menu1.Name = "Menu1"
         Me.Menu1.Size = New System.Drawing.Size(1240, 32)
         Me.Menu1.TabIndex = 15
-        '
-        'Tabla2
-        '
-        Me.Tabla2.Location = New System.Drawing.Point(6, 20)
-        Me.Tabla2.Name = "Tabla2"
-        Me.Tabla2.Size = New System.Drawing.Size(461, 313)
-        Me.Tabla2.TabIndex = 0
         '
         'DataGridView1
         '

@@ -76,21 +76,22 @@ Partial Class Produccion
         Me.Label7 = New System.Windows.Forms.Label()
         Me.DateTimePicker5 = New System.Windows.Forms.DateTimePicker()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.Button17 = New System.Windows.Forms.Button()
+        Me.Button16 = New System.Windows.Forms.Button()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.Button15 = New System.Windows.Forms.Button()
+        Me.Tabla11 = New Proyecto.Tabla()
+        Me.Tabla10 = New Proyecto.Tabla()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Button14 = New System.Windows.Forms.Button()
+        Me.Tabla9 = New Proyecto.Tabla()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Button13 = New System.Windows.Forms.Button()
-        Me.Tabla9 = New Proyecto.Tabla()
-        Me.Button14 = New System.Windows.Forms.Button()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Tabla10 = New Proyecto.Tabla()
-        Me.Tabla11 = New Proyecto.Tabla()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.Button15 = New System.Windows.Forms.Button()
-        Me.Button16 = New System.Windows.Forms.Button()
-        Me.Button17 = New System.Windows.Forms.Button()
-        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
-        Me.Label12 = New System.Windows.Forms.Label()
         Me.ComboBoxSucursales1 = New Proyecto.ComboBoxSucursales()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -612,6 +613,97 @@ Partial Class Produccion
         Me.TabPage6.Text = "Embotellar"
         Me.TabPage6.UseVisualStyleBackColor = True
         '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(303, 249)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(103, 15)
+        Me.Label12.TabIndex = 24
+        Me.Label12.Text = "Litros restantes: 0"
+        '
+        'ComboBox5
+        '
+        Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Location = New System.Drawing.Point(147, 267)
+        Me.ComboBox5.Name = "ComboBox5"
+        Me.ComboBox5.Size = New System.Drawing.Size(121, 23)
+        Me.ComboBox5.TabIndex = 23
+        Me.ComboBox5.Text = "Vinos"
+        '
+        'Button17
+        '
+        Me.Button17.Location = New System.Drawing.Point(310, 267)
+        Me.Button17.Name = "Button17"
+        Me.Button17.Size = New System.Drawing.Size(104, 23)
+        Me.Button17.TabIndex = 22
+        Me.Button17.Text = "Embotellar"
+        Me.Button17.UseVisualStyleBackColor = True
+        '
+        'Button16
+        '
+        Me.Button16.Location = New System.Drawing.Point(354, 192)
+        Me.Button16.Name = "Button16"
+        Me.Button16.Size = New System.Drawing.Size(60, 23)
+        Me.Button16.TabIndex = 21
+        Me.Button16.Text = "Quitar"
+        Me.Button16.UseVisualStyleBackColor = True
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Location = New System.Drawing.Point(192, 192)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(76, 21)
+        Me.TextBox8.TabIndex = 20
+        '
+        'Button15
+        '
+        Me.Button15.Location = New System.Drawing.Point(288, 192)
+        Me.Button15.Name = "Button15"
+        Me.Button15.Size = New System.Drawing.Size(60, 23)
+        Me.Button15.TabIndex = 19
+        Me.Button15.Text = "Agregar"
+        Me.Button15.UseVisualStyleBackColor = True
+        '
+        'Tabla11
+        '
+        Me.Tabla11.Location = New System.Drawing.Point(306, 31)
+        Me.Tabla11.Name = "Tabla11"
+        Me.Tabla11.Size = New System.Drawing.Size(108, 155)
+        Me.Tabla11.TabIndex = 18
+        '
+        'Tabla10
+        '
+        Me.Tabla10.Location = New System.Drawing.Point(192, 31)
+        Me.Tabla10.Name = "Tabla10"
+        Me.Tabla10.Size = New System.Drawing.Size(108, 155)
+        Me.Tabla10.TabIndex = 17
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(276, 10)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(51, 15)
+        Me.Label11.TabIndex = 16
+        Me.Label11.Text = "Botellas"
+        '
+        'Button14
+        '
+        Me.Button14.Location = New System.Drawing.Point(13, 219)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(60, 23)
+        Me.Button14.TabIndex = 13
+        Me.Button14.Text = "Quitar"
+        Me.Button14.UseVisualStyleBackColor = True
+        '
+        'Tabla9
+        '
+        Me.Tabla9.Location = New System.Drawing.Point(13, 58)
+        Me.Tabla9.Name = "Tabla9"
+        Me.Tabla9.Size = New System.Drawing.Size(142, 155)
+        Me.Tabla9.TabIndex = 15
+        '
         'TextBox7
         '
         Me.TextBox7.Location = New System.Drawing.Point(13, 31)
@@ -637,97 +729,6 @@ Partial Class Produccion
         Me.Button13.Text = "Agregar"
         Me.Button13.UseVisualStyleBackColor = True
         '
-        'Tabla9
-        '
-        Me.Tabla9.Location = New System.Drawing.Point(13, 58)
-        Me.Tabla9.Name = "Tabla9"
-        Me.Tabla9.Size = New System.Drawing.Size(142, 155)
-        Me.Tabla9.TabIndex = 15
-        '
-        'Button14
-        '
-        Me.Button14.Location = New System.Drawing.Point(13, 219)
-        Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(60, 23)
-        Me.Button14.TabIndex = 13
-        Me.Button14.Text = "Quitar"
-        Me.Button14.UseVisualStyleBackColor = True
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(276, 10)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(51, 15)
-        Me.Label11.TabIndex = 16
-        Me.Label11.Text = "Botellas"
-        '
-        'Tabla10
-        '
-        Me.Tabla10.Location = New System.Drawing.Point(192, 31)
-        Me.Tabla10.Name = "Tabla10"
-        Me.Tabla10.Size = New System.Drawing.Size(108, 155)
-        Me.Tabla10.TabIndex = 17
-        '
-        'Tabla11
-        '
-        Me.Tabla11.Location = New System.Drawing.Point(306, 31)
-        Me.Tabla11.Name = "Tabla11"
-        Me.Tabla11.Size = New System.Drawing.Size(108, 155)
-        Me.Tabla11.TabIndex = 18
-        '
-        'TextBox8
-        '
-        Me.TextBox8.Location = New System.Drawing.Point(192, 192)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(76, 21)
-        Me.TextBox8.TabIndex = 20
-        '
-        'Button15
-        '
-        Me.Button15.Location = New System.Drawing.Point(288, 192)
-        Me.Button15.Name = "Button15"
-        Me.Button15.Size = New System.Drawing.Size(60, 23)
-        Me.Button15.TabIndex = 19
-        Me.Button15.Text = "Agregar"
-        Me.Button15.UseVisualStyleBackColor = True
-        '
-        'Button16
-        '
-        Me.Button16.Location = New System.Drawing.Point(354, 192)
-        Me.Button16.Name = "Button16"
-        Me.Button16.Size = New System.Drawing.Size(60, 23)
-        Me.Button16.TabIndex = 21
-        Me.Button16.Text = "Quitar"
-        Me.Button16.UseVisualStyleBackColor = True
-        '
-        'Button17
-        '
-        Me.Button17.Location = New System.Drawing.Point(310, 267)
-        Me.Button17.Name = "Button17"
-        Me.Button17.Size = New System.Drawing.Size(104, 23)
-        Me.Button17.TabIndex = 22
-        Me.Button17.Text = "Embotellar"
-        Me.Button17.UseVisualStyleBackColor = True
-        '
-        'ComboBox5
-        '
-        Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Location = New System.Drawing.Point(147, 267)
-        Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBox5.TabIndex = 23
-        Me.ComboBox5.Text = "Vinos"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(303, 249)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(103, 15)
-        Me.Label12.TabIndex = 24
-        Me.Label12.Text = "Litros restantes: 0"
-        '
         'ComboBoxSucursales1
         '
         Me.ComboBoxSucursales1.Location = New System.Drawing.Point(484, 50)
@@ -735,11 +736,21 @@ Partial Class Produccion
         Me.ComboBoxSucursales1.Size = New System.Drawing.Size(181, 21)
         Me.ComboBoxSucursales1.TabIndex = 17
         '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(419, 50)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(59, 13)
+        Me.Label13.TabIndex = 18
+        Me.Label13.Text = "Sucursales"
+        '
         'Produccion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.ComboBoxSucursales1)
         Me.Controls.Add(Me.TabControl2)
         Me.Controls.Add(Me.TabControl1)
@@ -771,6 +782,7 @@ Partial Class Produccion
         Me.TabPage6.ResumeLayout(False)
         Me.TabPage6.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Menu1 As Proyecto.Menu
@@ -842,4 +854,5 @@ Partial Class Produccion
     Friend WithEvents ComboBox5 As System.Windows.Forms.ComboBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents ComboBoxSucursales1 As Proyecto.ComboBoxSucursales
+    Friend WithEvents Label13 As System.Windows.Forms.Label
 End Class

@@ -14,7 +14,6 @@ Public Class ComboBoxSucursales
         If Datos.UsuarioLogeado.Privilegios = 1 Then
             ComboBox1.Enabled = True
         End If
-        'ComboBox1.Text = Datos.UsuarioLogeado.Sucursal
     End Sub
 
     Public Event SeleccionCambio(sender As System.Object, e As System.EventArgs)
