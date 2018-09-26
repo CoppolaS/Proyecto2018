@@ -9,7 +9,7 @@ Public Class DatosParametros
     Dim ds As DataSet
 
     'barricas
-    Public Function ListaBarricas(Optional ByVal Sucursal As String = "0") As DataSet
+    Public Function ListaBarricas() As DataSet
         sql = "CALL `proyecto`.`LABM_Barricas`(?opcion,?ID_B,?numero,?disponible,?capacidad,?material,?nro_usos,?sucursal);"
         Try
             Con.cn2.Open()
@@ -116,7 +116,7 @@ Public Class DatosParametros
     End Function
 
     'tanques
-    Public Function ListaTanques(Optional ByVal Sucursal As String = "0") As DataSet
+    Public Function ListaTanques() As DataSet
         sql = "CALL `proyecto`.`LABM_Tanques`(?opcion,?ID_T,?numero,?disponible,?capacidad,?material,?sucursal);"
         Try
             Con.cn2.Open()
@@ -214,6 +214,113 @@ Public Class DatosParametros
             Return True
         Catch ex As Exception
             MsgBox("Error al modificar el tanque")
+        End Try
+        Return False
+    End Function
+
+    'procesos
+    Public Function ListaProcesos() As DataSet
+        sql = "CALL `proyecto`.`LABM_Procesos`(?opcion,?ID_P,?nombre,?descripcion,?materiaprima,?productointermedio,?barrica,?tanque);"
+        Try
+            Con.cn2.Open()
+            cm = New MySqlCommand()
+            cm.CommandText = sql
+            cm.Connection = Con.cn2
+            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
+            cm.Parameters.Add("?ID_P", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?nombre", MySqlDbType.VarChar).Value = "0"
+            cm.Parameters.Add("?descripcion", MySqlDbType.VarChar).Value = "0"
+            cm.Parameters.Add("?materiaprima", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?productointermedio", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?barrica", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?tanque", MySqlDbType.Int32).Value = 0
+            da = New MySqlDataAdapter(cm)
+            ds = New DataSet()
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Con.cn2.Close()
+        Return ds
+    End Function
+
+    Public Function IngresoProceso(ByVal nodo As Encapsuladoras.Procesos) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Procesos (?,?,?,?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 2)
+                cmd.Parameters.AddWithValue("ID_P", 0)
+                cmd.Parameters.AddWithValue("nombre", nodo.NombreProceso)
+                cmd.Parameters.AddWithValue("descripcion", nodo.DescripcionProceso)
+                cmd.Parameters.AddWithValue("materiaprima", nodo.MateriaPrimaProceso)
+                cmd.Parameters.AddWithValue("productointermedio", nodo.ProductoIntermedioProceso)
+                cmd.Parameters.AddWithValue("barrica", nodo.BarricaProceso)
+                cmd.Parameters.AddWithValue("tanque", nodo.TanqueProceso)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al ingresar el proceso")
+        End Try
+        Return False
+    End Function
+
+    Public Function EliminoProceso(ByVal nodo As Encapsuladoras.Procesos) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Procesos (?,?,?,?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 3)
+                cmd.Parameters.AddWithValue("ID_P", nodo.IDProceso)
+                cmd.Parameters.AddWithValue("nombre", "")
+                cmd.Parameters.AddWithValue("descripcion", "")
+                cmd.Parameters.AddWithValue("materiaprima", False)
+                cmd.Parameters.AddWithValue("productointermedio", False)
+                cmd.Parameters.AddWithValue("barrica", False)
+                cmd.Parameters.AddWithValue("tanque", False)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al eliminar el proceso")
+        End Try
+        Return False
+    End Function
+
+    Public Function ModificoProceso(ByVal nodo As Encapsuladoras.Procesos) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Procesos (?,?,?,?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 4)
+                cmd.Parameters.AddWithValue("ID_P", nodo.IDProceso)
+                cmd.Parameters.AddWithValue("nombre", nodo.NombreProceso)
+                cmd.Parameters.AddWithValue("descripcion", nodo.DescripcionProceso)
+                cmd.Parameters.AddWithValue("materiaprima", nodo.MateriaPrimaProceso)
+                cmd.Parameters.AddWithValue("productointermedio", nodo.ProductoIntermedioProceso)
+                cmd.Parameters.AddWithValue("barrica", nodo.BarricaProceso)
+                cmd.Parameters.AddWithValue("tanque", nodo.TanqueProceso)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al modificar el proceso")
         End Try
         Return False
     End Function
