@@ -22,13 +22,11 @@ Partial Class Parametros_Barricas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Menu1 = New Proyecto.Menu()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.buscador = New System.Windows.Forms.TextBox()
-        Me.Tabla1 = New Proyecto.Tabla()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
@@ -53,19 +51,14 @@ Partial Class Parametros_Barricas
         Me.modificar_BTN = New System.Windows.Forms.Button()
         Me.eliminar_BTN = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.ComboBoxSucursales1 = New Proyecto.ComboBoxSucursales()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.ComboBoxSucursales1 = New Proyecto.ComboBoxSucursales()
+        Me.Tabla1 = New Proyecto.Tabla()
+        Me.Menu1 = New Proyecto.Menu()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Menu1
-        '
-        Me.Menu1.Location = New System.Drawing.Point(12, 7)
-        Me.Menu1.Name = "Menu1"
-        Me.Menu1.Size = New System.Drawing.Size(1240, 32)
-        Me.Menu1.TabIndex = 15
         '
         'CheckBox1
         '
@@ -110,13 +103,6 @@ Partial Class Parametros_Barricas
         Me.buscador.Name = "buscador"
         Me.buscador.Size = New System.Drawing.Size(144, 20)
         Me.buscador.TabIndex = 39
-        '
-        'Tabla1
-        '
-        Me.Tabla1.Location = New System.Drawing.Point(12, 69)
-        Me.Tabla1.Name = "Tabla1"
-        Me.Tabla1.Size = New System.Drawing.Size(761, 599)
-        Me.Tabla1.TabIndex = 38
         '
         'TabControl1
         '
@@ -199,7 +185,7 @@ Partial Class Parametros_Barricas
         'ingresar_BTN
         '
         Me.ingresar_BTN.Enabled = False
-        Me.ingresar_BTN.Location = New System.Drawing.Point(13, 560)
+        Me.ingresar_BTN.Location = New System.Drawing.Point(13, 536)
         Me.ingresar_BTN.Name = "ingresar_BTN"
         Me.ingresar_BTN.Size = New System.Drawing.Size(443, 23)
         Me.ingresar_BTN.TabIndex = 4
@@ -239,7 +225,7 @@ Partial Class Parametros_Barricas
         Me.TabPage2.Location = New System.Drawing.Point(4, 24)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(10)
-        Me.TabPage2.Size = New System.Drawing.Size(469, 596)
+        Me.TabPage2.Size = New System.Drawing.Size(469, 572)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Administrar"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -327,7 +313,7 @@ Partial Class Parametros_Barricas
         'modificar_BTN
         '
         Me.modificar_BTN.Enabled = False
-        Me.modificar_BTN.Location = New System.Drawing.Point(13, 531)
+        Me.modificar_BTN.Location = New System.Drawing.Point(13, 507)
         Me.modificar_BTN.Name = "modificar_BTN"
         Me.modificar_BTN.Size = New System.Drawing.Size(443, 23)
         Me.modificar_BTN.TabIndex = 30
@@ -337,7 +323,7 @@ Partial Class Parametros_Barricas
         'eliminar_BTN
         '
         Me.eliminar_BTN.Enabled = False
-        Me.eliminar_BTN.Location = New System.Drawing.Point(13, 560)
+        Me.eliminar_BTN.Location = New System.Drawing.Point(13, 536)
         Me.eliminar_BTN.Name = "eliminar_BTN"
         Me.eliminar_BTN.Size = New System.Drawing.Size(443, 23)
         Me.eliminar_BTN.TabIndex = 1
@@ -353,13 +339,6 @@ Partial Class Parametros_Barricas
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Seleccionar una celda de la tabla primero"
         '
-        'ComboBoxSucursales1
-        '
-        Me.ComboBoxSucursales1.Location = New System.Drawing.Point(77, 42)
-        Me.ComboBoxSucursales1.Name = "ComboBoxSucursales1"
-        Me.ComboBoxSucursales1.Size = New System.Drawing.Size(166, 21)
-        Me.ComboBoxSucursales1.TabIndex = 44
-        '
         'Label12
         '
         Me.Label12.AutoSize = True
@@ -368,6 +347,27 @@ Partial Class Parametros_Barricas
         Me.Label12.Size = New System.Drawing.Size(59, 13)
         Me.Label12.TabIndex = 45
         Me.Label12.Text = "Sucursales"
+        '
+        'ComboBoxSucursales1
+        '
+        Me.ComboBoxSucursales1.Location = New System.Drawing.Point(77, 42)
+        Me.ComboBoxSucursales1.Name = "ComboBoxSucursales1"
+        Me.ComboBoxSucursales1.Size = New System.Drawing.Size(166, 21)
+        Me.ComboBoxSucursales1.TabIndex = 44
+        '
+        'Tabla1
+        '
+        Me.Tabla1.Location = New System.Drawing.Point(12, 69)
+        Me.Tabla1.Name = "Tabla1"
+        Me.Tabla1.Size = New System.Drawing.Size(761, 599)
+        Me.Tabla1.TabIndex = 38
+        '
+        'Menu1
+        '
+        Me.Menu1.Location = New System.Drawing.Point(12, 7)
+        Me.Menu1.Name = "Menu1"
+        Me.Menu1.Size = New System.Drawing.Size(1240, 32)
+        Me.Menu1.TabIndex = 15
         '
         'Parametros_Barricas
         '

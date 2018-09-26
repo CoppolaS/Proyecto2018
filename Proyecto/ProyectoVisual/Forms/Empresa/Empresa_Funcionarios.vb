@@ -37,10 +37,15 @@ Public Class Empresa_Funcionarios
         CargarTabla()
     End Sub
 
-    Private Sub CargarTabla() Handles ComboBoxSucursales1.SeleccionCambio
-        dv = Verif.ValidoListaFuncionarios(Datos.UsuarioLogeado.Sucursal)
-        Filtrar(Me, New System.EventArgs)
+    Private Sub CargarTabla() Handles ComboBoxSucursales1.SeleccionCambio, buscador.TextChanged, ComboBox1.SelectedValueChanged, CheckBox1.CheckedChanged
+        dv = Verif.ValidoListaFuncionarios()
+        If CheckBox1.CheckState = CheckState.Checked Then
+            dv.RowFilter = "" + ComboBox1.SelectedItem.ToString + " like '%" + buscador.Text.ToString + "%'"
+        Else
+            dv.RowFilter = "" + ComboBox1.SelectedItem.ToString + " like '%" + buscador.Text.ToString + "%' and Eliminado = 0"
+        End If
         Tabla1.DataGridView1.DataSource = dv
+        Tabla1.DataGridView1.ClearSelection()
         Tabla1.DataGridView1.Columns(7).Visible = False
         Tabla1.DataGridView1.Columns(10).Visible = False
         Tabla1.DataGridView1.ClearSelection()
@@ -53,7 +58,11 @@ Public Class Empresa_Funcionarios
         encapsuladora.MailFuncionario = TextBox4.Text
         encapsuladora.CedulaFuncionario = TextBox5.Text
         encapsuladora.CargoFuncionario = ComboBox2.SelectedItem.ToString
-        encapsuladora.PrivilegiosFuncionario = ComboBox3.SelectedItem.ToString
+        If ComboBox3.SelectedIndex = -1 Then
+            encapsuladora.PrivilegiosFuncionario = 4
+        Else
+            encapsuladora.PrivilegiosFuncionario = ComboBox3.SelectedItem.ToString
+        End If
         encapsuladora.SucursalFuncionario = ComboBox4.SelectedItem.ToString
         encapsuladora.UsuarioFuncionario = TextBox6.Text
         encapsuladora.ContrasenaFuncionario = TextBox7.Text
@@ -73,6 +82,8 @@ Public Class Empresa_Funcionarios
 
     Private Sub Eliminar(sender As System.Object, e As System.EventArgs) Handles eliminar_BTN.Click
         encapsuladora.IDFuncionario = Tabla.ID
+        encapsuladora.UsuarioFuncionario = Tabla1.DataGridView1(6, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
+        encapsuladora.ContrasenaFuncionario = Tabla1.DataGridView1(7, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
         Verif.ValidoEliminarFuncionarios(encapsuladora)
         CargarTabla()
     End Sub
@@ -145,12 +156,14 @@ Public Class Empresa_Funcionarios
         If CheckBox3.CheckState = CheckState.Checked Then
             TextBox6.Enabled = True
             TextBox7.Enabled = True
+            ComboBox3.Enabled = True
         Else
             TextBox6.Enabled = False
             TextBox7.Enabled = False
+            ComboBox3.Enabled = False
         End If
 
-        If TextBox1.TextLength > 0 And TextBox2.TextLength > 0 And TextBox3.TextLength > 0 And TextBox4.TextLength > 0 And TextBox5.TextLength > 0 And ComboBox2.SelectedIndex <> -1 And ComboBox3.SelectedIndex <> -1 And ComboBox4.SelectedIndex <> -1 Then
+        If TextBox1.TextLength > 0 And TextBox2.TextLength > 0 And TextBox3.TextLength > 0 And TextBox4.TextLength > 0 And TextBox5.TextLength > 0 And ComboBox2.SelectedIndex <> -1 And ComboBox4.SelectedIndex <> -1 Then
             ingresar_BTN.Enabled = True
         Else
             ingresar_BTN.Enabled = False
@@ -161,17 +174,6 @@ Public Class Empresa_Funcionarios
         Else
             Tabla1.DataGridView1.Columns(7).Visible = False
         End If
-    End Sub
-
-    Private Sub Filtrar(sender As Object, e As System.EventArgs) Handles buscador.TextChanged, ComboBox1.SelectedValueChanged, CheckBox1.CheckedChanged
-        dv = Verif.ValidoListaFuncionarios(Datos.UsuarioLogeado.Sucursal)
-        If CheckBox1.CheckState = CheckState.Checked Then
-            dv.RowFilter = "" + ComboBox1.SelectedItem.ToString + " like '%" + buscador.Text.ToString + "%'"
-        Else
-            dv.RowFilter = "" + ComboBox1.SelectedItem.ToString + " like '%" + buscador.Text.ToString + "%' and Eliminado = 0"
-        End If
-        Tabla1.DataGridView1.DataSource = dv
-        Tabla1.DataGridView1.ClearSelection()
     End Sub
 
 End Class

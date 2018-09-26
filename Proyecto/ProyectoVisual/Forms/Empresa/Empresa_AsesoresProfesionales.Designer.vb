@@ -24,6 +24,10 @@ Partial Class Empresa_AsesoresProfesionales
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.Label20 = New System.Windows.Forms.Label()
         Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
@@ -40,6 +44,10 @@ Partial Class Empresa_AsesoresProfesionales
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.Label22 = New System.Windows.Forms.Label()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
@@ -84,6 +92,10 @@ Partial Class Empresa_AsesoresProfesionales
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Label19)
+        Me.TabPage1.Controls.Add(Me.TextBox11)
+        Me.TabPage1.Controls.Add(Me.TextBox12)
+        Me.TabPage1.Controls.Add(Me.Label20)
         Me.TabPage1.Controls.Add(Me.ComboBox4)
         Me.TabPage1.Controls.Add(Me.Label17)
         Me.TabPage1.Controls.Add(Me.TextBox9)
@@ -107,12 +119,44 @@ Partial Class Empresa_AsesoresProfesionales
         Me.TabPage1.Text = "Ingresar"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(13, 236)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(70, 15)
+        Me.Label19.TabIndex = 19
+        Me.Label19.Text = "Contraseña"
+        '
+        'TextBox11
+        '
+        Me.TextBox11.Location = New System.Drawing.Point(112, 206)
+        Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.Size = New System.Drawing.Size(344, 21)
+        Me.TextBox11.TabIndex = 8
+        '
+        'TextBox12
+        '
+        Me.TextBox12.Location = New System.Drawing.Point(112, 233)
+        Me.TextBox12.Name = "TextBox12"
+        Me.TextBox12.Size = New System.Drawing.Size(344, 21)
+        Me.TextBox12.TabIndex = 9
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(13, 209)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(93, 15)
+        Me.Label20.TabIndex = 16
+        Me.Label20.Text = "Usuario de web"
+        '
         'ComboBox4
         '
         Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(71, 177)
+        Me.ComboBox4.Location = New System.Drawing.Point(112, 177)
         Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(385, 23)
+        Me.ComboBox4.Size = New System.Drawing.Size(344, 23)
         Me.ComboBox4.TabIndex = 7
         '
         'Label17
@@ -126,9 +170,9 @@ Partial Class Empresa_AsesoresProfesionales
         '
         'TextBox9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(71, 94)
+        Me.TextBox9.Location = New System.Drawing.Point(112, 94)
         Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(385, 21)
+        Me.TextBox9.Size = New System.Drawing.Size(344, 21)
         Me.TextBox9.TabIndex = 4
         '
         'Label14
@@ -143,9 +187,9 @@ Partial Class Empresa_AsesoresProfesionales
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(71, 148)
+        Me.ComboBox2.Location = New System.Drawing.Point(112, 148)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(385, 23)
+        Me.ComboBox2.Size = New System.Drawing.Size(344, 23)
         Me.ComboBox2.TabIndex = 6
         Me.ComboBox2.Text = "Tipo de Asesor Profesional"
         '
@@ -160,10 +204,11 @@ Partial Class Empresa_AsesoresProfesionales
         '
         'Button1
         '
+        Me.Button1.Enabled = False
         Me.Button1.Location = New System.Drawing.Point(13, 532)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(443, 23)
-        Me.Button1.TabIndex = 8
+        Me.Button1.TabIndex = 10
         Me.Button1.Text = "Ingresar"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -178,16 +223,16 @@ Partial Class Empresa_AsesoresProfesionales
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(71, 67)
+        Me.TextBox3.Location = New System.Drawing.Point(112, 67)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(385, 21)
+        Me.TextBox3.Size = New System.Drawing.Size(344, 21)
         Me.TextBox3.TabIndex = 3
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(71, 121)
+        Me.TextBox4.Location = New System.Drawing.Point(112, 121)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(385, 21)
+        Me.TextBox4.Size = New System.Drawing.Size(344, 21)
         Me.TextBox4.TabIndex = 5
         '
         'Label4
@@ -210,16 +255,16 @@ Partial Class Empresa_AsesoresProfesionales
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(71, 40)
+        Me.TextBox2.Location = New System.Drawing.Point(112, 40)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(385, 21)
+        Me.TextBox2.Size = New System.Drawing.Size(344, 21)
         Me.TextBox2.TabIndex = 2
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(71, 13)
+        Me.TextBox1.Location = New System.Drawing.Point(112, 13)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(385, 21)
+        Me.TextBox1.Size = New System.Drawing.Size(344, 21)
         Me.TextBox1.TabIndex = 1
         '
         'Label1
@@ -233,6 +278,10 @@ Partial Class Empresa_AsesoresProfesionales
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Label21)
+        Me.TabPage2.Controls.Add(Me.TextBox13)
+        Me.TabPage2.Controls.Add(Me.TextBox14)
+        Me.TabPage2.Controls.Add(Me.Label22)
         Me.TabPage2.Controls.Add(Me.ComboBox3)
         Me.TabPage2.Controls.Add(Me.Label6)
         Me.TabPage2.Controls.Add(Me.TextBox5)
@@ -258,13 +307,47 @@ Partial Class Empresa_AsesoresProfesionales
         Me.TabPage2.Text = "Administrar"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(13, 260)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(70, 15)
+        Me.Label21.TabIndex = 47
+        Me.Label21.Text = "Contraseña"
+        '
+        'TextBox13
+        '
+        Me.TextBox13.Enabled = False
+        Me.TextBox13.Location = New System.Drawing.Point(112, 230)
+        Me.TextBox13.Name = "TextBox13"
+        Me.TextBox13.Size = New System.Drawing.Size(344, 21)
+        Me.TextBox13.TabIndex = 39
+        '
+        'TextBox14
+        '
+        Me.TextBox14.Enabled = False
+        Me.TextBox14.Location = New System.Drawing.Point(112, 257)
+        Me.TextBox14.Name = "TextBox14"
+        Me.TextBox14.Size = New System.Drawing.Size(344, 21)
+        Me.TextBox14.TabIndex = 40
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(13, 233)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(93, 15)
+        Me.Label22.TabIndex = 44
+        Me.Label22.Text = "Usuario de web"
+        '
         'ComboBox3
         '
         Me.ComboBox3.Enabled = False
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(71, 201)
+        Me.ComboBox3.Location = New System.Drawing.Point(112, 201)
         Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(385, 23)
+        Me.ComboBox3.Size = New System.Drawing.Size(344, 23)
         Me.ComboBox3.TabIndex = 38
         '
         'Label6
@@ -279,9 +362,9 @@ Partial Class Empresa_AsesoresProfesionales
         'TextBox5
         '
         Me.TextBox5.Enabled = False
-        Me.TextBox5.Location = New System.Drawing.Point(71, 118)
+        Me.TextBox5.Location = New System.Drawing.Point(112, 118)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(385, 21)
+        Me.TextBox5.Size = New System.Drawing.Size(344, 21)
         Me.TextBox5.TabIndex = 35
         '
         'Label8
@@ -297,9 +380,9 @@ Partial Class Empresa_AsesoresProfesionales
         '
         Me.ComboBox5.Enabled = False
         Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Location = New System.Drawing.Point(71, 172)
+        Me.ComboBox5.Location = New System.Drawing.Point(112, 172)
         Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(385, 23)
+        Me.ComboBox5.Size = New System.Drawing.Size(344, 23)
         Me.ComboBox5.TabIndex = 37
         Me.ComboBox5.Text = "Tipo de Asesor Profesional"
         '
@@ -324,17 +407,17 @@ Partial Class Empresa_AsesoresProfesionales
         'TextBox6
         '
         Me.TextBox6.Enabled = False
-        Me.TextBox6.Location = New System.Drawing.Point(71, 91)
+        Me.TextBox6.Location = New System.Drawing.Point(112, 91)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(385, 21)
+        Me.TextBox6.Size = New System.Drawing.Size(344, 21)
         Me.TextBox6.TabIndex = 34
         '
         'TextBox7
         '
         Me.TextBox7.Enabled = False
-        Me.TextBox7.Location = New System.Drawing.Point(71, 145)
+        Me.TextBox7.Location = New System.Drawing.Point(112, 145)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(385, 21)
+        Me.TextBox7.Size = New System.Drawing.Size(344, 21)
         Me.TextBox7.TabIndex = 36
         '
         'Label11
@@ -358,17 +441,17 @@ Partial Class Empresa_AsesoresProfesionales
         'TextBox8
         '
         Me.TextBox8.Enabled = False
-        Me.TextBox8.Location = New System.Drawing.Point(71, 64)
+        Me.TextBox8.Location = New System.Drawing.Point(112, 64)
         Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(385, 21)
+        Me.TextBox8.Size = New System.Drawing.Size(344, 21)
         Me.TextBox8.TabIndex = 33
         '
         'TextBox10
         '
         Me.TextBox10.Enabled = False
-        Me.TextBox10.Location = New System.Drawing.Point(71, 37)
+        Me.TextBox10.Location = New System.Drawing.Point(112, 37)
         Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(385, 21)
+        Me.TextBox10.Size = New System.Drawing.Size(344, 21)
         Me.TextBox10.TabIndex = 32
         '
         'Label18
@@ -385,7 +468,7 @@ Partial Class Empresa_AsesoresProfesionales
         Me.Button3.Location = New System.Drawing.Point(16, 503)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(440, 23)
-        Me.Button3.TabIndex = 39
+        Me.Button3.TabIndex = 41
         Me.Button3.Text = "Modificar fila seleccionada"
         Me.Button3.UseVisualStyleBackColor = True
         '
@@ -394,7 +477,7 @@ Partial Class Empresa_AsesoresProfesionales
         Me.Button2.Location = New System.Drawing.Point(16, 532)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(440, 23)
-        Me.Button2.TabIndex = 40
+        Me.Button2.TabIndex = 42
         Me.Button2.Text = "Eliminar fila seleccionada"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -554,4 +637,12 @@ Partial Class Empresa_AsesoresProfesionales
     Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
     Friend WithEvents Label18 As System.Windows.Forms.Label
+    Friend WithEvents Label19 As System.Windows.Forms.Label
+    Friend WithEvents TextBox11 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox12 As System.Windows.Forms.TextBox
+    Friend WithEvents Label20 As System.Windows.Forms.Label
+    Friend WithEvents Label21 As System.Windows.Forms.Label
+    Friend WithEvents TextBox13 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox14 As System.Windows.Forms.TextBox
+    Friend WithEvents Label22 As System.Windows.Forms.Label
 End Class

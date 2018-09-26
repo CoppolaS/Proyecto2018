@@ -165,7 +165,7 @@ Partial Class Empresa_Funcionarios
         '
         Me.CheckBox3.AutoSize = True
         Me.CheckBox3.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.CheckBox3.Location = New System.Drawing.Point(128, 235)
+        Me.CheckBox3.Location = New System.Drawing.Point(128, 206)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(172, 19)
         Me.CheckBox3.TabIndex = 31
@@ -175,7 +175,7 @@ Partial Class Empresa_Funcionarios
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(13, 209)
+        Me.Label13.Location = New System.Drawing.Point(13, 180)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(55, 15)
         Me.Label13.TabIndex = 24
@@ -184,7 +184,7 @@ Partial Class Empresa_Funcionarios
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(13, 180)
+        Me.Label12.Location = New System.Drawing.Point(13, 288)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(109, 15)
         Me.Label12.TabIndex = 23
@@ -202,16 +202,17 @@ Partial Class Empresa_Funcionarios
         'ComboBox4
         '
         Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(128, 206)
+        Me.ComboBox4.Location = New System.Drawing.Point(128, 177)
         Me.ComboBox4.Name = "ComboBox4"
         Me.ComboBox4.Size = New System.Drawing.Size(212, 23)
         Me.ComboBox4.TabIndex = 21
         '
         'ComboBox3
         '
+        Me.ComboBox3.Enabled = False
         Me.ComboBox3.FormattingEnabled = True
         Me.ComboBox3.Items.AddRange(New Object() {"1", "2", "3", "4"})
-        Me.ComboBox3.Location = New System.Drawing.Point(128, 177)
+        Me.ComboBox3.Location = New System.Drawing.Point(128, 285)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(212, 23)
         Me.ComboBox3.TabIndex = 20
@@ -227,7 +228,7 @@ Partial Class Empresa_Funcionarios
         'TextBox7
         '
         Me.TextBox7.Enabled = False
-        Me.TextBox7.Location = New System.Drawing.Point(128, 287)
+        Me.TextBox7.Location = New System.Drawing.Point(128, 258)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(212, 21)
         Me.TextBox7.TabIndex = 18
@@ -235,7 +236,7 @@ Partial Class Empresa_Funcionarios
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(13, 290)
+        Me.Label10.Location = New System.Drawing.Point(13, 261)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(70, 15)
         Me.Label10.TabIndex = 17
@@ -244,7 +245,7 @@ Partial Class Empresa_Funcionarios
         'TextBox6
         '
         Me.TextBox6.Enabled = False
-        Me.TextBox6.Location = New System.Drawing.Point(128, 260)
+        Me.TextBox6.Location = New System.Drawing.Point(128, 231)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(212, 21)
         Me.TextBox6.TabIndex = 16
@@ -252,7 +253,7 @@ Partial Class Empresa_Funcionarios
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(13, 263)
+        Me.Label9.Location = New System.Drawing.Point(13, 234)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(50, 15)
         Me.Label9.TabIndex = 15
@@ -384,7 +385,7 @@ Partial Class Empresa_Funcionarios
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(13, 289)
+        Me.Label14.Location = New System.Drawing.Point(13, 206)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(55, 15)
         Me.Label14.TabIndex = 50
@@ -393,7 +394,7 @@ Partial Class Empresa_Funcionarios
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(13, 260)
+        Me.Label15.Location = New System.Drawing.Point(13, 289)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(109, 15)
         Me.Label15.TabIndex = 49
@@ -402,7 +403,7 @@ Partial Class Empresa_Funcionarios
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(13, 231)
+        Me.Label16.Location = New System.Drawing.Point(13, 177)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(40, 15)
         Me.Label16.TabIndex = 48
@@ -412,7 +413,7 @@ Partial Class Empresa_Funcionarios
         '
         Me.ComboBox5.Enabled = False
         Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Location = New System.Drawing.Point(128, 228)
+        Me.ComboBox5.Location = New System.Drawing.Point(128, 174)
         Me.ComboBox5.Name = "ComboBox5"
         Me.ComboBox5.Size = New System.Drawing.Size(212, 23)
         Me.ComboBox5.TabIndex = 47
@@ -422,7 +423,7 @@ Partial Class Empresa_Funcionarios
         Me.ComboBox6.Enabled = False
         Me.ComboBox6.FormattingEnabled = True
         Me.ComboBox6.Items.AddRange(New Object() {"1", "2", "3", "4"})
-        Me.ComboBox6.Location = New System.Drawing.Point(128, 257)
+        Me.ComboBox6.Location = New System.Drawing.Point(128, 286)
         Me.ComboBox6.Name = "ComboBox6"
         Me.ComboBox6.Size = New System.Drawing.Size(212, 23)
         Me.ComboBox6.TabIndex = 46
@@ -431,7 +432,7 @@ Partial Class Empresa_Funcionarios
         '
         Me.ComboBox7.Enabled = False
         Me.ComboBox7.FormattingEnabled = True
-        Me.ComboBox7.Location = New System.Drawing.Point(128, 286)
+        Me.ComboBox7.Location = New System.Drawing.Point(128, 203)
         Me.ComboBox7.Name = "ComboBox7"
         Me.ComboBox7.Size = New System.Drawing.Size(212, 23)
         Me.ComboBox7.TabIndex = 45
@@ -447,7 +448,7 @@ Partial Class Empresa_Funcionarios
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(13, 204)
+        Me.Label17.Location = New System.Drawing.Point(13, 262)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(70, 15)
         Me.Label17.TabIndex = 43
@@ -464,7 +465,7 @@ Partial Class Empresa_Funcionarios
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(13, 177)
+        Me.Label18.Location = New System.Drawing.Point(13, 235)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(50, 15)
         Me.Label18.TabIndex = 41
@@ -524,7 +525,7 @@ Partial Class Empresa_Funcionarios
         'TextBox13
         '
         Me.TextBox13.Enabled = False
-        Me.TextBox13.Location = New System.Drawing.Point(128, 174)
+        Me.TextBox13.Location = New System.Drawing.Point(128, 232)
         Me.TextBox13.Name = "TextBox13"
         Me.TextBox13.Size = New System.Drawing.Size(212, 21)
         Me.TextBox13.TabIndex = 34
@@ -541,7 +542,7 @@ Partial Class Empresa_Funcionarios
         'TextBox14
         '
         Me.TextBox14.Enabled = False
-        Me.TextBox14.Location = New System.Drawing.Point(128, 201)
+        Me.TextBox14.Location = New System.Drawing.Point(128, 259)
         Me.TextBox14.Name = "TextBox14"
         Me.TextBox14.Size = New System.Drawing.Size(212, 21)
         Me.TextBox14.TabIndex = 32

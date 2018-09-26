@@ -12,9 +12,13 @@ Public Class Parametros_Barricas
         CargarTabla()
     End Sub
 
-    Private Sub CargarTabla() Handles ComboBoxSucursales1.SeleccionCambio
-        dv = Verif.ValidoListaBarricas(Datos.UsuarioLogeado.Sucursal)
-        Filtrar(Me, New System.EventArgs)
+    Private Sub CargarTabla() Handles ComboBoxSucursales1.SeleccionCambio, buscador.TextChanged, ComboBox1.SelectedValueChanged, CheckBox1.CheckedChanged
+        dv = Verif.ValidoListaBarricas()
+        If CheckBox1.CheckState = CheckState.Checked Then
+            dv.RowFilter = "" + ComboBox1.SelectedItem.ToString + " like '%" + buscador.Text.ToString + "%'"
+        Else
+            dv.RowFilter = "" + ComboBox1.SelectedItem.ToString + " like '%" + buscador.Text.ToString + "%' and Eliminado = 0"
+        End If
         Tabla1.DataGridView1.DataSource = dv
         Tabla1.DataGridView1.Columns(6).Visible = False
         Tabla1.DataGridView1.ClearSelection()
@@ -92,14 +96,4 @@ Public Class Parametros_Barricas
         End If
     End Sub
 
-    Private Sub Filtrar(sender As Object, e As System.EventArgs) Handles buscador.TextChanged, ComboBox1.SelectedValueChanged, CheckBox1.CheckedChanged
-        dv = Verif.ValidoListaBarricas(Datos.UsuarioLogeado.Sucursal)
-        If CheckBox1.CheckState = CheckState.Checked Then
-            dv.RowFilter = "" + ComboBox1.SelectedItem.ToString + " like '%" + buscador.Text.ToString + "%'"
-        Else
-            dv.RowFilter = "" + ComboBox1.SelectedItem.ToString + " like '%" + buscador.Text.ToString + "%' and Eliminado = 0"
-        End If
-        Tabla1.DataGridView1.DataSource = dv
-        Tabla1.DataGridView1.ClearSelection()
-    End Sub
 End Class

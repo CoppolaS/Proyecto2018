@@ -37,8 +37,6 @@ Partial Class Empresa_Sucursales
         Me.modificar_BTN = New System.Windows.Forms.Button()
         Me.eliminar_BTN = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Tabla2 = New Proyecto.Tabla()
         Me.buscador = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -50,7 +48,6 @@ Partial Class Empresa_Sucursales
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -61,7 +58,7 @@ Partial Class Empresa_Sucursales
         Me.TabControl1.Location = New System.Drawing.Point(779, 45)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(477, 278)
+        Me.TabControl1.Size = New System.Drawing.Size(477, 623)
         Me.TabControl1.TabIndex = 13
         '
         'TabPage1
@@ -74,7 +71,7 @@ Partial Class Empresa_Sucursales
         Me.TabPage1.Location = New System.Drawing.Point(4, 24)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(10)
-        Me.TabPage1.Size = New System.Drawing.Size(469, 250)
+        Me.TabPage1.Size = New System.Drawing.Size(469, 595)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Ingresar"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -82,7 +79,7 @@ Partial Class Empresa_Sucursales
         'ingresar_BTN
         '
         Me.ingresar_BTN.Enabled = False
-        Me.ingresar_BTN.Location = New System.Drawing.Point(13, 214)
+        Me.ingresar_BTN.Location = New System.Drawing.Point(13, 559)
         Me.ingresar_BTN.Name = "ingresar_BTN"
         Me.ingresar_BTN.Size = New System.Drawing.Size(443, 23)
         Me.ingresar_BTN.TabIndex = 4
@@ -134,7 +131,7 @@ Partial Class Empresa_Sucursales
         Me.TabPage2.Location = New System.Drawing.Point(4, 24)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(10)
-        Me.TabPage2.Size = New System.Drawing.Size(469, 250)
+        Me.TabPage2.Size = New System.Drawing.Size(469, 595)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Administrar"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -177,7 +174,7 @@ Partial Class Empresa_Sucursales
         'modificar_BTN
         '
         Me.modificar_BTN.Enabled = False
-        Me.modificar_BTN.Location = New System.Drawing.Point(13, 185)
+        Me.modificar_BTN.Location = New System.Drawing.Point(13, 530)
         Me.modificar_BTN.Name = "modificar_BTN"
         Me.modificar_BTN.Size = New System.Drawing.Size(443, 23)
         Me.modificar_BTN.TabIndex = 30
@@ -187,7 +184,7 @@ Partial Class Empresa_Sucursales
         'eliminar_BTN
         '
         Me.eliminar_BTN.Enabled = False
-        Me.eliminar_BTN.Location = New System.Drawing.Point(13, 214)
+        Me.eliminar_BTN.Location = New System.Drawing.Point(13, 559)
         Me.eliminar_BTN.Name = "eliminar_BTN"
         Me.eliminar_BTN.Size = New System.Drawing.Size(443, 23)
         Me.eliminar_BTN.TabIndex = 1
@@ -202,24 +199,6 @@ Partial Class Empresa_Sucursales
         Me.Label7.Size = New System.Drawing.Size(235, 15)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Seleccionar una celda de la tabla primero"
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.Tabla2)
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(779, 329)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(473, 339)
-        Me.GroupBox1.TabIndex = 14
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Funcionarios de la sucursal seleccionada"
-        '
-        'Tabla2
-        '
-        Me.Tabla2.Location = New System.Drawing.Point(6, 20)
-        Me.Tabla2.Name = "Tabla2"
-        Me.Tabla2.Size = New System.Drawing.Size(461, 313)
-        Me.Tabla2.TabIndex = 0
         '
         'buscador
         '
@@ -298,7 +277,6 @@ Partial Class Empresa_Sucursales
         Me.Controls.Add(Me.buscador)
         Me.Controls.Add(Me.Tabla1)
         Me.Controls.Add(Me.Menu1)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.TabControl1)
         Me.MaximizeBox = False
         Me.Name = "Empresa_Sucursales"
@@ -310,7 +288,6 @@ Partial Class Empresa_Sucursales
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -318,7 +295,6 @@ Partial Class Empresa_Sucursales
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents ingresar_nombreTB As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
@@ -334,7 +310,6 @@ Partial Class Empresa_Sucursales
     Friend WithEvents ingresar_BTN As System.Windows.Forms.Button
     Friend WithEvents DataGridView1 As Proyecto.Tabla
     Friend WithEvents Tabla1 As Proyecto.Tabla
-    Friend WithEvents Tabla2 As Proyecto.Tabla
     Friend WithEvents buscador As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox

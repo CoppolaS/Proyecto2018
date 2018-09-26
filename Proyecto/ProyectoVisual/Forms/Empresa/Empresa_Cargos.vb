@@ -12,9 +12,13 @@ Public Class Empresa_Cargos
         CargarTabla()
     End Sub
 
-    Private Sub CargarTabla()
+    Private Sub CargarTabla() Handles buscador.TextChanged, ComboBox1.SelectedValueChanged, CheckBox1.CheckedChanged
         dv = Verif.ValidoListaCargos
-        Filtrar(Me, New System.EventArgs)
+        If CheckBox1.CheckState = CheckState.Checked Then
+            dv.RowFilter = "" + ComboBox1.SelectedItem.ToString + " like '%" + buscador.Text.ToString + "%'"
+        Else
+            dv.RowFilter = "" + ComboBox1.SelectedItem.ToString + " like '%" + buscador.Text.ToString + "%' and Eliminado = 0"
+        End If
         Tabla1.DataGridView1.DataSource = dv
         Tabla1.DataGridView1.Columns(2).Visible = False
         Tabla1.DataGridView1.ClearSelection()
@@ -60,14 +64,4 @@ Public Class Empresa_Cargos
         End If
     End Sub
 
-    Private Sub Filtrar(sender As Object, e As System.EventArgs) Handles buscador.TextChanged, ComboBox1.SelectedValueChanged, CheckBox1.CheckedChanged
-        dv = Verif.ValidoListaCargos
-        If CheckBox1.CheckState = CheckState.Checked Then
-            dv.RowFilter = "" + ComboBox1.SelectedItem.ToString + " like '%" + buscador.Text.ToString + "%'"
-        Else
-            dv.RowFilter = "" + ComboBox1.SelectedItem.ToString + " like '%" + buscador.Text.ToString + "%' and Eliminado = 0"
-        End If
-        Tabla1.DataGridView1.DataSource = dv
-        Tabla1.DataGridView1.ClearSelection()
-    End Sub
 End Class

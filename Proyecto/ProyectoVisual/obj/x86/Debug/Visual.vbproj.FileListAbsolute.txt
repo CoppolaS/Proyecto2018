@@ -112,7 +112,6 @@ D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\bin\Debug\Negocio.
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Visual.vbprojResolveAssemblyReference.cache
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Resources.resources
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Empresa_Cargos.resources
-D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Empresa_Compradores.resources
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Empresa_Sucursales.resources
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Empresa_TiposDeAsesores.resources
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Empresa_Vendedores.resources
@@ -206,3 +205,4 @@ C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\ProyectoVisual\obj\x86
 C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\ProyectoVisual\obj\x86\Debug\Visual.vbproj.GenerateResource.Cache
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Produccion.resources
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.ComboBoxSucursales.resources
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Empresa_Clientes.resources

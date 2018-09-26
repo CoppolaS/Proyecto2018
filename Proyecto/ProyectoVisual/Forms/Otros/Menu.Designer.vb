@@ -62,6 +62,7 @@ Partial Class Menu
         Me.SucursalesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TiposDeAsesoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VendedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GestiónDeUsuariosWebToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EstadísticasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistroHistóricoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -69,7 +70,6 @@ Partial Class Menu
         Me.ManualDeUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.GestiónDeUsuariosWebToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -326,7 +326,7 @@ Partial Class Menu
         '
         Me.CompradoresToolStripMenuItem.Name = "CompradoresToolStripMenuItem"
         Me.CompradoresToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
-        Me.CompradoresToolStripMenuItem.Text = "Compradores"
+        Me.CompradoresToolStripMenuItem.Text = "Clientes"
         '
         'SucursalesToolStripMenuItem
         '
@@ -345,6 +345,12 @@ Partial Class Menu
         Me.VendedoresToolStripMenuItem.Name = "VendedoresToolStripMenuItem"
         Me.VendedoresToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
         Me.VendedoresToolStripMenuItem.Text = "Vendedores"
+        '
+        'GestiónDeUsuariosWebToolStripMenuItem
+        '
+        Me.GestiónDeUsuariosWebToolStripMenuItem.Name = "GestiónDeUsuariosWebToolStripMenuItem"
+        Me.GestiónDeUsuariosWebToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.GestiónDeUsuariosWebToolStripMenuItem.Text = "Gestión de usuarios web"
         '
         'EstadísticasToolStripMenuItem
         '
@@ -392,12 +398,6 @@ Partial Class Menu
         Me.Label1.Size = New System.Drawing.Size(39, 13)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Label1"
-        '
-        'GestiónDeUsuariosWebToolStripMenuItem
-        '
-        Me.GestiónDeUsuariosWebToolStripMenuItem.Name = "GestiónDeUsuariosWebToolStripMenuItem"
-        Me.GestiónDeUsuariosWebToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
-        Me.GestiónDeUsuariosWebToolStripMenuItem.Text = "Gestión de usuarios web"
         '
         'Menu
         '

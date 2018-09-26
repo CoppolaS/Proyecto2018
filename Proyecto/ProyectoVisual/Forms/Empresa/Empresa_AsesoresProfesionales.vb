@@ -31,9 +31,13 @@ Public Class Empresa_AsesoresProfesionales
         CargarTabla()
     End Sub
 
-    Private Sub CargarTabla() Handles ComboBoxSucursales1.SeleccionCambio
-        dv = Verif.ValidoListaAsesoresProfesionales(Datos.UsuarioLogeado.Sucursal)
-        Filtrar(Me, New System.EventArgs)
+    Private Sub CargarTabla() Handles ComboBoxSucursales1.SeleccionCambio, buscador.TextChanged, ComboBox1.SelectedValueChanged, CheckBox1.CheckedChanged
+        dv = Verif.ValidoListaAsesoresProfesionales()
+        If CheckBox1.CheckState = CheckState.Checked Then
+            dv.RowFilter = "" + ComboBox1.SelectedItem.ToString + " like '%" + buscador.Text.ToString + "%'"
+        Else
+            dv.RowFilter = "" + ComboBox1.SelectedItem.ToString + " like '%" + buscador.Text.ToString + "%' and Eliminado = 0"
+        End If
         Tabla1.DataGridView1.DataSource = dv
         Tabla1.DataGridView1.Columns(6).Visible = False
         Tabla1.DataGridView1.Columns(9).Visible = False
@@ -48,12 +52,16 @@ Public Class Empresa_AsesoresProfesionales
         encapsuladora.CedulaAsesorProfesional = TextBox4.Text
         encapsuladora.TipoAsesorProfesional = ComboBox2.SelectedItem.ToString
         encapsuladora.SucursalAsesorProfesional = ComboBox4.SelectedItem.ToString
+        encapsuladora.UsuarioAsesorProfesional = TextBox11.Text
+        encapsuladora.ContrasenaAsesorProfesional = TextBox12.Text
         Verif.ValidoIngresoAsesoresProfesionales(encapsuladora)
         TextBox1.Clear()
         TextBox2.Clear()
         TextBox3.Clear()
         TextBox4.Clear()
         TextBox9.Clear()
+        TextBox11.Clear()
+        TextBox12.Clear()
         ComboBox2.SelectedIndex() = -1
         ComboBox4.SelectedIndex() = -1
         CargarTabla()
@@ -74,12 +82,16 @@ Public Class Empresa_AsesoresProfesionales
         encapsuladora.CedulaAsesorProfesional = TextBox7.Text
         encapsuladora.TipoAsesorProfesional = ComboBox5.SelectedItem.ToString
         encapsuladora.SucursalAsesorProfesional = ComboBox3.SelectedItem.ToString
+        encapsuladora.UsuarioAsesorProfesional = TextBox13.Text
+        encapsuladora.ContrasenaAsesorProfesional = TextBox14.Text
         Verif.ValidoModificarAsesoresProfesionales(encapsuladora)
         TextBox10.Clear()
         TextBox8.Clear()
         TextBox6.Clear()
         TextBox5.Clear()
         TextBox7.Clear()
+        TextBox13.Clear()
+        TextBox14.Clear()
         ComboBox5.SelectedIndex() = -1
         ComboBox3.SelectedIndex() = -1
         TextBox10.Enabled = False
@@ -87,6 +99,8 @@ Public Class Empresa_AsesoresProfesionales
         TextBox6.Enabled = False
         TextBox5.Enabled = False
         TextBox7.Enabled = False
+        TextBox13.Enabled = False
+        TextBox14.Enabled = False
         ComboBox5.Enabled = False
         ComboBox3.Enabled = False
         Button3.Focus()
@@ -102,6 +116,8 @@ Public Class Empresa_AsesoresProfesionales
             TextBox6.Enabled = True
             TextBox5.Enabled = True
             TextBox7.Enabled = True
+            TextBox13.Enabled = True
+            TextBox14.Enabled = True
             ComboBox5.Enabled = True
             ComboBox3.Enabled = True
             TextBox10.Text = Tabla1.DataGridView1(1, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
@@ -109,27 +125,22 @@ Public Class Empresa_AsesoresProfesionales
             TextBox6.Text = Tabla1.DataGridView1(3, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
             TextBox5.Text = Tabla1.DataGridView1(4, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
             TextBox7.Text = Tabla1.DataGridView1(5, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
+            TextBox13.Text = Tabla1.DataGridView1(10, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
+            TextBox14.Text = Tabla1.DataGridView1(11, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
             ComboBox5.SelectedItem = Tabla1.DataGridView1(7, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
             ComboBox3.SelectedItem = Tabla1.DataGridView1(9, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
         End If
     End Sub
 
-    Private Sub Habilitar(sender As System.Object, e As System.EventArgs) Handles TextBox1.TextChanged, TextBox2.TextChanged, TextBox3.TextChanged, TextBox4.TextChanged, TextBox9.TextChanged, ComboBox2.SelectedIndexChanged, ComboBox4.SelectedIndexChanged
-        If TextBox1.TextLength > 0 And TextBox2.TextLength > 0 And TextBox3.TextLength > 0 And TextBox4.TextLength > 0 And TextBox9.TextLength > 0 And ComboBox2.SelectedIndex <> -1 And ComboBox4.SelectedIndex <> -1 Then
+    Private Sub Habilitar(sender As System.Object, e As System.EventArgs) Handles TextBox1.TextChanged, TextBox2.TextChanged, TextBox3.TextChanged, TextBox4.TextChanged, TextBox9.TextChanged, ComboBox2.SelectedIndexChanged, ComboBox4.SelectedIndexChanged, TextBox11.TextChanged, TextBox12.TextChanged
+        If TextBox1.TextLength > 0 And TextBox2.TextLength > 0 And TextBox3.TextLength > 0 And TextBox4.TextLength > 0 And TextBox9.TextLength > 0 And TextBox11.TextLength > 0 And TextBox12.TextLength > 0 And ComboBox2.SelectedIndex <> -1 And ComboBox4.SelectedIndex <> -1 Then
             Button1.Enabled = True
         Else
             Button1.Enabled = False
         End If
     End Sub
 
-    Private Sub Filtrar(sender As Object, e As System.EventArgs) Handles buscador.TextChanged, ComboBox1.SelectedValueChanged, CheckBox1.CheckedChanged
-        dv = Verif.ValidoListaAsesoresProfesionales(Datos.UsuarioLogeado.Sucursal)
-        If CheckBox1.CheckState = CheckState.Checked Then
-            dv.RowFilter = "" + ComboBox1.SelectedItem.ToString + " like '%" + buscador.Text.ToString + "%'"
-        Else
-            dv.RowFilter = "" + ComboBox1.SelectedItem.ToString + " like '%" + buscador.Text.ToString + "%' and Eliminado = 0"
-        End If
-        Tabla1.DataGridView1.DataSource = dv
-        Tabla1.DataGridView1.ClearSelection()
+    Private Sub CargarTabla(sender As System.Object, e As System.EventArgs) Handles ComboBoxSucursales1.SeleccionCambio, ComboBox1.SelectedValueChanged, CheckBox1.CheckedChanged, buscador.TextChanged
+
     End Sub
 End Class

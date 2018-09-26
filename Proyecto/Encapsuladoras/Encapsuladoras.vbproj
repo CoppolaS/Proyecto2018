@@ -89,8 +89,10 @@
   <ItemGroup>
     <Compile Include="Empresa\AsesoresProfesionales.vb" />
     <Compile Include="Empresa\Cargos.vb" />
+    <Compile Include="Empresa\Clientes.vb" />
     <Compile Include="Empresa\Funcionarios.vb" />
     <Compile Include="Empresa\TiposAP.vb" />
+    <Compile Include="Empresa\Vendedores.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -108,6 +110,7 @@
     </Compile>
     <Compile Include="Empresa\Sucursales.vb" />
     <Compile Include="Parametros\Barricas.vb" />
+    <Compile Include="Parametros\Tanques.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

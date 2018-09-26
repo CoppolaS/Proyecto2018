@@ -100,10 +100,10 @@
     <Compile Include="Forms\Empresa\Empresa_Cargos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Empresa\Empresa_Compradores.Designer.vb">
-      <DependentUpon>Empresa_Compradores.vb</DependentUpon>
+    <Compile Include="Forms\Empresa\Empresa_Clientes.Designer.vb">
+      <DependentUpon>Empresa_Clientes.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Empresa\Empresa_Compradores.vb">
+    <Compile Include="Forms\Empresa\Empresa_Clientes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Empresa\Empresa_Sucursales.Designer.vb">
@@ -355,8 +355,8 @@
     <EmbeddedResource Include="Forms\Empresa\Empresa_Cargos.resx">
       <DependentUpon>Empresa_Cargos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Empresa\Empresa_Compradores.resx">
-      <DependentUpon>Empresa_Compradores.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\Empresa\Empresa_Clientes.resx">
+      <DependentUpon>Empresa_Clientes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Empresa\Empresa_Sucursales.resx">
       <DependentUpon>Empresa_Sucursales.vb</DependentUpon>

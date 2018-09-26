@@ -30,6 +30,64 @@ Public Class VerificarEmpresa
         Return Nothing
     End Function
 
+    'clientes
+    Public Function ValidoListaClientes() As DataView
+        ds = DatosE.ListaClientes
+        ds.Tables(0).Columns(0).ColumnName = "ID"
+        ds.Tables(0).Columns(1).ColumnName = "Nombre"
+        ds.Tables(0).Columns(2).ColumnName = "Teléfono"
+        ds.Tables(0).Columns(3).ColumnName = "Mail"
+        ds.Tables(0).Columns(4).ColumnName = "Dirección"
+        ds.Tables(0).Columns(5).ColumnName = "Eliminado"
+        ds.Tables(0).Columns(6).ColumnName = "Usuario"
+        ds.Tables(0).Columns(7).ColumnName = "Contraseña"
+        dv = ds.Tables(0).DefaultView
+        Return dv
+    End Function
+
+    Public Function ValidoIngresoClientes(ByVal encapsuladora As Encapsuladoras.Clientes)
+        DatosE.IngresoCliente(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoEliminarClientes(ByVal encapsuladora As Encapsuladoras.Clientes)
+        DatosE.EliminoCliente(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoModificarClientes(ByVal encapsuladora As Encapsuladoras.Clientes)
+        DatosE.ModificoCliente(encapsuladora)
+        Return Nothing
+    End Function
+
+    'vendedores
+    Public Function ValidoListaVendedores() As DataView
+        ds = DatosE.ListaVendedores
+        ds.Tables(0).Columns(0).ColumnName = "ID"
+        ds.Tables(0).Columns(1).ColumnName = "Nombre"
+        ds.Tables(0).Columns(2).ColumnName = "Teléfono"
+        ds.Tables(0).Columns(3).ColumnName = "Mail"
+        ds.Tables(0).Columns(4).ColumnName = "Dirección"
+        ds.Tables(0).Columns(5).ColumnName = "Eliminado"
+        dv = ds.Tables(0).DefaultView
+        Return dv
+    End Function
+
+    Public Function ValidoIngresoVendedores(ByVal encapsuladora As Encapsuladoras.Vendedores)
+        DatosE.IngresoVendedor(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoEliminarVendedores(ByVal encapsuladora As Encapsuladoras.Vendedores)
+        DatosE.EliminoVendedor(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoModificarVendedores(ByVal encapsuladora As Encapsuladoras.Vendedores)
+        DatosE.ModificoVendedor(encapsuladora)
+        Return Nothing
+    End Function
+
     'cargos
     Public Function ValidoListaCargos() As DataView
         ds = DatosE.ListaCargos
@@ -81,8 +139,8 @@ Public Class VerificarEmpresa
     End Function
 
     'funcionarios
-    Public Function ValidoListaFuncionarios(Optional ByVal Sucursal As String = "0") As DataView
-        ds = DatosE.ListaFuncionarios(Sucursal)
+    Public Function ValidoListaFuncionarios() As DataView
+        ds = DatosE.ListaFuncionarios()
         ds.Tables(0).Columns(0).ColumnName = "ID"
         ds.Tables(0).Columns(1).ColumnName = "Nombre"
         ds.Tables(0).Columns(2).ColumnName = "Apellido"
@@ -113,8 +171,8 @@ Public Class VerificarEmpresa
     End Function
 
     'asesores profesionales
-    Public Function ValidoListaAsesoresProfesionales(Optional ByVal Sucursal As String = "0") As DataView
-        ds = DatosE.ListaAsesoresProfesionales(Sucursal)
+    Public Function ValidoListaAsesoresProfesionales() As DataView
+        ds = DatosE.ListaAsesoresProfesionales()
         ds.Tables(0).Columns(0).ColumnName = "ID"
         ds.Tables(0).Columns(1).ColumnName = "Nombre"
         ds.Tables(0).Columns(2).ColumnName = "Apellido"
@@ -125,6 +183,8 @@ Public Class VerificarEmpresa
         ds.Tables(0).Columns(7).ColumnName = "Tipo"
         ds.Tables(0).Columns(8).ColumnName = "Alarmas"
         ds.Tables(0).Columns(9).ColumnName = "Sucursal"
+        ds.Tables(0).Columns(10).ColumnName = "Usuario"
+        ds.Tables(0).Columns(11).ColumnName = "Contraseña"
         dv = ds.Tables(0).DefaultView
         Return dv
     End Function

@@ -6,22 +6,7 @@ Public Class Menu
     Private Sub Menu_Load(sender As Object, e As EventArgs) Handles Me.Load
         Label1.Text = Datos.UsuarioLogeado.User & vbNewLine & Datos.UsuarioLogeado.Cargo
         Dim privilegios As Integer = Datos.UsuarioLogeado.Privilegios
-        'Select Case cargo
-        '    Case 1
-        '        'MsgBox("tecnico")
-        '    Case 2
-        '        'MsgBox("gerente general")
-        '    Case 3
-        '        PersonalToolStripMenuItem.Enabled = False
-        '        CargosToolStripMenuItem.Enabled = False
-        '        CompradoresToolStripMenuItem.Enabled = False
-        '        CargosToolStripMenuItem.Enabled = False
-        '        SucursalesToolStripMenuItem.Enabled = False
-        '        TiposDeAsesoresToolStripMenuItem.Enabled = False
-        '        VendedoresToolStripMenuItem.Enabled = False
-        '   Case 4
-        '       algo
-        'End Select
+        'deshabilitar botones del menu segun nivel de privilegios
     End Sub
 
     Private Sub InicioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InicioToolStripMenuItem.Click
@@ -268,10 +253,10 @@ Public Class Menu
     End Sub
 
     Private Sub CompradoresToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CompradoresToolStripMenuItem.Click
-        If (ParentForm.Name = "Empresa_Compradores") Then
+        If (ParentForm.Name = "Empresa_Clientes") Then
             Exit Sub
         Else
-            Empresa_Compradores.Show()
+            Empresa_Clientes.Show()
             ParentForm.Close()
         End If
     End Sub
@@ -325,13 +310,5 @@ Public Class Menu
         Login.Show()
         ParentForm.Close()
     End Sub
-
-    'Private Sub ReportarUnErrorToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ReportarUnErrorToolStripMenuItem.Click
-
-    'End Sub
-
-    'Private Sub ManualDeUsuarioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ManualDeUsuarioToolStripMenuItem.Click
-
-    'End Sub
 
 End Class

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Empresa_Vendedores
+Partial Class Empresa_Clientes
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,15 +22,18 @@ Partial Class Empresa_Vendedores
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Menu1 = New Proyecto.Menu()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.buscador = New System.Windows.Forms.TextBox()
-        Me.Tabla1 = New Proyecto.Tabla()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -41,6 +44,10 @@ Partial Class Empresa_Vendedores
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
@@ -52,27 +59,23 @@ Partial Class Empresa_Vendedores
         Me.modificar_BTN = New System.Windows.Forms.Button()
         Me.eliminar_BTN = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.Tabla1 = New Proyecto.Tabla()
+        Me.Menu1 = New Proyecto.Menu()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Menu1
-        '
-        Me.Menu1.Location = New System.Drawing.Point(12, 7)
-        Me.Menu1.Name = "Menu1"
-        Me.Menu1.Size = New System.Drawing.Size(1240, 32)
-        Me.Menu1.TabIndex = 15
-        '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.CheckBox1.Location = New System.Drawing.Point(476, 45)
+        Me.CheckBox1.Location = New System.Drawing.Point(476, 48)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(172, 17)
-        Me.CheckBox1.TabIndex = 39
-        Me.CheckBox1.Text = "Mostrar vendedores eliminados"
+        Me.CheckBox1.Size = New System.Drawing.Size(152, 17)
+        Me.CheckBox1.TabIndex = 28
+        Me.CheckBox1.Text = "Mostrar clientes eliminados"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'Label4
@@ -81,7 +84,7 @@ Partial Class Empresa_Vendedores
         Me.Label4.Location = New System.Drawing.Point(266, 49)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(54, 13)
-        Me.Label4.TabIndex = 38
+        Me.Label4.TabIndex = 27
         Me.Label4.Text = "Columna: "
         '
         'ComboBox1
@@ -90,7 +93,7 @@ Partial Class Empresa_Vendedores
         Me.ComboBox1.Location = New System.Drawing.Point(326, 45)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(144, 21)
-        Me.ComboBox1.TabIndex = 37
+        Me.ComboBox1.TabIndex = 26
         '
         'Label3
         '
@@ -98,7 +101,7 @@ Partial Class Empresa_Vendedores
         Me.Label3.Location = New System.Drawing.Point(12, 49)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(98, 13)
-        Me.Label3.TabIndex = 36
+        Me.Label3.TabIndex = 25
         Me.Label3.Text = "Buscar en la tabla: "
         '
         'buscador
@@ -106,14 +109,7 @@ Partial Class Empresa_Vendedores
         Me.buscador.Location = New System.Drawing.Point(116, 46)
         Me.buscador.Name = "buscador"
         Me.buscador.Size = New System.Drawing.Size(144, 20)
-        Me.buscador.TabIndex = 35
-        '
-        'Tabla1
-        '
-        Me.Tabla1.Location = New System.Drawing.Point(12, 70)
-        Me.Tabla1.Name = "Tabla1"
-        Me.Tabla1.Size = New System.Drawing.Size(761, 599)
-        Me.Tabla1.TabIndex = 34
+        Me.buscador.TabIndex = 24
         '
         'TabControl1
         '
@@ -124,10 +120,15 @@ Partial Class Empresa_Vendedores
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(477, 599)
-        Me.TabControl1.TabIndex = 33
+        Me.TabControl1.TabIndex = 22
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.TextBox9)
+        Me.TabPage1.Controls.Add(Me.TextBox10)
+        Me.TabPage1.Controls.Add(Me.CheckBox3)
+        Me.TabPage1.Controls.Add(Me.Label16)
+        Me.TabPage1.Controls.Add(Me.Label17)
         Me.TabPage1.Controls.Add(Me.TextBox4)
         Me.TabPage1.Controls.Add(Me.TextBox3)
         Me.TabPage1.Controls.Add(Me.TextBox2)
@@ -144,6 +145,51 @@ Partial Class Empresa_Vendedores
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Ingresar"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Enabled = False
+        Me.TextBox9.Location = New System.Drawing.Point(137, 152)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(312, 21)
+        Me.TextBox9.TabIndex = 7
+        '
+        'TextBox10
+        '
+        Me.TextBox10.Enabled = False
+        Me.TextBox10.Location = New System.Drawing.Point(137, 179)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.Size = New System.Drawing.Size(312, 21)
+        Me.TextBox10.TabIndex = 8
+        '
+        'CheckBox3
+        '
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox3.Location = New System.Drawing.Point(137, 127)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(126, 19)
+        Me.CheckBox3.TabIndex = 6
+        Me.CheckBox3.Text = "¿Usuario de web?"
+        Me.CheckBox3.UseVisualStyleBackColor = True
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(22, 179)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(70, 15)
+        Me.Label16.TabIndex = 50
+        Me.Label16.Text = "Contraseña"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(22, 152)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(50, 15)
+        Me.Label17.TabIndex = 48
+        Me.Label17.Text = "Usuario"
         '
         'TextBox4
         '
@@ -221,6 +267,10 @@ Partial Class Empresa_Vendedores
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.TextBox11)
+        Me.TabPage2.Controls.Add(Me.TextBox12)
+        Me.TabPage2.Controls.Add(Me.Label13)
+        Me.TabPage2.Controls.Add(Me.Label14)
         Me.TabPage2.Controls.Add(Me.TextBox7)
         Me.TabPage2.Controls.Add(Me.TextBox8)
         Me.TabPage2.Controls.Add(Me.TextBox5)
@@ -239,6 +289,40 @@ Partial Class Empresa_Vendedores
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Administrar"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'TextBox11
+        '
+        Me.TextBox11.Enabled = False
+        Me.TextBox11.Location = New System.Drawing.Point(134, 150)
+        Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.Size = New System.Drawing.Size(315, 21)
+        Me.TextBox11.TabIndex = 42
+        '
+        'TextBox12
+        '
+        Me.TextBox12.Enabled = False
+        Me.TextBox12.Location = New System.Drawing.Point(134, 177)
+        Me.TextBox12.Name = "TextBox12"
+        Me.TextBox12.Size = New System.Drawing.Size(315, 21)
+        Me.TextBox12.TabIndex = 43
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(20, 180)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(70, 15)
+        Me.Label13.TabIndex = 43
+        Me.Label13.Text = "Contraseña"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(20, 153)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(50, 15)
+        Me.Label14.TabIndex = 41
+        Me.Label14.Text = "Usuario"
         '
         'TextBox7
         '
@@ -337,11 +421,38 @@ Partial Class Empresa_Vendedores
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Seleccionar una celda de la tabla primero"
         '
-        'Empresa_Vendedores
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox2.Enabled = False
+        Me.CheckBox2.Location = New System.Drawing.Point(634, 48)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(176, 17)
+        Me.CheckBox2.TabIndex = 32
+        Me.CheckBox2.Text = "Mostrar contraseñas de clientes"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'Tabla1
+        '
+        Me.Tabla1.Location = New System.Drawing.Point(12, 70)
+        Me.Tabla1.Name = "Tabla1"
+        Me.Tabla1.Size = New System.Drawing.Size(761, 599)
+        Me.Tabla1.TabIndex = 23
+        '
+        'Menu1
+        '
+        Me.Menu1.Location = New System.Drawing.Point(12, 7)
+        Me.Menu1.Name = "Menu1"
+        Me.Menu1.Size = New System.Drawing.Size(1240, 32)
+        Me.Menu1.TabIndex = 15
+        '
+        'Empresa_Clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.ComboBox1)
@@ -351,10 +462,10 @@ Partial Class Empresa_Vendedores
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Menu1)
         Me.MaximizeBox = False
-        Me.Name = "Empresa_Vendedores"
+        Me.Name = "Empresa_Clientes"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Empresa - Vendedores / SI.GES.VI"
+        Me.Text = "Empresa - Clientes / SI.GES.VI"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
@@ -373,25 +484,35 @@ Partial Class Empresa_Vendedores
     Friend WithEvents Tabla1 As Proyecto.Tabla
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents ingresar_BTN As System.Windows.Forms.Button
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
-    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents modificar_BTN As System.Windows.Forms.Button
+    Friend WithEvents eliminar_BTN As System.Windows.Forms.Button
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents modificar_BTN As System.Windows.Forms.Button
-    Friend WithEvents eliminar_BTN As System.Windows.Forms.Button
-    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox11 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox12 As System.Windows.Forms.TextBox
+    Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
 End Class
