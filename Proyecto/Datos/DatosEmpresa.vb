@@ -206,7 +206,34 @@ Public Class DatosEmpresa
         Return False
     End Function
 
-    'clientes
+    Public Function ValidoUW_C(ByVal nodo As Encapsuladoras.Clientes) As Boolean
+        Try
+            Try
+                 Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Clientes (?,?,?,?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 5)
+                cmd.Parameters.AddWithValue("ID_C", nodo.IDCliente)
+                cmd.Parameters.AddWithValue("nombre", "0")
+                cmd.Parameters.AddWithValue("telefono", 0)
+                cmd.Parameters.AddWithValue("mail", "0")
+                cmd.Parameters.AddWithValue("direccion", "0")
+                cmd.Parameters.AddWithValue("usuario", "0")
+                cmd.Parameters.AddWithValue("contrasena", "0")
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al validar el cliente")
+        End Try
+        Return False
+    End Function
+
+    'vendedores
     Public Function ListaVendedores() As DataSet
         sql = "CALL `proyecto`.`LABM_Vendedores`(?opcion,?ID_V,?nombre,?telefono,?mail,?direccion);"
         Try
@@ -560,7 +587,7 @@ Public Class DatosEmpresa
                 cmd.Parameters.AddWithValue("pass", nodo.ContrasenaFuncionario)
                 cmd.Parameters.AddWithValue("cargo", "")
                 cmd.Parameters.AddWithValue("privilegios", 0)
-                cmd.Parameters.AddWithValue("sucursal", nodo.SucursalFuncionario)
+                cmd.Parameters.AddWithValue("sucursal", "")
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
@@ -678,7 +705,7 @@ Public Class DatosEmpresa
                 cmd.Parameters.AddWithValue("mail", "")
                 cmd.Parameters.AddWithValue("cedula", 0)
                 cmd.Parameters.AddWithValue("tipo", "")
-                cmd.Parameters.AddWithValue("sucursal", nodo.SucursalAsesorProfesional)
+                cmd.Parameters.AddWithValue("sucursal", "")
                 cmd.Parameters.AddWithValue("usuario", "")
                 cmd.Parameters.AddWithValue("contrasena", "")
                 Con.cn1.Open()
@@ -721,6 +748,36 @@ Public Class DatosEmpresa
             Return True
         Catch ex As Exception
             MsgBox("Error al modificar el asesor profesional")
+        End Try
+        Return False
+    End Function
+
+    Public Function ValidoUW_AP(ByVal nodo As Encapsuladoras.AsesoresProfesionales) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_AsesoresProfesionales (?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 5)
+                cmd.Parameters.AddWithValue("ID_AP", nodo.IDAsesorProfesional)
+                cmd.Parameters.AddWithValue("nombre", "")
+                cmd.Parameters.AddWithValue("apellido", "")
+                cmd.Parameters.AddWithValue("telefono", 0)
+                cmd.Parameters.AddWithValue("mail", "")
+                cmd.Parameters.AddWithValue("cedula", 0)
+                cmd.Parameters.AddWithValue("tipo", "")
+                cmd.Parameters.AddWithValue("sucursal", "")
+                cmd.Parameters.AddWithValue("usuario", "")
+                cmd.Parameters.AddWithValue("contrasena", "")
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al validar el asesor profesional")
         End Try
         Return False
     End Function

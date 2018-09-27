@@ -119,4 +119,10 @@ Public Class Empresa_Clientes
             Tabla1.DataGridView1.Columns(7).Visible = False
         End If
     End Sub
+
+    Private Sub Validar_Click(sender As System.Object, e As System.EventArgs) Handles Validar.Click
+        encapsuladora.IDCliente = Tabla.ID
+        Verif.ValidoUsuarioWebCliente(encapsuladora)
+        CargarTabla()
+    End Sub
 End Class

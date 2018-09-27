@@ -140,7 +140,9 @@ Public Class Empresa_AsesoresProfesionales
         End If
     End Sub
 
-    Private Sub CargarTabla(sender As System.Object, e As System.EventArgs) Handles ComboBoxSucursales1.SeleccionCambio, ComboBox1.SelectedValueChanged, CheckBox1.CheckedChanged, buscador.TextChanged
-
+    Private Sub Validar_Click(sender As System.Object, e As System.EventArgs) Handles Validar.Click
+        encapsuladora.IDAsesorProfesional = Tabla.ID
+        Verif.ValidoUsuarioWebAsesorProfesional(encapsuladora)
+        CargarTabla()
     End Sub
 End Class

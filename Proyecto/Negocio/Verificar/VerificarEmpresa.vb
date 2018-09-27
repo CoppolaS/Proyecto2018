@@ -60,6 +60,11 @@ Public Class VerificarEmpresa
         Return Nothing
     End Function
 
+    Public Function ValidoUsuarioWebCliente(ByVal encapsuladora As Encapsuladoras.Clientes)
+        DatosE.ValidoUW_C(encapsuladora)
+        Return Nothing
+    End Function
+
     'vendedores
     Public Function ValidoListaVendedores() As DataView
         ds = DatosE.ListaVendedores
@@ -201,6 +206,11 @@ Public Class VerificarEmpresa
 
     Public Function ValidoModificarAsesoresProfesionales(ByVal encapsuladora As Encapsuladoras.AsesoresProfesionales)
         DatosE.ModificoAsesorProfesional(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoUsuarioWebAsesorProfesional(ByVal encapsuladora As Encapsuladoras.AsesoresProfesionales)
+        DatosE.ValidoUW_AP(encapsuladora)
         Return Nothing
     End Function
 

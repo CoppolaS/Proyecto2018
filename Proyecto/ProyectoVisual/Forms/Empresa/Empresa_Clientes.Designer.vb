@@ -62,6 +62,7 @@ Partial Class Empresa_Clientes
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.Tabla1 = New Proyecto.Tabla()
         Me.Menu1 = New Proyecto.Menu()
+        Me.Validar = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -267,6 +268,7 @@ Partial Class Empresa_Clientes
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Validar)
         Me.TabPage2.Controls.Add(Me.TextBox11)
         Me.TabPage2.Controls.Add(Me.TextBox12)
         Me.TabPage2.Controls.Add(Me.Label13)
@@ -447,6 +449,15 @@ Partial Class Empresa_Clientes
         Me.Menu1.Size = New System.Drawing.Size(1240, 32)
         Me.Menu1.TabIndex = 15
         '
+        'Validar
+        '
+        Me.Validar.Location = New System.Drawing.Point(13, 477)
+        Me.Validar.Name = "Validar"
+        Me.Validar.Size = New System.Drawing.Size(440, 23)
+        Me.Validar.TabIndex = 49
+        Me.Validar.Text = "Validar asesor profesional seleccionado"
+        Me.Validar.UseVisualStyleBackColor = True
+        '
         'Empresa_Clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -515,4 +526,5 @@ Partial Class Empresa_Clientes
     Friend WithEvents TextBox11 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox12 As System.Windows.Forms.TextBox
     Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
+    Friend WithEvents Validar As System.Windows.Forms.Button
 End Class
