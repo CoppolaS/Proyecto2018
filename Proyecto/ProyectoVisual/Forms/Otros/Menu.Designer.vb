@@ -62,7 +62,6 @@ Partial Class Menu
         Me.SucursalesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TiposDeAsesoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VendedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GestiónDeUsuariosWebToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EstadísticasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistroHistóricoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -299,7 +298,7 @@ Partial Class Menu
         '
         'EmpresaToolStripMenuItem
         '
-        Me.EmpresaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PersonalToolStripMenuItem, Me.AsesoresProfesionalesToolStripMenuItem, Me.CargosToolStripMenuItem, Me.CompradoresToolStripMenuItem, Me.SucursalesToolStripMenuItem, Me.TiposDeAsesoresToolStripMenuItem, Me.VendedoresToolStripMenuItem, Me.GestiónDeUsuariosWebToolStripMenuItem})
+        Me.EmpresaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PersonalToolStripMenuItem, Me.AsesoresProfesionalesToolStripMenuItem, Me.CargosToolStripMenuItem, Me.CompradoresToolStripMenuItem, Me.SucursalesToolStripMenuItem, Me.TiposDeAsesoresToolStripMenuItem, Me.VendedoresToolStripMenuItem})
         Me.EmpresaToolStripMenuItem.Name = "EmpresaToolStripMenuItem"
         Me.EmpresaToolStripMenuItem.Size = New System.Drawing.Size(69, 26)
         Me.EmpresaToolStripMenuItem.Text = "Empresa"
@@ -307,50 +306,44 @@ Partial Class Menu
         'PersonalToolStripMenuItem
         '
         Me.PersonalToolStripMenuItem.Name = "PersonalToolStripMenuItem"
-        Me.PersonalToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.PersonalToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
         Me.PersonalToolStripMenuItem.Text = "Personal"
         '
         'AsesoresProfesionalesToolStripMenuItem
         '
         Me.AsesoresProfesionalesToolStripMenuItem.Name = "AsesoresProfesionalesToolStripMenuItem"
-        Me.AsesoresProfesionalesToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.AsesoresProfesionalesToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
         Me.AsesoresProfesionalesToolStripMenuItem.Text = "Asesores profesionales"
         '
         'CargosToolStripMenuItem
         '
         Me.CargosToolStripMenuItem.Name = "CargosToolStripMenuItem"
-        Me.CargosToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.CargosToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
         Me.CargosToolStripMenuItem.Text = "Cargos"
         '
         'CompradoresToolStripMenuItem
         '
         Me.CompradoresToolStripMenuItem.Name = "CompradoresToolStripMenuItem"
-        Me.CompradoresToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.CompradoresToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
         Me.CompradoresToolStripMenuItem.Text = "Clientes"
         '
         'SucursalesToolStripMenuItem
         '
         Me.SucursalesToolStripMenuItem.Name = "SucursalesToolStripMenuItem"
-        Me.SucursalesToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.SucursalesToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
         Me.SucursalesToolStripMenuItem.Text = "Sucursales"
         '
         'TiposDeAsesoresToolStripMenuItem
         '
         Me.TiposDeAsesoresToolStripMenuItem.Name = "TiposDeAsesoresToolStripMenuItem"
-        Me.TiposDeAsesoresToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.TiposDeAsesoresToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
         Me.TiposDeAsesoresToolStripMenuItem.Text = "Tipos de asesores"
         '
         'VendedoresToolStripMenuItem
         '
         Me.VendedoresToolStripMenuItem.Name = "VendedoresToolStripMenuItem"
-        Me.VendedoresToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.VendedoresToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
         Me.VendedoresToolStripMenuItem.Text = "Vendedores"
-        '
-        'GestiónDeUsuariosWebToolStripMenuItem
-        '
-        Me.GestiónDeUsuariosWebToolStripMenuItem.Name = "GestiónDeUsuariosWebToolStripMenuItem"
-        Me.GestiónDeUsuariosWebToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
-        Me.GestiónDeUsuariosWebToolStripMenuItem.Text = "Gestión de usuarios web"
         '
         'EstadísticasToolStripMenuItem
         '
@@ -460,6 +453,5 @@ Partial Class Menu
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents ObservacionesToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AlertasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents GestiónDeUsuariosWebToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

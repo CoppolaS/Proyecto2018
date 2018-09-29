@@ -150,21 +150,21 @@ Partial Class Empresa_Vendedores
         Me.TextBox4.Location = New System.Drawing.Point(85, 97)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(364, 21)
-        Me.TextBox4.TabIndex = 5
+        Me.TextBox4.TabIndex = 4
         '
         'TextBox3
         '
         Me.TextBox3.Location = New System.Drawing.Point(85, 70)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(364, 21)
-        Me.TextBox3.TabIndex = 4
+        Me.TextBox3.TabIndex = 3
         '
         'TextBox2
         '
         Me.TextBox2.Location = New System.Drawing.Point(85, 43)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(364, 21)
-        Me.TextBox2.TabIndex = 3
+        Me.TextBox2.TabIndex = 2
         '
         'Label9
         '
@@ -180,7 +180,7 @@ Partial Class Empresa_Vendedores
         Me.TextBox1.Location = New System.Drawing.Point(85, 16)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(364, 21)
-        Me.TextBox1.TabIndex = 2
+        Me.TextBox1.TabIndex = 1
         '
         'Label8
         '
@@ -197,7 +197,7 @@ Partial Class Empresa_Vendedores
         Me.ingresar_BTN.Location = New System.Drawing.Point(13, 535)
         Me.ingresar_BTN.Name = "ingresar_BTN"
         Me.ingresar_BTN.Size = New System.Drawing.Size(443, 23)
-        Me.ingresar_BTN.TabIndex = 9
+        Me.ingresar_BTN.TabIndex = 6
         Me.ingresar_BTN.Text = "Ingresar"
         Me.ingresar_BTN.UseVisualStyleBackColor = True
         '
@@ -314,7 +314,7 @@ Partial Class Empresa_Vendedores
         Me.modificar_BTN.Location = New System.Drawing.Point(13, 506)
         Me.modificar_BTN.Name = "modificar_BTN"
         Me.modificar_BTN.Size = New System.Drawing.Size(443, 23)
-        Me.modificar_BTN.TabIndex = 44
+        Me.modificar_BTN.TabIndex = 42
         Me.modificar_BTN.Text = "Modificar fila seleccionada"
         Me.modificar_BTN.UseVisualStyleBackColor = True
         '
@@ -324,7 +324,7 @@ Partial Class Empresa_Vendedores
         Me.eliminar_BTN.Location = New System.Drawing.Point(13, 535)
         Me.eliminar_BTN.Name = "eliminar_BTN"
         Me.eliminar_BTN.Size = New System.Drawing.Size(443, 23)
-        Me.eliminar_BTN.TabIndex = 45
+        Me.eliminar_BTN.TabIndex = 43
         Me.eliminar_BTN.Text = "Eliminar fila seleccionada"
         Me.eliminar_BTN.UseVisualStyleBackColor = True
         '

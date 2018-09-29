@@ -163,7 +163,7 @@ Partial Class Parametros_Tanques
         Me.TextBox2.Location = New System.Drawing.Point(136, 67)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(320, 21)
-        Me.TextBox2.TabIndex = 9
+        Me.TextBox2.TabIndex = 3
         '
         'Label5
         '
@@ -179,7 +179,7 @@ Partial Class Parametros_Tanques
         Me.TextBox1.Location = New System.Drawing.Point(136, 40)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(320, 21)
-        Me.TextBox1.TabIndex = 7
+        Me.TextBox1.TabIndex = 2
         '
         'Label2
         '
@@ -242,7 +242,7 @@ Partial Class Parametros_Tanques
         Me.TextBox5.Location = New System.Drawing.Point(136, 93)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(320, 21)
-        Me.TextBox5.TabIndex = 40
+        Me.TextBox5.TabIndex = 38
         '
         'Label9
         '
@@ -259,7 +259,7 @@ Partial Class Parametros_Tanques
         Me.TextBox6.Location = New System.Drawing.Point(136, 66)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(320, 21)
-        Me.TextBox6.TabIndex = 38
+        Me.TextBox6.TabIndex = 37
         '
         'Label10
         '
@@ -295,7 +295,7 @@ Partial Class Parametros_Tanques
         Me.CheckBox2.Location = New System.Drawing.Point(136, 120)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(99, 19)
-        Me.CheckBox2.TabIndex = 34
+        Me.CheckBox2.TabIndex = 39
         Me.CheckBox2.Text = "¿Disponible?"
         Me.CheckBox2.UseVisualStyleBackColor = True
         '
@@ -305,7 +305,7 @@ Partial Class Parametros_Tanques
         Me.modificar_BTN.Location = New System.Drawing.Point(13, 507)
         Me.modificar_BTN.Name = "modificar_BTN"
         Me.modificar_BTN.Size = New System.Drawing.Size(443, 23)
-        Me.modificar_BTN.TabIndex = 30
+        Me.modificar_BTN.TabIndex = 40
         Me.modificar_BTN.Text = "Modificar fila seleccionada"
         Me.modificar_BTN.UseVisualStyleBackColor = True
         '
@@ -315,7 +315,7 @@ Partial Class Parametros_Tanques
         Me.eliminar_BTN.Location = New System.Drawing.Point(13, 536)
         Me.eliminar_BTN.Name = "eliminar_BTN"
         Me.eliminar_BTN.Size = New System.Drawing.Size(443, 23)
-        Me.eliminar_BTN.TabIndex = 1
+        Me.eliminar_BTN.TabIndex = 41
         Me.eliminar_BTN.Text = "Eliminar fila seleccionada"
         Me.eliminar_BTN.UseVisualStyleBackColor = True
         '

@@ -41,6 +41,10 @@ Partial Class Parametros_Procesos
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.CheckBox9 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox8 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox7 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
@@ -48,10 +52,6 @@ Partial Class Parametros_Procesos
         Me.modificar_BTN = New System.Windows.Forms.Button()
         Me.eliminar_BTN = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox7 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox8 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox9 = New System.Windows.Forms.CheckBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -152,7 +152,7 @@ Partial Class Parametros_Procesos
         Me.CheckBox5.Location = New System.Drawing.Point(98, 142)
         Me.CheckBox5.Name = "CheckBox5"
         Me.CheckBox5.Size = New System.Drawing.Size(197, 19)
-        Me.CheckBox5.TabIndex = 10
+        Me.CheckBox5.TabIndex = 6
         Me.CheckBox5.Text = "¿El proceso involucra tanques?"
         Me.CheckBox5.UseVisualStyleBackColor = True
         '
@@ -163,7 +163,7 @@ Partial Class Parametros_Procesos
         Me.CheckBox4.Location = New System.Drawing.Point(98, 117)
         Me.CheckBox4.Name = "CheckBox4"
         Me.CheckBox4.Size = New System.Drawing.Size(197, 19)
-        Me.CheckBox4.TabIndex = 9
+        Me.CheckBox4.TabIndex = 5
         Me.CheckBox4.Text = "¿El proceso involucra barricas?"
         Me.CheckBox4.UseVisualStyleBackColor = True
         '
@@ -174,7 +174,7 @@ Partial Class Parametros_Procesos
         Me.CheckBox3.Location = New System.Drawing.Point(98, 92)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(263, 19)
-        Me.CheckBox3.TabIndex = 8
+        Me.CheckBox3.TabIndex = 4
         Me.CheckBox3.Text = "¿El proceso involucra producto intermedio?"
         Me.CheckBox3.UseVisualStyleBackColor = True
         '
@@ -183,7 +183,7 @@ Partial Class Parametros_Procesos
         Me.TextBox2.Location = New System.Drawing.Point(98, 40)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(358, 21)
-        Me.TextBox2.TabIndex = 7
+        Me.TextBox2.TabIndex = 2
         '
         'Label2
         '
@@ -201,7 +201,7 @@ Partial Class Parametros_Procesos
         Me.CheckBox2.Location = New System.Drawing.Point(98, 67)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(230, 19)
-        Me.CheckBox2.TabIndex = 5
+        Me.CheckBox2.TabIndex = 3
         Me.CheckBox2.Text = "¿El proceso involucra materia prima?"
         Me.CheckBox2.UseVisualStyleBackColor = True
         '
@@ -211,7 +211,7 @@ Partial Class Parametros_Procesos
         Me.ingresar_BTN.Location = New System.Drawing.Point(13, 560)
         Me.ingresar_BTN.Name = "ingresar_BTN"
         Me.ingresar_BTN.Size = New System.Drawing.Size(443, 23)
-        Me.ingresar_BTN.TabIndex = 4
+        Me.ingresar_BTN.TabIndex = 7
         Me.ingresar_BTN.Text = "Ingresar"
         Me.ingresar_BTN.UseVisualStyleBackColor = True
         '
@@ -252,6 +252,54 @@ Partial Class Parametros_Procesos
         Me.TabPage2.Text = "Administrar"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'CheckBox9
+        '
+        Me.CheckBox9.AutoSize = True
+        Me.CheckBox9.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox9.Enabled = False
+        Me.CheckBox9.Location = New System.Drawing.Point(98, 177)
+        Me.CheckBox9.Name = "CheckBox9"
+        Me.CheckBox9.Size = New System.Drawing.Size(197, 19)
+        Me.CheckBox9.TabIndex = 39
+        Me.CheckBox9.Text = "¿El proceso involucra tanques?"
+        Me.CheckBox9.UseVisualStyleBackColor = True
+        '
+        'CheckBox8
+        '
+        Me.CheckBox8.AutoSize = True
+        Me.CheckBox8.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox8.Enabled = False
+        Me.CheckBox8.Location = New System.Drawing.Point(98, 152)
+        Me.CheckBox8.Name = "CheckBox8"
+        Me.CheckBox8.Size = New System.Drawing.Size(197, 19)
+        Me.CheckBox8.TabIndex = 38
+        Me.CheckBox8.Text = "¿El proceso involucra barricas?"
+        Me.CheckBox8.UseVisualStyleBackColor = True
+        '
+        'CheckBox7
+        '
+        Me.CheckBox7.AutoSize = True
+        Me.CheckBox7.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox7.Enabled = False
+        Me.CheckBox7.Location = New System.Drawing.Point(98, 127)
+        Me.CheckBox7.Name = "CheckBox7"
+        Me.CheckBox7.Size = New System.Drawing.Size(263, 19)
+        Me.CheckBox7.TabIndex = 37
+        Me.CheckBox7.Text = "¿El proceso involucra producto intermedio?"
+        Me.CheckBox7.UseVisualStyleBackColor = True
+        '
+        'CheckBox6
+        '
+        Me.CheckBox6.AutoSize = True
+        Me.CheckBox6.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox6.Enabled = False
+        Me.CheckBox6.Location = New System.Drawing.Point(98, 102)
+        Me.CheckBox6.Name = "CheckBox6"
+        Me.CheckBox6.Size = New System.Drawing.Size(230, 19)
+        Me.CheckBox6.TabIndex = 36
+        Me.CheckBox6.Text = "¿El proceso involucra materia prima?"
+        Me.CheckBox6.UseVisualStyleBackColor = True
+        '
         'TextBox3
         '
         Me.TextBox3.Enabled = False
@@ -275,7 +323,7 @@ Partial Class Parametros_Procesos
         Me.TextBox4.Location = New System.Drawing.Point(98, 75)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(358, 21)
-        Me.TextBox4.TabIndex = 32
+        Me.TextBox4.TabIndex = 35
         '
         'Label6
         '
@@ -292,7 +340,7 @@ Partial Class Parametros_Procesos
         Me.modificar_BTN.Location = New System.Drawing.Point(13, 531)
         Me.modificar_BTN.Name = "modificar_BTN"
         Me.modificar_BTN.Size = New System.Drawing.Size(443, 23)
-        Me.modificar_BTN.TabIndex = 30
+        Me.modificar_BTN.TabIndex = 40
         Me.modificar_BTN.Text = "Modificar fila seleccionada"
         Me.modificar_BTN.UseVisualStyleBackColor = True
         '
@@ -302,7 +350,7 @@ Partial Class Parametros_Procesos
         Me.eliminar_BTN.Location = New System.Drawing.Point(13, 560)
         Me.eliminar_BTN.Name = "eliminar_BTN"
         Me.eliminar_BTN.Size = New System.Drawing.Size(443, 23)
-        Me.eliminar_BTN.TabIndex = 1
+        Me.eliminar_BTN.TabIndex = 41
         Me.eliminar_BTN.Text = "Eliminar fila seleccionada"
         Me.eliminar_BTN.UseVisualStyleBackColor = True
         '
@@ -314,54 +362,6 @@ Partial Class Parametros_Procesos
         Me.Label7.Size = New System.Drawing.Size(235, 15)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Seleccionar una celda de la tabla primero"
-        '
-        'CheckBox6
-        '
-        Me.CheckBox6.AutoSize = True
-        Me.CheckBox6.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.CheckBox6.Enabled = False
-        Me.CheckBox6.Location = New System.Drawing.Point(98, 102)
-        Me.CheckBox6.Name = "CheckBox6"
-        Me.CheckBox6.Size = New System.Drawing.Size(230, 19)
-        Me.CheckBox6.TabIndex = 35
-        Me.CheckBox6.Text = "¿El proceso involucra materia prima?"
-        Me.CheckBox6.UseVisualStyleBackColor = True
-        '
-        'CheckBox7
-        '
-        Me.CheckBox7.AutoSize = True
-        Me.CheckBox7.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.CheckBox7.Enabled = False
-        Me.CheckBox7.Location = New System.Drawing.Point(98, 127)
-        Me.CheckBox7.Name = "CheckBox7"
-        Me.CheckBox7.Size = New System.Drawing.Size(263, 19)
-        Me.CheckBox7.TabIndex = 36
-        Me.CheckBox7.Text = "¿El proceso involucra producto intermedio?"
-        Me.CheckBox7.UseVisualStyleBackColor = True
-        '
-        'CheckBox8
-        '
-        Me.CheckBox8.AutoSize = True
-        Me.CheckBox8.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.CheckBox8.Enabled = False
-        Me.CheckBox8.Location = New System.Drawing.Point(98, 152)
-        Me.CheckBox8.Name = "CheckBox8"
-        Me.CheckBox8.Size = New System.Drawing.Size(197, 19)
-        Me.CheckBox8.TabIndex = 37
-        Me.CheckBox8.Text = "¿El proceso involucra barricas?"
-        Me.CheckBox8.UseVisualStyleBackColor = True
-        '
-        'CheckBox9
-        '
-        Me.CheckBox9.AutoSize = True
-        Me.CheckBox9.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.CheckBox9.Enabled = False
-        Me.CheckBox9.Location = New System.Drawing.Point(98, 177)
-        Me.CheckBox9.Name = "CheckBox9"
-        Me.CheckBox9.Size = New System.Drawing.Size(197, 19)
-        Me.CheckBox9.TabIndex = 38
-        Me.CheckBox9.Text = "¿El proceso involucra tanques?"
-        Me.CheckBox9.UseVisualStyleBackColor = True
         '
         'Parametros_Procesos
         '

@@ -109,6 +109,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Empresa\Sucursales.vb" />
+    <Compile Include="Otros\Hectareas.vb" />
+    <Compile Include="Otros\Parcelas.vb" />
     <Compile Include="Parametros\Barricas.vb" />
     <Compile Include="Parametros\Procesos.vb" />
     <Compile Include="Parametros\Tanques.vb" />
@@ -134,7 +136,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Materia prima\" />
-    <Folder Include="Otros\" />
     <Folder Include="Plantaciones\" />
     <Folder Include="Producto final\" />
     <Folder Include="Producto intermedio\" />

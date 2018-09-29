@@ -139,7 +139,7 @@ Partial Class Parametros_Barricas
         Me.TextBox3.Location = New System.Drawing.Point(136, 94)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(320, 21)
-        Me.TextBox3.TabIndex = 11
+        Me.TextBox3.TabIndex = 4
         '
         'Label8
         '
@@ -155,7 +155,7 @@ Partial Class Parametros_Barricas
         Me.TextBox2.Location = New System.Drawing.Point(136, 67)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(320, 21)
-        Me.TextBox2.TabIndex = 9
+        Me.TextBox2.TabIndex = 3
         '
         'Label5
         '
@@ -171,7 +171,7 @@ Partial Class Parametros_Barricas
         Me.TextBox1.Location = New System.Drawing.Point(136, 40)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(320, 21)
-        Me.TextBox1.TabIndex = 7
+        Me.TextBox1.TabIndex = 2
         '
         'Label2
         '
@@ -188,7 +188,7 @@ Partial Class Parametros_Barricas
         Me.ingresar_BTN.Location = New System.Drawing.Point(13, 536)
         Me.ingresar_BTN.Name = "ingresar_BTN"
         Me.ingresar_BTN.Size = New System.Drawing.Size(443, 23)
-        Me.ingresar_BTN.TabIndex = 4
+        Me.ingresar_BTN.TabIndex = 5
         Me.ingresar_BTN.Text = "Ingresar"
         Me.ingresar_BTN.UseVisualStyleBackColor = True
         '
@@ -236,7 +236,7 @@ Partial Class Parametros_Barricas
         Me.TextBox4.Location = New System.Drawing.Point(136, 120)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(320, 21)
-        Me.TextBox4.TabIndex = 42
+        Me.TextBox4.TabIndex = 39
         '
         'Label6
         '
@@ -253,7 +253,7 @@ Partial Class Parametros_Barricas
         Me.TextBox5.Location = New System.Drawing.Point(136, 93)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(320, 21)
-        Me.TextBox5.TabIndex = 40
+        Me.TextBox5.TabIndex = 38
         '
         'Label9
         '
@@ -270,7 +270,7 @@ Partial Class Parametros_Barricas
         Me.TextBox6.Location = New System.Drawing.Point(136, 66)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(320, 21)
-        Me.TextBox6.TabIndex = 38
+        Me.TextBox6.TabIndex = 37
         '
         'Label10
         '
@@ -306,7 +306,7 @@ Partial Class Parametros_Barricas
         Me.CheckBox2.Location = New System.Drawing.Point(136, 147)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(99, 19)
-        Me.CheckBox2.TabIndex = 34
+        Me.CheckBox2.TabIndex = 40
         Me.CheckBox2.Text = "¿Disponible?"
         Me.CheckBox2.UseVisualStyleBackColor = True
         '
@@ -316,7 +316,7 @@ Partial Class Parametros_Barricas
         Me.modificar_BTN.Location = New System.Drawing.Point(13, 507)
         Me.modificar_BTN.Name = "modificar_BTN"
         Me.modificar_BTN.Size = New System.Drawing.Size(443, 23)
-        Me.modificar_BTN.TabIndex = 30
+        Me.modificar_BTN.TabIndex = 41
         Me.modificar_BTN.Text = "Modificar fila seleccionada"
         Me.modificar_BTN.UseVisualStyleBackColor = True
         '
@@ -326,7 +326,7 @@ Partial Class Parametros_Barricas
         Me.eliminar_BTN.Location = New System.Drawing.Point(13, 536)
         Me.eliminar_BTN.Name = "eliminar_BTN"
         Me.eliminar_BTN.Size = New System.Drawing.Size(443, 23)
-        Me.eliminar_BTN.TabIndex = 1
+        Me.eliminar_BTN.TabIndex = 42
         Me.eliminar_BTN.Text = "Eliminar fila seleccionada"
         Me.eliminar_BTN.UseVisualStyleBackColor = True
         '

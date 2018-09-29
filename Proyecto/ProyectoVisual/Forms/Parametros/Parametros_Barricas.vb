@@ -96,4 +96,7 @@ Public Class Parametros_Barricas
         End If
     End Sub
 
+    Private Sub CargarTabla(sender As System.Object, e As System.EventArgs) Handles ComboBoxSucursales1.SeleccionCambio, ComboBox1.SelectedValueChanged, CheckBox1.CheckedChanged, buscador.TextChanged
+
+    End Sub
 End Class

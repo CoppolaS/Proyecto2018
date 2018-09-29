@@ -133,7 +133,7 @@ Partial Class Empresa_Cargos
         Me.ingresar_BTN.Location = New System.Drawing.Point(13, 560)
         Me.ingresar_BTN.Name = "ingresar_BTN"
         Me.ingresar_BTN.Size = New System.Drawing.Size(443, 23)
-        Me.ingresar_BTN.TabIndex = 4
+        Me.ingresar_BTN.TabIndex = 2
         Me.ingresar_BTN.Text = "Ingresar"
         Me.ingresar_BTN.UseVisualStyleBackColor = True
         '
@@ -191,7 +191,7 @@ Partial Class Empresa_Cargos
         Me.modificar_BTN.Location = New System.Drawing.Point(13, 531)
         Me.modificar_BTN.Name = "modificar_BTN"
         Me.modificar_BTN.Size = New System.Drawing.Size(443, 23)
-        Me.modificar_BTN.TabIndex = 30
+        Me.modificar_BTN.TabIndex = 33
         Me.modificar_BTN.Text = "Modificar fila seleccionada"
         Me.modificar_BTN.UseVisualStyleBackColor = True
         '
@@ -201,7 +201,7 @@ Partial Class Empresa_Cargos
         Me.eliminar_BTN.Location = New System.Drawing.Point(13, 560)
         Me.eliminar_BTN.Name = "eliminar_BTN"
         Me.eliminar_BTN.Size = New System.Drawing.Size(443, 23)
-        Me.eliminar_BTN.TabIndex = 1
+        Me.eliminar_BTN.TabIndex = 34
         Me.eliminar_BTN.Text = "Eliminar fila seleccionada"
         Me.eliminar_BTN.UseVisualStyleBackColor = True
         '

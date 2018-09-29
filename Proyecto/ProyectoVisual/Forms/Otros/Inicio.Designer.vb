@@ -30,12 +30,14 @@ Partial Class Inicio
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Menu1 = New Proyecto.Menu()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.Tabla3)
         Me.Panel2.Controls.Add(Me.Tabla2)
         Me.Panel2.Controls.Add(Me.Tabla1)
@@ -57,9 +59,9 @@ Partial Class Inicio
         '
         'Tabla2
         '
-        Me.Tabla2.Location = New System.Drawing.Point(396, 35)
+        Me.Tabla2.Location = New System.Drawing.Point(396, 158)
         Me.Tabla2.Name = "Tabla2"
-        Me.Tabla2.Size = New System.Drawing.Size(436, 578)
+        Me.Tabla2.Size = New System.Drawing.Size(436, 455)
         Me.Tabla2.TabIndex = 7
         '
         'Tabla1
@@ -106,6 +108,15 @@ Partial Class Inicio
         Me.Menu1.Size = New System.Drawing.Size(1240, 32)
         Me.Menu1.TabIndex = 7
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(568, 76)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 9
+        Me.Button1.Text = "test"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -131,4 +142,5 @@ Partial Class Inicio
     Friend WithEvents Tabla3 As Proyecto.Tabla
     Friend WithEvents Tabla2 As Proyecto.Tabla
     Friend WithEvents Tabla1 As Proyecto.Tabla
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

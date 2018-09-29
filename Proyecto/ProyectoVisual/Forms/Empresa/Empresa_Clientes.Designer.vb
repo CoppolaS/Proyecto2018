@@ -44,6 +44,7 @@ Partial Class Empresa_Clientes
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Validar = New System.Windows.Forms.Button()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.TextBox12 = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -62,7 +63,6 @@ Partial Class Empresa_Clientes
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.Tabla1 = New Proyecto.Tabla()
         Me.Menu1 = New Proyecto.Menu()
-        Me.Validar = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -292,6 +292,15 @@ Partial Class Empresa_Clientes
         Me.TabPage2.Text = "Administrar"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'Validar
+        '
+        Me.Validar.Location = New System.Drawing.Point(13, 477)
+        Me.Validar.Name = "Validar"
+        Me.Validar.Size = New System.Drawing.Size(440, 23)
+        Me.Validar.TabIndex = 44
+        Me.Validar.Text = "Validar asesor profesional seleccionado"
+        Me.Validar.UseVisualStyleBackColor = True
+        '
         'TextBox11
         '
         Me.TextBox11.Enabled = False
@@ -400,7 +409,7 @@ Partial Class Empresa_Clientes
         Me.modificar_BTN.Location = New System.Drawing.Point(13, 506)
         Me.modificar_BTN.Name = "modificar_BTN"
         Me.modificar_BTN.Size = New System.Drawing.Size(443, 23)
-        Me.modificar_BTN.TabIndex = 44
+        Me.modificar_BTN.TabIndex = 45
         Me.modificar_BTN.Text = "Modificar fila seleccionada"
         Me.modificar_BTN.UseVisualStyleBackColor = True
         '
@@ -410,7 +419,7 @@ Partial Class Empresa_Clientes
         Me.eliminar_BTN.Location = New System.Drawing.Point(13, 535)
         Me.eliminar_BTN.Name = "eliminar_BTN"
         Me.eliminar_BTN.Size = New System.Drawing.Size(443, 23)
-        Me.eliminar_BTN.TabIndex = 45
+        Me.eliminar_BTN.TabIndex = 46
         Me.eliminar_BTN.Text = "Eliminar fila seleccionada"
         Me.eliminar_BTN.UseVisualStyleBackColor = True
         '
@@ -448,15 +457,6 @@ Partial Class Empresa_Clientes
         Me.Menu1.Name = "Menu1"
         Me.Menu1.Size = New System.Drawing.Size(1240, 32)
         Me.Menu1.TabIndex = 15
-        '
-        'Validar
-        '
-        Me.Validar.Location = New System.Drawing.Point(13, 477)
-        Me.Validar.Name = "Validar"
-        Me.Validar.Size = New System.Drawing.Size(440, 23)
-        Me.Validar.TabIndex = 49
-        Me.Validar.Text = "Validar asesor profesional seleccionado"
-        Me.Validar.UseVisualStyleBackColor = True
         '
         'Empresa_Clientes
         '

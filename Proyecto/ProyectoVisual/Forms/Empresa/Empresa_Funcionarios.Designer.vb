@@ -168,7 +168,7 @@ Partial Class Empresa_Funcionarios
         Me.CheckBox3.Location = New System.Drawing.Point(128, 206)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(172, 19)
-        Me.CheckBox3.TabIndex = 31
+        Me.CheckBox3.TabIndex = 13
         Me.CheckBox3.Text = "¿Funcionario con usuario?"
         Me.CheckBox3.UseVisualStyleBackColor = True
         '
@@ -205,7 +205,7 @@ Partial Class Empresa_Funcionarios
         Me.ComboBox4.Location = New System.Drawing.Point(128, 177)
         Me.ComboBox4.Name = "ComboBox4"
         Me.ComboBox4.Size = New System.Drawing.Size(212, 23)
-        Me.ComboBox4.TabIndex = 21
+        Me.ComboBox4.TabIndex = 12
         '
         'ComboBox3
         '
@@ -215,7 +215,7 @@ Partial Class Empresa_Funcionarios
         Me.ComboBox3.Location = New System.Drawing.Point(128, 285)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(212, 23)
-        Me.ComboBox3.TabIndex = 20
+        Me.ComboBox3.TabIndex = 16
         '
         'ComboBox2
         '
@@ -223,7 +223,7 @@ Partial Class Empresa_Funcionarios
         Me.ComboBox2.Location = New System.Drawing.Point(128, 148)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(212, 23)
-        Me.ComboBox2.TabIndex = 19
+        Me.ComboBox2.TabIndex = 11
         '
         'TextBox7
         '
@@ -231,7 +231,7 @@ Partial Class Empresa_Funcionarios
         Me.TextBox7.Location = New System.Drawing.Point(128, 258)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(212, 21)
-        Me.TextBox7.TabIndex = 18
+        Me.TextBox7.TabIndex = 15
         '
         'Label10
         '
@@ -248,7 +248,7 @@ Partial Class Empresa_Funcionarios
         Me.TextBox6.Location = New System.Drawing.Point(128, 231)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(212, 21)
-        Me.TextBox6.TabIndex = 16
+        Me.TextBox6.TabIndex = 14
         '
         'Label9
         '
@@ -264,7 +264,7 @@ Partial Class Empresa_Funcionarios
         Me.TextBox5.Location = New System.Drawing.Point(128, 121)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(212, 21)
-        Me.TextBox5.TabIndex = 14
+        Me.TextBox5.TabIndex = 10
         '
         'Label8
         '
@@ -280,7 +280,7 @@ Partial Class Empresa_Funcionarios
         Me.TextBox4.Location = New System.Drawing.Point(128, 94)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(212, 21)
-        Me.TextBox4.TabIndex = 12
+        Me.TextBox4.TabIndex = 9
         '
         'Label6
         '
@@ -296,7 +296,7 @@ Partial Class Empresa_Funcionarios
         Me.TextBox3.Location = New System.Drawing.Point(128, 67)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(212, 21)
-        Me.TextBox3.TabIndex = 10
+        Me.TextBox3.TabIndex = 8
         '
         'Label5
         '
@@ -312,7 +312,7 @@ Partial Class Empresa_Funcionarios
         Me.TextBox2.Location = New System.Drawing.Point(128, 40)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(212, 21)
-        Me.TextBox2.TabIndex = 8
+        Me.TextBox2.TabIndex = 7
         '
         'Label2
         '
@@ -345,7 +345,7 @@ Partial Class Empresa_Funcionarios
         Me.ingresar_BTN.Location = New System.Drawing.Point(13, 533)
         Me.ingresar_BTN.Name = "ingresar_BTN"
         Me.ingresar_BTN.Size = New System.Drawing.Size(327, 23)
-        Me.ingresar_BTN.TabIndex = 4
+        Me.ingresar_BTN.TabIndex = 17
         Me.ingresar_BTN.Text = "Ingresar"
         Me.ingresar_BTN.UseVisualStyleBackColor = True
         '
@@ -416,7 +416,7 @@ Partial Class Empresa_Funcionarios
         Me.ComboBox5.Location = New System.Drawing.Point(128, 174)
         Me.ComboBox5.Name = "ComboBox5"
         Me.ComboBox5.Size = New System.Drawing.Size(212, 23)
-        Me.ComboBox5.TabIndex = 47
+        Me.ComboBox5.TabIndex = 49
         '
         'ComboBox6
         '
@@ -426,7 +426,7 @@ Partial Class Empresa_Funcionarios
         Me.ComboBox6.Location = New System.Drawing.Point(128, 286)
         Me.ComboBox6.Name = "ComboBox6"
         Me.ComboBox6.Size = New System.Drawing.Size(212, 23)
-        Me.ComboBox6.TabIndex = 46
+        Me.ComboBox6.TabIndex = 53
         '
         'ComboBox7
         '
@@ -435,7 +435,7 @@ Partial Class Empresa_Funcionarios
         Me.ComboBox7.Location = New System.Drawing.Point(128, 203)
         Me.ComboBox7.Name = "ComboBox7"
         Me.ComboBox7.Size = New System.Drawing.Size(212, 23)
-        Me.ComboBox7.TabIndex = 45
+        Me.ComboBox7.TabIndex = 50
         '
         'TextBox8
         '
@@ -460,7 +460,7 @@ Partial Class Empresa_Funcionarios
         Me.TextBox9.Location = New System.Drawing.Point(128, 66)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.Size = New System.Drawing.Size(212, 21)
-        Me.TextBox9.TabIndex = 42
+        Me.TextBox9.TabIndex = 45
         '
         'Label18
         '
@@ -477,7 +477,7 @@ Partial Class Empresa_Funcionarios
         Me.TextBox10.Location = New System.Drawing.Point(128, 93)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(212, 21)
-        Me.TextBox10.TabIndex = 40
+        Me.TextBox10.TabIndex = 46
         '
         'Label19
         '
@@ -494,7 +494,7 @@ Partial Class Empresa_Funcionarios
         Me.TextBox11.Location = New System.Drawing.Point(128, 120)
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.Size = New System.Drawing.Size(212, 21)
-        Me.TextBox11.TabIndex = 38
+        Me.TextBox11.TabIndex = 47
         '
         'Label20
         '
@@ -511,7 +511,7 @@ Partial Class Empresa_Funcionarios
         Me.TextBox12.Location = New System.Drawing.Point(128, 147)
         Me.TextBox12.Name = "TextBox12"
         Me.TextBox12.Size = New System.Drawing.Size(212, 21)
-        Me.TextBox12.TabIndex = 36
+        Me.TextBox12.TabIndex = 48
         '
         'Label21
         '
@@ -528,7 +528,7 @@ Partial Class Empresa_Funcionarios
         Me.TextBox13.Location = New System.Drawing.Point(128, 232)
         Me.TextBox13.Name = "TextBox13"
         Me.TextBox13.Size = New System.Drawing.Size(212, 21)
-        Me.TextBox13.TabIndex = 34
+        Me.TextBox13.TabIndex = 51
         '
         'Label22
         '
@@ -545,7 +545,7 @@ Partial Class Empresa_Funcionarios
         Me.TextBox14.Location = New System.Drawing.Point(128, 259)
         Me.TextBox14.Name = "TextBox14"
         Me.TextBox14.Size = New System.Drawing.Size(212, 21)
-        Me.TextBox14.TabIndex = 32
+        Me.TextBox14.TabIndex = 52
         '
         'Label23
         '
@@ -562,7 +562,7 @@ Partial Class Empresa_Funcionarios
         Me.modificar_BTN.Location = New System.Drawing.Point(13, 504)
         Me.modificar_BTN.Name = "modificar_BTN"
         Me.modificar_BTN.Size = New System.Drawing.Size(327, 23)
-        Me.modificar_BTN.TabIndex = 30
+        Me.modificar_BTN.TabIndex = 54
         Me.modificar_BTN.Text = "Modificar fila seleccionada"
         Me.modificar_BTN.UseVisualStyleBackColor = True
         '
@@ -572,7 +572,7 @@ Partial Class Empresa_Funcionarios
         Me.eliminar_BTN.Location = New System.Drawing.Point(13, 533)
         Me.eliminar_BTN.Name = "eliminar_BTN"
         Me.eliminar_BTN.Size = New System.Drawing.Size(327, 23)
-        Me.eliminar_BTN.TabIndex = 1
+        Me.eliminar_BTN.TabIndex = 55
         Me.eliminar_BTN.Text = "Eliminar fila seleccionada"
         Me.eliminar_BTN.UseVisualStyleBackColor = True
         '

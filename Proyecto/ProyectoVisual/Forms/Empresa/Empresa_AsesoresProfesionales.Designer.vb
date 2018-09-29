@@ -44,6 +44,7 @@ Partial Class Empresa_AsesoresProfesionales
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Validar = New System.Windows.Forms.Button()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.TextBox13 = New System.Windows.Forms.TextBox()
         Me.TextBox14 = New System.Windows.Forms.TextBox()
@@ -74,7 +75,6 @@ Partial Class Empresa_AsesoresProfesionales
         Me.ComboBoxSucursales1 = New Proyecto.ComboBoxSucursales()
         Me.Tabla1 = New Proyecto.Tabla()
         Me.Menu1 = New Proyecto.Menu()
-        Me.Validar = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -309,6 +309,15 @@ Partial Class Empresa_AsesoresProfesionales
         Me.TabPage2.Text = "Administrar"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'Validar
+        '
+        Me.Validar.Location = New System.Drawing.Point(16, 474)
+        Me.Validar.Name = "Validar"
+        Me.Validar.Size = New System.Drawing.Size(440, 23)
+        Me.Validar.TabIndex = 41
+        Me.Validar.Text = "Validar asesor profesional seleccionado"
+        Me.Validar.UseVisualStyleBackColor = True
+        '
         'Label21
         '
         Me.Label21.AutoSize = True
@@ -470,7 +479,7 @@ Partial Class Empresa_AsesoresProfesionales
         Me.Button3.Location = New System.Drawing.Point(16, 503)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(440, 23)
-        Me.Button3.TabIndex = 41
+        Me.Button3.TabIndex = 42
         Me.Button3.Text = "Modificar fila seleccionada"
         Me.Button3.UseVisualStyleBackColor = True
         '
@@ -479,7 +488,7 @@ Partial Class Empresa_AsesoresProfesionales
         Me.Button2.Location = New System.Drawing.Point(16, 532)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(440, 23)
-        Me.Button2.TabIndex = 42
+        Me.Button2.TabIndex = 43
         Me.Button2.Text = "Eliminar fila seleccionada"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -565,15 +574,6 @@ Partial Class Empresa_AsesoresProfesionales
         Me.Menu1.Name = "Menu1"
         Me.Menu1.Size = New System.Drawing.Size(1240, 32)
         Me.Menu1.TabIndex = 15
-        '
-        'Validar
-        '
-        Me.Validar.Location = New System.Drawing.Point(16, 474)
-        Me.Validar.Name = "Validar"
-        Me.Validar.Size = New System.Drawing.Size(440, 23)
-        Me.Validar.TabIndex = 48
-        Me.Validar.Text = "Validar asesor profesional seleccionado"
-        Me.Validar.UseVisualStyleBackColor = True
         '
         'Empresa_AsesoresProfesionales
         '

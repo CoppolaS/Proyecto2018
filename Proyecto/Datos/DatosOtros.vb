@@ -121,4 +121,155 @@ Public Class DatosOtros
         Return ds
     End Function
 
+    'hectareas
+    Public Function ListaHectareas() As DataSet
+        sql = "CALL `proyecto`.`LABM_Hectareas`(?opcion,?ID_H,?cantidad,?numero,?m2libres,?m2ocupados,?sucursal);"
+        Try
+            Con.cn2.Open()
+            cm = New MySqlCommand()
+            cm.CommandText = sql
+            cm.Connection = Con.cn2
+            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
+            cm.Parameters.Add("?ID_H", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?cantidad", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?numero", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?m2libres", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?m2ocupados", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?sucursal", MySqlDbType.VarChar).Value = UsuarioLogeado.Sucursal
+            da = New MySqlDataAdapter(cm)
+            ds = New DataSet()
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Con.cn2.Close()
+        Return ds
+    End Function
+
+    Public Function IngresoHectarea(ByVal nodo As Encapsuladoras.Hectareas) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Hectareas (?,?,?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 2)
+                cmd.Parameters.AddWithValue("ID_H", 0)
+                cmd.Parameters.AddWithValue("cantidad", nodo.CantidadHectareas)
+                cmd.Parameters.AddWithValue("numero", 0)
+                cmd.Parameters.AddWithValue("m2libres", 0)
+                cmd.Parameters.AddWithValue("m2ocupados", 0)
+                cmd.Parameters.AddWithValue("sucursal", nodo.SucursalHectarea)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al ingresar la hectárea")
+        End Try
+        Return False
+    End Function
+
+    Public Function EliminoHectarea(ByVal nodo As Encapsuladoras.Hectareas) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Hectareas (?,?,?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 3)
+                cmd.Parameters.AddWithValue("ID_H", nodo.IDHectarea)
+                cmd.Parameters.AddWithValue("cantidad", 0)
+                cmd.Parameters.AddWithValue("numero", 0)
+                cmd.Parameters.AddWithValue("m2libres", 0)
+                cmd.Parameters.AddWithValue("m2ocupados", 0)
+                cmd.Parameters.AddWithValue("sucursal", Datos.UsuarioLogeado.Sucursal)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al eliminar la hectárea")
+        End Try
+        Return False
+    End Function
+
+    'parcelas
+    Public Function ListaParcelas(Optional ByVal ID_H As Integer = 0) As DataSet
+        sql = "CALL `proyecto`.`LABM_Parcelas`(?opcion,?ID_P,?cantidad,?numero,?m2,?ID_H);"
+        Try
+            Con.cn2.Open()
+            cm = New MySqlCommand()
+            cm.CommandText = sql
+            cm.Connection = Con.cn2
+            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
+            cm.Parameters.Add("?ID_P", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?cantidad", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?numero", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?m2", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?ID_H", MySqlDbType.Int32).Value = ID_H
+            da = New MySqlDataAdapter(cm)
+            ds = New DataSet()
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Con.cn2.Close()
+        Return ds
+    End Function
+
+    Public Function IngresoParcela(ByVal nodo As Encapsuladoras.Parcelas) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Parcelas (?,?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 2)
+                cmd.Parameters.AddWithValue("ID_P", 0)
+                cmd.Parameters.AddWithValue("cantidad", nodo.CantidadParcelas)
+                cmd.Parameters.AddWithValue("numero", 0)
+                cmd.Parameters.AddWithValue("m2", nodo.MetrosCuadradosParcela)
+                cmd.Parameters.AddWithValue("ID_H", nodo.IDHectarea)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al ingresar la parcela")
+        End Try
+        Return False
+    End Function
+
+    Public Function EliminoParcela(ByVal nodo As Encapsuladoras.Parcelas) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Parcelas (?,?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 3)
+                cmd.Parameters.AddWithValue("ID_P", nodo.IDParcela)
+                cmd.Parameters.AddWithValue("cantidad", 0)
+                cmd.Parameters.AddWithValue("numero", 0)
+                cmd.Parameters.AddWithValue("m2", 0)
+                cmd.Parameters.AddWithValue("ID_H", 0)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al eliminar la parcela")
+        End Try
+        Return False
+    End Function
+
 End Class

@@ -167,6 +167,12 @@
     <Compile Include="Forms\Otros\Tabla.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Forms\Terrenos.Designer.vb">
+      <DependentUpon>Terrenos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Terrenos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -345,6 +351,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Otros\Tabla.resx">
       <DependentUpon>Tabla.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Terrenos.resx">
+      <DependentUpon>Terrenos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
