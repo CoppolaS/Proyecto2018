@@ -76,7 +76,10 @@ Public Class Terrenos
 
     Private Sub EliminarParcela(sender As System.Object, e As System.EventArgs) Handles Button4.Click
         encapsuladora2.IDParcela = Integer.Parse(Tabla2.DataGridView1.Rows(Tabla2.DataGridView1.CurrentRow.Index).Cells(0).Value)
+        encapsuladora2.MetrosCuadradosParcela = Integer.Parse(Tabla2.DataGridView1.Rows(Tabla2.DataGridView1.CurrentRow.Index).Cells(2).Value)
+        encapsuladora2.IDHectarea = Integer.Parse(Tabla1.DataGridView1.Rows(Tabla1.DataGridView1.CurrentRow.Index).Cells(0).Value)
         Verif.ValidoEliminarParcelas(encapsuladora2)
+        CargarTabla1()
         CargarTabla2()
     End Sub
 

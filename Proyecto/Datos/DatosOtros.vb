@@ -256,8 +256,8 @@ Public Class DatosOtros
                 cmd.Parameters.AddWithValue("ID_P", nodo.IDParcela)
                 cmd.Parameters.AddWithValue("cantidad", 0)
                 cmd.Parameters.AddWithValue("numero", 0)
-                cmd.Parameters.AddWithValue("m2", 0)
-                cmd.Parameters.AddWithValue("ID_H", 0)
+                cmd.Parameters.AddWithValue("m2", nodo.MetrosCuadradosParcela)
+                cmd.Parameters.AddWithValue("ID_H", nodo.IDHectarea)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException

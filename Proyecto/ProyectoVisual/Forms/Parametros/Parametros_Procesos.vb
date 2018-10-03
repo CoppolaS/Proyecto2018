@@ -96,6 +96,9 @@ Public Class Parametros_Procesos
         encapsuladora.NombreProceso = TextBox3.Text
         encapsuladora.DescripcionProceso = TextBox4.Text
         encapsuladora.MateriaPrimaProceso = CheckBox6.CheckState
+        encapsuladora.ProductoIntermedioProceso = CheckBox7.CheckState
+        encapsuladora.BarricaProceso = CheckBox8.CheckState
+        encapsuladora.TanqueProceso = CheckBox9.CheckState
         Verif.ValidoModificarProcesos(encapsuladora)
         TextBox3.Clear()
         TextBox4.Clear()
