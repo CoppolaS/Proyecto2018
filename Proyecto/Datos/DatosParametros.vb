@@ -325,4 +325,189 @@ Public Class DatosParametros
         Return False
     End Function
 
+    'tratamientos
+    Public Function ListaTratamientos() As DataSet
+        sql = "CALL `proyecto`.`LABM_Tratamientos`(?opcion,?ID_T,?nombre,?descripcion);"
+        Try
+            Con.cn2.Open()
+            cm = New MySqlCommand()
+            cm.CommandText = sql
+            cm.Connection = Con.cn2
+            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
+            cm.Parameters.Add("?ID_T", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?nombre", MySqlDbType.VarChar).Value = "0"
+            cm.Parameters.Add("?descripcion", MySqlDbType.VarChar).Value = "0"
+            da = New MySqlDataAdapter(cm)
+            ds = New DataSet()
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Con.cn2.Close()
+        Return ds
+    End Function
+
+    Public Function IngresoTratamiento(ByVal nodo As Encapsuladoras.Tratamientos) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Tratamientos (?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 2)
+                cmd.Parameters.AddWithValue("ID_T", 0)
+                cmd.Parameters.AddWithValue("nombre", nodo.NombreTratamiento)
+                cmd.Parameters.AddWithValue("descripcion", nodo.DescripcionTratamiento)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al ingresar el tratamiento")
+        End Try
+        Return False
+    End Function
+
+    Public Function EliminoTratamiento(ByVal nodo As Encapsuladoras.Tratamientos) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Tratamientos (?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 3)
+                cmd.Parameters.AddWithValue("ID_T", nodo.IDTratamiento)
+                cmd.Parameters.AddWithValue("nombre", "0")
+                cmd.Parameters.AddWithValue("descripcion", "0")
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al eliminar el tratamiento")
+        End Try
+        Return False
+    End Function
+
+    Public Function ModificoTratamiento(ByVal nodo As Encapsuladoras.Tratamientos) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Tratamientos (?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 4)
+                cmd.Parameters.AddWithValue("ID_T", nodo.IDTratamiento)
+                cmd.Parameters.AddWithValue("nombre", nodo.NombreTratamiento)
+                cmd.Parameters.AddWithValue("descripcion", nodo.DescripcionTratamiento)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al modificar el tratamiento")
+        End Try
+        Return False
+    End Function
+
+    'tanques
+    Public Function ListaDatos() As DataSet
+        sql = "CALL `proyecto`.`LABM_Datos`(?opcion,?ID_D,?nombre,?unidad,?descripcion);"
+        Try
+            Con.cn2.Open()
+            cm = New MySqlCommand()
+            cm.CommandText = sql
+            cm.Connection = Con.cn2
+            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
+            cm.Parameters.Add("?ID_D", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?nombre", MySqlDbType.Int32).Value = "0"
+            cm.Parameters.Add("?unidad", MySqlDbType.Int32).Value = "0"
+            cm.Parameters.Add("?descripcion", MySqlDbType.Int32).Value = "0"
+            da = New MySqlDataAdapter(cm)
+            ds = New DataSet()
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Con.cn2.Close()
+        Return ds
+    End Function
+
+    Public Function IngresoDato(ByVal nodo As Encapsuladoras.Datos) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Datos (?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 2)
+                cmd.Parameters.AddWithValue("ID_D", 0)
+                cmd.Parameters.AddWithValue("nombre", nodo.NombreDato)
+                cmd.Parameters.AddWithValue("unidad", nodo.UnidadDato)
+                cmd.Parameters.AddWithValue("descripcion", nodo.DescripcionDato)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al ingresar el dato")
+        End Try
+        Return False
+    End Function
+
+    Public Function EliminoDato(ByVal nodo As Encapsuladoras.Datos) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Datos (?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 3)
+                cmd.Parameters.AddWithValue("ID_D", nodo.IDDato)
+                cmd.Parameters.AddWithValue("nombre", "0")
+                cmd.Parameters.AddWithValue("unidad", "0")
+                cmd.Parameters.AddWithValue("descripcion", "0")
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al eliminar el dato")
+        End Try
+        Return False
+    End Function
+
+    Public Function ModificoDato(ByVal nodo As Encapsuladoras.Datos) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Datos (?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 4)
+                cmd.Parameters.AddWithValue("ID_D", nodo.IDDato)
+                cmd.Parameters.AddWithValue("nombre", nodo.NombreDato)
+                cmd.Parameters.AddWithValue("unidad", nodo.UnidadDato)
+                cmd.Parameters.AddWithValue("descripcion", nodo.DescripcionDato)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al modificar el dato")
+        End Try
+        Return False
+    End Function
 End Class

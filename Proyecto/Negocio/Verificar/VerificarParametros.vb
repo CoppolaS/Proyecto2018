@@ -92,4 +92,54 @@ Public Class VerificarParametros
         Return Nothing
     End Function
 
+    'tratamientos
+    Public Function ValidoListaTratamientos() As DataView
+        ds = DatosP.ListaTratamientos
+        ds.Tables(0).Columns(0).ColumnName = "ID"
+        ds.Tables(0).Columns(1).ColumnName = "Nombre"
+        ds.Tables(0).Columns(2).ColumnName = "Descripción"
+        dv = ds.Tables(0).DefaultView
+        Return dv
+    End Function
+
+    Public Function ValidoIngresoTratamientos(ByVal encapsuladora As Encapsuladoras.Tratamientos)
+        DatosP.IngresoTratamiento(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoEliminarTratamientos(ByVal encapsuladora As Encapsuladoras.Tratamientos)
+        DatosP.EliminoTratamiento(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoModificarTratamientos(ByVal encapsuladora As Encapsuladoras.Tratamientos)
+        DatosP.ModificoTratamiento(encapsuladora)
+        Return Nothing
+    End Function
+
+    'datos
+    Public Function ValidoListaDatos() As DataView
+        ds = DatosP.ListaDatos()
+        ds.Tables(0).Columns(0).ColumnName = "ID"
+        ds.Tables(0).Columns(1).ColumnName = "Nombre"
+        ds.Tables(0).Columns(2).ColumnName = "Unidad"
+        ds.Tables(0).Columns(3).ColumnName = "Descripción"
+        dv = ds.Tables(0).DefaultView
+        Return dv
+    End Function
+
+    Public Function ValidoIngresoDatos(ByVal encapsuladora As Encapsuladoras.Datos)
+        DatosP.IngresoDato(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoEliminarDatos(ByVal encapsuladora As Encapsuladoras.Datos)
+        DatosP.EliminoDato(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoModificarDatos(ByVal encapsuladora As Encapsuladoras.Datos)
+        DatosP.ModificoDato(encapsuladora)
+        Return Nothing
+    End Function
 End Class

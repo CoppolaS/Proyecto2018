@@ -207,3 +207,4 @@ D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proy
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.ComboBoxSucursales.resources
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Empresa_Clientes.resources
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Terrenos.resources
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Parametros_Tratamientos.resources
