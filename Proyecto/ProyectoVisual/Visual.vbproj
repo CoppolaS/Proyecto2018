@@ -167,6 +167,12 @@
     <Compile Include="Forms\Otros\Tabla.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Forms\Parametros\Tratamientos.Designer.vb">
+      <DependentUpon>Tratamientos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Parametros\Tratamientos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\Terrenos.Designer.vb">
       <DependentUpon>Terrenos.vb</DependentUpon>
     </Compile>
@@ -351,6 +357,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Otros\Tabla.resx">
       <DependentUpon>Tabla.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Parametros\Tratamientos.resx">
+      <DependentUpon>Tratamientos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Terrenos.resx">
       <DependentUpon>Terrenos.vb</DependentUpon>

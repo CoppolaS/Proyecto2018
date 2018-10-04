@@ -114,6 +114,7 @@
     <Compile Include="Parametros\Barricas.vb" />
     <Compile Include="Parametros\Procesos.vb" />
     <Compile Include="Parametros\Tanques.vb" />
+    <Compile Include="Parametros\Tratamientos.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
