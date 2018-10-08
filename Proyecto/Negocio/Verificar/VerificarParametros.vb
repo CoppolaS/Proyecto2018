@@ -142,4 +142,30 @@ Public Class VerificarParametros
         DatosP.ModificoDato(encapsuladora)
         Return Nothing
     End Function
+
+    'cepas
+    Public Function ValidoListaCepas() As DataView
+        ds = DatosP.ListaCepas()
+        ds.Tables(0).Columns(0).ColumnName = "ID"
+        ds.Tables(0).Columns(1).ColumnName = "Nombre"
+        ds.Tables(0).Columns(2).ColumnName = "Imagen Uva"
+        ds.Tables(0).Columns(3).ColumnName = "Imagen Mosto"
+        ds.Tables(0).Columns(4).ColumnName = "Descripción Uva"
+        ds.Tables(0).Columns(5).ColumnName = "Descripción Mosto"
+        ds.Tables(0).Columns(6).ColumnName = "Precio Uva"
+        ds.Tables(0).Columns(7).ColumnName = "Precio Mosto"
+        dv = ds.Tables(0).DefaultView
+        Return dv
+    End Function
+
+    Public Function ValidoIngresoCepas(ByVal encapsuladora As Encapsuladoras.Cepas)
+        DatosP.IngresoCepa(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoEliminarCepas(ByVal encapsuladora As Encapsuladoras.Cepas)
+        DatosP.EliminoCepa(encapsuladora)
+        Return Nothing
+    End Function
+
 End Class

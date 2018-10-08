@@ -112,6 +112,7 @@
     <Compile Include="Otros\Hectareas.vb" />
     <Compile Include="Otros\Parcelas.vb" />
     <Compile Include="Parametros\Barricas.vb" />
+    <Compile Include="Parametros\Cepas.vb" />
     <Compile Include="Parametros\Datos.vb" />
     <Compile Include="Parametros\Procesos.vb" />
     <Compile Include="Parametros\Tanques.vb" />

@@ -67,6 +67,7 @@
     <ApplicationIcon>Resources\favicon1.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="ProyectoVisual, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <ExecutableExtension>.exe</ExecutableExtension>
     </Reference>
@@ -148,6 +149,12 @@
     <Compile Include="Forms\Otros\Estadisticas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\Otros\Imagen.Designer.vb">
+      <DependentUpon>Imagen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Otros\Imagen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\Otros\Inicio.Designer.vb">
       <DependentUpon>Inicio.vb</DependentUpon>
     </Compile>
@@ -166,6 +173,12 @@
     </Compile>
     <Compile Include="Forms\Otros\Tabla.vb">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Parametros\Parametros_Cepas.Designer.vb">
+      <DependentUpon>Parametros_Cepas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Parametros\Parametros_Cepas.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Parametros\Parametros_Tratamientos.Designer.vb">
       <DependentUpon>Parametros_Tratamientos.vb</DependentUpon>
@@ -355,8 +368,14 @@
     <EmbeddedResource Include="Forms\Otros\ComboBoxSucursales.resx">
       <DependentUpon>ComboBoxSucursales.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Otros\Imagen.resx">
+      <DependentUpon>Imagen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Otros\Tabla.resx">
       <DependentUpon>Tabla.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Parametros\Parametros_Cepas.resx">
+      <DependentUpon>Parametros_Cepas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Parametros\Parametros_Tratamientos.resx">
       <DependentUpon>Parametros_Tratamientos.vb</DependentUpon>

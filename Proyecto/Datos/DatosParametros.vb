@@ -416,7 +416,7 @@ Public Class DatosParametros
         Return False
     End Function
 
-    'tanques
+    'datos
     Public Function ListaDatos() As DataSet
         sql = "CALL `proyecto`.`LABM_Datos`(?opcion,?ID_D,?nombre,?unidad,?descripcion);"
         Try
@@ -510,4 +510,88 @@ Public Class DatosParametros
         End Try
         Return False
     End Function
+
+    'cepas
+    Public Function ListaCepas() As DataSet
+        sql = "CALL `proyecto`.`LABM_Cepas`(?opcion,?ID_C,?nombre,?imgu,?imgm,?descripcionu,?descripcionm,?preciou,?preciom);"
+        Try
+            Con.cn2.Open()
+            cm = New MySqlCommand()
+            cm.CommandText = sql
+            cm.Connection = Con.cn2
+            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
+            cm.Parameters.Add("?ID_C", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?nombre", MySqlDbType.Int32).Value = "0"
+            cm.Parameters.Add("?imgu", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?imgm", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?descripcionu", MySqlDbType.Int32).Value = "0"
+            cm.Parameters.Add("?descripcionm", MySqlDbType.Int32).Value = "0"
+            cm.Parameters.Add("?preciou", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?preciom", MySqlDbType.Int32).Value = 0
+            da = New MySqlDataAdapter(cm)
+            ds = New DataSet()
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Con.cn2.Close()
+        Return ds
+    End Function
+
+    Public Function IngresoCepa(ByVal nodo As Encapsuladoras.Cepas) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Cepas (?,?,?,?,?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 2)
+                cmd.Parameters.AddWithValue("ID_C", 0)
+                cmd.Parameters.AddWithValue("nombre", nodo.NombreCepa)
+                cmd.Parameters.AddWithValue("imgu", nodo.ImagenUvaCepa)
+                cmd.Parameters.AddWithValue("imgm", nodo.ImagenMostoCepa)
+                cmd.Parameters.AddWithValue("descripcionu", nodo.DescripcionUvaCepa)
+                cmd.Parameters.AddWithValue("descripcionm", nodo.DescripcionMostoCepa)
+                cmd.Parameters.AddWithValue("preciou", nodo.PrecioUvaCepa)
+                cmd.Parameters.AddWithValue("preciom", nodo.PrecioMostoCepa)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al ingresar la cepa")
+        End Try
+        Return False
+    End Function
+
+    Public Function EliminoCepa(ByVal nodo As Encapsuladoras.Cepas) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Cepas (?,?,?,?,?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 3)
+                cmd.Parameters.AddWithValue("ID_C", nodo.IDCepa)
+                cmd.Parameters.AddWithValue("nombre", "0")
+                cmd.Parameters.AddWithValue("imgu", 0)
+                cmd.Parameters.AddWithValue("imgm", 0)
+                cmd.Parameters.AddWithValue("descripcionu", "0")
+                cmd.Parameters.AddWithValue("descripcionm", "0")
+                cmd.Parameters.AddWithValue("preciou", 0)
+                cmd.Parameters.AddWithValue("preciom", 0)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al eliminar la cepa")
+        End Try
+        Return False
+    End Function
+
 End Class
