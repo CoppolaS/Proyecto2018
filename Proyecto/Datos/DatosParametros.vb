@@ -594,4 +594,91 @@ Public Class DatosParametros
         Return False
     End Function
 
+    'tanques
+    Public Function ListaBotellas() As DataSet
+        sql = "CALL `proyecto`.`LABM_Botellas`(?opcion,?ID_B,?capacidad);"
+        Try
+            Con.cn2.Open()
+            cm = New MySqlCommand()
+            cm.CommandText = sql
+            cm.Connection = Con.cn2
+            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
+            cm.Parameters.Add("?ID_B", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?capacidad", MySqlDbType.Int32).Value = 0
+            da = New MySqlDataAdapter(cm)
+            ds = New DataSet()
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Con.cn2.Close()
+        Return ds
+    End Function
+
+    Public Function IngresoBotella(ByVal nodo As Encapsuladoras.Botellas) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Botellas (?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 2)
+                cmd.Parameters.AddWithValue("ID_B", 0)
+                cmd.Parameters.AddWithValue("capacidad", nodo.CapacidadBotella)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al ingresar la botella")
+        End Try
+        Return False
+    End Function
+
+    Public Function EliminoBotella(ByVal nodo As Encapsuladoras.Botellas) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Botellas (?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 3)
+                cmd.Parameters.AddWithValue("ID_B", nodo.IDBotella)
+                cmd.Parameters.AddWithValue("capacidad", 0)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al eliminar la botella")
+        End Try
+        Return False
+    End Function
+
+    Public Function ModificoBotella(ByVal nodo As Encapsuladoras.Botellas) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Botellas (?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 4)
+                cmd.Parameters.AddWithValue("ID_B", nodo.IDBotella)
+                cmd.Parameters.AddWithValue("capacidad", nodo.CapacidadBotella)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al modificar la botella")
+        End Try
+        Return False
+    End Function
+
 End Class

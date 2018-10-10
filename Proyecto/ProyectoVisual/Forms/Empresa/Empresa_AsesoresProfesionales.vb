@@ -15,6 +15,7 @@ Public Class Empresa_AsesoresProfesionales
         ComboBox3.DropDownStyle = ComboBoxStyle.DropDownList
         ComboBox4.DropDownStyle = ComboBoxStyle.DropDownList
         ComboBox5.DropDownStyle = ComboBoxStyle.DropDownList
+        ComboBox6.DropDownStyle = ComboBoxStyle.DropDownList
         ComboBox1.SelectedIndex() = 0
         dv = Verif.ValidoListaSucursales
         dv.RowFilter = "Eliminado = 0"
@@ -140,8 +141,9 @@ Public Class Empresa_AsesoresProfesionales
         End If
     End Sub
 
-    Private Sub Validar_Click(sender As System.Object, e As System.EventArgs) Handles Validar.Click
+    Private Sub Validar_Click(sender As System.Object, e As System.EventArgs) Handles ComboBox6.SelectedIndexChanged
         encapsuladora.IDAsesorProfesional = Tabla.ID
+        encapsuladora.ValidoAsesorProfesional = ComboBox6.SelectedIndex
         Verif.ValidoUsuarioWebAsesorProfesional(encapsuladora)
         CargarTabla()
     End Sub

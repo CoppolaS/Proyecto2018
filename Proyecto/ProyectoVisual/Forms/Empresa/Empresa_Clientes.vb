@@ -12,6 +12,7 @@ Public Class Empresa_Clientes
         ComboBox1.Items.Add("Usuario")
         ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
         ComboBox1.SelectedIndex() = 0
+        ComboBox2.DropDownStyle = ComboBoxStyle.DropDownList
         If Datos.UsuarioLogeado.Privilegios <> 4 Then
             CheckBox2.Enabled = True
         End If
@@ -120,8 +121,9 @@ Public Class Empresa_Clientes
         End If
     End Sub
 
-    Private Sub Validar_Click(sender As System.Object, e As System.EventArgs) Handles Validar.Click
+    Private Sub Validar_Click(sender As System.Object, e As System.EventArgs) Handles ComboBox2.SelectedIndexChanged
         encapsuladora.IDCliente = Tabla.ID
+        encapsuladora.ValidoCliente = ComboBox2.SelectedIndex
         Verif.ValidoUsuarioWebCliente(encapsuladora)
         CargarTabla()
     End Sub

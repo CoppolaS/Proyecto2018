@@ -89,10 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatosEmpresa.vb" />
-    <Compile Include="DatosMateria_prima.vb" />
     <Compile Include="DatosParametros.vb" />
-    <Compile Include="DatosPlantaciones.vb" />
-    <Compile Include="DatosProducto_intermedio.vb" />
     <Compile Include="Varios\Conexion.vb" />
     <Compile Include="DatosOtros.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -110,7 +107,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="DatosProducto_final.vb" />
     <Compile Include="Varios\UsuarioLogeado.vb" />
     <Compile Include="Varios\UsuarioLogeadoWeb.vb" />
   </ItemGroup>

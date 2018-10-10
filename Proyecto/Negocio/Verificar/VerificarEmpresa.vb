@@ -41,6 +41,7 @@ Public Class VerificarEmpresa
         ds.Tables(0).Columns(5).ColumnName = "Eliminado"
         ds.Tables(0).Columns(6).ColumnName = "Usuario"
         ds.Tables(0).Columns(7).ColumnName = "Contraseña"
+        ds.Tables(0).Columns(8).ColumnName = "¿Validado?"
         dv = ds.Tables(0).DefaultView
         Return dv
     End Function
@@ -190,6 +191,7 @@ Public Class VerificarEmpresa
         ds.Tables(0).Columns(9).ColumnName = "Sucursal"
         ds.Tables(0).Columns(10).ColumnName = "Usuario"
         ds.Tables(0).Columns(11).ColumnName = "Contraseña"
+        ds.Tables(0).Columns(12).ColumnName = "¿Validado?"
         dv = ds.Tables(0).DefaultView
         Return dv
     End Function

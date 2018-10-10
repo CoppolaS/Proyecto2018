@@ -6,8 +6,9 @@
     Private Direccion As String
     Private Usuario As String
     Private Contrasena As String
+    Private Valido As Integer
 
-    Public Sub New(ByVal ID_Cliente As Integer, ByVal Nombre As String, ByVal Telefono As Integer, ByVal Mail As String, ByVal Direccion As String, ByVal Usuario As String, ByVal Contrasena As String)
+    Public Sub New(ByVal ID_Cliente As Integer, ByVal Nombre As String, ByVal Telefono As Integer, ByVal Mail As String, ByVal Direccion As String, ByVal Usuario As String, ByVal Contrasena As String, ByVal Valido As Integer)
         Me.ID_Cliente = ID_Cliente
         Me.Nombre = Nombre
         Me.Telefono = Telefono
@@ -15,6 +16,7 @@
         Me.Direccion = Direccion
         Me.Usuario = Usuario
         Me.Contrasena = Contrasena
+        Me.Valido = Valido
     End Sub
 
     Public Sub New()
@@ -81,6 +83,15 @@
         End Get
         Set(ByVal value As String)
             Me.Contrasena = value
+        End Set
+    End Property
+
+    Public Property ValidoCliente() As Integer
+        Get
+            Return Me.Valido
+        End Get
+        Set(ByVal value As Integer)
+            Me.Valido = value
         End Set
     End Property
 

@@ -89,7 +89,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Verificar\VerificarEmpresa.vb" />
-    <Compile Include="Verificar\VerificarMateria_prima.vb" />
     <Compile Include="Verificar\VerificarOtros.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -107,9 +106,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Verificar\VerificarParametros.vb" />
-    <Compile Include="Verificar\VerificarPlantaciones.vb" />
-    <Compile Include="Verificar\VerificarProducto_final.vb" />
-    <Compile Include="Verificar\VerificarProducto_intermedio.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

@@ -1,12 +1,9 @@
 ﻿Imports Datos.UsuarioLogeado
 
 Public Class Menu
-    'debajo: eventos de los botones del menustrip1
 
     Private Sub Menu_Load(sender As Object, e As EventArgs) Handles Me.Load
         Label1.Text = Datos.UsuarioLogeado.User & vbNewLine & Datos.UsuarioLogeado.Cargo
-        Dim privilegios As Integer = Datos.UsuarioLogeado.Privilegios
-        'deshabilitar botones del menu segun nivel de privilegios
     End Sub
 
     Private Sub InicioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InicioToolStripMenuItem.Click
@@ -18,7 +15,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub CepasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CepasToolStripMenuItem.Click
+    Private Sub CepasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If (ParentForm.Name = "Plantaciones_Cepas") Then
             Exit Sub
         Else
@@ -27,7 +24,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub DatosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DatosToolStripMenuItem.Click
+    Private Sub DatosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If (ParentForm.Name = "Plantaciones_Datos") Then
             Exit Sub
         Else
@@ -36,7 +33,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub HectáreasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HectáreasToolStripMenuItem.Click
+    Private Sub HectáreasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If (ParentForm.Name = "Plantaciones_Hectareas") Then
             Exit Sub
         Else
@@ -45,7 +42,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub ParcelasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ParcelasToolStripMenuItem.Click
+    Private Sub ParcelasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If (ParentForm.Name = "Plantaciones_Parcelas") Then
             Exit Sub
         Else
@@ -54,7 +51,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub ReservasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ReservasToolStripMenuItem.Click
+    Private Sub ReservasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If (ParentForm.Name = "MateriaPrima_Reservas") Then
             Exit Sub
         Else
@@ -63,7 +60,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub TransaccionesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TransaccionesToolStripMenuItem.Click
+    Private Sub TransaccionesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If (ParentForm.Name = "MateriaPrima_Transacciones") Then
             Exit Sub
         Else
@@ -72,7 +69,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub TransportesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TransportesToolStripMenuItem.Click
+    Private Sub TransportesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If (ParentForm.Name = "MateriaPrima_Transportes") Then
             Exit Sub
         Else
@@ -81,7 +78,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub DatosToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DatosToolStripMenuItem1.Click
+    Private Sub DatosToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If (ParentForm.Name = "MateriaPrima_Datos") Then
             Exit Sub
         Else
@@ -90,7 +87,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub ProducciónToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProducciónToolStripMenuItem.Click
+    Private Sub ProducciónToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If (ParentForm.Name = "MateriaPrima_Produccion") Then
             Exit Sub
         Else
@@ -99,7 +96,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub ReservasToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ReservasToolStripMenuItem1.Click
+    Private Sub ReservasToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If (ParentForm.Name = "ProductoIntermedio_Reservas") Then
             Exit Sub
         Else
@@ -108,7 +105,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub TransaccionesToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TransaccionesToolStripMenuItem1.Click
+    Private Sub TransaccionesToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If (ParentForm.Name = "ProductoIntermedio_Transacciones") Then
             Exit Sub
         Else
@@ -117,7 +114,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub TransportesToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TransportesToolStripMenuItem1.Click
+    Private Sub TransportesToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If (ParentForm.Name = "ProductoIntermedio_Transportes") Then
             Exit Sub
         Else
@@ -126,7 +123,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub DatosToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DatosToolStripMenuItem2.Click
+    Private Sub DatosToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If (ParentForm.Name = "ProductoIntermedio_Datos") Then
             Exit Sub
         Else
@@ -135,7 +132,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub ProducciónToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProducciónToolStripMenuItem1.Click
+    Private Sub ProducciónToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If (ParentForm.Name = "ProductoIntermedio_Produccion") Then
             Exit Sub
         Else
@@ -144,7 +141,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub ReservasToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ReservasToolStripMenuItem2.Click
+    Private Sub ReservasToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If (ParentForm.Name = "ProductoIntermedio_Reservas") Then
             Exit Sub
         Else
@@ -153,7 +150,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub TransaccionesToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TransaccionesToolStripMenuItem2.Click
+    Private Sub TransaccionesToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If (ParentForm.Name = "ProductoFinal_Transacciones") Then
             Exit Sub
         Else
@@ -162,7 +159,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub TransportesToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TransportesToolStripMenuItem2.Click
+    Private Sub TransportesToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If (ParentForm.Name = "ProductoFinal_Transportes") Then
             Exit Sub
         Else
@@ -171,7 +168,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub VinosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VinosToolStripMenuItem.Click
+    Private Sub VinosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If (ParentForm.Name = "ProductoFinal_Vinos") Then
             Exit Sub
         Else

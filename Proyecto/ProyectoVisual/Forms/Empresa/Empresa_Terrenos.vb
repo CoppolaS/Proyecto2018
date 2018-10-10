@@ -1,6 +1,6 @@
 ﻿Imports Negocio
 
-Public Class Terrenos
+Public Class Empresa_Terrenos
     Dim Verif As New Negocio.VerificarOtros
     Dim encapsuladora1 As New Encapsuladoras.Hectareas
     Dim encapsuladora2 As New Encapsuladoras.Parcelas

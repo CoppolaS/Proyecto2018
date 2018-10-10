@@ -46,7 +46,7 @@ Public Class Inicio
     End Sub
 
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
-        Parametros_Cepas.Show()
+        Parametros_Botellas.Show()
         Me.Close()
     End Sub
 End Class

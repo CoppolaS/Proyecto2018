@@ -112,6 +112,7 @@
     <Compile Include="Otros\Hectareas.vb" />
     <Compile Include="Otros\Parcelas.vb" />
     <Compile Include="Parametros\Barricas.vb" />
+    <Compile Include="Parametros\Botellas.vb" />
     <Compile Include="Parametros\Cepas.vb" />
     <Compile Include="Parametros\Datos.vb" />
     <Compile Include="Parametros\Procesos.vb" />
@@ -137,12 +138,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Materia prima\" />
-    <Folder Include="Plantaciones\" />
-    <Folder Include="Producto final\" />
-    <Folder Include="Producto intermedio\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

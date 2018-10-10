@@ -11,8 +11,9 @@
     Private Sucursal As String
     Private Usuario As String
     Private Contrasena As String
+    Private Valido As Integer
 
-    Public Sub New(ByVal ID_AsesorProfesional As Integer, ByVal Nombre As String, ByVal Apellido As String, ByVal Telefono As Integer, ByVal Mail As String, ByVal Cedula As Integer, ByVal Eliminado As Boolean, ByVal Tipo As String, ByVal Alarmas As Boolean, ByVal Sucursal As String, ByVal Usuario As String, ByVal Contrasena As String)
+    Public Sub New(ByVal ID_AsesorProfesional As Integer, ByVal Nombre As String, ByVal Apellido As String, ByVal Telefono As Integer, ByVal Mail As String, ByVal Cedula As Integer, ByVal Eliminado As Boolean, ByVal Tipo As String, ByVal Alarmas As Boolean, ByVal Sucursal As String, ByVal Usuario As String, ByVal Contrasena As String, ByVal Valido As Integer)
         Me.ID_AsesorProfesional = ID_AsesorProfesional
         Me.Nombre = Nombre
         Me.Apellido = Apellido
@@ -25,6 +26,7 @@
         Me.Sucursal = Sucursal
         Me.Usuario = Usuario
         Me.Contrasena = Contrasena
+        Me.Valido = Valido
     End Sub
 
     Public Sub New()
@@ -127,6 +129,15 @@
         End Get
         Set(ByVal value As String)
             Me.Contrasena = value
+        End Set
+    End Property
+
+    Public Property ValidoAsesorProfesional() As Integer
+        Get
+            Return Me.Valido
+        End Get
+        Set(ByVal value As Integer)
+            Me.Valido = value
         End Set
     End Property
 

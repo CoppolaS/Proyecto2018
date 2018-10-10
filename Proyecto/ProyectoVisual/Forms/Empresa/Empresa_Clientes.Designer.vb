@@ -44,7 +44,6 @@ Partial Class Empresa_Clientes
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Validar = New System.Windows.Forms.Button()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.TextBox12 = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -63,6 +62,8 @@ Partial Class Empresa_Clientes
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.Tabla1 = New Proyecto.Tabla()
         Me.Menu1 = New Proyecto.Menu()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -268,7 +269,8 @@ Partial Class Empresa_Clientes
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.Validar)
+        Me.TabPage2.Controls.Add(Me.Label12)
+        Me.TabPage2.Controls.Add(Me.ComboBox2)
         Me.TabPage2.Controls.Add(Me.TextBox11)
         Me.TabPage2.Controls.Add(Me.TextBox12)
         Me.TabPage2.Controls.Add(Me.Label13)
@@ -291,15 +293,6 @@ Partial Class Empresa_Clientes
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Administrar"
         Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'Validar
-        '
-        Me.Validar.Location = New System.Drawing.Point(13, 477)
-        Me.Validar.Name = "Validar"
-        Me.Validar.Size = New System.Drawing.Size(440, 23)
-        Me.Validar.TabIndex = 44
-        Me.Validar.Text = "Validar asesor profesional seleccionado"
-        Me.Validar.UseVisualStyleBackColor = True
         '
         'TextBox11
         '
@@ -458,6 +451,24 @@ Partial Class Empresa_Clientes
         Me.Menu1.Size = New System.Drawing.Size(1240, 32)
         Me.Menu1.TabIndex = 15
         '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"0-Pendiente", "1-Aprobado", "2-Rechazado"})
+        Me.ComboBox2.Location = New System.Drawing.Point(222, 477)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(234, 23)
+        Me.ComboBox2.TabIndex = 47
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(20, 480)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(196, 15)
+        Me.Label12.TabIndex = 48
+        Me.Label12.Text = "Validación de cliente seleccionado"
+        '
         'Empresa_Clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -526,5 +537,6 @@ Partial Class Empresa_Clientes
     Friend WithEvents TextBox11 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox12 As System.Windows.Forms.TextBox
     Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
-    Friend WithEvents Validar As System.Windows.Forms.Button
+    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label12 As System.Windows.Forms.Label
 End Class

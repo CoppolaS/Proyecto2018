@@ -168,4 +168,29 @@ Public Class VerificarParametros
         Return Nothing
     End Function
 
+    'botellas
+    Public Function ValidoListaBotellas() As DataView
+        ds = DatosP.ListaBotellas()
+        ds.Tables(0).Columns(0).ColumnName = "ID"
+        ds.Tables(0).Columns(1).ColumnName = "Capacidad"
+        ds.Tables(0).Columns(2).ColumnName = "Eliminado"
+        dv = ds.Tables(0).DefaultView
+        Return dv
+    End Function
+
+    Public Function ValidoIngresoBotellas(ByVal encapsuladora As Encapsuladoras.Botellas)
+        DatosP.IngresoBotella(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoEliminarBotellas(ByVal encapsuladora As Encapsuladoras.Botellas)
+        DatosP.EliminoBotella(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoModificarBotellas(ByVal encapsuladora As Encapsuladoras.Botellas)
+        DatosP.ModificoBotella(encapsuladora)
+        Return Nothing
+    End Function
+
 End Class
