@@ -2,10 +2,6 @@
 
 Public Class Menu
 
-    Private Sub Menu_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Label1.Text = Datos.UsuarioLogeado.User & vbNewLine & Datos.UsuarioLogeado.Cargo
-    End Sub
-
     Private Sub InicioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InicioToolStripMenuItem.Click
         If (ParentForm.Name = "Inicio") Then
             Exit Sub
@@ -306,6 +302,42 @@ Public Class Menu
     Private Sub CerrarSesiónToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles CerrarSesiónToolStripMenuItem.Click
         Login.Show()
         ParentForm.Close()
+    End Sub
+
+    Private Sub TerrenosToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles TerrenosToolStripMenuItem.Click
+        If (ParentForm.Name = "Empresa_Terrenos") Then
+            Exit Sub
+        Else
+            Empresa_Terrenos.Show()
+            ParentForm.Close()
+        End If
+    End Sub
+
+    Private Sub BotellasToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles BotellasToolStripMenuItem.Click
+        If (ParentForm.Name = "Parametros_Botellas") Then
+            Exit Sub
+        Else
+            Parametros_Botellas.Show()
+            ParentForm.Close()
+        End If
+    End Sub
+
+    Private Sub CepasToolStripMenuItem_Click_1(sender As System.Object, e As System.EventArgs) Handles CepasToolStripMenuItem.Click
+        If (ParentForm.Name = "Parametros_Cepas") Then
+            Exit Sub
+        Else
+            Parametros_Cepas.Show()
+            ParentForm.Close()
+        End If
+    End Sub
+
+    Private Sub TratamientosToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles TratamientosToolStripMenuItem.Click
+        If (ParentForm.Name = "Parametros_Tratamientos") Then
+            Exit Sub
+        Else
+            Parametros_Tratamientos.Show()
+            ParentForm.Close()
+        End If
     End Sub
 
 End Class

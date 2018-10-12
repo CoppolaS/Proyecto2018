@@ -272,4 +272,46 @@ Public Class DatosOtros
         Return False
     End Function
 
+    'materia prima
+    Public Function ListaMateriasPrimas() As DataSet
+        sql = "CALL `proyecto`.`LABM_MateriaPrima`(?opcion,?ID_MP);"
+        Try
+            Con.cn2.Open()
+            cm = New MySqlCommand()
+            cm.CommandText = sql
+            cm.Connection = Con.cn2
+            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
+            cm.Parameters.Add("?ID_MP", MySqlDbType.Int32).Value = 0
+
+            da = New MySqlDataAdapter(cm)
+            ds = New DataSet()
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Con.cn2.Close()
+        Return ds
+    End Function
+
+    'producto intermedio
+    Public Function ListaProductosIntermedios() As DataSet
+        sql = "CALL `proyecto`.`LABM_ProductoIntermedio`(?opcion,?ID_PI);"
+        Try
+            Con.cn2.Open()
+            cm = New MySqlCommand()
+            cm.CommandText = sql
+            cm.Connection = Con.cn2
+            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
+            cm.Parameters.Add("?ID_PI", MySqlDbType.Int32).Value = 0
+
+            da = New MySqlDataAdapter(cm)
+            ds = New DataSet()
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Con.cn2.Close()
+        Return ds
+    End Function
+
 End Class

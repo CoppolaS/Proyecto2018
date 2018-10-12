@@ -11,6 +11,9 @@ Public Class ComboBoxSucursales
         For i As Integer = 0 To dv.Count - 1
             ComboBox1.Items.Add(dv(i).Item("Nombre").ToString())
         Next
+        RemoveHandler ComboBox1.SelectedIndexChanged, AddressOf Combobox1CambioSeleccion
+        ComboBox1.SelectedItem = Datos.UsuarioLogeado.Sucursal
+        AddHandler ComboBox1.SelectedIndexChanged, AddressOf Combobox1CambioSeleccion
         If Datos.UsuarioLogeado.Privilegios = 1 Then
             ComboBox1.Enabled = True
         End If

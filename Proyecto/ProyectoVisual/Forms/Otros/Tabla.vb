@@ -17,6 +17,9 @@
     Public Event ClickCelda(sender As Object, e As System.Windows.Forms.DataGridViewCellEventArgs)
 
     Private Sub DataGridView1_CellClick(sender As Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        If DataGridView1.Rows.Count = 0 Then
+            Exit Sub
+        End If
         Dim Fila As Integer = DataGridView1.CurrentRow.Index
         Dim ID1 As Integer = DataGridView1.Rows(Fila).Cells(0).Value
         ID = ID1

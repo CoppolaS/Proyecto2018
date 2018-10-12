@@ -136,6 +136,12 @@
     <Compile Include="Forms\Empresa\Empresa_Funcionarios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\GestionCultivos.Designer.vb">
+      <DependentUpon>GestionCultivos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GestionCultivos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\Otros\ComboBoxSucursales.Designer.vb">
       <DependentUpon>ComboBoxSucursales.vb</DependentUpon>
     </Compile>
@@ -362,14 +368,17 @@
     <Compile Include="Forms\Sin usar\ProductoIntermedio_Transportes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Produccion.Designer.vb">
+    <Compile Include="Forms\Produccion.Designer.vb">
       <DependentUpon>Produccion.vb</DependentUpon>
     </Compile>
-    <Compile Include="Produccion.vb">
+    <Compile Include="Forms\Produccion.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\GestionCultivos.resx">
+      <DependentUpon>GestionCultivos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Otros\ComboBoxSucursales.resx">
       <DependentUpon>ComboBoxSucursales.vb</DependentUpon>
     </EmbeddedResource>
@@ -502,7 +511,7 @@
     <EmbeddedResource Include="Forms\Sin usar\ProductoIntermedio_Transportes.resx">
       <DependentUpon>ProductoIntermedio_Transportes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Produccion.resx">
+    <EmbeddedResource Include="Forms\Produccion.resx">
       <DependentUpon>Produccion.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

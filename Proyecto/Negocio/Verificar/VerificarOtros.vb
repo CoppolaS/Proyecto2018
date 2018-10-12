@@ -68,4 +68,36 @@ Public Class VerificarOtros
         Return Nothing
     End Function
 
+    'materia prima
+    Public Function ValidoListaMateriasPrimas() As DataView
+        ds = DatosO.ListaMateriasPrimas()
+        ds.Tables(0).Columns(0).ColumnName = "ID"
+        ds.Tables(0).Columns(1).ColumnName = "Estado sanitario"
+        ds.Tables(0).Columns(2).ColumnName = "Fecha de avance"
+        ds.Tables(0).Columns(3).ColumnName = "Cantidad"
+        ds.Tables(0).Columns(4).ColumnName = "Cantidad actual"
+        ds.Tables(0).Columns(5).ColumnName = "Venta"
+        ds.Tables(0).Columns(6).ColumnName = "Eliminado"
+        ds.Tables(0).Columns(7).ColumnName = "Fecha de cosechado"
+        ds.Tables(0).Columns(8).ColumnName = "Fecha de plantado"
+        dv = ds.Tables(0).DefaultView
+        Return dv
+    End Function
+
+    'producto intermedio
+    Public Function ValidoListaProductosIntermedios() As DataView
+        ds = DatosO.ListaProductosIntermedios()
+        ds.Tables(0).Columns(0).ColumnName = "ID"
+        ds.Tables(0).Columns(1).ColumnName = "Fecha de entrada"
+        ds.Tables(0).Columns(2).ColumnName = "Fecha de salida"
+        ds.Tables(0).Columns(3).ColumnName = "Cantidad"
+        ds.Tables(0).Columns(4).ColumnName = "Venta"
+        ds.Tables(0).Columns(5).ColumnName = "Cantidad actual"
+        ds.Tables(0).Columns(6).ColumnName = "Eliminado"
+        ds.Tables(0).Columns(7).ColumnName = "Fecha de avance"
+        ds.Tables(0).Columns(8).ColumnName = "Fecha de cosechado"
+        dv = ds.Tables(0).DefaultView
+        Return dv
+    End Function
+
 End Class

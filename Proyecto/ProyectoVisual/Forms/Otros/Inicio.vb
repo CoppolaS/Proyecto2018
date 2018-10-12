@@ -6,6 +6,7 @@ Public Class Inicio
     Dim dv As New DataView
 
     Private Sub Inicio_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Label1.Text = "Usuario: " & Datos.UsuarioLogeado.User & " \ Cargo: " & Datos.UsuarioLogeado.Cargo & " \ Sucursal actual: " & Datos.UsuarioLogeado.Sucursal & " \ Nivel de privilegios: " & Datos.UsuarioLogeado.Privilegios
         ComboBox1.SelectedIndex = Datos.UsuarioLogeado.Ventana1 - 1
         ComboBox2.SelectedIndex = Datos.UsuarioLogeado.Ventana2 - 1
         ComboBox3.SelectedIndex = Datos.UsuarioLogeado.Ventana3 - 1
@@ -46,7 +47,7 @@ Public Class Inicio
     End Sub
 
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
-        Empresa_Terrenos.Show()
+        GestionCultivos.Show()
         Me.Close()
     End Sub
 End Class
