@@ -426,7 +426,7 @@ Public Class DatosEmpresa
 
     'tiposap
     Public Function ListaTiposAP() As DataSet
-        sql = "CALL `proyecto`.`LABM_TiposAP`(?opcion,?ID_TAP,?nombre,?alarmas);"
+        sql = "CALL `proyecto`.`LABM_TiposAP`(?opcion,?ID_TAP,?nombre,?alarmas,?cosechas,?materiaprima,?productointermedio);"
         Try
             Con.cn2.Open()
             cm = New MySqlCommand()
@@ -436,6 +436,9 @@ Public Class DatosEmpresa
             cm.Parameters.Add("?ID_TAP", MySqlDbType.Int32).Value = 0
             cm.Parameters.Add("?nombre", MySqlDbType.VarChar).Value = "0"
             cm.Parameters.Add("?alarmas", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?cosechas", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?materiaprima", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?productointermedio", MySqlDbType.Int32).Value = 0
             da = New MySqlDataAdapter(cm)
             ds = New DataSet()
             da.Fill(ds)
@@ -449,12 +452,15 @@ Public Class DatosEmpresa
     Public Function IngresoTipoAP(ByVal nodo As Encapsuladoras.TiposAP) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_TiposAP (?,?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_TiposAP (?,?,?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 2)
                 cmd.Parameters.AddWithValue("ID_TAP", 0)
                 cmd.Parameters.AddWithValue("nombre", nodo.NombreTipoAP)
                 cmd.Parameters.AddWithValue("alarmas", nodo.AlarmasTipoAP)
+                cmd.Parameters.AddWithValue("cosechas", nodo.CosechasTipoAP)
+                cmd.Parameters.AddWithValue("materiaprima", nodo.MateriaPrimaTipoAP)
+                cmd.Parameters.AddWithValue("productointermedio", nodo.ProductoIntermedioTipoAP)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
@@ -472,12 +478,15 @@ Public Class DatosEmpresa
     Public Function EliminoTipoAP(ByVal nodo As Encapsuladoras.TiposAP) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_TiposAP (?,?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_TiposAP (?,?,?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 3)
                 cmd.Parameters.AddWithValue("ID_TAP", nodo.IDTipoAP)
                 cmd.Parameters.AddWithValue("nombre", "")
                 cmd.Parameters.AddWithValue("alarmas", False)
+                cmd.Parameters.AddWithValue("cosechas", False)
+                cmd.Parameters.AddWithValue("materiaprima", False)
+                cmd.Parameters.AddWithValue("productointermedio", False)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
@@ -495,12 +504,15 @@ Public Class DatosEmpresa
     Public Function ModificoTipoAP(ByVal nodo As Encapsuladoras.TiposAP) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_TiposAP (?,?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_TiposAP (?,?,?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 4)
                 cmd.Parameters.AddWithValue("ID_TAP", nodo.IDTipoAP)
                 cmd.Parameters.AddWithValue("nombre", nodo.NombreTipoAP)
                 cmd.Parameters.AddWithValue("alarmas", nodo.AlarmasTipoAP)
+                cmd.Parameters.AddWithValue("cosechas", nodo.CosechasTipoAP)
+                cmd.Parameters.AddWithValue("materiaprima", nodo.MateriaPrimaTipoAP)
+                cmd.Parameters.AddWithValue("productointermedio", nodo.ProductoIntermedioTipoAP)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException

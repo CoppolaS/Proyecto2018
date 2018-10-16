@@ -30,11 +30,29 @@ Public Class Empresa_TiposDeAsesores
             modificar_BTN.Enabled = True
             administrar_nombreTB.Enabled = True
             CheckBox3.Enabled = True
+            CheckBox7.Enabled = True
+            CheckBox8.Enabled = True
+            CheckBox9.Enabled = True
             administrar_nombreTB.Text = Tabla1.DataGridView1(1, Tabla1.DataGridView1.CurrentRow.Index).Value.ToString
             If Tabla1.DataGridView1(2, Tabla1.DataGridView1.CurrentRow.Index).Value = True Then
                 CheckBox3.CheckState = CheckState.Checked
             Else
                 CheckBox3.CheckState = CheckState.Unchecked
+            End If
+            If Tabla1.DataGridView1(4, Tabla1.DataGridView1.CurrentRow.Index).Value = True Then
+                CheckBox9.CheckState = CheckState.Checked
+            Else
+                CheckBox9.CheckState = CheckState.Unchecked
+            End If
+            If Tabla1.DataGridView1(5, Tabla1.DataGridView1.CurrentRow.Index).Value = True Then
+                CheckBox8.CheckState = CheckState.Checked
+            Else
+                CheckBox8.CheckState = CheckState.Unchecked
+            End If
+            If Tabla1.DataGridView1(6, Tabla1.DataGridView1.CurrentRow.Index).Value = True Then
+                CheckBox9.CheckState = CheckState.Checked
+            Else
+                CheckBox9.CheckState = CheckState.Unchecked
             End If
         End If
     End Sub
@@ -42,9 +60,15 @@ Public Class Empresa_TiposDeAsesores
     Private Sub Ingresar(sender As System.Object, e As System.EventArgs) Handles ingresar_BTN.Click
         encapsuladora.NombreTipoAP = ingresar_nombreTB.Text
         encapsuladora.AlarmasTipoAP = CheckBox2.CheckState
+        encapsuladora.CosechasTipoAP = CheckBox4.CheckState
+        encapsuladora.MateriaPrimaTipoAP = CheckBox5.CheckState
+        encapsuladora.ProductoIntermedioTipoAP = CheckBox6.CheckState
         Verif.ValidoIngresoTiposAP(encapsuladora)
         ingresar_nombreTB.Clear()
         CheckBox2.CheckState = CheckState.Unchecked
+        CheckBox4.CheckState = CheckState.Unchecked
+        CheckBox5.CheckState = CheckState.Unchecked
+        CheckBox6.CheckState = CheckState.Unchecked
         CargarTabla()
     End Sub
 
@@ -58,10 +82,19 @@ Public Class Empresa_TiposDeAsesores
         encapsuladora.IDTipoAP = Tabla.ID
         encapsuladora.NombreTipoAP = administrar_nombreTB.Text
         encapsuladora.AlarmasTipoAP = CheckBox3.CheckState
+        encapsuladora.CosechasTipoAP = CheckBox9.CheckState
+        encapsuladora.MateriaPrimaTipoAP = CheckBox8.CheckState
+        encapsuladora.ProductoIntermedioTipoAP = CheckBox7.CheckState
         Verif.ValidoModificarTiposAP(encapsuladora)
         administrar_nombreTB.Clear()
         CheckBox3.CheckState = CheckState.Unchecked
+        CheckBox9.CheckState = CheckState.Unchecked
+        CheckBox8.CheckState = CheckState.Unchecked
+        CheckBox7.CheckState = CheckState.Unchecked
         CheckBox3.Enabled = False
+        CheckBox9.Enabled = False
+        CheckBox8.Enabled = False
+        CheckBox7.Enabled = False
         administrar_nombreTB.Enabled = False
         modificar_BTN.Focus()
         CargarTabla()

@@ -30,16 +30,19 @@ Partial Class GestionCultivos
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Tabla4 = New Proyecto.Tabla()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Tabla5 = New Proyecto.Tabla()
-        Me.Tabla4 = New Proyecto.Tabla()
         Me.Tabla3 = New Proyecto.Tabla()
         Me.Tabla2 = New Proyecto.Tabla()
         Me.Tabla1 = New Proyecto.Tabla()
         Me.ComboBoxSucursales1 = New Proyecto.ComboBoxSucursales()
         Me.Menu1 = New Proyecto.Menu()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -75,13 +78,14 @@ Partial Class GestionCultivos
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox1.Controls.Add(Me.Tabla4)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Tabla5)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 445)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(682, 224)
+        Me.GroupBox1.Size = New System.Drawing.Size(1240, 224)
         Me.GroupBox1.TabIndex = 9
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos"
@@ -114,18 +118,27 @@ Partial Class GestionCultivos
         '
         'DateTimePicker1
         '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePicker1.Location = New System.Drawing.Point(496, 75)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(180, 20)
         Me.DateTimePicker1.TabIndex = 5
         '
+        'Tabla4
+        '
+        Me.Tabla4.Location = New System.Drawing.Point(682, 19)
+        Me.Tabla4.Name = "Tabla4"
+        Me.Tabla4.Size = New System.Drawing.Size(552, 199)
+        Me.Tabla4.TabIndex = 8
+        '
         'Button1
         '
+        Me.Button1.Enabled = False
         Me.Button1.Location = New System.Drawing.Point(412, 195)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(264, 23)
         Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Agregar"
+        Me.Button1.Text = "Ingresar"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'TextBox1
@@ -151,32 +164,25 @@ Partial Class GestionCultivos
         Me.Tabla5.Size = New System.Drawing.Size(400, 199)
         Me.Tabla5.TabIndex = 0
         '
-        'Tabla4
-        '
-        Me.Tabla4.Location = New System.Drawing.Point(700, 445)
-        Me.Tabla4.Name = "Tabla4"
-        Me.Tabla4.Size = New System.Drawing.Size(552, 224)
-        Me.Tabla4.TabIndex = 8
-        '
         'Tabla3
         '
-        Me.Tabla3.Location = New System.Drawing.Point(769, 77)
+        Me.Tabla3.Location = New System.Drawing.Point(769, 105)
         Me.Tabla3.Name = "Tabla3"
-        Me.Tabla3.Size = New System.Drawing.Size(483, 362)
+        Me.Tabla3.Size = New System.Drawing.Size(483, 334)
         Me.Tabla3.TabIndex = 7
         '
         'Tabla2
         '
-        Me.Tabla2.Location = New System.Drawing.Point(276, 77)
+        Me.Tabla2.Location = New System.Drawing.Point(276, 105)
         Me.Tabla2.Name = "Tabla2"
-        Me.Tabla2.Size = New System.Drawing.Size(487, 362)
+        Me.Tabla2.Size = New System.Drawing.Size(487, 334)
         Me.Tabla2.TabIndex = 6
         '
         'Tabla1
         '
-        Me.Tabla1.Location = New System.Drawing.Point(12, 77)
+        Me.Tabla1.Location = New System.Drawing.Point(12, 105)
         Me.Tabla1.Name = "Tabla1"
-        Me.Tabla1.Size = New System.Drawing.Size(258, 362)
+        Me.Tabla1.Size = New System.Drawing.Size(258, 334)
         Me.Tabla1.TabIndex = 5
         '
         'ComboBoxSucursales1
@@ -193,13 +199,42 @@ Partial Class GestionCultivos
         Me.Menu1.Size = New System.Drawing.Size(1240, 32)
         Me.Menu1.TabIndex = 0
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(12, 89)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(48, 13)
+        Me.Label6.TabIndex = 10
+        Me.Label6.Text = "Parcelas"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(273, 89)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(71, 13)
+        Me.Label7.TabIndex = 11
+        Me.Label7.Text = "Materia Prima"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(769, 89)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(102, 13)
+        Me.Label8.TabIndex = 12
+        Me.Label8.Text = "Producto Intermedio"
+        '
         'GestionCultivos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.Tabla4)
         Me.Controls.Add(Me.Tabla3)
         Me.Controls.Add(Me.Tabla2)
         Me.Controls.Add(Me.Tabla1)
@@ -237,4 +272,7 @@ Partial Class GestionCultivos
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
 End Class

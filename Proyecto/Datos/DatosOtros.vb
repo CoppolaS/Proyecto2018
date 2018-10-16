@@ -273,16 +273,22 @@ Public Class DatosOtros
     End Function
 
     'materia prima
-    Public Function ListaMateriasPrimas() As DataSet
-        sql = "CALL `proyecto`.`LABM_MateriaPrima`(?opcion,?ID_MP);"
+    Public Function ListaMateriasPrimas(Optional ByVal ID_MP As Integer = 0) As DataSet
+        sql = "CALL `proyecto`.`LABM_MateriaPrima`(?opcion,?ID_MP,?fecha,?valor,?dato);"
         Try
             Con.cn2.Open()
             cm = New MySqlCommand()
             cm.CommandText = sql
             cm.Connection = Con.cn2
-            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
-            cm.Parameters.Add("?ID_MP", MySqlDbType.Int32).Value = 0
-
+            If ID_MP = 0 Then
+                cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
+            Else
+                cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 5
+            End If
+            cm.Parameters.Add("?ID_MP", MySqlDbType.Int32).Value = ID_MP
+            cm.Parameters.Add("?fecha", MySqlDbType.Int32).Value = "0"
+            cm.Parameters.Add("?valor", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?dato", MySqlDbType.Int32).Value = 0
             da = New MySqlDataAdapter(cm)
             ds = New DataSet()
             da.Fill(ds)
@@ -293,17 +299,47 @@ Public Class DatosOtros
         Return ds
     End Function
 
+    Public Function IngresoMateriaPrimaDato(ByVal nodo As Encapsuladoras.DatosCultivos) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_MateriaPrima (?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 6)
+                cmd.Parameters.AddWithValue("ID_MP", nodo.IDDato)
+                cmd.Parameters.AddWithValue("fecha", nodo.FechaDato)
+                cmd.Parameters.AddWithValue("valor", nodo.ValorDato)
+                cmd.Parameters.AddWithValue("dato", nodo.NroDato)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al ingresar el dato")
+        End Try
+        Return False
+    End Function
+
     'producto intermedio
-    Public Function ListaProductosIntermedios() As DataSet
-        sql = "CALL `proyecto`.`LABM_ProductoIntermedio`(?opcion,?ID_PI);"
+    Public Function ListaProductosIntermedios(Optional ByVal ID_PI As Integer = 0) As DataSet
+        sql = "CALL `proyecto`.`LABM_ProductoIntermedio`(?opcion,?ID_PI,?fecha,?valor,?dato);"
         Try
             Con.cn2.Open()
             cm = New MySqlCommand()
             cm.CommandText = sql
             cm.Connection = Con.cn2
-            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
-            cm.Parameters.Add("?ID_PI", MySqlDbType.Int32).Value = 0
-
+            If ID_PI = 0 Then
+                cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
+            Else
+                cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 5
+            End If
+            cm.Parameters.Add("?ID_PI", MySqlDbType.Int32).Value = ID_PI
+            cm.Parameters.Add("?fecha", MySqlDbType.Int32).Value = "0"
+            cm.Parameters.Add("?valor", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?dato", MySqlDbType.Int32).Value = 0
             da = New MySqlDataAdapter(cm)
             ds = New DataSet()
             da.Fill(ds)
@@ -312,6 +348,77 @@ Public Class DatosOtros
         End Try
         Con.cn2.Close()
         Return ds
+    End Function
+
+    Public Function IngresoProductoIntermedioDato(ByVal nodo As Encapsuladoras.DatosCultivos) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_ProductoIntermedio (?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 6)
+                cmd.Parameters.AddWithValue("ID_PI", nodo.IDDato)
+                cmd.Parameters.AddWithValue("fecha", nodo.FechaDato)
+                cmd.Parameters.AddWithValue("valor", nodo.ValorDato)
+                cmd.Parameters.AddWithValue("dato", nodo.NroDato)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al ingresar el dato")
+        End Try
+        Return False
+    End Function
+
+    'datos cultivos
+    Public Function ListaParcelasDatos(Optional ByVal ID_P As Integer = 0) As DataSet
+        sql = "CALL `proyecto`.`LABM_DatosCultivos`(?opcion,?ID_P,?fecha,?valor,?dato);"
+        Try
+            Con.cn2.Open()
+            cm = New MySqlCommand()
+            cm.CommandText = sql
+            cm.Connection = Con.cn2
+            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
+            cm.Parameters.Add("?ID_P", MySqlDbType.Int32).Value = ID_P
+            cm.Parameters.Add("?fecha", MySqlDbType.Int32).Value = "0"
+            cm.Parameters.Add("?valor", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?dato", MySqlDbType.Int32).Value = 0
+            da = New MySqlDataAdapter(cm)
+            ds = New DataSet()
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Con.cn2.Close()
+        Return ds
+    End Function
+
+    Public Function IngresoParcelaDato(ByVal nodo As Encapsuladoras.DatosCultivos) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_DatosCultivos (?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 2)
+                cmd.Parameters.AddWithValue("ID_P", nodo.IDDato)
+                cmd.Parameters.AddWithValue("fecha", nodo.FechaDato)
+                cmd.Parameters.AddWithValue("valor", nodo.ValorDato)
+                cmd.Parameters.AddWithValue("dato", nodo.NroDato)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al ingresar el dato")
+        End Try
+        Return False
     End Function
 
 End Class

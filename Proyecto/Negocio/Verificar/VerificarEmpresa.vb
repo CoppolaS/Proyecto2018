@@ -125,6 +125,9 @@ Public Class VerificarEmpresa
         ds.Tables(0).Columns(1).ColumnName = "Nombre"
         ds.Tables(0).Columns(2).ColumnName = "Alarmas"
         ds.Tables(0).Columns(3).ColumnName = "Eliminado"
+        ds.Tables(0).Columns(4).ColumnName = "Acceso a cosechas"
+        ds.Tables(0).Columns(5).ColumnName = "Acceso a materia prima"
+        ds.Tables(0).Columns(6).ColumnName = "Acceso a producto intermedio"
         dv = ds.Tables(0).DefaultView
         Return dv
     End Function

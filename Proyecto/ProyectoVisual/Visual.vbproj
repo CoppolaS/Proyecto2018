@@ -203,6 +203,12 @@
     <Compile Include="Forms\Empresa\Empresa_Terrenos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\Plantaciones.Designer.vb">
+      <DependentUpon>Plantaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Plantaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -399,6 +405,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Empresa\Empresa_Terrenos.resx">
       <DependentUpon>Empresa_Terrenos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Plantaciones.resx">
+      <DependentUpon>Plantaciones.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

@@ -21,8 +21,11 @@
             Exit Sub
         End If
         Dim Fila As Integer = DataGridView1.CurrentRow.Index
-        Dim ID1 As Integer = DataGridView1.Rows(Fila).Cells(0).Value
-        ID = ID1
+        Try
+            Dim ID1 As Integer = DataGridView1.Rows(Fila).Cells(0).Value
+            ID = ID1
+        Catch
+        End Try
         RaiseEvent ClickCelda(Me, New System.Windows.Forms.DataGridViewCellEventArgs(0, 0))
     End Sub
 

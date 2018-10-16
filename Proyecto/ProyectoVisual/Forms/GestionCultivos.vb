@@ -3,9 +3,14 @@
 Public Class GestionCultivos
     Dim Verif As New Negocio.VerificarOtros
     Dim VerifP As New Negocio.VerificarParametros
+    Dim encapsuladora As New Encapsuladoras.DatosCultivos
     Dim dv As New DataView
+    Dim tbl As Integer
 
     Private Sub GestionCultivos_Load(sender As System.Object, e As System.EventArgs) Handles Me.Load, ComboBoxSucursales1.SeleccionCambio
+        DateTimePicker1.Format = DateTimePickerFormat.Custom
+        DateTimePicker1.CustomFormat = "yyyy-MM-dd"
+        DateTimePicker1.Value = Today
         ComboBox1.Items.Clear()
         dv = Verif.ValidoListaHectareas
         ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
@@ -28,13 +33,6 @@ Public Class GestionCultivos
         CargarTabla1()
         CargarTabla2()
         CargarTabla3()
-        dv = VerifP.ValidoListaDatos()
-        dv.RowFilter = "Eliminado = 0"
-        Tabla4.DataGridView1.Columns.Clear()
-        Tabla4.DataGridView1.Columns.Add("Fecha", "Fecha")
-        For i As Integer = 0 To dv.Count - 1
-            Tabla4.DataGridView1.Columns.Add(dv(i).Item("Nombre").ToString(), dv(i).Item("Nombre").ToString())
-        Next
     End Sub
 
     Private Sub CargarTabla1() Handles ComboBox1.SelectedIndexChanged
@@ -62,75 +60,56 @@ Public Class GestionCultivos
         Tabla3.DataGridView1.ClearSelection()
     End Sub
 
-    Private Sub CeldaSeleccionada(sender As Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles Tabla1.ClickCelda, Tabla2.ClickCelda, Tabla3.ClickCelda
-        Dim TablaSeleccionada As Integer
-        If Tabla1.DataGridView1.SelectedRows.Count > 0 Then
-            TablaSeleccionada = 1
-        End If
-        If Tabla2.DataGridView1.SelectedRows.Count > 0 Then
-            TablaSeleccionada = 2
-        End If
-        If Tabla3.DataGridView1.SelectedRows.Count > 0 Then
-            TablaSeleccionada = 3
-        End If
+    Private Sub CeldaSeleccionada1(sender As Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles Tabla1.ClickCelda
+        tbl = 1
+        Button1.Enabled = True
+        dv = Verif.ValidoListaParcelasDatos(Tabla.ID)
+        Tabla4.DataGridView1.DataSource = dv
+        Tabla2.DataGridView1.ClearSelection()
+        Tabla3.DataGridView1.ClearSelection()
+        Tabla4.DataGridView1.ClearSelection()
     End Sub
 
-    'Private Sub CeldaSeleccionada2(sender As Object, e As System.Windows.Forms.DataGridViewCellEventArgs)
-    '    If Tabla2.DataGridView1.SelectedRows.Count > 0 Then
-    '        Button4.Enabled = True
-    '    End If
-    'End Sub
+    Private Sub CeldaSeleccionada2(sender As Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles Tabla2.ClickCelda
+        tbl = 2
+        Button1.Enabled = True
+        dv = Verif.ValidoListaMateriasPrimas(Tabla.ID)
+        Tabla4.DataGridView1.DataSource = dv
+        Tabla1.DataGridView1.ClearSelection()
+        Tabla3.DataGridView1.ClearSelection()
+        Tabla4.DataGridView1.ClearSelection()
+    End Sub
 
-    'Private Sub IngresarHectarea(sender As System.Object, e As System.EventArgs)
-    '    encapsuladora1.CantidadHectareas = Integer.Parse(TextBox1.Text)
-    '    encapsuladora1.SucursalHectarea = Datos.UsuarioLogeado.Sucursal
-    '    Verif.ValidoIngresoHectareas(encapsuladora1)
-    '    TextBox1.Clear()
-    '    CargarTabla1()
-    'End Sub
+    Private Sub CeldaSeleccionada3(sender As Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles Tabla3.ClickCelda
+        tbl = 3
+        Button1.Enabled = True
+        dv = Verif.ValidoListaProductosIntermedios(Tabla.ID)
+        Tabla4.DataGridView1.DataSource = dv
+        Tabla1.DataGridView1.ClearSelection()
+        Tabla2.DataGridView1.ClearSelection()
+        Tabla4.DataGridView1.ClearSelection()
+    End Sub
 
-    'Private Sub IngresarParcela(sender As System.Object, e As System.EventArgs) Handles Button3.Click
-    '    encapsuladora2.CantidadParcelas = Integer.Parse(TextBox2.Text)
-    '    encapsuladora2.MetrosCuadradosParcela = Integer.Parse(TextBox3.Text)
-    '    encapsuladora2.IDHectarea = Integer.Parse(Tabla1.DataGridView1.Rows(Tabla1.DataGridView1.CurrentRow.Index).Cells(0).Value)
-    '    If (encapsuladora2.CantidadParcelas * encapsuladora2.MetrosCuadradosParcela) > 10000 Or (encapsuladora2.CantidadParcelas * encapsuladora2.MetrosCuadradosParcela) > Tabla1.DataGridView1.Rows(Tabla1.DataGridView1.CurrentRow.Index).Cells(2).Value Then
-    '        MsgBox("No hay suficiente espacio en la hectárea seleccionada")
-    '    Else
-    '        Verif.ValidoIngresoParcelas(encapsuladora2)
-    '    End If
-    '    TextBox2.Clear()
-    '    TextBox3.Clear()
-    '    CargarTabla1()
-    '    CargarTabla2()
-    'End Sub
-
-    'Private Sub EliminarHectarea(sender As System.Object, e As System.EventArgs) Handles Button2.Click
-    '    encapsuladora1.IDHectarea = Integer.Parse(Tabla1.DataGridView1.Rows(Tabla1.DataGridView1.CurrentRow.Index).Cells(0).Value)
-    '    Verif.ValidoEliminarHectareas(encapsuladora1)
-    '    CargarTabla1()
-    'End Sub
-
-    'Private Sub EliminarParcela(sender As System.Object, e As System.EventArgs) Handles Button4.Click
-    '    encapsuladora2.IDParcela = Integer.Parse(Tabla2.DataGridView1.Rows(Tabla2.DataGridView1.CurrentRow.Index).Cells(0).Value)
-    '    encapsuladora2.MetrosCuadradosParcela = Integer.Parse(Tabla2.DataGridView1.Rows(Tabla2.DataGridView1.CurrentRow.Index).Cells(2).Value)
-    '    encapsuladora2.IDHectarea = Integer.Parse(Tabla1.DataGridView1.Rows(Tabla1.DataGridView1.CurrentRow.Index).Cells(0).Value)
-    '    Verif.ValidoEliminarParcelas(encapsuladora2)
-    '    CargarTabla1()
-    '    CargarTabla2()
-    'End Sub
-
-    'Private Sub Habilitar_Ingreso(sender As Object, e As System.EventArgs) Handles TextBox1.TextChanged, TextBox2.TextChanged, TextBox3.TextChanged
-    '    If TextBox1.TextLength <> 0 Then
-    '        Button1.Enabled = True
-    '    Else
-    '        Button1.Enabled = False
-    '    End If
-
-    '    If TextBox2.TextLength <> 0 And TextBox3.TextLength <> 0 And Tabla1.DataGridView1.SelectedRows.Count > 0 Then
-    '        Button3.Enabled = True
-    '    Else
-    '        Button3.Enabled = False
-    '    End If
-    'End Sub
+    Private Sub IngresarDato(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+        encapsuladora.NroDato = Integer.Parse(ComboBox2.SelectedItem)
+        encapsuladora.ValorDato = Integer.Parse(TextBox1.Text)
+        encapsuladora.FechaDato = DateTimePicker1.Value
+        encapsuladora.IDDato = Tabla.ID
+        If tbl = 1 Then
+            Verif.ValidoIngresoParcelasDatos(encapsuladora)
+            CargarTabla1()
+        End If
+        If tbl = 2 Then
+            Verif.ValidoIngresoMateriasPrimasDatos(encapsuladora)
+            CargarTabla2()
+        End If
+        If tbl = 3 Then
+            Verif.ValidoIngresoProductosIntermediosDatos(encapsuladora)
+            CargarTabla3()
+        End If
+        ComboBox2.SelectedIndex = -1
+        TextBox1.Clear()
+        Button1.Enabled = False
+    End Sub
 
 End Class
