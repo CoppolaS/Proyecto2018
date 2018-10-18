@@ -14,7 +14,9 @@
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -27,7 +29,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -65,6 +66,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Resources\favicon1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ProyectoVisual, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
@@ -203,10 +207,10 @@
     <Compile Include="Forms\Empresa\Empresa_Terrenos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Plantaciones.Designer.vb">
-      <DependentUpon>Plantaciones.vb</DependentUpon>
+    <Compile Include="Forms\Parametros\Parametros_Vinos.Designer.vb">
+      <DependentUpon>Parametros_Vinos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Plantaciones.vb">
+    <Compile Include="Forms\Parametros\Parametros_Vinos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -406,8 +410,8 @@
     <EmbeddedResource Include="Forms\Empresa\Empresa_Terrenos.resx">
       <DependentUpon>Empresa_Terrenos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Plantaciones.resx">
-      <DependentUpon>Plantaciones.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\Parametros\Parametros_Vinos.resx">
+      <DependentUpon>Parametros_Vinos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -525,6 +529,8 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -575,6 +581,9 @@
       <Project>{EC917023-4509-4DF7-857C-A4D0300677F4}</Project>
       <Name>Negocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

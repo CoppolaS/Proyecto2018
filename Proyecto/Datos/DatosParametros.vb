@@ -512,14 +512,18 @@ Public Class DatosParametros
     End Function
 
     'cepas
-    Public Function ListaCepas() As DataSet
-        sql = "CALL `proyecto`.`LABM_Cepas`(?opcion,?ID_C,?nombre,?imgu,?imgm,?descripcionu,?descripcionm,?preciou,?preciom);"
+    Public Function ListaCepas(Optional ByVal ID_V As Integer = 0) As DataSet
+        sql = "CALL `proyecto`.`LABM_Cepas`(?opcion,?ID_C,?nombre,?imgu,?imgm,?descripcionu,?descripcionm,?preciou,?preciom,?ID_V);"
         Try
             Con.cn2.Open()
             cm = New MySqlCommand()
             cm.CommandText = sql
             cm.Connection = Con.cn2
-            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
+            If ID_V = 0 Then
+                cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
+            Else
+                cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 5
+            End If
             cm.Parameters.Add("?ID_C", MySqlDbType.Int32).Value = 0
             cm.Parameters.Add("?nombre", MySqlDbType.Int32).Value = "0"
             cm.Parameters.Add("?imgu", MySqlDbType.Int32).Value = 0
@@ -528,6 +532,7 @@ Public Class DatosParametros
             cm.Parameters.Add("?descripcionm", MySqlDbType.Int32).Value = "0"
             cm.Parameters.Add("?preciou", MySqlDbType.Int32).Value = 0
             cm.Parameters.Add("?preciom", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?ID_V", MySqlDbType.Int32).Value = ID_V
             da = New MySqlDataAdapter(cm)
             ds = New DataSet()
             da.Fill(ds)
@@ -541,7 +546,7 @@ Public Class DatosParametros
     Public Function IngresoCepa(ByVal nodo As Encapsuladoras.Cepas) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Cepas (?,?,?,?,?,?,?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Cepas (?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 2)
                 cmd.Parameters.AddWithValue("ID_C", 0)
@@ -552,6 +557,7 @@ Public Class DatosParametros
                 cmd.Parameters.AddWithValue("descripcionm", nodo.DescripcionMostoCepa)
                 cmd.Parameters.AddWithValue("preciou", nodo.PrecioUvaCepa)
                 cmd.Parameters.AddWithValue("preciom", nodo.PrecioMostoCepa)
+                cmd.Parameters.AddWithValue("ID_V", 0)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
@@ -569,7 +575,7 @@ Public Class DatosParametros
     Public Function EliminoCepa(ByVal nodo As Encapsuladoras.Cepas) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Cepas (?,?,?,?,?,?,?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Cepas (?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 3)
                 cmd.Parameters.AddWithValue("ID_C", nodo.IDCepa)
@@ -580,6 +586,7 @@ Public Class DatosParametros
                 cmd.Parameters.AddWithValue("descripcionm", "0")
                 cmd.Parameters.AddWithValue("preciou", 0)
                 cmd.Parameters.AddWithValue("preciom", 0)
+                cmd.Parameters.AddWithValue("ID_V", 0)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
@@ -594,17 +601,22 @@ Public Class DatosParametros
         Return False
     End Function
 
-    'tanques
-    Public Function ListaBotellas() As DataSet
-        sql = "CALL `proyecto`.`LABM_Botellas`(?opcion,?ID_B,?capacidad);"
+    'botellas
+    Public Function ListaBotellas(Optional ByVal ID_V As Integer = 0) As DataSet
+        sql = "CALL `proyecto`.`LABM_Botellas`(?opcion,?ID_B,?capacidad,?ID_V);"
         Try
             Con.cn2.Open()
             cm = New MySqlCommand()
             cm.CommandText = sql
             cm.Connection = Con.cn2
-            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
+            If ID_V = 0 Then
+                cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
+            Else
+                cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 5
+            End If
             cm.Parameters.Add("?ID_B", MySqlDbType.Int32).Value = 0
             cm.Parameters.Add("?capacidad", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?ID_V", MySqlDbType.Int32).Value = ID_V
             da = New MySqlDataAdapter(cm)
             ds = New DataSet()
             da.Fill(ds)
@@ -618,11 +630,12 @@ Public Class DatosParametros
     Public Function IngresoBotella(ByVal nodo As Encapsuladoras.Botellas) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Botellas (?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Botellas (?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 2)
                 cmd.Parameters.AddWithValue("ID_B", 0)
                 cmd.Parameters.AddWithValue("capacidad", nodo.CapacidadBotella)
+                cmd.Parameters.AddWithValue("ID_V", 0)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
@@ -640,11 +653,12 @@ Public Class DatosParametros
     Public Function EliminoBotella(ByVal nodo As Encapsuladoras.Botellas) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Botellas (?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Botellas (?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 3)
                 cmd.Parameters.AddWithValue("ID_B", nodo.IDBotella)
                 cmd.Parameters.AddWithValue("capacidad", 0)
+                cmd.Parameters.AddWithValue("ID_V", 0)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
@@ -662,11 +676,12 @@ Public Class DatosParametros
     Public Function ModificoBotella(ByVal nodo As Encapsuladoras.Botellas) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Botellas (?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Botellas (?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 4)
                 cmd.Parameters.AddWithValue("ID_B", nodo.IDBotella)
                 cmd.Parameters.AddWithValue("capacidad", nodo.CapacidadBotella)
+                cmd.Parameters.AddWithValue("ID_V", 0)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
@@ -677,6 +692,74 @@ Public Class DatosParametros
             Return True
         Catch ex As Exception
             MsgBox("Error al modificar la botella")
+        End Try
+        Return False
+    End Function
+
+    'vinos
+    Public Function ListaVinos() As DataSet
+        sql = "CALL `proyecto`.`LABM_Vinos`(?opcion,?ID_V,?nombre,?descripcion);"
+        Try
+            Con.cn2.Open()
+            cm = New MySqlCommand()
+            cm.CommandText = sql
+            cm.Connection = Con.cn2
+            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
+            cm.Parameters.Add("?ID_V", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?nombre", MySqlDbType.Int32).Value = "0"
+            cm.Parameters.Add("?descripcion", MySqlDbType.Int32).Value = "0"
+            da = New MySqlDataAdapter(cm)
+            ds = New DataSet()
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Con.cn2.Close()
+        Return ds
+    End Function
+
+    Public Function IngresoVino(ByVal nodo As Encapsuladoras.Vinos) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Vinos (?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 2)
+                cmd.Parameters.AddWithValue("ID_V", 0)
+                cmd.Parameters.AddWithValue("nombre", nodo.NombreVino)
+                cmd.Parameters.AddWithValue("descripcion", nodo.DescripcionVino)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al ingresar el vino")
+        End Try
+        Return False
+    End Function
+
+    Public Function EliminoVino(ByVal nodo As Encapsuladoras.Vinos) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Vinos (?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 3)
+                cmd.Parameters.AddWithValue("ID_V", nodo.IDVino)
+                cmd.Parameters.AddWithValue("nombre", "0")
+                cmd.Parameters.AddWithValue("descripcion", "0")
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al eliminar el vino")
         End Try
         Return False
     End Function

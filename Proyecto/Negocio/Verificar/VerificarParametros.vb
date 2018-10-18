@@ -144,16 +144,21 @@ Public Class VerificarParametros
     End Function
 
     'cepas
-    Public Function ValidoListaCepas() As DataView
-        ds = DatosP.ListaCepas()
-        ds.Tables(0).Columns(0).ColumnName = "ID"
-        ds.Tables(0).Columns(1).ColumnName = "Nombre"
-        ds.Tables(0).Columns(2).ColumnName = "Imagen Uva"
-        ds.Tables(0).Columns(3).ColumnName = "Imagen Mosto"
-        ds.Tables(0).Columns(4).ColumnName = "Descripción Uva"
-        ds.Tables(0).Columns(5).ColumnName = "Descripción Mosto"
-        ds.Tables(0).Columns(6).ColumnName = "Precio Uva"
-        ds.Tables(0).Columns(7).ColumnName = "Precio Mosto"
+    Public Function ValidoListaCepas(Optional ByVal ID_V As Integer = 0) As DataView
+        ds = DatosP.ListaCepas(ID_V)
+        If ID_V = 0 Then
+            ds.Tables(0).Columns(0).ColumnName = "ID"
+            ds.Tables(0).Columns(1).ColumnName = "Nombre"
+            ds.Tables(0).Columns(2).ColumnName = "Imagen Uva"
+            ds.Tables(0).Columns(3).ColumnName = "Imagen Mosto"
+            ds.Tables(0).Columns(4).ColumnName = "Descripción Uva"
+            ds.Tables(0).Columns(5).ColumnName = "Descripción Mosto"
+            ds.Tables(0).Columns(6).ColumnName = "Precio Uva"
+            ds.Tables(0).Columns(7).ColumnName = "Precio Mosto"
+        Else
+            ds.Tables(0).Columns(0).ColumnName = "ID"
+            ds.Tables(0).Columns(1).ColumnName = "Nombre"
+        End If
         dv = ds.Tables(0).DefaultView
         Return dv
     End Function
@@ -169,11 +174,18 @@ Public Class VerificarParametros
     End Function
 
     'botellas
-    Public Function ValidoListaBotellas() As DataView
-        ds = DatosP.ListaBotellas()
-        ds.Tables(0).Columns(0).ColumnName = "ID"
-        ds.Tables(0).Columns(1).ColumnName = "Capacidad"
-        ds.Tables(0).Columns(2).ColumnName = "Eliminado"
+    Public Function ValidoListaBotellas(Optional ByVal ID_V As Integer = 0) As DataView
+        ds = DatosP.ListaBotellas(ID_V)
+        If ID_V = 0 Then
+            ds.Tables(0).Columns(0).ColumnName = "ID"
+            ds.Tables(0).Columns(1).ColumnName = "Capacidad"
+            ds.Tables(0).Columns(2).ColumnName = "Eliminado"
+        Else
+            ds.Tables(0).Columns(0).ColumnName = "ID"
+            ds.Tables(0).Columns(1).ColumnName = "Capacidad"
+            ds.Tables(0).Columns(2).ColumnName = "Foto"
+            ds.Tables(0).Columns(3).ColumnName = "Precio"
+        End If
         dv = ds.Tables(0).DefaultView
         Return dv
     End Function
@@ -190,6 +202,27 @@ Public Class VerificarParametros
 
     Public Function ValidoModificarBotellas(ByVal encapsuladora As Encapsuladoras.Botellas)
         DatosP.ModificoBotella(encapsuladora)
+        Return Nothing
+    End Function
+
+    'vinos
+    Public Function ValidoListaVinos() As DataView
+        ds = DatosP.ListaVinos()
+        ds.Tables(0).Columns(0).ColumnName = "ID"
+        ds.Tables(0).Columns(1).ColumnName = "Nombre"
+        ds.Tables(0).Columns(2).ColumnName = "Descripción"
+        ds.Tables(0).Columns(3).ColumnName = "Eliminado"
+        dv = ds.Tables(0).DefaultView
+        Return dv
+    End Function
+
+    Public Function ValidoIngresoVinos(ByVal encapsuladora As Encapsuladoras.Vinos)
+        DatosP.IngresoVino(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoEliminarVinos(ByVal encapsuladora As Encapsuladoras.Vinos)
+        DatosP.EliminoVino(encapsuladora)
         Return Nothing
     End Function
 
