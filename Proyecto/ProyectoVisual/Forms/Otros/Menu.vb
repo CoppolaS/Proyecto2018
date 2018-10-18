@@ -340,4 +340,12 @@ Public Class Menu
         End If
     End Sub
 
+    Private Sub VinosToolStripMenuItem_Click_1(sender As System.Object, e As System.EventArgs) Handles VinosToolStripMenuItem.Click
+        If (ParentForm.Name = "Parametros_Vinos") Then
+            Exit Sub
+        Else
+            Parametros_Vinos.Show()
+            ParentForm.Close()
+        End If
+    End Sub
 End Class

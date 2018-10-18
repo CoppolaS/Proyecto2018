@@ -168,8 +168,18 @@ Public Class VerificarParametros
         Return Nothing
     End Function
 
+    Public Function ValidoIngresoCepasVinos(ByVal encapsuladora As Encapsuladoras.Cepas)
+        DatosP.IngresoCepaVino(encapsuladora)
+        Return Nothing
+    End Function
+
     Public Function ValidoEliminarCepas(ByVal encapsuladora As Encapsuladoras.Cepas)
         DatosP.EliminoCepa(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoEliminarCepasVinos(ByVal encapsuladora As Encapsuladoras.Cepas)
+        DatosP.EliminoCepaVino(encapsuladora)
         Return Nothing
     End Function
 
@@ -195,8 +205,18 @@ Public Class VerificarParametros
         Return Nothing
     End Function
 
+    Public Function ValidoIngresoBotellasVinos(ByVal encapsuladora As Encapsuladoras.Botellas)
+        DatosP.IngresoBotellaVino(encapsuladora)
+        Return Nothing
+    End Function
+
     Public Function ValidoEliminarBotellas(ByVal encapsuladora As Encapsuladoras.Botellas)
         DatosP.EliminoBotella(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoEliminarBotellasVinos(ByVal encapsuladora As Encapsuladoras.Botellas)
+        DatosP.EliminoBotellaVino(encapsuladora)
         Return Nothing
     End Function
 

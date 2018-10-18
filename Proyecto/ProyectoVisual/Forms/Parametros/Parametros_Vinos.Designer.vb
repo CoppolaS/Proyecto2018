@@ -37,6 +37,7 @@ Partial Class Parametros_Vinos
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -51,10 +52,10 @@ Partial Class Parametros_Vinos
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Tabla3 = New Proyecto.Tabla()
+        Me.Tabla2 = New Proyecto.Tabla()
         Me.Menu1 = New Proyecto.Menu()
         Me.Tabla1 = New Proyecto.Tabla()
-        Me.Tabla2 = New Proyecto.Tabla()
-        Me.Tabla3 = New Proyecto.Tabla()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -194,6 +195,7 @@ Partial Class Parametros_Vinos
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Label11)
         Me.TabPage2.Controls.Add(Me.PictureBox1)
         Me.TabPage2.Controls.Add(Me.Button7)
         Me.TabPage2.Controls.Add(Me.Label8)
@@ -216,11 +218,22 @@ Partial Class Parametros_Vinos
         Me.TabPage2.Text = "Administrar"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(52, 87)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(93, 13)
+        Me.Label11.TabIndex = 22
+        Me.Label11.Text = "Ruta de la imagen"
+        '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(55, 90)
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox1.Location = New System.Drawing.Point(55, 103)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(264, 140)
+        Me.PictureBox1.Size = New System.Drawing.Size(264, 127)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 21
         Me.PictureBox1.TabStop = False
         '
@@ -344,6 +357,20 @@ Partial Class Parametros_Vinos
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Botella"
         '
+        'Tabla3
+        '
+        Me.Tabla3.Location = New System.Drawing.Point(586, 390)
+        Me.Tabla3.Name = "Tabla3"
+        Me.Tabla3.Size = New System.Drawing.Size(320, 250)
+        Me.Tabla3.TabIndex = 77
+        '
+        'Tabla2
+        '
+        Me.Tabla2.Location = New System.Drawing.Point(586, 77)
+        Me.Tabla2.Name = "Tabla2"
+        Me.Tabla2.Size = New System.Drawing.Size(320, 278)
+        Me.Tabla2.TabIndex = 76
+        '
         'Menu1
         '
         Me.Menu1.Location = New System.Drawing.Point(12, 12)
@@ -357,20 +384,6 @@ Partial Class Parametros_Vinos
         Me.Tabla1.Name = "Tabla1"
         Me.Tabla1.Size = New System.Drawing.Size(568, 592)
         Me.Tabla1.TabIndex = 0
-        '
-        'Tabla2
-        '
-        Me.Tabla2.Location = New System.Drawing.Point(586, 77)
-        Me.Tabla2.Name = "Tabla2"
-        Me.Tabla2.Size = New System.Drawing.Size(320, 278)
-        Me.Tabla2.TabIndex = 76
-        '
-        'Tabla3
-        '
-        Me.Tabla3.Location = New System.Drawing.Point(586, 390)
-        Me.Tabla3.Name = "Tabla3"
-        Me.Tabla3.Size = New System.Drawing.Size(320, 250)
-        Me.Tabla3.TabIndex = 77
         '
         'Parametros_Vinos
         '
@@ -437,4 +450,5 @@ Partial Class Parametros_Vinos
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Tabla2 As Proyecto.Tabla
     Friend WithEvents Tabla3 As Proyecto.Tabla
+    Friend WithEvents Label11 As System.Windows.Forms.Label
 End Class

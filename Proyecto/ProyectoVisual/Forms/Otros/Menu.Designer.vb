@@ -50,6 +50,7 @@ Partial Class Menu
         Me.ReportarUnErrorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManualDeUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VinosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -106,7 +107,7 @@ Partial Class Menu
         '
         'ParámetrosToolStripMenuItem
         '
-        Me.ParámetrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BarricasToolStripMenuItem, Me.DatosToolStripMenuItem3, Me.ProcesosToolStripMenuItem, Me.TanquesToolStripMenuItem, Me.TransportesToolStripMenuItem3, Me.BotellasToolStripMenuItem, Me.CepasToolStripMenuItem, Me.TratamientosToolStripMenuItem})
+        Me.ParámetrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BarricasToolStripMenuItem, Me.DatosToolStripMenuItem3, Me.ProcesosToolStripMenuItem, Me.TanquesToolStripMenuItem, Me.TransportesToolStripMenuItem3, Me.BotellasToolStripMenuItem, Me.CepasToolStripMenuItem, Me.TratamientosToolStripMenuItem, Me.VinosToolStripMenuItem})
         Me.ParámetrosToolStripMenuItem.Name = "ParámetrosToolStripMenuItem"
         Me.ParámetrosToolStripMenuItem.Size = New System.Drawing.Size(83, 26)
         Me.ParámetrosToolStripMenuItem.Text = "Parámetros"
@@ -114,49 +115,49 @@ Partial Class Menu
         'BarricasToolStripMenuItem
         '
         Me.BarricasToolStripMenuItem.Name = "BarricasToolStripMenuItem"
-        Me.BarricasToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
+        Me.BarricasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.BarricasToolStripMenuItem.Text = "Barricas"
         '
         'DatosToolStripMenuItem3
         '
         Me.DatosToolStripMenuItem3.Name = "DatosToolStripMenuItem3"
-        Me.DatosToolStripMenuItem3.Size = New System.Drawing.Size(146, 22)
+        Me.DatosToolStripMenuItem3.Size = New System.Drawing.Size(152, 22)
         Me.DatosToolStripMenuItem3.Text = "Datos"
         '
         'ProcesosToolStripMenuItem
         '
         Me.ProcesosToolStripMenuItem.Name = "ProcesosToolStripMenuItem"
-        Me.ProcesosToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
+        Me.ProcesosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ProcesosToolStripMenuItem.Text = "Procesos"
         '
         'TanquesToolStripMenuItem
         '
         Me.TanquesToolStripMenuItem.Name = "TanquesToolStripMenuItem"
-        Me.TanquesToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
+        Me.TanquesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TanquesToolStripMenuItem.Text = "Tanques"
         '
         'TransportesToolStripMenuItem3
         '
         Me.TransportesToolStripMenuItem3.Name = "TransportesToolStripMenuItem3"
-        Me.TransportesToolStripMenuItem3.Size = New System.Drawing.Size(146, 22)
+        Me.TransportesToolStripMenuItem3.Size = New System.Drawing.Size(152, 22)
         Me.TransportesToolStripMenuItem3.Text = "Transportes"
         '
         'BotellasToolStripMenuItem
         '
         Me.BotellasToolStripMenuItem.Name = "BotellasToolStripMenuItem"
-        Me.BotellasToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
+        Me.BotellasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.BotellasToolStripMenuItem.Text = "Botellas"
         '
         'CepasToolStripMenuItem
         '
         Me.CepasToolStripMenuItem.Name = "CepasToolStripMenuItem"
-        Me.CepasToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
+        Me.CepasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.CepasToolStripMenuItem.Text = "Cepas"
         '
         'TratamientosToolStripMenuItem
         '
         Me.TratamientosToolStripMenuItem.Name = "TratamientosToolStripMenuItem"
-        Me.TratamientosToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
+        Me.TratamientosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TratamientosToolStripMenuItem.Text = "Tratamientos"
         '
         'EmpresaToolStripMenuItem
@@ -251,6 +252,12 @@ Partial Class Menu
         Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
         Me.CerrarSesiónToolStripMenuItem.Text = "Cerrar sesión"
         '
+        'VinosToolStripMenuItem
+        '
+        Me.VinosToolStripMenuItem.Name = "VinosToolStripMenuItem"
+        Me.VinosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.VinosToolStripMenuItem.Text = "Vinos"
+        '
         'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -292,5 +299,6 @@ Partial Class Menu
     Friend WithEvents CepasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TratamientosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TerrenosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents VinosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
