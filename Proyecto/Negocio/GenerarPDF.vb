@@ -12,7 +12,7 @@ Public Class GenerarPDF
         Dim paragraph As New Paragraph
         Dim PdfFile As New Document(PageSize.A4, 40, 40, 40, 20)
         PdfFile.AddTitle(TituloPDF)
-        Dim Write As PdfWriter = PdfWriter.GetInstance(PdfFile, New FileStream("C:\Users\tiago\Documents\" & NombrePDF & ".pdf", FileMode.Create))
+        Dim Write As PdfWriter = PdfWriter.GetInstance(PdfFile, New FileStream("..\..\" & NombrePDF & ".pdf", FileMode.Create))
         PdfFile.Open()
         Dim pTitle As New Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 14, iTextSharp.text.Font.BOLD, BaseColor.BLACK)
         Dim pTable As New Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 12, iTextSharp.text.Font.NORMAL, BaseColor.BLACK)
@@ -45,7 +45,7 @@ Public Class GenerarPDF
         Next
         PdfFile.Add(PdfTable)
         PdfFile.Close()
-        System.Diagnostics.Process.Start("C:\Users\tiago\Documents\" & NombrePDF & ".pdf")
+        System.Diagnostics.Process.Start("..\..\" & NombrePDF & ".pdf")
     End Sub
 
 End Class

@@ -66,6 +66,18 @@ Public Class VerificarOtros
         Return Nothing
     End Function
 
+    Public Function ValidoListaParcelasConPlantaciones(Optional ByVal ID_H As Integer = 0) As DataView
+        ds = DatosO.ListaParcelasConPlantaciones(ID_H)
+        ds.Tables(0).Columns(0).ColumnName = "ID"
+        ds.Tables(0).Columns(1).ColumnName = "N° de parcela"
+        ds.Tables(0).Columns(2).ColumnName = "Metros cuadrados"
+        ds.Tables(0).Columns(3).ColumnName = "Eliminado"
+        ds.Tables(0).Columns(4).ColumnName = "Fecha de plantado"
+        ds.Tables(0).Columns(5).ColumnName = "Fecha de desplantado"
+        dv = ds.Tables(0).DefaultView
+        Return dv
+    End Function
+
     'materia prima
     Public Function ValidoListaMateriasPrimas(Optional ByVal ID_MP As Integer = 0) As DataView
         ds = DatosO.ListaMateriasPrimas(ID_MP)
@@ -132,6 +144,23 @@ Public Class VerificarOtros
 
     Public Function ValidoIngresoParcelasDatos(ByVal encapsuladora As Encapsuladoras.DatosCultivos)
         DatosO.IngresoParcelaDato(encapsuladora)
+        Return Nothing
+    End Function
+
+    'gestion produccion
+    Public Function ValidoPonerEnVentaGestionProduccion(ByVal encapsuladora As Encapsuladoras.GestionProduccion)
+        DatosO.IngresoPonerEnVentaGestionProduccion(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoQuitarDeVentaGestionProduccion(ByVal encapsuladora As Encapsuladoras.GestionProduccion)
+        DatosO.IngresoQuitarDeVentaGestionProduccion(encapsuladora)
+        Return Nothing
+    End Function
+
+    'asignar tratamientos
+    Public Function ValidoIngresoFechaPlantado(ByVal encapsuladora As Encapsuladoras.AsignarTratamientos)
+        DatosO.IngresoFechaPlantado(encapsuladora)
         Return Nothing
     End Function
 

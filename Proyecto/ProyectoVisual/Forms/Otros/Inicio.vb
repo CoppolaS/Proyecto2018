@@ -4,6 +4,7 @@ Imports Datos.UsuarioLogeado
 Public Class Inicio
     Dim Verif As New Negocio.VerificarOtros
     Dim dv As New DataView
+    Dim GPDF As New Negocio.GenerarPDF
 
     Private Sub Inicio_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Label1.Text = "Usuario: " & Datos.UsuarioLogeado.User & " \ Cargo: " & Datos.UsuarioLogeado.Cargo & " \ Sucursal actual: " & Datos.UsuarioLogeado.Sucursal & " \ Nivel de privilegios: " & Datos.UsuarioLogeado.Privilegios
@@ -47,7 +48,7 @@ Public Class Inicio
     End Sub
 
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
-        Parametros_Vinos.Show()
+        GestionCultivos.Show()
         Me.Close()
     End Sub
 End Class

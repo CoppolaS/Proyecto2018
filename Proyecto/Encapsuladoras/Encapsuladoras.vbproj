@@ -109,7 +109,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Empresa\Sucursales.vb" />
+    <Compile Include="Otros\AsignarTratamientos.vb" />
     <Compile Include="Otros\DatosCultivos.vb" />
+    <Compile Include="Otros\GestionProduccion.vb" />
     <Compile Include="Otros\Hectareas.vb" />
     <Compile Include="Otros\Parcelas.vb" />
     <Compile Include="Parametros\Barricas.vb" />

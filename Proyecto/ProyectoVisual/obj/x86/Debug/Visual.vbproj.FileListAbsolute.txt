@@ -215,3 +215,5 @@ D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proy
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\bin\Debug\ProyectoVisual.exe.config
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\bin\Debug\itextsharp.dll
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.Parametros_Vinos.resources
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.AsignarTratamientos.resources
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\ProyectoVisual\obj\x86\Debug\Proyecto.GestionProduccion.resources

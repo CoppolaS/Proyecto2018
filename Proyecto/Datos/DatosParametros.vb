@@ -326,17 +326,22 @@ Public Class DatosParametros
     End Function
 
     'tratamientos
-    Public Function ListaTratamientos() As DataSet
-        sql = "CALL `proyecto`.`LABM_Tratamientos`(?opcion,?ID_T,?nombre,?descripcion);"
+    Public Function ListaTratamientos(Optional ByVal ID_P As Integer = 0) As DataSet
+        sql = "CALL `proyecto`.`LABM_Tratamientos`(?opcion,?ID_T,?nombre,?descripcion,?ID_P);"
         Try
             Con.cn2.Open()
             cm = New MySqlCommand()
             cm.CommandText = sql
             cm.Connection = Con.cn2
-            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
+            If ID_P = 0 Then
+                cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
+            Else
+                cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 5
+            End If
             cm.Parameters.Add("?ID_T", MySqlDbType.Int32).Value = 0
             cm.Parameters.Add("?nombre", MySqlDbType.VarChar).Value = "0"
             cm.Parameters.Add("?descripcion", MySqlDbType.VarChar).Value = "0"
+            cm.Parameters.Add("?ID_P", MySqlDbType.Int32).Value = ID_P
             da = New MySqlDataAdapter(cm)
             ds = New DataSet()
             da.Fill(ds)
@@ -350,12 +355,13 @@ Public Class DatosParametros
     Public Function IngresoTratamiento(ByVal nodo As Encapsuladoras.Tratamientos) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Tratamientos (?,?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Tratamientos (?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 2)
                 cmd.Parameters.AddWithValue("ID_T", 0)
                 cmd.Parameters.AddWithValue("nombre", nodo.NombreTratamiento)
                 cmd.Parameters.AddWithValue("descripcion", nodo.DescripcionTratamiento)
+                cmd.Parameters.AddWithValue("ID_P", 0)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
@@ -373,12 +379,13 @@ Public Class DatosParametros
     Public Function EliminoTratamiento(ByVal nodo As Encapsuladoras.Tratamientos) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Tratamientos (?,?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Tratamientos (?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 3)
                 cmd.Parameters.AddWithValue("ID_T", nodo.IDTratamiento)
                 cmd.Parameters.AddWithValue("nombre", "0")
                 cmd.Parameters.AddWithValue("descripcion", "0")
+                cmd.Parameters.AddWithValue("ID_P", 0)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
@@ -396,12 +403,13 @@ Public Class DatosParametros
     Public Function ModificoTratamiento(ByVal nodo As Encapsuladoras.Tratamientos) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Tratamientos (?,?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Tratamientos (?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 4)
                 cmd.Parameters.AddWithValue("ID_T", nodo.IDTratamiento)
                 cmd.Parameters.AddWithValue("nombre", nodo.NombreTratamiento)
                 cmd.Parameters.AddWithValue("descripcion", nodo.DescripcionTratamiento)
+                cmd.Parameters.AddWithValue("ID_P", 0)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException

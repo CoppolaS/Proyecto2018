@@ -93,11 +93,20 @@ Public Class VerificarParametros
     End Function
 
     'tratamientos
-    Public Function ValidoListaTratamientos() As DataView
-        ds = DatosP.ListaTratamientos
-        ds.Tables(0).Columns(0).ColumnName = "ID"
-        ds.Tables(0).Columns(1).ColumnName = "Nombre"
-        ds.Tables(0).Columns(2).ColumnName = "Descripción"
+    Public Function ValidoListaTratamientos(Optional ByVal ID_P As Integer = 0) As DataView
+        ds = DatosP.ListaTratamientos(ID_P)
+        If ID_P = 0 Then
+            ds.Tables(0).Columns(0).ColumnName = "ID"
+            ds.Tables(0).Columns(1).ColumnName = "Nombre"
+            ds.Tables(0).Columns(2).ColumnName = "Descripción"
+        Else
+            ds.Tables(0).Columns(0).ColumnName = "ID"
+            ds.Tables(0).Columns(1).ColumnName = "Nombre"
+            ds.Tables(0).Columns(2).ColumnName = "Descripción"
+            ds.Tables(0).Columns(3).ColumnName = "Eliminado"
+            ds.Tables(0).Columns(4).ColumnName = "Fecha de comienzo"
+            ds.Tables(0).Columns(5).ColumnName = "Fecha de finalización"
+        End If
         dv = ds.Tables(0).DefaultView
         Return dv
     End Function
