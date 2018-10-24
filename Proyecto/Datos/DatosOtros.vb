@@ -272,29 +272,6 @@ Public Class DatosOtros
         Return False
     End Function
 
-    Public Function ListaParcelasConPlantaciones(Optional ByVal ID_H As Integer = 0) As DataSet
-        sql = "CALL `proyecto`.`LABM_Parcelas`(?opcion,?ID_P,?cantidad,?numero,?m2,?ID_H);"
-        Try
-            Con.cn2.Open()
-            cm = New MySqlCommand()
-            cm.CommandText = sql
-            cm.Connection = Con.cn2
-            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 4
-            cm.Parameters.Add("?ID_P", MySqlDbType.Int32).Value = 0
-            cm.Parameters.Add("?cantidad", MySqlDbType.Int32).Value = 0
-            cm.Parameters.Add("?numero", MySqlDbType.Int32).Value = 0
-            cm.Parameters.Add("?m2", MySqlDbType.Int32).Value = 0
-            cm.Parameters.Add("?ID_H", MySqlDbType.Int32).Value = ID_H
-            da = New MySqlDataAdapter(cm)
-            ds = New DataSet()
-            da.Fill(ds)
-        Catch ex As Exception
-            MsgBox(ex.ToString)
-        End Try
-        Con.cn2.Close()
-        Return ds
-    End Function
-
     'materia prima
     Public Function ListaMateriasPrimas(Optional ByVal ID_MP As Integer = 0) As DataSet
         sql = "CALL `proyecto`.`LABM_MateriaPrima`(?opcion,?ID_MP,?fecha,?valor,?dato);"
@@ -433,6 +410,7 @@ Public Class DatosOtros
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
+                MsgBox("La parcela seleccionada no tiene una plantación y cosecha actual")
                 Return False
             Finally
                 Con.cn1.Close()
@@ -494,15 +472,125 @@ Public Class DatosOtros
     End Function
 
     'asignar tratamientos
-    Public Function IngresoFechaPlantado(ByVal nodo As Encapsuladoras.AsignarTratamientos) As Boolean
+    Public Function ListaPlantacionesCosechas(Optional ByVal ID_P As Integer = 0) As DataSet
+        sql = "CALL `proyecto`.`LABM_AsignarTratamientos`(?opcion,?ID_P,?FechaPlant,?ID_C,?ID_T,?FechaTratamiento,?userFuncionario,?passFuncionario);"
+        Try
+            Con.cn2.Open()
+            cm = New MySqlCommand()
+            cm.CommandText = sql
+            cm.Connection = Con.cn2
+            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
+            cm.Parameters.Add("?ID_P", MySqlDbType.Int32).Value = ID_P
+            cm.Parameters.Add("?FechaPlant", MySqlDbType.Int32).Value = "0"
+            cm.Parameters.Add("?ID_C", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?ID_T", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?FechaTratamiento", MySqlDbType.Int32).Value = "0"
+            cm.Parameters.Add("?userFuncionario", MySqlDbType.VarChar).Value = "0"
+            cm.Parameters.Add("?passFuncionario", MySqlDbType.VarChar).Value = "0"
+            da = New MySqlDataAdapter(cm)
+            ds = New DataSet()
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Con.cn2.Close()
+        Return ds
+    End Function
+
+    Public Function IngresoPlantacionCosecha(ByVal nodo As Encapsuladoras.AsignarTratamientos) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_AsignarTratamientos (?,?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_AsignarTratamientos (?,?,?,?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
-                cmd.Parameters.AddWithValue("opcion", 1)
+                cmd.Parameters.AddWithValue("opcion", 2)
                 cmd.Parameters.AddWithValue("ID_P", nodo.ID_ParcelaAT)
                 cmd.Parameters.AddWithValue("FechaPlant", nodo.FechaPlantadoAT.ToString("yyyy-MM-dd"))
                 cmd.Parameters.AddWithValue("ID_C", nodo.ID_CepaAT)
+                cmd.Parameters.AddWithValue("ID_T", 0)
+                cmd.Parameters.AddWithValue("FechaTratamiento", "0000-00-00")
+                cmd.Parameters.AddWithValue("userFuncionario", "0")
+                cmd.Parameters.AddWithValue("passFuncionario", "0")
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al ingresar la fecha de plantado")
+        End Try
+        Return False
+    End Function
+
+    Public Function FinalizoPlantacionCosecha(ByVal nodo As Encapsuladoras.AsignarTratamientos) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_AsignarTratamientos (?,?,?,?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 3)
+                cmd.Parameters.AddWithValue("ID_P", nodo.ID_ParcelaAT)
+                cmd.Parameters.AddWithValue("FechaPlant", nodo.FechaPlantadoAT.ToString("yyyy-MM-dd"))
+                cmd.Parameters.AddWithValue("ID_C", 0)
+                cmd.Parameters.AddWithValue("ID_T", 0)
+                cmd.Parameters.AddWithValue("FechaTratamiento", "0000-00-00")
+                cmd.Parameters.AddWithValue("userFuncionario", "0")
+                cmd.Parameters.AddWithValue("passFuncionario", "0")
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al ingresar la fecha de plantado")
+        End Try
+        Return False
+    End Function
+
+    Public Function IngresoTratamiento(ByVal nodo As Encapsuladoras.AsignarTratamientos) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_AsignarTratamientos (?,?,?,?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 4)
+                cmd.Parameters.AddWithValue("ID_P", nodo.ID_ParcelaAT)
+                cmd.Parameters.AddWithValue("FechaPlant", "0000-00-00")
+                cmd.Parameters.AddWithValue("ID_C", 0)
+                cmd.Parameters.AddWithValue("ID_T", nodo.ID_TratamientoAT)
+                cmd.Parameters.AddWithValue("FechaTratamiento", nodo.FechaTratamientoAT.ToString("yyyy-MM-dd"))
+                cmd.Parameters.AddWithValue("userFuncionario", UsuarioLogeado.User)
+                cmd.Parameters.AddWithValue("passFuncionario", UsuarioLogeado.Pass)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al ingresar la fecha de plantado")
+        End Try
+        Return False
+    End Function
+
+    Public Function FinalizoTratamiento(ByVal nodo As Encapsuladoras.AsignarTratamientos) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_AsignarTratamientos (?,?,?,?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 5)
+                cmd.Parameters.AddWithValue("ID_P", nodo.ID_ParcelaAT)
+                cmd.Parameters.AddWithValue("FechaPlant", "0000-00-00")
+                cmd.Parameters.AddWithValue("ID_C", 0)
+                cmd.Parameters.AddWithValue("ID_T", nodo.ID_TratamientoAT)
+                cmd.Parameters.AddWithValue("FechaTratamiento", nodo.FechaTratamientoAT.ToString("yyyy-MM-dd"))
+                cmd.Parameters.AddWithValue("userFuncionario", "0")
+                cmd.Parameters.AddWithValue("passFuncionario", "0")
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException

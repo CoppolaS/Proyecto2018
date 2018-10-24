@@ -66,18 +66,6 @@ Public Class VerificarOtros
         Return Nothing
     End Function
 
-    Public Function ValidoListaParcelasConPlantaciones(Optional ByVal ID_H As Integer = 0) As DataView
-        ds = DatosO.ListaParcelasConPlantaciones(ID_H)
-        ds.Tables(0).Columns(0).ColumnName = "ID"
-        ds.Tables(0).Columns(1).ColumnName = "N° de parcela"
-        ds.Tables(0).Columns(2).ColumnName = "Metros cuadrados"
-        ds.Tables(0).Columns(3).ColumnName = "Eliminado"
-        ds.Tables(0).Columns(4).ColumnName = "Fecha de plantado"
-        ds.Tables(0).Columns(5).ColumnName = "Fecha de desplantado"
-        dv = ds.Tables(0).DefaultView
-        Return dv
-    End Function
-
     'materia prima
     Public Function ValidoListaMateriasPrimas(Optional ByVal ID_MP As Integer = 0) As DataView
         ds = DatosO.ListaMateriasPrimas(ID_MP)
@@ -159,8 +147,34 @@ Public Class VerificarOtros
     End Function
 
     'asignar tratamientos
-    Public Function ValidoIngresoFechaPlantado(ByVal encapsuladora As Encapsuladoras.AsignarTratamientos)
-        DatosO.IngresoFechaPlantado(encapsuladora)
+    Public Function ValidoListaPlantacionesCosechas(Optional ByVal ID_P As Integer = 0) As DataView
+        ds = DatosO.ListaPlantacionesCosechas(ID_P)
+        ds.Tables(0).Columns(0).ColumnName = "Fecha de plantado"
+        ds.Tables(0).Columns(1).ColumnName = "Fecha de desplantado"
+        ds.Tables(0).Columns(2).ColumnName = "Fecha de comienzo de la cosecha"
+        ds.Tables(0).Columns(3).ColumnName = "Fecha de cosechado"
+        ds.Tables(0).Columns(4).ColumnName = "Nombre de la cepa"
+        dv = ds.Tables(0).DefaultView
+        Return dv
+    End Function
+
+    Public Function ValidoIngresoFechaPlantadoCosechado(ByVal encapsuladora As Encapsuladoras.AsignarTratamientos)
+        DatosO.IngresoPlantacionCosecha(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoFinalizarPlantadoCosechado(ByVal encapsuladora As Encapsuladoras.AsignarTratamientos)
+        DatosO.FinalizoPlantacionCosecha(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoIngresoTratamiento(ByVal encapsuladora As Encapsuladoras.AsignarTratamientos)
+        DatosO.IngresoTratamiento(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoFinalizarTratamiento(ByVal encapsuladora As Encapsuladoras.AsignarTratamientos)
+        DatosO.FinalizoTratamiento(encapsuladora)
         Return Nothing
     End Function
 

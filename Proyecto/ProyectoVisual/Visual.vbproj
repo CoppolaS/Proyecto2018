@@ -241,36 +241,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Forms\Sin usar\MateriaPrima_Datos.Designer.vb">
-      <DependentUpon>MateriaPrima_Datos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Sin usar\MateriaPrima_Datos.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Sin usar\MateriaPrima_Produccion.Designer.vb">
-      <DependentUpon>MateriaPrima_Produccion.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Sin usar\MateriaPrima_Produccion.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Sin usar\MateriaPrima_Reservas.Designer.vb">
-      <DependentUpon>MateriaPrima_Reservas.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Sin usar\MateriaPrima_Reservas.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Sin usar\MateriaPrima_Transacciones.Designer.vb">
-      <DependentUpon>MateriaPrima_Transacciones.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Sin usar\MateriaPrima_Transacciones.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Sin usar\MateriaPrima_Transportes.Designer.vb">
-      <DependentUpon>MateriaPrima_Transportes.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Sin usar\MateriaPrima_Transportes.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Forms\Otros\Menu.Designer.vb">
       <DependentUpon>Menu.vb</DependentUpon>
     </Compile>
@@ -311,84 +281,6 @@
       <DependentUpon>Parametros_Transportes.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\Parametros\Parametros_Transportes.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Sin usar\Plantaciones_Cepas.Designer.vb">
-      <DependentUpon>Plantaciones_Cepas.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Sin usar\Plantaciones_Cepas.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Sin usar\Plantaciones_Datos.Designer.vb">
-      <DependentUpon>Plantaciones_Datos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Sin usar\Plantaciones_Datos.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Sin usar\Plantaciones_Hectareas.Designer.vb">
-      <DependentUpon>Plantaciones_Hectareas.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Sin usar\Plantaciones_Hectareas.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Sin usar\Plantaciones_Parcelas.Designer.vb">
-      <DependentUpon>Plantaciones_Parcelas.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Sin usar\Plantaciones_Parcelas.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Sin usar\ProductoFinal_Reservas.Designer.vb">
-      <DependentUpon>ProductoFinal_Reservas.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Sin usar\ProductoFinal_Reservas.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Sin usar\ProductoFinal_Transacciones.Designer.vb">
-      <DependentUpon>ProductoFinal_Transacciones.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Sin usar\ProductoFinal_Transacciones.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Sin usar\ProductoFinal_Transportes.Designer.vb">
-      <DependentUpon>ProductoFinal_Transportes.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Sin usar\ProductoFinal_Transportes.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Sin usar\ProductoFinal_Vinos.Designer.vb">
-      <DependentUpon>ProductoFinal_Vinos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Sin usar\ProductoFinal_Vinos.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Sin usar\ProductoIntermedio_Datos.Designer.vb">
-      <DependentUpon>ProductoIntermedio_Datos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Sin usar\ProductoIntermedio_Datos.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Sin usar\ProductoIntermedio_Produccion.Designer.vb">
-      <DependentUpon>ProductoIntermedio_Produccion.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Sin usar\ProductoIntermedio_Produccion.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Sin usar\ProductoIntermedio_Reservas.Designer.vb">
-      <DependentUpon>ProductoIntermedio_Reservas.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Sin usar\ProductoIntermedio_Reservas.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Sin usar\ProductoIntermedio_Transacciones.Designer.vb">
-      <DependentUpon>ProductoIntermedio_Transacciones.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Sin usar\ProductoIntermedio_Transacciones.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Sin usar\ProductoIntermedio_Transportes.Designer.vb">
-      <DependentUpon>ProductoIntermedio_Transportes.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Sin usar\ProductoIntermedio_Transportes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Produccion.Designer.vb">
@@ -468,21 +360,6 @@
     <EmbeddedResource Include="Forms\Otros\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sin usar\MateriaPrima_Datos.resx">
-      <DependentUpon>MateriaPrima_Datos.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sin usar\MateriaPrima_Produccion.resx">
-      <DependentUpon>MateriaPrima_Produccion.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sin usar\MateriaPrima_Reservas.resx">
-      <DependentUpon>MateriaPrima_Reservas.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sin usar\MateriaPrima_Transacciones.resx">
-      <DependentUpon>MateriaPrima_Transacciones.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sin usar\MateriaPrima_Transportes.resx">
-      <DependentUpon>MateriaPrima_Transportes.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Otros\Menu.resx">
       <DependentUpon>Menu.vb</DependentUpon>
     </EmbeddedResource>
@@ -503,45 +380,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Parametros\Parametros_Transportes.resx">
       <DependentUpon>Parametros_Transportes.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sin usar\Plantaciones_Cepas.resx">
-      <DependentUpon>Plantaciones_Cepas.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sin usar\Plantaciones_Datos.resx">
-      <DependentUpon>Plantaciones_Datos.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sin usar\Plantaciones_Hectareas.resx">
-      <DependentUpon>Plantaciones_Hectareas.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sin usar\Plantaciones_Parcelas.resx">
-      <DependentUpon>Plantaciones_Parcelas.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sin usar\ProductoFinal_Reservas.resx">
-      <DependentUpon>ProductoFinal_Reservas.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sin usar\ProductoFinal_Transacciones.resx">
-      <DependentUpon>ProductoFinal_Transacciones.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sin usar\ProductoFinal_Transportes.resx">
-      <DependentUpon>ProductoFinal_Transportes.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sin usar\ProductoFinal_Vinos.resx">
-      <DependentUpon>ProductoFinal_Vinos.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sin usar\ProductoIntermedio_Datos.resx">
-      <DependentUpon>ProductoIntermedio_Datos.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sin usar\ProductoIntermedio_Produccion.resx">
-      <DependentUpon>ProductoIntermedio_Produccion.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sin usar\ProductoIntermedio_Reservas.resx">
-      <DependentUpon>ProductoIntermedio_Reservas.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sin usar\ProductoIntermedio_Transacciones.resx">
-      <DependentUpon>ProductoIntermedio_Transacciones.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sin usar\ProductoIntermedio_Transportes.resx">
-      <DependentUpon>ProductoIntermedio_Transportes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Produccion.resx">
       <DependentUpon>Produccion.vb</DependentUpon>
