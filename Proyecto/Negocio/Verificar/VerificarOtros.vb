@@ -178,4 +178,22 @@ Public Class VerificarOtros
         Return Nothing
     End Function
 
+    'produccion
+    Public Function ValidoListaParcelasPlantaciones(Optional ByVal ID_H As Integer = 0) As DataView
+        ds = DatosO.ListaParcelasPlantaciones(ID_H)
+        ds.Tables(0).Columns(0).ColumnName = "ID"
+        ds.Tables(0).Columns(1).ColumnName = "N° de parcela"
+        ds.Tables(0).Columns(2).ColumnName = "Metros cuadrados"
+        ds.Tables(0).Columns(3).ColumnName = "Eliminado"
+        ds.Tables(0).Columns(4).ColumnName = "Fecha de plantado"
+        ds.Tables(0).Columns(5).ColumnName = "Fecha de desplantado"
+        dv = ds.Tables(0).DefaultView
+        Return dv
+    End Function
+
+    Public Function ValidoIngresoParcelasCosechas(ByVal encapsuladora As Encapsuladoras.Produccion)
+        DatosO.IngresoParcelaCosecha(encapsuladora)
+        Return Nothing
+    End Function
+
 End Class

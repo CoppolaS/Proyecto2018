@@ -26,31 +26,41 @@ Partial Class Menu
         Me.ObservacionesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.AlertasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProducciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProducciónToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GestiónDeCultivosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TrasladosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AsignarTratamientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EmpresaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FuncionariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AsesoresProfesionalesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CargosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SucursalesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TiposDeAsesorProfesionalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VendedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TerrenosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ParámetrosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BarricasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DatosToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DatosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProcesosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TanquesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TransportesToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TransportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BotellasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CepasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TratamientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EmpresaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PersonalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AsesoresProfesionalesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CargosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CompradoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SucursalesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TiposDeAsesoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.VendedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TerrenosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EstadísticasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VinosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TrazabilidadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistroHistóricoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TransaccionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ComprasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReservasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GestiónDeProducciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EstadísticasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportarUnErrorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManualDeUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.VinosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -59,7 +69,7 @@ Partial Class Menu
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.Control
         Me.MenuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.MenuStrip1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ObservacionesToolStripMenuItem1, Me.AlertasToolStripMenuItem, Me.InicioToolStripMenuItem, Me.ParámetrosToolStripMenuItem, Me.EmpresaToolStripMenuItem, Me.EstadísticasToolStripMenuItem, Me.RegistroHistóricoToolStripMenuItem, Me.AyudaToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ObservacionesToolStripMenuItem1, Me.AlertasToolStripMenuItem, Me.InicioToolStripMenuItem, Me.ProducciónToolStripMenuItem, Me.EmpresaToolStripMenuItem, Me.ParámetrosToolStripMenuItem, Me.TrazabilidadToolStripMenuItem, Me.RegistroHistóricoToolStripMenuItem, Me.TransaccionesToolStripMenuItem, Me.EstadísticasToolStripMenuItem, Me.AyudaToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Margin = New System.Windows.Forms.Padding(0, 0, 0, 10)
         Me.MenuStrip1.Name = "MenuStrip1"
@@ -105,9 +115,95 @@ Partial Class Menu
         Me.InicioToolStripMenuItem.Size = New System.Drawing.Size(48, 26)
         Me.InicioToolStripMenuItem.Text = "Inicio"
         '
+        'ProducciónToolStripMenuItem
+        '
+        Me.ProducciónToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProducciónToolStripMenuItem1, Me.GestiónDeCultivosToolStripMenuItem, Me.TrasladosToolStripMenuItem, Me.AsignarTratamientosToolStripMenuItem})
+        Me.ProducciónToolStripMenuItem.Name = "ProducciónToolStripMenuItem"
+        Me.ProducciónToolStripMenuItem.Size = New System.Drawing.Size(81, 26)
+        Me.ProducciónToolStripMenuItem.Text = "Producción"
+        '
+        'ProducciónToolStripMenuItem1
+        '
+        Me.ProducciónToolStripMenuItem1.Name = "ProducciónToolStripMenuItem1"
+        Me.ProducciónToolStripMenuItem1.Size = New System.Drawing.Size(186, 22)
+        Me.ProducciónToolStripMenuItem1.Text = "Producción"
+        '
+        'GestiónDeCultivosToolStripMenuItem
+        '
+        Me.GestiónDeCultivosToolStripMenuItem.Name = "GestiónDeCultivosToolStripMenuItem"
+        Me.GestiónDeCultivosToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
+        Me.GestiónDeCultivosToolStripMenuItem.Text = "Gestión de cultivos"
+        '
+        'TrasladosToolStripMenuItem
+        '
+        Me.TrasladosToolStripMenuItem.Name = "TrasladosToolStripMenuItem"
+        Me.TrasladosToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
+        Me.TrasladosToolStripMenuItem.Text = "Traslados"
+        '
+        'AsignarTratamientosToolStripMenuItem
+        '
+        Me.AsignarTratamientosToolStripMenuItem.Name = "AsignarTratamientosToolStripMenuItem"
+        Me.AsignarTratamientosToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
+        Me.AsignarTratamientosToolStripMenuItem.Text = "Asignar tratamientos"
+        '
+        'EmpresaToolStripMenuItem
+        '
+        Me.EmpresaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FuncionariosToolStripMenuItem, Me.AsesoresProfesionalesToolStripMenuItem, Me.CargosToolStripMenuItem, Me.ClientesToolStripMenuItem, Me.SucursalesToolStripMenuItem, Me.TiposDeAsesorProfesionalToolStripMenuItem, Me.VendedoresToolStripMenuItem, Me.TerrenosToolStripMenuItem})
+        Me.EmpresaToolStripMenuItem.Name = "EmpresaToolStripMenuItem"
+        Me.EmpresaToolStripMenuItem.Size = New System.Drawing.Size(69, 26)
+        Me.EmpresaToolStripMenuItem.Text = "Empresa"
+        '
+        'FuncionariosToolStripMenuItem
+        '
+        Me.FuncionariosToolStripMenuItem.Name = "FuncionariosToolStripMenuItem"
+        Me.FuncionariosToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.FuncionariosToolStripMenuItem.Text = "Funcionarios"
+        '
+        'AsesoresProfesionalesToolStripMenuItem
+        '
+        Me.AsesoresProfesionalesToolStripMenuItem.Name = "AsesoresProfesionalesToolStripMenuItem"
+        Me.AsesoresProfesionalesToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.AsesoresProfesionalesToolStripMenuItem.Text = "Asesores profesionales"
+        '
+        'CargosToolStripMenuItem
+        '
+        Me.CargosToolStripMenuItem.Name = "CargosToolStripMenuItem"
+        Me.CargosToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.CargosToolStripMenuItem.Text = "Cargos"
+        '
+        'ClientesToolStripMenuItem
+        '
+        Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.ClientesToolStripMenuItem.Text = "Clientes"
+        '
+        'SucursalesToolStripMenuItem
+        '
+        Me.SucursalesToolStripMenuItem.Name = "SucursalesToolStripMenuItem"
+        Me.SucursalesToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.SucursalesToolStripMenuItem.Text = "Sucursales"
+        '
+        'TiposDeAsesorProfesionalToolStripMenuItem
+        '
+        Me.TiposDeAsesorProfesionalToolStripMenuItem.Name = "TiposDeAsesorProfesionalToolStripMenuItem"
+        Me.TiposDeAsesorProfesionalToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.TiposDeAsesorProfesionalToolStripMenuItem.Text = "Tipos de asesor profesional"
+        '
+        'VendedoresToolStripMenuItem
+        '
+        Me.VendedoresToolStripMenuItem.Name = "VendedoresToolStripMenuItem"
+        Me.VendedoresToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.VendedoresToolStripMenuItem.Text = "Vendedores"
+        '
+        'TerrenosToolStripMenuItem
+        '
+        Me.TerrenosToolStripMenuItem.Name = "TerrenosToolStripMenuItem"
+        Me.TerrenosToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.TerrenosToolStripMenuItem.Text = "Terrenos"
+        '
         'ParámetrosToolStripMenuItem
         '
-        Me.ParámetrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BarricasToolStripMenuItem, Me.DatosToolStripMenuItem3, Me.ProcesosToolStripMenuItem, Me.TanquesToolStripMenuItem, Me.TransportesToolStripMenuItem3, Me.BotellasToolStripMenuItem, Me.CepasToolStripMenuItem, Me.TratamientosToolStripMenuItem, Me.VinosToolStripMenuItem})
+        Me.ParámetrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BarricasToolStripMenuItem, Me.DatosToolStripMenuItem, Me.ProcesosToolStripMenuItem, Me.TanquesToolStripMenuItem, Me.TransportesToolStripMenuItem, Me.BotellasToolStripMenuItem, Me.CepasToolStripMenuItem, Me.TratamientosToolStripMenuItem, Me.VinosToolStripMenuItem})
         Me.ParámetrosToolStripMenuItem.Name = "ParámetrosToolStripMenuItem"
         Me.ParámetrosToolStripMenuItem.Size = New System.Drawing.Size(83, 26)
         Me.ParámetrosToolStripMenuItem.Text = "Parámetros"
@@ -118,11 +214,11 @@ Partial Class Menu
         Me.BarricasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.BarricasToolStripMenuItem.Text = "Barricas"
         '
-        'DatosToolStripMenuItem3
+        'DatosToolStripMenuItem
         '
-        Me.DatosToolStripMenuItem3.Name = "DatosToolStripMenuItem3"
-        Me.DatosToolStripMenuItem3.Size = New System.Drawing.Size(152, 22)
-        Me.DatosToolStripMenuItem3.Text = "Datos"
+        Me.DatosToolStripMenuItem.Name = "DatosToolStripMenuItem"
+        Me.DatosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DatosToolStripMenuItem.Text = "Datos"
         '
         'ProcesosToolStripMenuItem
         '
@@ -136,11 +232,11 @@ Partial Class Menu
         Me.TanquesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TanquesToolStripMenuItem.Text = "Tanques"
         '
-        'TransportesToolStripMenuItem3
+        'TransportesToolStripMenuItem
         '
-        Me.TransportesToolStripMenuItem3.Name = "TransportesToolStripMenuItem3"
-        Me.TransportesToolStripMenuItem3.Size = New System.Drawing.Size(152, 22)
-        Me.TransportesToolStripMenuItem3.Text = "Transportes"
+        Me.TransportesToolStripMenuItem.Name = "TransportesToolStripMenuItem"
+        Me.TransportesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TransportesToolStripMenuItem.Text = "Transportes"
         '
         'BotellasToolStripMenuItem
         '
@@ -160,60 +256,54 @@ Partial Class Menu
         Me.TratamientosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TratamientosToolStripMenuItem.Text = "Tratamientos"
         '
-        'EmpresaToolStripMenuItem
+        'VinosToolStripMenuItem
         '
-        Me.EmpresaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PersonalToolStripMenuItem, Me.AsesoresProfesionalesToolStripMenuItem, Me.CargosToolStripMenuItem, Me.CompradoresToolStripMenuItem, Me.SucursalesToolStripMenuItem, Me.TiposDeAsesoresToolStripMenuItem, Me.VendedoresToolStripMenuItem, Me.TerrenosToolStripMenuItem})
-        Me.EmpresaToolStripMenuItem.Name = "EmpresaToolStripMenuItem"
-        Me.EmpresaToolStripMenuItem.Size = New System.Drawing.Size(69, 26)
-        Me.EmpresaToolStripMenuItem.Text = "Empresa"
+        Me.VinosToolStripMenuItem.Name = "VinosToolStripMenuItem"
+        Me.VinosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.VinosToolStripMenuItem.Text = "Vinos"
         '
-        'PersonalToolStripMenuItem
+        'TrazabilidadToolStripMenuItem
         '
-        Me.PersonalToolStripMenuItem.Name = "PersonalToolStripMenuItem"
-        Me.PersonalToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
-        Me.PersonalToolStripMenuItem.Text = "Funcionarios"
+        Me.TrazabilidadToolStripMenuItem.Name = "TrazabilidadToolStripMenuItem"
+        Me.TrazabilidadToolStripMenuItem.Size = New System.Drawing.Size(87, 26)
+        Me.TrazabilidadToolStripMenuItem.Text = "Trazabilidad"
         '
-        'AsesoresProfesionalesToolStripMenuItem
+        'RegistroHistóricoToolStripMenuItem
         '
-        Me.AsesoresProfesionalesToolStripMenuItem.Name = "AsesoresProfesionalesToolStripMenuItem"
-        Me.AsesoresProfesionalesToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
-        Me.AsesoresProfesionalesToolStripMenuItem.Text = "Asesores profesionales"
+        Me.RegistroHistóricoToolStripMenuItem.Name = "RegistroHistóricoToolStripMenuItem"
+        Me.RegistroHistóricoToolStripMenuItem.Size = New System.Drawing.Size(116, 26)
+        Me.RegistroHistóricoToolStripMenuItem.Text = "Registro Histórico"
         '
-        'CargosToolStripMenuItem
+        'TransaccionesToolStripMenuItem
         '
-        Me.CargosToolStripMenuItem.Name = "CargosToolStripMenuItem"
-        Me.CargosToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
-        Me.CargosToolStripMenuItem.Text = "Cargos"
+        Me.TransaccionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VentasToolStripMenuItem, Me.ComprasToolStripMenuItem, Me.ReservasToolStripMenuItem, Me.GestiónDeProducciónToolStripMenuItem})
+        Me.TransaccionesToolStripMenuItem.Name = "TransaccionesToolStripMenuItem"
+        Me.TransaccionesToolStripMenuItem.Size = New System.Drawing.Size(99, 26)
+        Me.TransaccionesToolStripMenuItem.Text = "Transacciones"
         '
-        'CompradoresToolStripMenuItem
+        'VentasToolStripMenuItem
         '
-        Me.CompradoresToolStripMenuItem.Name = "CompradoresToolStripMenuItem"
-        Me.CompradoresToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
-        Me.CompradoresToolStripMenuItem.Text = "Clientes"
+        Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
+        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
+        Me.VentasToolStripMenuItem.Text = "Ventas"
         '
-        'SucursalesToolStripMenuItem
+        'ComprasToolStripMenuItem
         '
-        Me.SucursalesToolStripMenuItem.Name = "SucursalesToolStripMenuItem"
-        Me.SucursalesToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
-        Me.SucursalesToolStripMenuItem.Text = "Sucursales"
+        Me.ComprasToolStripMenuItem.Name = "ComprasToolStripMenuItem"
+        Me.ComprasToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
+        Me.ComprasToolStripMenuItem.Text = "Compras"
         '
-        'TiposDeAsesoresToolStripMenuItem
+        'ReservasToolStripMenuItem
         '
-        Me.TiposDeAsesoresToolStripMenuItem.Name = "TiposDeAsesoresToolStripMenuItem"
-        Me.TiposDeAsesoresToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
-        Me.TiposDeAsesoresToolStripMenuItem.Text = "Tipos de asesores"
+        Me.ReservasToolStripMenuItem.Name = "ReservasToolStripMenuItem"
+        Me.ReservasToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
+        Me.ReservasToolStripMenuItem.Text = "Reservas"
         '
-        'VendedoresToolStripMenuItem
+        'GestiónDeProducciónToolStripMenuItem
         '
-        Me.VendedoresToolStripMenuItem.Name = "VendedoresToolStripMenuItem"
-        Me.VendedoresToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
-        Me.VendedoresToolStripMenuItem.Text = "Vendedores"
-        '
-        'TerrenosToolStripMenuItem
-        '
-        Me.TerrenosToolStripMenuItem.Name = "TerrenosToolStripMenuItem"
-        Me.TerrenosToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
-        Me.TerrenosToolStripMenuItem.Text = "Terrenos"
+        Me.GestiónDeProducciónToolStripMenuItem.Name = "GestiónDeProducciónToolStripMenuItem"
+        Me.GestiónDeProducciónToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
+        Me.GestiónDeProducciónToolStripMenuItem.Text = "Gestión de producción"
         '
         'EstadísticasToolStripMenuItem
         '
@@ -221,24 +311,12 @@ Partial Class Menu
         Me.EstadísticasToolStripMenuItem.Size = New System.Drawing.Size(84, 26)
         Me.EstadísticasToolStripMenuItem.Text = "Estadísticas"
         '
-        'RegistroHistóricoToolStripMenuItem
-        '
-        Me.RegistroHistóricoToolStripMenuItem.Name = "RegistroHistóricoToolStripMenuItem"
-        Me.RegistroHistóricoToolStripMenuItem.Size = New System.Drawing.Size(114, 26)
-        Me.RegistroHistóricoToolStripMenuItem.Text = "Registro histórico"
-        '
         'AyudaToolStripMenuItem
         '
-        Me.AyudaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportarUnErrorToolStripMenuItem, Me.ManualDeUsuarioToolStripMenuItem, Me.CerrarSesiónToolStripMenuItem})
+        Me.AyudaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManualDeUsuarioToolStripMenuItem, Me.CerrarSesiónToolStripMenuItem})
         Me.AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem"
         Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(52, 26)
         Me.AyudaToolStripMenuItem.Text = "Ayuda"
-        '
-        'ReportarUnErrorToolStripMenuItem
-        '
-        Me.ReportarUnErrorToolStripMenuItem.Name = "ReportarUnErrorToolStripMenuItem"
-        Me.ReportarUnErrorToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
-        Me.ReportarUnErrorToolStripMenuItem.Text = "Reportar un error"
         '
         'ManualDeUsuarioToolStripMenuItem
         '
@@ -251,12 +329,6 @@ Partial Class Menu
         Me.CerrarSesiónToolStripMenuItem.Name = "CerrarSesiónToolStripMenuItem"
         Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
         Me.CerrarSesiónToolStripMenuItem.Text = "Cerrar sesión"
-        '
-        'VinosToolStripMenuItem
-        '
-        Me.VinosToolStripMenuItem.Name = "VinosToolStripMenuItem"
-        Me.VinosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.VinosToolStripMenuItem.Text = "Vinos"
         '
         'Menu
         '
@@ -273,32 +345,42 @@ Partial Class Menu
     End Sub
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents InicioToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents EstadísticasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents RegistroHistóricoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents EmpresaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents PersonalToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents AsesoresProfesionalesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents CargosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents CompradoresToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents SucursalesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents TiposDeAsesoresToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents VendedoresToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ParámetrosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AyudaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ReportarUnErrorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents BarricasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents DatosToolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ProcesosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents TanquesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents TransportesToolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ManualDeUsuarioToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CerrarSesiónToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ObservacionesToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AlertasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ProducciónToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents EmpresaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ParámetrosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TrazabilidadToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents RegistroHistóricoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TransaccionesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents EstadísticasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ProducciónToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents GestiónDeCultivosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TrasladosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents AsignarTratamientosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents FuncionariosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents AsesoresProfesionalesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CargosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ClientesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SucursalesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TiposDeAsesorProfesionalToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents VendedoresToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TerrenosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BarricasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents DatosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ProcesosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TanquesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TransportesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BotellasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CepasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TratamientosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents TerrenosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents VinosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents VentasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ComprasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ReservasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents GestiónDeProducciónToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

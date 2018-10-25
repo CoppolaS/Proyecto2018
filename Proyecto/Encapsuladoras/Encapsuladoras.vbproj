@@ -114,6 +114,7 @@
     <Compile Include="Otros\GestionProduccion.vb" />
     <Compile Include="Otros\Hectareas.vb" />
     <Compile Include="Otros\Parcelas.vb" />
+    <Compile Include="Otros\Produccion.vb" />
     <Compile Include="Parametros\Barricas.vb" />
     <Compile Include="Parametros\Botellas.vb" />
     <Compile Include="Parametros\Cepas.vb" />

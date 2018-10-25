@@ -99,10 +99,10 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\AsignarTratamientos.Designer.vb">
+    <Compile Include="Forms\Producción\AsignarTratamientos.Designer.vb">
       <DependentUpon>AsignarTratamientos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AsignarTratamientos.vb">
+    <Compile Include="Forms\Producción\AsignarTratamientos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Empresa\Empresa_Cargos.Designer.vb">
@@ -147,16 +147,16 @@
     <Compile Include="Forms\Empresa\Empresa_Funcionarios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\GestionCultivos.Designer.vb">
+    <Compile Include="Forms\Producción\GestionCultivos.Designer.vb">
       <DependentUpon>GestionCultivos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\GestionCultivos.vb">
+    <Compile Include="Forms\Producción\GestionCultivos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\GestionProduccion.Designer.vb">
+    <Compile Include="Forms\Transacciones\GestionProduccion.Designer.vb">
       <DependentUpon>GestionProduccion.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\GestionProduccion.vb">
+    <Compile Include="Forms\Transacciones\GestionProduccion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Otros\ComboBoxSucursales.Designer.vb">
@@ -283,21 +283,21 @@
     <Compile Include="Forms\Parametros\Parametros_Transportes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Produccion.Designer.vb">
+    <Compile Include="Forms\Producción\Produccion.Designer.vb">
       <DependentUpon>Produccion.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Produccion.vb">
+    <Compile Include="Forms\Producción\Produccion.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\AsignarTratamientos.resx">
+    <EmbeddedResource Include="Forms\Producción\AsignarTratamientos.resx">
       <DependentUpon>AsignarTratamientos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\GestionCultivos.resx">
+    <EmbeddedResource Include="Forms\Producción\GestionCultivos.resx">
       <DependentUpon>GestionCultivos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\GestionProduccion.resx">
+    <EmbeddedResource Include="Forms\Transacciones\GestionProduccion.resx">
       <DependentUpon>GestionProduccion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Otros\ComboBoxSucursales.resx">
@@ -381,7 +381,7 @@
     <EmbeddedResource Include="Forms\Parametros\Parametros_Transportes.resx">
       <DependentUpon>Parametros_Transportes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Produccion.resx">
+    <EmbeddedResource Include="Forms\Producción\Produccion.resx">
       <DependentUpon>Produccion.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

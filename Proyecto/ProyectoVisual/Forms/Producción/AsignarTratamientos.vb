@@ -5,7 +5,6 @@ Public Class AsignarTratamientos
     Dim VerifP As New Negocio.VerificarParametros
     Dim encapsuladora As New Encapsuladoras.AsignarTratamientos
     Dim dv As New DataView
-    Dim tbl As Integer
 
     Private Sub GestionCultivos_Load(sender As System.Object, e As System.EventArgs) Handles Me.Load, ComboBoxSucursales1.SeleccionCambio
         DateTimePicker1.Format = DateTimePickerFormat.Custom

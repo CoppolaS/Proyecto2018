@@ -13,21 +13,6 @@ C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\Negocio\obj\x86\Debug\N
 C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\Negocio\obj\x86\Debug\Negocio.dll
 C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\Negocio\obj\x86\Debug\Negocio.xml
 C:\Users\7iago-PC\Documents\GitHub\Proyecto2018\Proyecto\Negocio\obj\x86\Debug\Negocio.pdb
-D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Negocio.dll
-D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Negocio.pdb
-D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Negocio.xml
-D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Datos.dll
-D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Encapsuladoras.dll
-D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Datos.pdb
-D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Datos.xml
-D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Encapsuladoras.pdb
-D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Encapsuladoras.xml
-D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\obj\x86\Debug\Negocio.vbprojResolveAssemblyReference.cache
-D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\obj\x86\Debug\Negocio.Resources.resources
-D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\obj\x86\Debug\Negocio.vbproj.GenerateResource.Cache
-D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\obj\x86\Debug\Negocio.dll
-D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\obj\x86\Debug\Negocio.xml
-D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\obj\x86\Debug\Negocio.pdb
 C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Negocio\bin\x86\Debug\Negocio.dll
 C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Negocio\bin\x86\Debug\Negocio.pdb
 C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Negocio\bin\x86\Debug\Negocio.xml
@@ -43,3 +28,18 @@ C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Negocio\obj\x86\Debug\
 C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Negocio\obj\x86\Debug\Negocio.dll
 C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Negocio\obj\x86\Debug\Negocio.xml
 C:\Users\tiago\Downloads\Programa\Programa Tiago\Proyecto\Negocio\obj\x86\Debug\Negocio.pdb
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Negocio.dll
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Negocio.pdb
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Negocio.xml
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Datos.dll
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Encapsuladoras.dll
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Datos.pdb
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Datos.xml
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Encapsuladoras.pdb
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\bin\x86\Debug\Encapsuladoras.xml
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\obj\x86\Debug\Negocio.vbprojResolveAssemblyReference.cache
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\obj\x86\Debug\Negocio.Resources.resources
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\obj\x86\Debug\Negocio.vbproj.GenerateResource.Cache
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\obj\x86\Debug\Negocio.dll
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\obj\x86\Debug\Negocio.xml
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Negocio\obj\x86\Debug\Negocio.pdb

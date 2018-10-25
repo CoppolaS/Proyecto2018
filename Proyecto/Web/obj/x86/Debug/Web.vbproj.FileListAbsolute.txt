@@ -58,6 +58,7 @@ D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Web\bin\x86\Debug\Web.xml
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Web\bin\x86\Debug\Datos.dll
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Web\bin\x86\Debug\Negocio.dll
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Web\bin\x86\Debug\Encapsuladoras.dll
+D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Web\bin\x86\Debug\itextsharp.dll
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Web\bin\x86\Debug\Datos.pdb
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Web\bin\x86\Debug\Datos.xml
 D:\Repos GitHub\Proyecto\Proyecto2018\Proyecto\Web\bin\x86\Debug\Negocio.pdb

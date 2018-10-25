@@ -8,9 +8,4 @@
     Public Shared Ventana3 As Integer
     Public Shared Privilegios As Integer
     Public Shared Sucursal As String
-    'privilegios
-    '1=Gerente general
-    '2=Gerente de sucursal
-    '3=Técnico
-    '4=Administrativo
 End Class

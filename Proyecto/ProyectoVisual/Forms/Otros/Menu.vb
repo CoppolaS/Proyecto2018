@@ -1,7 +1,22 @@
 ﻿Imports Datos.UsuarioLogeado
 
 Public Class Menu
-    'rehacer menu cuando tengamos el definitivo
+    'privilegios
+    '1=Gerente general
+    '2=Gerente de sucursal
+    '3=Técnico
+    '4=Administrativo
+    Private Sub Menu_Load(sender As Object, e As System.EventArgs) Handles Me.Load
+        Select Case Datos.UsuarioLogeado.Privilegios
+            Case 3
+                TransaccionesToolStripMenuItem.Enabled = False
+                EstadísticasToolStripMenuItem.Enabled = False
+                RegistroHistóricoToolStripMenuItem.Enabled = False
+            Case 4
+                TransaccionesToolStripMenuItem.Enabled = False
+        End Select
+    End Sub
+
     Private Sub InicioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InicioToolStripMenuItem.Click
         If (ParentForm.Name = "Inicio") Then
             Exit Sub
@@ -11,52 +26,48 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub BarricasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BarricasToolStripMenuItem.Click
-        If (ParentForm.Name = "Parametros_Barricas") Then
+    Private Sub CerrarSesiónToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles CerrarSesiónToolStripMenuItem.Click
+        Login.Show()
+        ParentForm.Close()
+    End Sub
+
+    Private Sub ProducciónToolStripMenuItem1_Click(sender As System.Object, e As System.EventArgs) Handles ProducciónToolStripMenuItem1.Click
+        If (ParentForm.Name = "Produccion") Then
             Exit Sub
         Else
-            Parametros_Barricas.Show()
+            Produccion.Show()
             ParentForm.Close()
         End If
     End Sub
 
-    Private Sub DatosToolStripMenuItem3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DatosToolStripMenuItem3.Click
-        If (ParentForm.Name = "Parametros_Datos") Then
+    Private Sub GestiónDeCultivosToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles GestiónDeCultivosToolStripMenuItem.Click
+        If (ParentForm.Name = "GestionCultivos") Then
             Exit Sub
         Else
-            Parametros_Datos.Show()
+            GestionCultivos.Show()
             ParentForm.Close()
         End If
     End Sub
 
-    Private Sub ProcesosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProcesosToolStripMenuItem.Click
-        If (ParentForm.Name = "Parametros_Procesos") Then
+    Private Sub TrasladosToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles TrasladosToolStripMenuItem.Click
+        If (ParentForm.Name = "Traslados") Then
             Exit Sub
         Else
-            Parametros_Procesos.Show()
+            'Traslados.Show()
+            'ParentForm.Close()
+        End If
+    End Sub
+
+    Private Sub AsignarTratamientosToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles AsignarTratamientosToolStripMenuItem.Click
+        If (ParentForm.Name = "AsignarTratamientos") Then
+            Exit Sub
+        Else
+            AsignarTratamientos.Show()
             ParentForm.Close()
         End If
     End Sub
 
-    Private Sub TanquesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TanquesToolStripMenuItem.Click
-        If (ParentForm.Name = "Parametros_Tanques") Then
-            Exit Sub
-        Else
-            Parametros_Tanques.Show()
-            ParentForm.Close()
-        End If
-    End Sub
-
-    Private Sub TransportesToolStripMenuItem3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TransportesToolStripMenuItem3.Click
-        If (ParentForm.Name = "Parametros_Transportes") Then
-            Exit Sub
-        Else
-            Parametros_Transportes.Show()
-            ParentForm.Close()
-        End If
-    End Sub
-
-    Private Sub PersonalToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PersonalToolStripMenuItem.Click
+    Private Sub FuncionariosToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles FuncionariosToolStripMenuItem.Click
         If (ParentForm.Name = "Empresa_Funcionarios") Then
             Exit Sub
         Else
@@ -65,7 +76,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub AsesoresProfesionalesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AsesoresProfesionalesToolStripMenuItem.Click
+    Private Sub AsesoresProfesionalesToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles AsesoresProfesionalesToolStripMenuItem.Click
         If (ParentForm.Name = "Empresa_AsesoresProfesionales") Then
             Exit Sub
         Else
@@ -74,7 +85,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub CargosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CargosToolStripMenuItem.Click
+    Private Sub CargosToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles CargosToolStripMenuItem.Click
         If (ParentForm.Name = "Empresa_Cargos") Then
             Exit Sub
         Else
@@ -83,7 +94,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub CompradoresToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CompradoresToolStripMenuItem.Click
+    Private Sub ClientesToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ClientesToolStripMenuItem.Click
         If (ParentForm.Name = "Empresa_Clientes") Then
             Exit Sub
         Else
@@ -92,7 +103,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub SucursalesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SucursalesToolStripMenuItem.Click
+    Private Sub SucursalesToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles SucursalesToolStripMenuItem.Click
         If (ParentForm.Name = "Empresa_Sucursales") Then
             Exit Sub
         Else
@@ -101,7 +112,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub TiposDeAsesoresToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TiposDeAsesoresToolStripMenuItem.Click
+    Private Sub TiposDeAsesorProfesionalToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles TiposDeAsesorProfesionalToolStripMenuItem.Click
         If (ParentForm.Name = "Empresa_TiposDeAsesores") Then
             Exit Sub
         Else
@@ -110,7 +121,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub VendedoresToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VendedoresToolStripMenuItem.Click
+    Private Sub VendedoresToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles VendedoresToolStripMenuItem.Click
         If (ParentForm.Name = "Empresa_Vendedores") Then
             Exit Sub
         Else
@@ -119,34 +130,56 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub EstadísticasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EstadísticasToolStripMenuItem.Click
-        If (ParentForm.Name = "Estadisticas") Then
-            Exit Sub
-        Else
-            Estadisticas.Show()
-            ParentForm.Close()
-        End If
-    End Sub
-
-    Private Sub RegistroHistóricoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RegistroHistóricoToolStripMenuItem.Click
-        If (ParentForm.Name = "RegistroHistorico") Then
-            Exit Sub
-        Else
-            RegistroHistorico.Show()
-            ParentForm.Close()
-        End If
-    End Sub
-
-    Private Sub CerrarSesiónToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles CerrarSesiónToolStripMenuItem.Click
-        Login.Show()
-        ParentForm.Close()
-    End Sub
-
     Private Sub TerrenosToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles TerrenosToolStripMenuItem.Click
         If (ParentForm.Name = "Empresa_Terrenos") Then
             Exit Sub
         Else
             Empresa_Terrenos.Show()
+            ParentForm.Close()
+        End If
+    End Sub
+
+    Private Sub BarricasToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles BarricasToolStripMenuItem.Click
+        If (ParentForm.Name = "Parametros_Barricas") Then
+            Exit Sub
+        Else
+            Parametros_Barricas.Show()
+            ParentForm.Close()
+        End If
+    End Sub
+
+    Private Sub DatosToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles DatosToolStripMenuItem.Click
+        If (ParentForm.Name = "Parametros_Datos") Then
+            Exit Sub
+        Else
+            Parametros_Datos.Show()
+            ParentForm.Close()
+        End If
+    End Sub
+
+    Private Sub ProcesosToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ProcesosToolStripMenuItem.Click
+        If (ParentForm.Name = "Parametros_Procesos") Then
+            Exit Sub
+        Else
+            Parametros_Procesos.Show()
+            ParentForm.Close()
+        End If
+    End Sub
+
+    Private Sub TanquesToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles TanquesToolStripMenuItem.Click
+        If (ParentForm.Name = "Parametros_Tanques") Then
+            Exit Sub
+        Else
+            Parametros_Tanques.Show()
+            ParentForm.Close()
+        End If
+    End Sub
+
+    Private Sub TransportesToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles TransportesToolStripMenuItem.Click
+        If (ParentForm.Name = "Parametros_Transportes") Then
+            Exit Sub
+        Else
+            Parametros_Transportes.Show()
             ParentForm.Close()
         End If
     End Sub
@@ -160,7 +193,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub CepasToolStripMenuItem_Click_1(sender As System.Object, e As System.EventArgs) Handles CepasToolStripMenuItem.Click
+    Private Sub CepasToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles CepasToolStripMenuItem.Click
         If (ParentForm.Name = "Parametros_Cepas") Then
             Exit Sub
         Else
@@ -178,7 +211,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub VinosToolStripMenuItem_Click_1(sender As System.Object, e As System.EventArgs) Handles VinosToolStripMenuItem.Click
+    Private Sub VinosToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles VinosToolStripMenuItem.Click
         If (ParentForm.Name = "Parametros_Vinos") Then
             Exit Sub
         Else
@@ -186,4 +219,73 @@ Public Class Menu
             ParentForm.Close()
         End If
     End Sub
+
+    Private Sub TrazabilidadToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles TrazabilidadToolStripMenuItem.Click
+        If (ParentForm.Name = "Trazabilidad") Then
+            Exit Sub
+        Else
+            'Trazabilidad.Show()
+            'ParentForm.Close()
+        End If
+    End Sub
+
+
+    Private Sub RegistroHistóricoToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles RegistroHistóricoToolStripMenuItem.Click
+        If (ParentForm.Name = "RegistroHistorico") Then
+            Exit Sub
+        Else
+            RegistroHistorico.Show()
+            ParentForm.Close()
+        End If
+    End Sub
+
+    Private Sub VentasToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles VentasToolStripMenuItem.Click
+        If (ParentForm.Name = "Ventas") Then
+            Exit Sub
+        Else
+            'Ventas.Show()
+            'ParentForm.Close()
+        End If
+    End Sub
+
+    Private Sub ComprasToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ComprasToolStripMenuItem.Click
+        If (ParentForm.Name = "Compras") Then
+            Exit Sub
+        Else
+            'Compras.Show()
+            ParentForm.Close()
+        End If
+    End Sub
+
+    Private Sub ReservasToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ReservasToolStripMenuItem.Click
+        If (ParentForm.Name = "Reservas") Then
+            Exit Sub
+        Else
+            'Reservas.Show()
+            'ParentForm.Close()
+        End If
+    End Sub
+
+    Private Sub GestiónDeProducciónToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles GestiónDeProducciónToolStripMenuItem.Click
+        If (ParentForm.Name = "GestionProduccion") Then
+            Exit Sub
+        Else
+            GestionProduccion.Show()
+            ParentForm.Close()
+        End If
+    End Sub
+
+    Private Sub EstadísticasToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles EstadísticasToolStripMenuItem.Click
+        If (ParentForm.Name = "Estadisticas") Then
+            Exit Sub
+        Else
+            Estadisticas.Show()
+            ParentForm.Close()
+        End If
+    End Sub
+
+    Private Sub ManualDeUsuarioToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ManualDeUsuarioToolStripMenuItem.Click
+
+    End Sub
+
 End Class

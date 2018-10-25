@@ -604,4 +604,53 @@ Public Class DatosOtros
         End Try
         Return False
     End Function
+
+    'produccion
+    Public Function ListaParcelasPlantaciones(Optional ByVal ID_H As Integer = 0) As DataSet
+        sql = "CALL `proyecto`.`LABM_Parcelas`(?opcion,?ID_P,?cantidad,?numero,?m2,?ID_H);"
+        Try
+            Con.cn2.Open()
+            cm = New MySqlCommand()
+            cm.CommandText = sql
+            cm.Connection = Con.cn2
+            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 4
+            cm.Parameters.Add("?ID_P", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?cantidad", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?numero", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?m2", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?ID_H", MySqlDbType.Int32).Value = ID_H
+            da = New MySqlDataAdapter(cm)
+            ds = New DataSet()
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Con.cn2.Close()
+        Return ds
+    End Function
+
+    Public Function IngresoParcelaCosecha(ByVal nodo As Encapsuladoras.Produccion) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 1)
+                cmd.Parameters.AddWithValue("ID_P", nodo.ID_ParcelaP)
+                cmd.Parameters.AddWithValue("FechaCosechado", nodo.FechaCosechadoP.ToString("yyyy-MM-dd"))
+                cmd.Parameters.AddWithValue("Cantidad", nodo.CantidadP)
+                cmd.Parameters.AddWithValue("EstadoSanitario", nodo.EstadoSanitarioP)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al ingresar la fecha de plantado")
+        End Try
+        Return False
+    End Function
+
 End Class
