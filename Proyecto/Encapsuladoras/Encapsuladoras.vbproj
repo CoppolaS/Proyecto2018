@@ -121,6 +121,7 @@
     <Compile Include="Parametros\Datos.vb" />
     <Compile Include="Parametros\Procesos.vb" />
     <Compile Include="Parametros\Tanques.vb" />
+    <Compile Include="Parametros\Transportes.vb" />
     <Compile Include="Parametros\Tratamientos.vb" />
     <Compile Include="Parametros\Vinos.vb" />
   </ItemGroup>

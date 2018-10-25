@@ -888,4 +888,111 @@ Public Class DatosParametros
         Return False
     End Function
 
+    'transportes
+    Public Function ListaTransportes() As DataSet
+        sql = "CALL `proyecto`.`LABM_Transportes`(?opcion,?ID_T,?capacidad,?producto,?tipo,?nombre,?ocupados,?cantidad);"
+        Try
+            Con.cn2.Open()
+            cm = New MySqlCommand()
+            cm.CommandText = sql
+            cm.Connection = Con.cn2
+            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
+            cm.Parameters.Add("?ID_T", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?capacidad", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?producto", MySqlDbType.VarChar).Value = "0"
+            cm.Parameters.Add("?tipo", MySqlDbType.VarChar).Value = "0"
+            cm.Parameters.Add("?nombre", MySqlDbType.VarChar).Value = "0"
+            cm.Parameters.Add("?ocupados", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?cantidad", MySqlDbType.Int32).Value = 0
+            da = New MySqlDataAdapter(cm)
+            ds = New DataSet()
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Con.cn2.Close()
+        Return ds
+    End Function
+
+    Public Function IngresoTransporte(ByVal nodo As Encapsuladoras.Transportes) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Transportes (?,?,?,?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 2)
+                cmd.Parameters.AddWithValue("ID_T", 0)
+                cmd.Parameters.AddWithValue("capacidad", nodo.CapacidadTransporte)
+                cmd.Parameters.AddWithValue("producto", nodo.ProductoTransporte)
+                cmd.Parameters.AddWithValue("tipo", nodo.TipoTransporte)
+                cmd.Parameters.AddWithValue("nombre", nodo.NombreTransporte)
+                cmd.Parameters.AddWithValue("ocupados", nodo.OcupadosTransporte)
+                cmd.Parameters.AddWithValue("cantidad", nodo.CantidadTransporte)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al ingresar el transporte")
+        End Try
+        Return False
+    End Function
+
+    Public Function EliminoTransporte(ByVal nodo As Encapsuladoras.Transportes) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Transportes (?,?,?,?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 3)
+                cmd.Parameters.AddWithValue("ID_T", nodo.IDTransporte)
+                cmd.Parameters.AddWithValue("capacidad", 0)
+                cmd.Parameters.AddWithValue("producto", "0")
+                cmd.Parameters.AddWithValue("tipo", "0")
+                cmd.Parameters.AddWithValue("nombre", "0")
+                cmd.Parameters.AddWithValue("ocupados", 0)
+                cmd.Parameters.AddWithValue("cantidad", 0)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al eliminar el transporte")
+        End Try
+        Return False
+    End Function
+
+    Public Function ModificoTransporte(ByVal nodo As Encapsuladoras.Transportes) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Transportes (?,?,?,?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 4)
+                cmd.Parameters.AddWithValue("ID_T", nodo.IDTransporte)
+                cmd.Parameters.AddWithValue("capacidad", nodo.CapacidadTransporte)
+                cmd.Parameters.AddWithValue("producto", nodo.ProductoTransporte)
+                cmd.Parameters.AddWithValue("tipo", nodo.TipoTransporte)
+                cmd.Parameters.AddWithValue("nombre", nodo.NombreTransporte)
+                cmd.Parameters.AddWithValue("ocupados", nodo.OcupadosTransporte)
+                cmd.Parameters.AddWithValue("cantidad", nodo.CantidadTransporte)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al modificar el transporte")
+        End Try
+        Return False
+    End Function
+
 End Class

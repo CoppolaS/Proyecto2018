@@ -255,4 +255,32 @@ Public Class VerificarParametros
         Return Nothing
     End Function
 
+    'transportes
+    Public Function ValidoListaTransportes() As DataView
+        ds = DatosP.ListaTransportes()
+        ds.Tables(0).Columns(0).ColumnName = "ID"
+        ds.Tables(0).Columns(1).ColumnName = "Capacidad"
+        ds.Tables(0).Columns(2).ColumnName = "Producto"
+        ds.Tables(0).Columns(3).ColumnName = "Tipo"
+        ds.Tables(0).Columns(4).ColumnName = "Nombre"
+        ds.Tables(0).Columns(5).ColumnName = "Ocupados"
+        ds.Tables(0).Columns(6).ColumnName = "Cantidad"
+        dv = ds.Tables(0).DefaultView
+        Return dv
+    End Function
+
+    Public Function ValidoIngresoTransportes(ByVal encapsuladora As Encapsuladoras.Transportes)
+        DatosP.IngresoTransporte(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoEliminarTransportes(ByVal encapsuladora As Encapsuladoras.Transportes)
+        DatosP.EliminoTransporte(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoModificarTransportes(ByVal encapsuladora As Encapsuladoras.Transportes)
+        DatosP.ModificoTransporte(encapsuladora)
+        Return Nothing
+    End Function
 End Class

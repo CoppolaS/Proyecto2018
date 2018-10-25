@@ -648,7 +648,7 @@ Public Class DatosOtros
             End Try
             Return True
         Catch ex As Exception
-            MsgBox("Error al ingresar la fecha de plantado")
+            MsgBox("Error al ingresar la cosecha")
         End Try
         Return False
     End Function
