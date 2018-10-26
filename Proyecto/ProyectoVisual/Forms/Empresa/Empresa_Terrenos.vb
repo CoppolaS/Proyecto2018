@@ -14,7 +14,6 @@ Public Class Empresa_Terrenos
         dv = Verif.ValidoListaHectareas()
         dv.RowFilter = "Eliminado = 0"
         Tabla1.DataGridView1.DataSource = dv
-        Tabla1.DataGridView1.Columns(0).Visible = False
         Tabla1.DataGridView1.Columns(4).Visible = False
         Tabla1.DataGridView1.Columns(5).Visible = False
         Tabla1.DataGridView1.ClearSelection()

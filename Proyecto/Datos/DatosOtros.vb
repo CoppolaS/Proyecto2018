@@ -653,4 +653,29 @@ Public Class DatosOtros
         Return False
     End Function
 
+    'pendiente
+    Public Function AsignarProcesoMP(ByVal nodo As Encapsuladoras.Produccion) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 1)
+                cmd.Parameters.AddWithValue("ID_P", nodo.ID_ParcelaP)
+                cmd.Parameters.AddWithValue("FechaCosechado", nodo.FechaCosechadoP.ToString("yyyy-MM-dd"))
+                cmd.Parameters.AddWithValue("Cantidad", nodo.CantidadP)
+                cmd.Parameters.AddWithValue("EstadoSanitario", nodo.EstadoSanitarioP)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al ingresar la cosecha")
+        End Try
+        Return False
+    End Function
+
 End Class

@@ -186,13 +186,18 @@ Public Class VerificarOtros
         ds.Tables(0).Columns(2).ColumnName = "Metros cuadrados"
         ds.Tables(0).Columns(3).ColumnName = "Eliminado"
         ds.Tables(0).Columns(4).ColumnName = "Fecha de plantado"
-        ds.Tables(0).Columns(5).ColumnName = "Fecha de desplantado"
+        ds.Tables(0).Columns(5).ColumnName = "Fecha de inicio de cosecha"
         dv = ds.Tables(0).DefaultView
         Return dv
     End Function
 
     Public Function ValidoIngresoParcelasCosechas(ByVal encapsuladora As Encapsuladoras.Produccion)
         DatosO.IngresoParcelaCosecha(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoAsignarProcesoMP(ByVal encapsuladora As Encapsuladoras.Produccion)
+        DatosO.AsignarProcesoMP(encapsuladora)
         Return Nothing
     End Function
 

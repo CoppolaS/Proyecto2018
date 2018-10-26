@@ -28,6 +28,7 @@ Partial Class Login
         Me.userlabel = New System.Windows.Forms.Label()
         Me.passlabel = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'userTB
@@ -52,7 +53,7 @@ Partial Class Login
         Me.iniciarsesion.Enabled = False
         Me.iniciarsesion.Location = New System.Drawing.Point(12, 314)
         Me.iniciarsesion.Name = "iniciarsesion"
-        Me.iniciarsesion.Size = New System.Drawing.Size(290, 26)
+        Me.iniciarsesion.Size = New System.Drawing.Size(145, 26)
         Me.iniciarsesion.TabIndex = 4
         Me.iniciarsesion.Text = "Iniciar sesión"
         Me.iniciarsesion.UseVisualStyleBackColor = True
@@ -86,12 +87,22 @@ Partial Class Login
         Me.Label1.Size = New System.Drawing.Size(290, 233)
         Me.Label1.TabIndex = 1
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(227, 317)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 7
+        Me.Button1.Text = "Auto"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Login
         '
         Me.AcceptButton = Me.iniciarsesion
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(314, 352)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.passlabel)
         Me.Controls.Add(Me.userlabel)
         Me.Controls.Add(Me.Label1)
@@ -113,5 +124,6 @@ Partial Class Login
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents userlabel As System.Windows.Forms.Label
     Friend WithEvents passlabel As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 
 End Class
