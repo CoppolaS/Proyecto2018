@@ -3,15 +3,19 @@
     Private FechaCosechado As Date
     Private Cantidad As Integer
     Private EstadoSanitario As Integer
-    Private FechaInicioProceso As Date
+    Private ID_PI As Integer
+    Private ID_MP As Integer
+    Private FechaProceso As Date
     Private Proceso As Integer
 
-    Public Sub New(ByVal ID_Parcela As Integer, ByVal FechaCosechado As Date, ByVal Cantidad As Integer, ByVal EstadoSanitario As Integer, ByVal FechaInicioProceso As Date, ByVal Proceso As Integer)
+    Public Sub New(ByVal ID_Parcela As Integer, ByVal FechaCosechado As Date, ByVal Cantidad As Integer, ByVal EstadoSanitario As Integer, ByVal ID_PI As Integer, ByVal ID_MP As Integer, ByVal FechaProceso As Date, ByVal Proceso As Integer)
         Me.ID_Parcela = ID_Parcela
         Me.FechaCosechado = FechaCosechado
         Me.Cantidad = Cantidad
         Me.EstadoSanitario = EstadoSanitario
-        Me.FechaInicioProceso = FechaInicioProceso
+        Me.ID_MP = ID_MP
+        Me.ID_MP = ID_MP
+        Me.FechaProceso = FechaProceso
         Me.Proceso = Proceso
     End Sub
 
@@ -55,21 +59,39 @@
         End Set
     End Property
 
-    Public Property FechaInicioProcesoP() As Date
+    Public Property IDProductoIntermedioP() As Integer
         Get
-            Return Me.FechaInicioProceso
+            Return Me.ID_PI
+        End Get
+        Set(ByVal value As Integer)
+            Me.ID_PI = value
+        End Set
+    End Property
+
+    Public Property IDMateriaPrimaP() As Integer
+        Get
+            Return Me.ID_MP
+        End Get
+        Set(ByVal value As Integer)
+            Me.ID_MP = value
+        End Set
+    End Property
+
+    Public Property FechaProcesoP() As Date
+        Get
+            Return Me.FechaProceso
         End Get
         Set(ByVal value As Date)
-            Me.FechaInicioProceso = value
+            Me.FechaProceso = value
         End Set
     End Property
 
     Public Property ID_ProcesoP() As Integer
         Get
-            Return Me.EstadoSanitario
+            Return Me.Proceso
         End Get
         Set(ByVal value As Integer)
-            Me.EstadoSanitario = value
+            Me.Proceso = value
         End Set
     End Property
 

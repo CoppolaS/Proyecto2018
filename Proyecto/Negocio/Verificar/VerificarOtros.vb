@@ -191,6 +191,36 @@ Public Class VerificarOtros
         Return dv
     End Function
 
+    Public Function ValidoListaMateriasPrimasProcesos(ByVal Filtro As Integer) As DataView
+        ds = DatosO.ListaMateriasPrimasProcesos(Filtro)
+        ds.Tables(0).Columns(0).ColumnName = "ID"
+        ds.Tables(0).Columns(1).ColumnName = "Estado sanitario"
+        ds.Tables(0).Columns(2).ColumnName = "Fecha de avance"
+        ds.Tables(0).Columns(3).ColumnName = "Cantidad"
+        ds.Tables(0).Columns(4).ColumnName = "Cantidad actual"
+        ds.Tables(0).Columns(5).ColumnName = "Venta"
+        ds.Tables(0).Columns(6).ColumnName = "Eliminado"
+        ds.Tables(0).Columns(7).ColumnName = "Fecha de cosechado"
+        ds.Tables(0).Columns(8).ColumnName = "Fecha de plantado"
+        dv = ds.Tables(0).DefaultView
+        Return dv
+    End Function
+
+    Public Function ValidoListaProductosIntermediosProcesos(ByVal Filtro As Integer) As DataView
+        ds = DatosO.ListaProductosIntermediosProcesos(Filtro)
+        ds.Tables(0).Columns(0).ColumnName = "ID"
+        ds.Tables(0).Columns(1).ColumnName = "Fecha de entrada"
+        ds.Tables(0).Columns(2).ColumnName = "Fecha de salida"
+        ds.Tables(0).Columns(3).ColumnName = "Cantidad"
+        ds.Tables(0).Columns(4).ColumnName = "Venta"
+        ds.Tables(0).Columns(5).ColumnName = "Cantidad actual"
+        ds.Tables(0).Columns(6).ColumnName = "Eliminado"
+        ds.Tables(0).Columns(7).ColumnName = "Fecha de avance"
+        ds.Tables(0).Columns(8).ColumnName = "Fecha de cosechado"
+        dv = ds.Tables(0).DefaultView
+        Return dv
+    End Function
+
     Public Function ValidoIngresoParcelasCosechas(ByVal encapsuladora As Encapsuladoras.Produccion)
         DatosO.IngresoParcelaCosecha(encapsuladora)
         Return Nothing
@@ -198,6 +228,21 @@ Public Class VerificarOtros
 
     Public Function ValidoAsignarProcesoMP(ByVal encapsuladora As Encapsuladoras.Produccion)
         DatosO.AsignarProcesoMP(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoFinalizarProcesoMP(ByVal encapsuladora As Encapsuladoras.Produccion)
+        DatosO.FinalizarProcesoMP(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoAsignarProcesoPI(ByVal encapsuladora As Encapsuladoras.Produccion)
+        DatosO.AsignarProcesoPI(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoFinalizarProcesoPI(ByVal encapsuladora As Encapsuladoras.Produccion)
+        DatosO.FinalizarProcesoPI(encapsuladora)
         Return Nothing
     End Function
 

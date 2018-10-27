@@ -629,16 +629,72 @@ Public Class DatosOtros
         Return ds
     End Function
 
+    Public Function ListaMateriasPrimasProcesos(ByVal Filtro As Integer) As DataSet
+        sql = "CALL `proyecto`.`LABM_Produccion`(?opcion,?ID_P,?FechaCosechado,?Cantidad,?EstadoSanitario,?IDProductoIntermedio,?IDMateriaPrima,?FechaProceso,?IDProceso);"
+        Try
+            Con.cn2.Open()
+            cm = New MySqlCommand()
+            cm.CommandText = sql
+            cm.Connection = Con.cn2
+            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = Filtro
+            cm.Parameters.Add("?ID_P", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?FechaCosechado", MySqlDbType.Date).Value = "0000-00-00"
+            cm.Parameters.Add("?Cantidad", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?EstadoSanitario", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?IDProductoIntermedio", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?IDMateriaPrima", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?FechaProceso", MySqlDbType.Date).Value = "0000-00-00"
+            cm.Parameters.Add("?IDProceso", MySqlDbType.Int32).Value = 0
+            da = New MySqlDataAdapter(cm)
+            ds = New DataSet()
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Con.cn2.Close()
+        Return ds
+    End Function
+
+    Public Function ListaProductosIntermediosProcesos(ByVal Filtro As Integer) As DataSet
+        sql = "CALL `proyecto`.`LABM_Produccion`(?opcion,?ID_P,?FechaCosechado,?Cantidad,?EstadoSanitario,?IDProductoIntermedio,?IDMateriaPrima,?FechaProceso,?IDProceso);"
+        Try
+            Con.cn2.Open()
+            cm = New MySqlCommand()
+            cm.CommandText = sql
+            cm.Connection = Con.cn2
+            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = Filtro
+            cm.Parameters.Add("?ID_P", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?FechaCosechado", MySqlDbType.Date).Value = "0000-00-00"
+            cm.Parameters.Add("?Cantidad", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?EstadoSanitario", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?IDProductoIntermedio", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?IDMateriaPrima", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?FechaProceso", MySqlDbType.Date).Value = "0000-00-00"
+            cm.Parameters.Add("?IDProceso", MySqlDbType.Int32).Value = 0
+            da = New MySqlDataAdapter(cm)
+            ds = New DataSet()
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Con.cn2.Close()
+        Return ds
+    End Function
+
     Public Function IngresoParcelaCosecha(ByVal nodo As Encapsuladoras.Produccion) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 1)
                 cmd.Parameters.AddWithValue("ID_P", nodo.ID_ParcelaP)
                 cmd.Parameters.AddWithValue("FechaCosechado", nodo.FechaCosechadoP.ToString("yyyy-MM-dd"))
                 cmd.Parameters.AddWithValue("Cantidad", nodo.CantidadP)
                 cmd.Parameters.AddWithValue("EstadoSanitario", nodo.EstadoSanitarioP)
+                cmd.Parameters.AddWithValue("IDProductoIntermedio", 0)
+                cmd.Parameters.AddWithValue("IDMateriaPrima", 0)
+                cmd.Parameters.AddWithValue("FechaProceso", "0000-00-00")
+                cmd.Parameters.AddWithValue("IDProceso", 0)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
@@ -653,27 +709,118 @@ Public Class DatosOtros
         Return False
     End Function
 
-    'pendiente
     Public Function AsignarProcesoMP(ByVal nodo As Encapsuladoras.Produccion) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
-                cmd.Parameters.AddWithValue("opcion", 1)
-                cmd.Parameters.AddWithValue("ID_P", nodo.ID_ParcelaP)
-                cmd.Parameters.AddWithValue("FechaCosechado", nodo.FechaCosechadoP.ToString("yyyy-MM-dd"))
-                cmd.Parameters.AddWithValue("Cantidad", nodo.CantidadP)
-                cmd.Parameters.AddWithValue("EstadoSanitario", nodo.EstadoSanitarioP)
+                cmd.Parameters.AddWithValue("opcion", 2)
+                cmd.Parameters.AddWithValue("ID_P", 0)
+                cmd.Parameters.AddWithValue("FechaCosechado", "0000-00-00")
+                cmd.Parameters.AddWithValue("Cantidad", 0)
+                cmd.Parameters.AddWithValue("EstadoSanitario", 0)
+                cmd.Parameters.AddWithValue("IDProductoIntermedio", 0)
+                cmd.Parameters.AddWithValue("IDMateriaPrima", nodo.IDMateriaPrimaP)
+                cmd.Parameters.AddWithValue("FechaProceso", nodo.FechaProcesoP.ToString("yyyy-MM-dd"))
+                cmd.Parameters.AddWithValue("IDProceso", nodo.ID_ProcesoP)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
+                MsgBox(o.ToString)
                 Return False
             Finally
                 Con.cn1.Close()
             End Try
             Return True
         Catch ex As Exception
-            MsgBox("Error al ingresar la cosecha")
+            MsgBox("Error al ingresar el proceso en la materia prima")
+        End Try
+        Return False
+    End Function
+
+    Public Function FinalizarProcesoMP(ByVal nodo As Encapsuladoras.Produccion) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 3)
+                cmd.Parameters.AddWithValue("ID_P", 0)
+                cmd.Parameters.AddWithValue("FechaCosechado", "0000-00-00")
+                cmd.Parameters.AddWithValue("Cantidad", 0)
+                cmd.Parameters.AddWithValue("EstadoSanitario", 0)
+                cmd.Parameters.AddWithValue("IDProductoIntermedio", 0)
+                cmd.Parameters.AddWithValue("IDMateriaPrima", nodo.IDMateriaPrimaP)
+                cmd.Parameters.AddWithValue("FechaProceso", nodo.FechaProcesoP.ToString("yyyy-MM-dd"))
+                cmd.Parameters.AddWithValue("IDProceso", 0)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                MsgBox(o.ToString)
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al ingresar el proceso en la materia prima")
+        End Try
+        Return False
+    End Function
+
+    Public Function AsignarProcesoPI(ByVal nodo As Encapsuladoras.Produccion) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 4)
+                cmd.Parameters.AddWithValue("ID_P", 0)
+                cmd.Parameters.AddWithValue("FechaCosechado", "0000-00-00")
+                cmd.Parameters.AddWithValue("Cantidad", 0)
+                cmd.Parameters.AddWithValue("EstadoSanitario", 0)
+                cmd.Parameters.AddWithValue("IDProductoIntermedio", nodo.IDProductoIntermedioP)
+                cmd.Parameters.AddWithValue("IDMateriaPrima", 0)
+                cmd.Parameters.AddWithValue("FechaProceso", nodo.FechaProcesoP.ToString("yyyy-MM-dd"))
+                cmd.Parameters.AddWithValue("IDProceso", nodo.ID_ProcesoP)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                MsgBox(o.ToString)
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al ingresar el proceso en el producto intermedio")
+        End Try
+        Return False
+    End Function
+
+    Public Function FinalizarProcesoPI(ByVal nodo As Encapsuladoras.Produccion) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?,?,?,?,?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", 5)
+                cmd.Parameters.AddWithValue("ID_P", 0)
+                cmd.Parameters.AddWithValue("FechaCosechado", "0000-00-00")
+                cmd.Parameters.AddWithValue("Cantidad", 0)
+                cmd.Parameters.AddWithValue("EstadoSanitario", 0)
+                cmd.Parameters.AddWithValue("IDProductoIntermedio", nodo.IDProductoIntermedioP)
+                cmd.Parameters.AddWithValue("IDMateriaPrima", 0)
+                cmd.Parameters.AddWithValue("FechaProceso", nodo.FechaProcesoP.ToString("yyyy-MM-dd"))
+                cmd.Parameters.AddWithValue("IDProceso", 0)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                MsgBox(o.ToString)
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error al ingresar el proceso en el producto intermedio")
         End Try
         Return False
     End Function

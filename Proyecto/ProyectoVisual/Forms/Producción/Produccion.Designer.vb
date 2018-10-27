@@ -34,6 +34,8 @@ Partial Class Produccion
         Me.Label16 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
@@ -50,15 +52,10 @@ Partial Class Produccion
         Me.Button10 = New System.Windows.Forms.Button()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.Tabla8 = New Proyecto.Tabla()
         Me.TabControl2 = New System.Windows.Forms.TabControl()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -75,22 +72,30 @@ Partial Class Produccion
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Button13 = New System.Windows.Forms.Button()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.ComboBoxSucursales1 = New Proyecto.ComboBoxSucursales()
-        Me.Tabla6 = New Proyecto.Tabla()
-        Me.Tabla7 = New Proyecto.Tabla()
         Me.Tabla11 = New Proyecto.Tabla()
         Me.Tabla10 = New Proyecto.Tabla()
         Me.Tabla9 = New Proyecto.Tabla()
-        Me.Tabla8 = New Proyecto.Tabla()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxSucursales1 = New Proyecto.ComboBoxSucursales()
         Me.Tabla3 = New Proyecto.Tabla()
         Me.Tabla2 = New Proyecto.Tabla()
         Me.Tabla1 = New Proyecto.Tabla()
         Me.Menu1 = New Proyecto.Menu()
+        Me.ComboBox7 = New System.Windows.Forms.ComboBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -210,6 +215,7 @@ Partial Class Produccion
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Label22)
         Me.TabPage1.Controls.Add(Me.Label17)
         Me.TabPage1.Controls.Add(Me.Label4)
         Me.TabPage1.Controls.Add(Me.Button4)
@@ -223,6 +229,24 @@ Partial Class Produccion
         Me.TabPage1.Text = "Asignar proceso"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(163, 121)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(52, 15)
+        Me.Label17.TabIndex = 10
+        Me.Label17.Text = "Proceso"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(61, 92)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(154, 15)
+        Me.Label4.TabIndex = 9
+        Me.Label4.Text = "Fecha de inicio de proceso"
+        '
         'Button4
         '
         Me.Button4.Location = New System.Drawing.Point(361, 264)
@@ -235,7 +259,7 @@ Partial Class Produccion
         'ComboBox3
         '
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(197, 95)
+        Me.ComboBox3.Location = New System.Drawing.Point(221, 113)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(244, 23)
         Me.ComboBox3.TabIndex = 1
@@ -243,13 +267,14 @@ Partial Class Produccion
         '
         'DateTimePicker2
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(197, 68)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(221, 86)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(244, 21)
         Me.DateTimePicker2.TabIndex = 0
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Label23)
         Me.TabPage2.Controls.Add(Me.Button5)
         Me.TabPage2.Controls.Add(Me.Label5)
         Me.TabPage2.Controls.Add(Me.DateTimePicker3)
@@ -263,7 +288,7 @@ Partial Class Produccion
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(13, 55)
+        Me.Button5.Location = New System.Drawing.Point(326, 264)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(139, 23)
         Me.Button5.TabIndex = 2
@@ -273,7 +298,7 @@ Partial Class Produccion
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(13, 10)
+        Me.Label5.Location = New System.Drawing.Point(13, 113)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(190, 15)
         Me.Label5.TabIndex = 1
@@ -281,7 +306,7 @@ Partial Class Produccion
         '
         'DateTimePicker3
         '
-        Me.DateTimePicker3.Location = New System.Drawing.Point(13, 28)
+        Me.DateTimePicker3.Location = New System.Drawing.Point(209, 108)
         Me.DateTimePicker3.Name = "DateTimePicker3"
         Me.DateTimePicker3.Size = New System.Drawing.Size(245, 21)
         Me.DateTimePicker3.TabIndex = 0
@@ -371,6 +396,13 @@ Partial Class Produccion
         Me.Label8.TabIndex = 1
         Me.Label8.Text = "Cantidad K:"
         '
+        'Tabla8
+        '
+        Me.Tabla8.Location = New System.Drawing.Point(95, 13)
+        Me.Tabla8.Name = "Tabla8"
+        Me.Tabla8.Size = New System.Drawing.Size(370, 245)
+        Me.Tabla8.TabIndex = 0
+        '
         'TabControl2
         '
         Me.TabControl2.Controls.Add(Me.TabPage4)
@@ -385,15 +417,12 @@ Partial Class Produccion
         '
         'TabPage4
         '
-        Me.TabPage4.Controls.Add(Me.Button8)
-        Me.TabPage4.Controls.Add(Me.Button6)
-        Me.TabPage4.Controls.Add(Me.Button7)
-        Me.TabPage4.Controls.Add(Me.TextBox4)
+        Me.TabPage4.Controls.Add(Me.Label24)
         Me.TabPage4.Controls.Add(Me.Label6)
-        Me.TabPage4.Controls.Add(Me.Tabla6)
-        Me.TabPage4.Controls.Add(Me.Tabla7)
+        Me.TabPage4.Controls.Add(Me.Label21)
         Me.TabPage4.Controls.Add(Me.ComboBox4)
         Me.TabPage4.Controls.Add(Me.DateTimePicker4)
+        Me.TabPage4.Controls.Add(Me.Button8)
         Me.TabPage4.Location = New System.Drawing.Point(4, 24)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(10)
@@ -411,58 +440,9 @@ Partial Class Produccion
         Me.Button8.Text = "Aceptar"
         Me.Button8.UseVisualStyleBackColor = True
         '
-        'Button6
-        '
-        Me.Button6.Location = New System.Drawing.Point(195, 264)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(66, 23)
-        Me.Button6.TabIndex = 15
-        Me.Button6.Text = "Quitar"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
-        'Button7
-        '
-        Me.Button7.Location = New System.Drawing.Point(123, 264)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(66, 23)
-        Me.Button7.TabIndex = 14
-        Me.Button7.Text = "Agregar"
-        Me.Button7.UseVisualStyleBackColor = True
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(13, 266)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(104, 21)
-        Me.TextBox4.TabIndex = 13
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(33, 248)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(56, 15)
-        Me.Label6.TabIndex = 12
-        Me.Label6.Text = "Cantidad"
-        '
-        'ComboBox4
-        '
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(213, 11)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(201, 23)
-        Me.ComboBox4.TabIndex = 3
-        Me.ComboBox4.Text = "Procesos"
-        '
-        'DateTimePicker4
-        '
-        Me.DateTimePicker4.Location = New System.Drawing.Point(13, 13)
-        Me.DateTimePicker4.Name = "DateTimePicker4"
-        Me.DateTimePicker4.Size = New System.Drawing.Size(194, 21)
-        Me.DateTimePicker4.TabIndex = 2
-        '
         'TabPage5
         '
+        Me.TabPage5.Controls.Add(Me.Label25)
         Me.TabPage5.Controls.Add(Me.Button9)
         Me.TabPage5.Controls.Add(Me.Label7)
         Me.TabPage5.Controls.Add(Me.DateTimePicker5)
@@ -476,7 +456,7 @@ Partial Class Produccion
         '
         'Button9
         '
-        Me.Button9.Location = New System.Drawing.Point(13, 55)
+        Me.Button9.Location = New System.Drawing.Point(275, 264)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(139, 23)
         Me.Button9.TabIndex = 5
@@ -486,7 +466,7 @@ Partial Class Produccion
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(13, 10)
+        Me.Label7.Location = New System.Drawing.Point(13, 113)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(190, 15)
         Me.Label7.TabIndex = 4
@@ -494,9 +474,9 @@ Partial Class Produccion
         '
         'DateTimePicker5
         '
-        Me.DateTimePicker5.Location = New System.Drawing.Point(13, 28)
+        Me.DateTimePicker5.Location = New System.Drawing.Point(209, 107)
         Me.DateTimePicker5.Name = "DateTimePicker5"
-        Me.DateTimePicker5.Size = New System.Drawing.Size(245, 21)
+        Me.DateTimePicker5.Size = New System.Drawing.Size(205, 21)
         Me.DateTimePicker5.TabIndex = 3
         '
         'TabPage6
@@ -618,6 +598,27 @@ Partial Class Produccion
         Me.Button13.Text = "Agregar"
         Me.Button13.UseVisualStyleBackColor = True
         '
+        'Tabla11
+        '
+        Me.Tabla11.Location = New System.Drawing.Point(306, 31)
+        Me.Tabla11.Name = "Tabla11"
+        Me.Tabla11.Size = New System.Drawing.Size(108, 155)
+        Me.Tabla11.TabIndex = 18
+        '
+        'Tabla10
+        '
+        Me.Tabla10.Location = New System.Drawing.Point(192, 31)
+        Me.Tabla10.Name = "Tabla10"
+        Me.Tabla10.Size = New System.Drawing.Size(108, 155)
+        Me.Tabla10.TabIndex = 17
+        '
+        'Tabla9
+        '
+        Me.Tabla9.Location = New System.Drawing.Point(13, 58)
+        Me.Tabla9.Name = "Tabla9"
+        Me.Tabla9.Size = New System.Drawing.Size(142, 155)
+        Me.Tabla9.TabIndex = 15
+        '
         'Label13
         '
         Me.Label13.AutoSize = True
@@ -645,23 +646,40 @@ Partial Class Produccion
         Me.Label15.TabIndex = 20
         Me.Label15.Text = "Parcelas / Plantaciones"
         '
-        'Label4
+        'Label18
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(37, 74)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(154, 15)
-        Me.Label4.TabIndex = 9
-        Me.Label4.Text = "Fecha de inicio de proceso"
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(326, 64)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(70, 13)
+        Me.Label18.TabIndex = 21
+        Me.Label18.Text = "Materia prima"
         '
-        'Label17
+        'Label19
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(139, 103)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(52, 15)
-        Me.Label17.TabIndex = 10
-        Me.Label17.Text = "Proceso"
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(818, 61)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(101, 13)
+        Me.Label19.TabIndex = 22
+        Me.Label19.Text = "Producto intermedio"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(381, 80)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(0, 13)
+        Me.Label20.TabIndex = 24
+        '
+        'ComboBox6
+        '
+        Me.ComboBox6.FormattingEnabled = True
+        Me.ComboBox6.Items.AddRange(New Object() {"Materias primas sin procesos activos", "Materias primas con procesos activos"})
+        Me.ComboBox6.Location = New System.Drawing.Point(325, 80)
+        Me.ComboBox6.Name = "ComboBox6"
+        Me.ComboBox6.Size = New System.Drawing.Size(229, 21)
+        Me.ComboBox6.TabIndex = 23
         '
         'ComboBoxSucursales1
         '
@@ -670,60 +688,18 @@ Partial Class Produccion
         Me.ComboBoxSucursales1.Size = New System.Drawing.Size(250, 21)
         Me.ComboBoxSucursales1.TabIndex = 17
         '
-        'Tabla6
-        '
-        Me.Tabla6.Location = New System.Drawing.Point(213, 40)
-        Me.Tabla6.Name = "Tabla6"
-        Me.Tabla6.Size = New System.Drawing.Size(201, 205)
-        Me.Tabla6.TabIndex = 11
-        '
-        'Tabla7
-        '
-        Me.Tabla7.Location = New System.Drawing.Point(13, 40)
-        Me.Tabla7.Name = "Tabla7"
-        Me.Tabla7.Size = New System.Drawing.Size(194, 205)
-        Me.Tabla7.TabIndex = 10
-        '
-        'Tabla11
-        '
-        Me.Tabla11.Location = New System.Drawing.Point(306, 31)
-        Me.Tabla11.Name = "Tabla11"
-        Me.Tabla11.Size = New System.Drawing.Size(108, 155)
-        Me.Tabla11.TabIndex = 18
-        '
-        'Tabla10
-        '
-        Me.Tabla10.Location = New System.Drawing.Point(192, 31)
-        Me.Tabla10.Name = "Tabla10"
-        Me.Tabla10.Size = New System.Drawing.Size(108, 155)
-        Me.Tabla10.TabIndex = 17
-        '
-        'Tabla9
-        '
-        Me.Tabla9.Location = New System.Drawing.Point(13, 58)
-        Me.Tabla9.Name = "Tabla9"
-        Me.Tabla9.Size = New System.Drawing.Size(142, 155)
-        Me.Tabla9.TabIndex = 15
-        '
-        'Tabla8
-        '
-        Me.Tabla8.Location = New System.Drawing.Point(95, 13)
-        Me.Tabla8.Name = "Tabla8"
-        Me.Tabla8.Size = New System.Drawing.Size(370, 245)
-        Me.Tabla8.TabIndex = 0
-        '
         'Tabla3
         '
-        Me.Tabla3.Location = New System.Drawing.Point(817, 77)
+        Me.Tabla3.Location = New System.Drawing.Point(817, 104)
         Me.Tabla3.Name = "Tabla3"
-        Me.Tabla3.Size = New System.Drawing.Size(435, 258)
+        Me.Tabla3.Size = New System.Drawing.Size(435, 231)
         Me.Tabla3.TabIndex = 3
         '
         'Tabla2
         '
-        Me.Tabla2.Location = New System.Drawing.Point(325, 77)
+        Me.Tabla2.Location = New System.Drawing.Point(325, 104)
         Me.Tabla2.Name = "Tabla2"
-        Me.Tabla2.Size = New System.Drawing.Size(486, 258)
+        Me.Tabla2.Size = New System.Drawing.Size(486, 231)
         Me.Tabla2.TabIndex = 2
         '
         'Tabla1
@@ -740,11 +716,95 @@ Partial Class Produccion
         Me.Menu1.Size = New System.Drawing.Size(1240, 32)
         Me.Menu1.TabIndex = 0
         '
+        'ComboBox7
+        '
+        Me.ComboBox7.FormattingEnabled = True
+        Me.ComboBox7.Items.AddRange(New Object() {"Productos intermedios sin procesos activos", "Productos intermedios con procesos activos"})
+        Me.ComboBox7.Location = New System.Drawing.Point(817, 80)
+        Me.ComboBox7.Name = "ComboBox7"
+        Me.ComboBox7.Size = New System.Drawing.Size(229, 21)
+        Me.ComboBox7.TabIndex = 25
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(112, 121)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(52, 15)
+        Me.Label6.TabIndex = 20
+        Me.Label6.Text = "Proceso"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(10, 92)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(154, 15)
+        Me.Label21.TabIndex = 19
+        Me.Label21.Text = "Fecha de inicio de proceso"
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Location = New System.Drawing.Point(170, 113)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(244, 23)
+        Me.ComboBox4.TabIndex = 18
+        Me.ComboBox4.Text = "Procesos"
+        '
+        'DateTimePicker4
+        '
+        Me.DateTimePicker4.Location = New System.Drawing.Point(170, 86)
+        Me.DateTimePicker4.Name = "DateTimePicker4"
+        Me.DateTimePicker4.Size = New System.Drawing.Size(244, 21)
+        Me.DateTimePicker4.TabIndex = 17
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(13, 10)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(222, 15)
+        Me.Label22.TabIndex = 14
+        Me.Label22.Text = "Seleccionar una materia prima primero"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(13, 10)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(222, 15)
+        Me.Label23.TabIndex = 15
+        Me.Label23.Text = "Seleccionar una materia prima primero"
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(13, 10)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(248, 15)
+        Me.Label24.TabIndex = 21
+        Me.Label24.Text = "Seleccionar un producto intermedio primero"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(13, 10)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(248, 15)
+        Me.Label25.TabIndex = 22
+        Me.Label25.Text = "Seleccionar un producto intermedio primero"
+        '
         'Produccion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.Controls.Add(Me.ComboBox7)
+        Me.Controls.Add(Me.Label20)
+        Me.Controls.Add(Me.ComboBox6)
+        Me.Controls.Add(Me.Label19)
+        Me.Controls.Add(Me.Label18)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Label13)
@@ -808,15 +868,7 @@ Partial Class Produccion
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents DateTimePicker3 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Button5 As System.Windows.Forms.Button
-    Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
-    Friend WithEvents DateTimePicker4 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Button8 As System.Windows.Forms.Button
-    Friend WithEvents Button6 As System.Windows.Forms.Button
-    Friend WithEvents Button7 As System.Windows.Forms.Button
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents Tabla6 As Proyecto.Tabla
-    Friend WithEvents Tabla7 As Proyecto.Tabla
     Friend WithEvents Button9 As System.Windows.Forms.Button
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents DateTimePicker5 As System.Windows.Forms.DateTimePicker
@@ -851,4 +903,17 @@ Partial Class Produccion
     Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label18 As System.Windows.Forms.Label
+    Friend WithEvents Label19 As System.Windows.Forms.Label
+    Friend WithEvents Label20 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox6 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox7 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label21 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
+    Friend WithEvents DateTimePicker4 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label22 As System.Windows.Forms.Label
+    Friend WithEvents Label23 As System.Windows.Forms.Label
+    Friend WithEvents Label24 As System.Windows.Forms.Label
+    Friend WithEvents Label25 As System.Windows.Forms.Label
 End Class

@@ -8,6 +8,7 @@ Public Class AsignarTratamientos
 
     Private Sub GestionCultivos_Load(sender As System.Object, e As System.EventArgs) Handles Me.Load, ComboBoxSucursales1.SeleccionCambio
         ComboBox1.Items.Clear()
+        ComboBox3.Items.Clear()
         DateTimePicker1.Format = DateTimePickerFormat.Custom
         DateTimePicker2.Format = DateTimePickerFormat.Custom
         DateTimePicker3.Format = DateTimePickerFormat.Custom
