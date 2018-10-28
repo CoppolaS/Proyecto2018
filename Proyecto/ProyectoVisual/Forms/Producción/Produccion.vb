@@ -203,14 +203,42 @@ Public Class Produccion
     End Sub
 
     Private Sub ProcesoPIcambio(sender As System.Object, e As System.EventArgs) Handles ComboBox4.SelectedIndexChanged
-
+        dv = Verif.ValidoListaTanquesBarricas(Integer.Parse(ComboBox4.SelectedItem))
+        dv.RowFilter = "Eliminado = 0"
+        Tabla5.DataGridView1.DataSource = dv
+        Try
+            Tabla4.DataGridView1.Columns.Clear()
+        Catch ex As Exception
+        End Try
+        For i As Integer = 0 To Tabla5.DataGridView1.Columns.Count - 1
+            Tabla4.DataGridView1.Columns.Add(Tabla5.DataGridView1.Columns.Item(i).HeaderText, Tabla5.DataGridView1.Columns.Item(i).HeaderText)
+        Next
+        Tabla4.DataGridView1.Columns(0).Visible = False
+        Tabla4.DataGridView1.Columns(2).Visible = False
+        Tabla4.DataGridView1.Columns("Eliminado").Visible = False
+        Tabla5.DataGridView1.Columns(0).Visible = False
+        Tabla5.DataGridView1.Columns(2).Visible = False
+        Tabla5.DataGridView1.Columns("Eliminado").Visible = False
+        Tabla4.DataGridView1.ClearSelection()
+        Tabla5.DataGridView1.ClearSelection()
     End Sub
 
     Private Sub AgregarProcesoPI(sender As System.Object, e As System.EventArgs) Handles Button2.Click
-
+        Dim row As New DataGridViewRow
+        If Tabla5.DataGridView1.Columns.Count = 6 Then
+            For i As Integer = 0 To 5
+                row.Cells(i).Value = Tabla5.DataGridView1.Rows(Tabla5.DataGridView1.CurrentRow.Index).Cells(i).Value
+            Next
+        Else
+            For i As Integer = 0 To 6
+                row.Cells(i).Value = Tabla5.DataGridView1.Rows(Tabla5.DataGridView1.CurrentRow.Index).Cells(i).Value
+            Next
+        End If
+        Tabla4.DataGridView1.Rows.Add(row)
+        Tabla4.DataGridView1.ClearSelection()
     End Sub
 
     Private Sub QuitarProcesoPI(sender As System.Object, e As System.EventArgs) Handles Button3.Click
-
+        Tabla4.DataGridView1.Rows.RemoveAt(Tabla4.DataGridView1.CurrentRow.Index)
     End Sub
 End Class

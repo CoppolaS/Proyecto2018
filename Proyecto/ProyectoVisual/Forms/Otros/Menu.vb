@@ -10,7 +10,6 @@ Public Class Menu
         Select Case Datos.UsuarioLogeado.Privilegios
             Case 3
                 TransaccionesToolStripMenuItem.Enabled = False
-                EstadísticasToolStripMenuItem.Enabled = False
                 RegistroHistóricoToolStripMenuItem.Enabled = False
             Case 4
                 TransaccionesToolStripMenuItem.Enabled = False
@@ -257,7 +256,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub ReservasToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ReservasToolStripMenuItem.Click
+    Private Sub ReservasToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs)
         If (ParentForm.Name = "Reservas") Then
             Exit Sub
         Else
@@ -275,7 +274,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub EstadísticasToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles EstadísticasToolStripMenuItem.Click
+    Private Sub EstadísticasToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs)
         If (ParentForm.Name = "Estadisticas") Then
             Exit Sub
         Else

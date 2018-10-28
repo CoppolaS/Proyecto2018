@@ -901,4 +901,32 @@ Public Class DatosOtros
         Return False
     End Function
 
+    Public Function ListaTanquesBarricas(ByVal ID_P As Integer) As DataSet
+        sql = "CALL `proyecto`.`LABM_Produccion`(?opcion,?ID_P,?FechaCosechado,?Cantidad,?EstadoSanitario,?IDProductoIntermedio,?IDMateriaPrima,?FechaProceso,?IDProceso,?FechaAvance,?CantidadLitros);"
+        Try
+            Con.cn2.Open()
+            cm = New MySqlCommand()
+            cm.CommandText = sql
+            cm.Connection = Con.cn2
+            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 12
+            cm.Parameters.Add("?ID_P", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?FechaCosechado", MySqlDbType.Date).Value = "0000-00-00"
+            cm.Parameters.Add("?Cantidad", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?EstadoSanitario", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?IDProductoIntermedio", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?IDMateriaPrima", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?FechaProceso", MySqlDbType.Date).Value = "0000-00-00"
+            cm.Parameters.Add("?IDProceso", MySqlDbType.Int32).Value = ID_P
+            cm.Parameters.Add("?FechaAvance", MySqlDbType.Date).Value = "0000-00-00"
+            cm.Parameters.Add("?CantidadLitros", MySqlDbType.Int32).Value = 0
+            da = New MySqlDataAdapter(cm)
+            ds = New DataSet()
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Con.cn2.Close()
+        Return ds
+    End Function
+
 End Class

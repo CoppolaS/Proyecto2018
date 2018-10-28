@@ -54,11 +54,11 @@ Partial Class Produccion
         Me.Button10 = New System.Windows.Forms.Button()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Tabla8 = New Proyecto.Tabla()
         Me.TabControl2 = New System.Windows.Forms.TabControl()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.Tabla5 = New Proyecto.Tabla()
-        Me.Tabla4 = New Proyecto.Tabla()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label26 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
@@ -82,9 +82,6 @@ Partial Class Produccion
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Button13 = New System.Windows.Forms.Button()
-        Me.Tabla11 = New Proyecto.Tabla()
-        Me.Tabla10 = New Proyecto.Tabla()
-        Me.Tabla9 = New Proyecto.Tabla()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -94,13 +91,16 @@ Partial Class Produccion
         Me.ComboBox6 = New System.Windows.Forms.ComboBox()
         Me.ComboBox7 = New System.Windows.Forms.ComboBox()
         Me.ComboBoxSucursales1 = New Proyecto.ComboBoxSucursales()
+        Me.Tabla5 = New Proyecto.Tabla()
+        Me.Tabla4 = New Proyecto.Tabla()
+        Me.Tabla11 = New Proyecto.Tabla()
+        Me.Tabla10 = New Proyecto.Tabla()
+        Me.Tabla9 = New Proyecto.Tabla()
+        Me.Tabla8 = New Proyecto.Tabla()
         Me.Tabla3 = New Proyecto.Tabla()
         Me.Tabla2 = New Proyecto.Tabla()
         Me.Tabla1 = New Proyecto.Tabla()
         Me.Menu1 = New Proyecto.Menu()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -422,13 +422,6 @@ Partial Class Produccion
         Me.Label8.TabIndex = 1
         Me.Label8.Text = "Cantidad a prensar:"
         '
-        'Tabla8
-        '
-        Me.Tabla8.Location = New System.Drawing.Point(123, 13)
-        Me.Tabla8.Name = "Tabla8"
-        Me.Tabla8.Size = New System.Drawing.Size(363, 245)
-        Me.Tabla8.TabIndex = 0
-        '
         'TabControl2
         '
         Me.TabControl2.Controls.Add(Me.TabPage4)
@@ -462,19 +455,32 @@ Partial Class Produccion
         Me.TabPage4.Text = "Asignar proceso"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
-        'Tabla5
+        'Button3
         '
-        Me.Tabla5.Location = New System.Drawing.Point(165, 103)
-        Me.Tabla5.Name = "Tabla5"
-        Me.Tabla5.Size = New System.Drawing.Size(144, 154)
-        Me.Tabla5.TabIndex = 23
+        Me.Button3.Location = New System.Drawing.Point(110, 264)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(101, 23)
+        Me.Button3.TabIndex = 28
+        Me.Button3.Text = "Quitar"
+        Me.Button3.UseVisualStyleBackColor = True
         '
-        'Tabla4
+        'Button2
         '
-        Me.Tabla4.Location = New System.Drawing.Point(320, 103)
-        Me.Tabla4.Name = "Tabla4"
-        Me.Tabla4.Size = New System.Drawing.Size(144, 154)
-        Me.Tabla4.TabIndex = 22
+        Me.Button2.Location = New System.Drawing.Point(3, 264)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(101, 23)
+        Me.Button2.TabIndex = 27
+        Me.Button2.Text = "Agregar"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Location = New System.Drawing.Point(165, 83)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(200, 15)
+        Me.Label26.TabIndex = 26
+        Me.Label26.Text = "Agregar los tanques/barricas a usar"
         '
         'Label24
         '
@@ -695,27 +701,6 @@ Partial Class Produccion
         Me.Button13.Text = "Agregar"
         Me.Button13.UseVisualStyleBackColor = True
         '
-        'Tabla11
-        '
-        Me.Tabla11.Location = New System.Drawing.Point(306, 31)
-        Me.Tabla11.Name = "Tabla11"
-        Me.Tabla11.Size = New System.Drawing.Size(108, 155)
-        Me.Tabla11.TabIndex = 18
-        '
-        'Tabla10
-        '
-        Me.Tabla10.Location = New System.Drawing.Point(192, 31)
-        Me.Tabla10.Name = "Tabla10"
-        Me.Tabla10.Size = New System.Drawing.Size(108, 155)
-        Me.Tabla10.TabIndex = 17
-        '
-        'Tabla9
-        '
-        Me.Tabla9.Location = New System.Drawing.Point(13, 58)
-        Me.Tabla9.Name = "Tabla9"
-        Me.Tabla9.Size = New System.Drawing.Size(142, 155)
-        Me.Tabla9.TabIndex = 15
-        '
         'Label13
         '
         Me.Label13.AutoSize = True
@@ -794,6 +779,48 @@ Partial Class Produccion
         Me.ComboBoxSucursales1.Size = New System.Drawing.Size(179, 21)
         Me.ComboBoxSucursales1.TabIndex = 17
         '
+        'Tabla5
+        '
+        Me.Tabla5.Location = New System.Drawing.Point(3, 104)
+        Me.Tabla5.Name = "Tabla5"
+        Me.Tabla5.Size = New System.Drawing.Size(238, 154)
+        Me.Tabla5.TabIndex = 23
+        '
+        'Tabla4
+        '
+        Me.Tabla4.Location = New System.Drawing.Point(247, 103)
+        Me.Tabla4.Name = "Tabla4"
+        Me.Tabla4.Size = New System.Drawing.Size(227, 154)
+        Me.Tabla4.TabIndex = 22
+        '
+        'Tabla11
+        '
+        Me.Tabla11.Location = New System.Drawing.Point(306, 31)
+        Me.Tabla11.Name = "Tabla11"
+        Me.Tabla11.Size = New System.Drawing.Size(108, 155)
+        Me.Tabla11.TabIndex = 18
+        '
+        'Tabla10
+        '
+        Me.Tabla10.Location = New System.Drawing.Point(192, 31)
+        Me.Tabla10.Name = "Tabla10"
+        Me.Tabla10.Size = New System.Drawing.Size(108, 155)
+        Me.Tabla10.TabIndex = 17
+        '
+        'Tabla9
+        '
+        Me.Tabla9.Location = New System.Drawing.Point(13, 58)
+        Me.Tabla9.Name = "Tabla9"
+        Me.Tabla9.Size = New System.Drawing.Size(142, 155)
+        Me.Tabla9.TabIndex = 15
+        '
+        'Tabla8
+        '
+        Me.Tabla8.Location = New System.Drawing.Point(123, 13)
+        Me.Tabla8.Name = "Tabla8"
+        Me.Tabla8.Size = New System.Drawing.Size(363, 245)
+        Me.Tabla8.TabIndex = 0
+        '
         'Tabla3
         '
         Me.Tabla3.Location = New System.Drawing.Point(767, 104)
@@ -821,33 +848,6 @@ Partial Class Produccion
         Me.Menu1.Name = "Menu1"
         Me.Menu1.Size = New System.Drawing.Size(1240, 32)
         Me.Menu1.TabIndex = 0
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(165, 83)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(200, 15)
-        Me.Label26.TabIndex = 26
-        Me.Label26.Text = "Agregar los tanques/barricas a usar"
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(58, 137)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(101, 23)
-        Me.Button3.TabIndex = 28
-        Me.Button3.Text = "Quitar"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(58, 108)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(101, 23)
-        Me.Button2.TabIndex = 27
-        Me.Button2.Text = "Agregar"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Produccion
         '

@@ -55,9 +55,7 @@ Partial Class Menu
         Me.TransaccionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ComprasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReservasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GestiónDeProducciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EstadísticasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManualDeUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -69,7 +67,7 @@ Partial Class Menu
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.Control
         Me.MenuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.MenuStrip1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ObservacionesToolStripMenuItem1, Me.AlertasToolStripMenuItem, Me.InicioToolStripMenuItem, Me.ProducciónToolStripMenuItem, Me.EmpresaToolStripMenuItem, Me.ParámetrosToolStripMenuItem, Me.TrazabilidadToolStripMenuItem, Me.RegistroHistóricoToolStripMenuItem, Me.TransaccionesToolStripMenuItem, Me.EstadísticasToolStripMenuItem, Me.AyudaToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ObservacionesToolStripMenuItem1, Me.AlertasToolStripMenuItem, Me.InicioToolStripMenuItem, Me.ProducciónToolStripMenuItem, Me.EmpresaToolStripMenuItem, Me.ParámetrosToolStripMenuItem, Me.TrazabilidadToolStripMenuItem, Me.RegistroHistóricoToolStripMenuItem, Me.TransaccionesToolStripMenuItem, Me.AyudaToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Margin = New System.Windows.Forms.Padding(0, 0, 0, 10)
         Me.MenuStrip1.Name = "MenuStrip1"
@@ -211,55 +209,55 @@ Partial Class Menu
         'BarricasToolStripMenuItem
         '
         Me.BarricasToolStripMenuItem.Name = "BarricasToolStripMenuItem"
-        Me.BarricasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BarricasToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
         Me.BarricasToolStripMenuItem.Text = "Barricas"
         '
         'DatosToolStripMenuItem
         '
         Me.DatosToolStripMenuItem.Name = "DatosToolStripMenuItem"
-        Me.DatosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DatosToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
         Me.DatosToolStripMenuItem.Text = "Datos"
         '
         'ProcesosToolStripMenuItem
         '
         Me.ProcesosToolStripMenuItem.Name = "ProcesosToolStripMenuItem"
-        Me.ProcesosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ProcesosToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
         Me.ProcesosToolStripMenuItem.Text = "Procesos"
         '
         'TanquesToolStripMenuItem
         '
         Me.TanquesToolStripMenuItem.Name = "TanquesToolStripMenuItem"
-        Me.TanquesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TanquesToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
         Me.TanquesToolStripMenuItem.Text = "Tanques"
         '
         'TransportesToolStripMenuItem
         '
         Me.TransportesToolStripMenuItem.Name = "TransportesToolStripMenuItem"
-        Me.TransportesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TransportesToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
         Me.TransportesToolStripMenuItem.Text = "Transportes"
         '
         'BotellasToolStripMenuItem
         '
         Me.BotellasToolStripMenuItem.Name = "BotellasToolStripMenuItem"
-        Me.BotellasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BotellasToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
         Me.BotellasToolStripMenuItem.Text = "Botellas"
         '
         'CepasToolStripMenuItem
         '
         Me.CepasToolStripMenuItem.Name = "CepasToolStripMenuItem"
-        Me.CepasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CepasToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
         Me.CepasToolStripMenuItem.Text = "Cepas"
         '
         'TratamientosToolStripMenuItem
         '
         Me.TratamientosToolStripMenuItem.Name = "TratamientosToolStripMenuItem"
-        Me.TratamientosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TratamientosToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
         Me.TratamientosToolStripMenuItem.Text = "Tratamientos"
         '
         'VinosToolStripMenuItem
         '
         Me.VinosToolStripMenuItem.Name = "VinosToolStripMenuItem"
-        Me.VinosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.VinosToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
         Me.VinosToolStripMenuItem.Text = "Vinos"
         '
         'TrazabilidadToolStripMenuItem
@@ -276,7 +274,7 @@ Partial Class Menu
         '
         'TransaccionesToolStripMenuItem
         '
-        Me.TransaccionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VentasToolStripMenuItem, Me.ComprasToolStripMenuItem, Me.ReservasToolStripMenuItem, Me.GestiónDeProducciónToolStripMenuItem})
+        Me.TransaccionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VentasToolStripMenuItem, Me.ComprasToolStripMenuItem, Me.GestiónDeProducciónToolStripMenuItem})
         Me.TransaccionesToolStripMenuItem.Name = "TransaccionesToolStripMenuItem"
         Me.TransaccionesToolStripMenuItem.Size = New System.Drawing.Size(99, 26)
         Me.TransaccionesToolStripMenuItem.Text = "Transacciones"
@@ -293,23 +291,11 @@ Partial Class Menu
         Me.ComprasToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
         Me.ComprasToolStripMenuItem.Text = "Compras"
         '
-        'ReservasToolStripMenuItem
-        '
-        Me.ReservasToolStripMenuItem.Name = "ReservasToolStripMenuItem"
-        Me.ReservasToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
-        Me.ReservasToolStripMenuItem.Text = "Reservas"
-        '
         'GestiónDeProducciónToolStripMenuItem
         '
         Me.GestiónDeProducciónToolStripMenuItem.Name = "GestiónDeProducciónToolStripMenuItem"
         Me.GestiónDeProducciónToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
         Me.GestiónDeProducciónToolStripMenuItem.Text = "Gestión de producción"
-        '
-        'EstadísticasToolStripMenuItem
-        '
-        Me.EstadísticasToolStripMenuItem.Name = "EstadísticasToolStripMenuItem"
-        Me.EstadísticasToolStripMenuItem.Size = New System.Drawing.Size(84, 26)
-        Me.EstadísticasToolStripMenuItem.Text = "Estadísticas"
         '
         'AyudaToolStripMenuItem
         '
@@ -356,7 +342,6 @@ Partial Class Menu
     Friend WithEvents TrazabilidadToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents RegistroHistóricoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TransaccionesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents EstadísticasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ProducciónToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GestiónDeCultivosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TrasladosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -380,7 +365,6 @@ Partial Class Menu
     Friend WithEvents VinosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents VentasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ComprasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ReservasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GestiónDeProducciónToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

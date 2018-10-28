@@ -261,4 +261,26 @@ Public Class VerificarOtros
         Return Nothing
     End Function
 
+    Public Function ValidoListaTanquesBarricas(ByVal ID_P As Integer) As DataView
+        ds = DatosO.ListaTanquesBarricas(ID_P)
+        If ds.Tables(0).Columns.Count = 6 Then
+            ds.Tables(0).Columns(0).ColumnName = "ID"
+            ds.Tables(0).Columns(1).ColumnName = "Número"
+            ds.Tables(0).Columns(2).ColumnName = "Disponible"
+            ds.Tables(0).Columns(3).ColumnName = "Capacidad"
+            ds.Tables(0).Columns(4).ColumnName = "Material"
+            ds.Tables(0).Columns(5).ColumnName = "Eliminado"
+        Else
+            ds.Tables(0).Columns(0).ColumnName = "ID"
+            ds.Tables(0).Columns(1).ColumnName = "Número"
+            ds.Tables(0).Columns(2).ColumnName = "Disponible"
+            ds.Tables(0).Columns(3).ColumnName = "Capacidad"
+            ds.Tables(0).Columns(4).ColumnName = "Material"
+            ds.Tables(0).Columns(5).ColumnName = "Número de usos"
+            ds.Tables(0).Columns(6).ColumnName = "Eliminado"
+        End If
+        dv = ds.Tables(0).DefaultView
+        Return dv
+    End Function
+
 End Class
