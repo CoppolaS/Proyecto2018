@@ -75,10 +75,11 @@ Public Class VerificarOtros
             ds.Tables(0).Columns(2).ColumnName = "Fecha de avance"
             ds.Tables(0).Columns(3).ColumnName = "Cantidad"
             ds.Tables(0).Columns(4).ColumnName = "Cantidad actual"
-            ds.Tables(0).Columns(5).ColumnName = "Venta"
-            ds.Tables(0).Columns(6).ColumnName = "Eliminado"
-            ds.Tables(0).Columns(7).ColumnName = "Fecha de cosechado"
-            ds.Tables(0).Columns(8).ColumnName = "Fecha de plantado"
+            ds.Tables(0).Columns(5).ColumnName = "Cantidad en venta"
+            ds.Tables(0).Columns(6).ColumnName = "Venta"
+            ds.Tables(0).Columns(7).ColumnName = "Eliminado"
+            ds.Tables(0).Columns(8).ColumnName = "Fecha de cosechado"
+            ds.Tables(0).Columns(9).ColumnName = "Fecha de plantado"
         Else
             ds.Tables(0).Columns(0).ColumnName = "Fecha del dato"
             ds.Tables(0).Columns(1).ColumnName = "Nombre del dato"
@@ -101,11 +102,12 @@ Public Class VerificarOtros
             ds.Tables(0).Columns(1).ColumnName = "Fecha de entrada"
             ds.Tables(0).Columns(2).ColumnName = "Fecha de salida"
             ds.Tables(0).Columns(3).ColumnName = "Cantidad"
-            ds.Tables(0).Columns(4).ColumnName = "Venta"
-            ds.Tables(0).Columns(5).ColumnName = "Cantidad actual"
-            ds.Tables(0).Columns(6).ColumnName = "Eliminado"
-            ds.Tables(0).Columns(7).ColumnName = "Fecha de avance"
-            ds.Tables(0).Columns(8).ColumnName = "Fecha de cosechado"
+            ds.Tables(0).Columns(4).ColumnName = "Cantidad actual"
+            ds.Tables(0).Columns(5).ColumnName = "Cantidad en venta"
+            ds.Tables(0).Columns(6).ColumnName = "Venta"
+            ds.Tables(0).Columns(7).ColumnName = "Eliminado"
+            ds.Tables(0).Columns(8).ColumnName = "Fecha de avance"
+            ds.Tables(0).Columns(9).ColumnName = "Fecha de cosechado"
         Else
             ds.Tables(0).Columns(0).ColumnName = "Fecha del dato"
             ds.Tables(0).Columns(1).ColumnName = "Nombre del dato"
@@ -198,10 +200,12 @@ Public Class VerificarOtros
         ds.Tables(0).Columns(2).ColumnName = "Fecha de avance"
         ds.Tables(0).Columns(3).ColumnName = "Cantidad"
         ds.Tables(0).Columns(4).ColumnName = "Cantidad actual"
-        ds.Tables(0).Columns(5).ColumnName = "Venta"
-        ds.Tables(0).Columns(6).ColumnName = "Eliminado"
-        ds.Tables(0).Columns(7).ColumnName = "Fecha de cosechado"
-        ds.Tables(0).Columns(8).ColumnName = "Fecha de plantado"
+        ds.Tables(0).Columns(5).ColumnName = "Cantidad en venta"
+        ds.Tables(0).Columns(6).ColumnName = "Venta"
+        ds.Tables(0).Columns(7).ColumnName = "Eliminado"
+        ds.Tables(0).Columns(8).ColumnName = "Fecha de cosechado"
+        ds.Tables(0).Columns(9).ColumnName = "Fecha de plantado"
+        ds.Tables(0).Columns(10).ColumnName = "Nombre de cepa"
         dv = ds.Tables(0).DefaultView
         Return dv
     End Function
@@ -212,11 +216,12 @@ Public Class VerificarOtros
         ds.Tables(0).Columns(1).ColumnName = "Fecha de entrada"
         ds.Tables(0).Columns(2).ColumnName = "Fecha de salida"
         ds.Tables(0).Columns(3).ColumnName = "Cantidad"
-        ds.Tables(0).Columns(4).ColumnName = "Venta"
-        ds.Tables(0).Columns(5).ColumnName = "Cantidad actual"
-        ds.Tables(0).Columns(6).ColumnName = "Eliminado"
-        ds.Tables(0).Columns(7).ColumnName = "Fecha de avance"
-        ds.Tables(0).Columns(8).ColumnName = "Fecha de cosechado"
+        ds.Tables(0).Columns(4).ColumnName = "Cantidad actual"
+        ds.Tables(0).Columns(5).ColumnName = "Cantidad en venta"
+        ds.Tables(0).Columns(6).ColumnName = "Venta"
+        ds.Tables(0).Columns(7).ColumnName = "Eliminado"
+        ds.Tables(0).Columns(8).ColumnName = "Fecha de avance"
+        ds.Tables(0).Columns(9).ColumnName = "Fecha de cosechado"
         dv = ds.Tables(0).DefaultView
         Return dv
     End Function
@@ -243,6 +248,16 @@ Public Class VerificarOtros
 
     Public Function ValidoFinalizarProcesoPI(ByVal encapsuladora As Encapsuladoras.Produccion)
         DatosO.FinalizarProcesoPI(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoAceptarPrensado1(ByVal encapsuladora As Encapsuladoras.Produccion)
+        DatosO.AceptarPrensado1(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoAceptarPrensado2(ByVal encapsuladora As Encapsuladoras.Produccion)
+        DatosO.AceptarPrensado2(encapsuladora)
         Return Nothing
     End Function
 

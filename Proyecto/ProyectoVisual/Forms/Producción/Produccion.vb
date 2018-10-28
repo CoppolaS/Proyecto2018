@@ -12,6 +12,7 @@ Public Class Produccion
         ComboBox4.Items.Clear()
         ComboBox6.SelectedIndex = 0
         ComboBox7.SelectedIndex = 0
+        Tabla8.DataGridView1.Columns.Clear()
         DateTimePicker1.Format = DateTimePickerFormat.Custom
         DateTimePicker1.CustomFormat = "yyyy-MM-dd"
         DateTimePicker2.Format = DateTimePickerFormat.Custom
@@ -48,6 +49,11 @@ Public Class Produccion
         For i As Integer = 0 To dv.Count - 1
             ComboBox4.Items.Add(dv(i).Item("ID").ToString())
         Next
+        Tabla8.DataGridView1.Columns.Add("1", "ID de la materia prima seleccionada")
+        Tabla8.DataGridView1.Columns.Add("2", "Cepa de la materia prima seleccionada")
+        Tabla8.DataGridView1.Columns.Add("3", "Cantidad de kilos a prensar")
+        TabControl1.SelectedTab = TabPage3
+        TabControl2.SelectedTab = TabPage6
     End Sub
 
     Private Sub CargarTabla1() Handles ComboBox1.SelectedIndexChanged
@@ -69,9 +75,14 @@ Public Class Produccion
             Button4.Enabled = False
             Button5.Enabled = True
         End If
-        dv.RowFilter = "Eliminado = 0"
+        If Tabla8.DataGridView1.RowCount > 0 Then
+            dv.RowFilter = "Eliminado = 0 and [Cantidad actual] <> 0 and [Nombre de cepa] = '" + Tabla8.DataGridView1.Rows(0).Cells(1).Value.ToString + "'"
+        Else
+            dv.RowFilter = "Eliminado = 0 and [Cantidad actual] <> 0"
+        End If
         Tabla2.DataGridView1.DataSource = dv
-        Tabla2.DataGridView1.Columns(6).Visible = False
+        Tabla2.DataGridView1.Columns(2).Visible = False
+        Tabla2.DataGridView1.Columns(7).Visible = False
         Tabla2.DataGridView1.ClearSelection()
     End Sub
 
@@ -85,9 +96,11 @@ Public Class Produccion
             Button8.Enabled = False
             Button9.Enabled = True
         End If
-        dv.RowFilter = "Eliminado = 0"
+        dv.RowFilter = "Eliminado = 0 and [Cantidad actual] <> 0"
         Tabla3.DataGridView1.DataSource = dv
-        Tabla3.DataGridView1.Columns(6).Visible = False
+        Tabla3.DataGridView1.Columns(2).Visible = False
+        Tabla3.DataGridView1.Columns(7).Visible = False
+        Tabla3.DataGridView1.Columns(8).Visible = False
         Tabla3.DataGridView1.ClearSelection()
     End Sub
 
@@ -135,4 +148,69 @@ Public Class Produccion
         CargarTabla3()
     End Sub
 
+    Private Sub AgregarPrensar(sender As System.Object, e As System.EventArgs) Handles Button10.Click
+        If Tabla2.DataGridView1.SelectedRows.Count > 0 And ComboBox6.SelectedIndex = 0 And Integer.Parse(TextBox5.Text) <= Integer.Parse(Tabla2.DataGridView1.Rows(Tabla2.DataGridView1.CurrentRow.Index).Cells(4).Value.ToString) Then
+            Dim ID As Integer = Integer.Parse(Tabla2.DataGridView1.Rows(Tabla2.DataGridView1.CurrentRow.Index).Cells(0).Value.ToString)
+            Dim Cepa As String = Tabla2.DataGridView1.Rows(Tabla2.DataGridView1.CurrentRow.Index).Cells(10).Value.ToString
+            Tabla8.DataGridView1.Rows.Add(ID, Cepa, TextBox5.Text)
+            CargarTabla2()
+            Tabla2.DataGridView1.Rows(Tabla2.DataGridView1.CurrentRow.Index).Cells(4).Value = Integer.Parse(Tabla2.DataGridView1.Rows(Tabla2.DataGridView1.CurrentRow.Index).Cells(4).Value.ToString) - Integer.Parse(TextBox5.Text)
+        End If
+    End Sub
+
+    Private Sub QuitarPrensar(sender As System.Object, e As System.EventArgs) Handles Button11.Click
+        If Tabla8.DataGridView1.SelectedRows.Count > 0 Then
+            Tabla8.DataGridView1.Rows.RemoveAt(Tabla8.DataGridView1.CurrentRow.Index)
+            CargarTabla2()
+        End If
+    End Sub
+
+    Private Sub Habilitar_Ingreso(sender As Object, e As System.EventArgs) Handles TextBox1.TextChanged, TextBox5.TextChanged, TextBox6.TextChanged, ComboBox2.SelectedIndexChanged, DateTimePicker1.ValueChanged
+        If TextBox1.TextLength > 0 And ComboBox2.SelectedIndex <> -1 Then
+            Button1.Enabled = True
+        Else
+            Button1.Enabled = False
+        End If
+
+        If TextBox5.TextLength > 0 Then
+            Button10.Enabled = True
+        Else
+            Button10.Enabled = False
+        End If
+
+        If TextBox6.TextLength > 0 Then
+            Button12.Enabled = True
+        Else
+            Button12.Enabled = False
+        End If
+    End Sub
+
+    Private Sub AceptarPrensado(sender As System.Object, e As System.EventArgs) Handles Button12.Click
+        If Tabla8.DataGridView1.RowCount > 0 Then
+            encapsuladora.FechaAvanceP = DateTimePicker6.Value
+            encapsuladora.CantidadLitrosP = Integer.Parse(TextBox6.Text)
+            Verif.ValidoAceptarPrensado1(encapsuladora)
+            For i As Integer = 0 To Tabla8.DataGridView1.RowCount - 1
+                encapsuladora.IDMateriaPrimaP = Integer.Parse(Tabla8.DataGridView1.Rows(i).Cells(0).Value.ToString)
+                encapsuladora.CantidadP = Integer.Parse(Tabla8.DataGridView1.Rows(i).Cells(2).Value.ToString)
+                encapsuladora.FechaAvanceP = DateTimePicker6.Value
+                encapsuladora.CantidadLitrosP = Integer.Parse(TextBox6.Text)
+                Verif.ValidoAceptarPrensado2(encapsuladora)
+            Next
+            CargarTabla2()
+            CargarTabla3()
+        End If
+    End Sub
+
+    Private Sub ProcesoPIcambio(sender As System.Object, e As System.EventArgs) Handles ComboBox4.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub AgregarProcesoPI(sender As System.Object, e As System.EventArgs) Handles Button2.Click
+
+    End Sub
+
+    Private Sub QuitarProcesoPI(sender As System.Object, e As System.EventArgs) Handles Button3.Click
+
+    End Sub
 End Class

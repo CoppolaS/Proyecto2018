@@ -7,8 +7,10 @@
     Private ID_MP As Integer
     Private FechaProceso As Date
     Private Proceso As Integer
+    Private FechaAvance As Date
+    Private CantidadLitros As Integer
 
-    Public Sub New(ByVal ID_Parcela As Integer, ByVal FechaCosechado As Date, ByVal Cantidad As Integer, ByVal EstadoSanitario As Integer, ByVal ID_PI As Integer, ByVal ID_MP As Integer, ByVal FechaProceso As Date, ByVal Proceso As Integer)
+    Public Sub New(ByVal ID_Parcela As Integer, ByVal FechaCosechado As Date, ByVal Cantidad As Integer, ByVal EstadoSanitario As Integer, ByVal ID_PI As Integer, ByVal ID_MP As Integer, ByVal FechaProceso As Date, ByVal Proceso As Integer, ByVal FechaAvance As Date, ByVal CantidadLitros As Integer)
         Me.ID_Parcela = ID_Parcela
         Me.FechaCosechado = FechaCosechado
         Me.Cantidad = Cantidad
@@ -17,6 +19,8 @@
         Me.ID_MP = ID_MP
         Me.FechaProceso = FechaProceso
         Me.Proceso = Proceso
+        Me.FechaAvance = FechaAvance
+        Me.CantidadLitros = CantidadLitros
     End Sub
 
     Public Sub New()
@@ -92,6 +96,24 @@
         End Get
         Set(ByVal value As Integer)
             Me.Proceso = value
+        End Set
+    End Property
+
+    Public Property FechaAvanceP() As Date
+        Get
+            Return Me.FechaAvance
+        End Get
+        Set(ByVal value As Date)
+            Me.FechaAvance = value
+        End Set
+    End Property
+
+    Public Property CantidadLitrosP() As Integer
+        Get
+            Return Me.CantidadLitros
+        End Get
+        Set(ByVal value As Integer)
+            Me.CantidadLitros = value
         End Set
     End Property
 

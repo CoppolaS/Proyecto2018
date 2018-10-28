@@ -22,12 +22,10 @@ Partial Class GestionProduccion
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Tabla2 = New Proyecto.Tabla()
         Me.Tabla1 = New Proyecto.Tabla()
-        Me.ComboBoxSucursales1 = New Proyecto.ComboBoxSucursales()
         Me.Menu1 = New Proyecto.Menu()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -43,15 +41,6 @@ Partial Class GestionProduccion
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 50)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(48, 13)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Sucursal"
         '
         'Label6
         '
@@ -85,13 +74,6 @@ Partial Class GestionProduccion
         Me.Tabla1.Size = New System.Drawing.Size(625, 390)
         Me.Tabla1.TabIndex = 3
         '
-        'ComboBoxSucursales1
-        '
-        Me.ComboBoxSucursales1.Location = New System.Drawing.Point(66, 50)
-        Me.ComboBoxSucursales1.Name = "ComboBoxSucursales1"
-        Me.ComboBoxSucursales1.Size = New System.Drawing.Size(166, 21)
-        Me.ComboBoxSucursales1.TabIndex = 1
-        '
         'Menu1
         '
         Me.Menu1.Location = New System.Drawing.Point(12, 12)
@@ -102,7 +84,7 @@ Partial Class GestionProduccion
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(241, 50)
+        Me.Label8.Location = New System.Drawing.Point(212, 50)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(105, 13)
         Me.Label8.TabIndex = 11
@@ -112,7 +94,7 @@ Partial Class GestionProduccion
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Todos", "A la venta", "No a la venta"})
-        Me.ComboBox1.Location = New System.Drawing.Point(352, 50)
+        Me.ComboBox1.Location = New System.Drawing.Point(323, 50)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(166, 21)
         Me.ComboBox1.TabIndex = 12
@@ -163,18 +145,18 @@ Partial Class GestionProduccion
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(6, 27)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(78, 13)
+        Me.Label5.Size = New System.Drawing.Size(87, 13)
         Me.Label5.TabIndex = 5
-        Me.Label5.Text = "Cantidad total: "
+        Me.Label5.Text = "Cantidad actual: "
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(6, 61)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(115, 13)
+        Me.Label4.Size = New System.Drawing.Size(97, 13)
         Me.Label4.TabIndex = 6
-        Me.Label4.Text = "Cantidad seleccionada"
+        Me.Label4.Text = "Cantidad a vender:"
         '
         'TabPage2
         '
@@ -209,8 +191,6 @@ Partial Class GestionProduccion
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Tabla2)
         Me.Controls.Add(Me.Tabla1)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ComboBoxSucursales1)
         Me.Controls.Add(Me.Menu1)
         Me.MaximizeBox = False
         Me.Name = "GestionProduccion"
@@ -226,8 +206,6 @@ Partial Class GestionProduccion
 
     End Sub
     Friend WithEvents Menu1 As Proyecto.Menu
-    Friend WithEvents ComboBoxSucursales1 As Proyecto.ComboBoxSucursales
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Tabla1 As Proyecto.Tabla
     Friend WithEvents Tabla2 As Proyecto.Tabla
     Friend WithEvents Label6 As System.Windows.Forms.Label
