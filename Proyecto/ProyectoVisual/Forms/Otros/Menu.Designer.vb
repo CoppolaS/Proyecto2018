@@ -57,7 +57,6 @@ Partial Class Menu
         Me.ComprasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GestiónDeProducciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ManualDeUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -299,21 +298,15 @@ Partial Class Menu
         '
         'AyudaToolStripMenuItem
         '
-        Me.AyudaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManualDeUsuarioToolStripMenuItem, Me.CerrarSesiónToolStripMenuItem})
+        Me.AyudaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CerrarSesiónToolStripMenuItem})
         Me.AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem"
         Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(52, 26)
         Me.AyudaToolStripMenuItem.Text = "Ayuda"
         '
-        'ManualDeUsuarioToolStripMenuItem
-        '
-        Me.ManualDeUsuarioToolStripMenuItem.Name = "ManualDeUsuarioToolStripMenuItem"
-        Me.ManualDeUsuarioToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
-        Me.ManualDeUsuarioToolStripMenuItem.Text = "Manual de usuario"
-        '
         'CerrarSesiónToolStripMenuItem
         '
         Me.CerrarSesiónToolStripMenuItem.Name = "CerrarSesiónToolStripMenuItem"
-        Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.CerrarSesiónToolStripMenuItem.Text = "Cerrar sesión"
         '
         'Menu
@@ -332,7 +325,6 @@ Partial Class Menu
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents InicioToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AyudaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ManualDeUsuarioToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CerrarSesiónToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ObservacionesToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AlertasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

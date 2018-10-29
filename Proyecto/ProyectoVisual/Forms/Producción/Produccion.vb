@@ -14,6 +14,7 @@ Public Class Produccion
         ComboBox6.SelectedIndex = 0
         ComboBox7.SelectedIndex = 0
         Tabla8.DataGridView1.Columns.Clear()
+        Tabla9.DataGridView1.Columns.Clear()
         DateTimePicker1.Format = DateTimePickerFormat.Custom
         DateTimePicker1.CustomFormat = "yyyy-MM-dd"
         DateTimePicker2.Format = DateTimePickerFormat.Custom

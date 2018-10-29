@@ -283,7 +283,7 @@ Public Class Menu
         End If
     End Sub
 
-    Private Sub ManualDeUsuarioToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ManualDeUsuarioToolStripMenuItem.Click
+    Private Sub ManualDeUsuarioToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs)
 
     End Sub
 

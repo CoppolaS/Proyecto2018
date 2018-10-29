@@ -630,7 +630,7 @@ Public Class DatosOtros
     End Function
 
     Public Function ListaMateriasPrimasProcesos(ByVal Filtro As Integer) As DataSet
-        sql = "CALL `proyecto`.`LABM_Produccion`(?opcion,?ID_P,?FechaCosechado,?Cantidad,?EstadoSanitario,?IDProductoIntermedio,?IDMateriaPrima,?FechaProceso,?IDProceso,?FechaAvance,?CantidadLitros,?IDTanque,?IDBarrica);"
+        sql = "CALL `proyecto`.`LABM_Produccion`(?opcion,?ID_P,?FechaCosechado,?Cantidad,?EstadoSanitario,?IDProductoIntermedio,?IDMateriaPrima,?FechaProceso,?IDProceso,?FechaAvance,?CantidadLitros,?IDTanque,?IDBarrica,?Sucursal);"
         Try
             Con.cn2.Open()
             cm = New MySqlCommand()
@@ -649,6 +649,7 @@ Public Class DatosOtros
             cm.Parameters.Add("?CantidadLitros", MySqlDbType.Int32).Value = 0
             cm.Parameters.Add("?IDTanque", MySqlDbType.Int32).Value = 0
             cm.Parameters.Add("?IDBarrica", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?Sucursal", MySqlDbType.VarChar).Value = UsuarioLogeado.Sucursal
             da = New MySqlDataAdapter(cm)
             ds = New DataSet()
             da.Fill(ds)
@@ -660,7 +661,7 @@ Public Class DatosOtros
     End Function
 
     Public Function ListaProductosIntermediosProcesos(ByVal Filtro As Integer) As DataSet
-        sql = "CALL `proyecto`.`LABM_Produccion`(?opcion,?ID_P,?FechaCosechado,?Cantidad,?EstadoSanitario,?IDProductoIntermedio,?IDMateriaPrima,?FechaProceso,?IDProceso,?FechaAvance,?CantidadLitros,?IDTanque,?IDBarrica);"
+        sql = "CALL `proyecto`.`LABM_Produccion`(?opcion,?ID_P,?FechaCosechado,?Cantidad,?EstadoSanitario,?IDProductoIntermedio,?IDMateriaPrima,?FechaProceso,?IDProceso,?FechaAvance,?CantidadLitros,?IDTanque,?IDBarrica,?Sucursal);"
         Try
             Con.cn2.Open()
             cm = New MySqlCommand()
@@ -679,6 +680,7 @@ Public Class DatosOtros
             cm.Parameters.Add("?CantidadLitros", MySqlDbType.Int32).Value = 0
             cm.Parameters.Add("?IDTanque", MySqlDbType.Int32).Value = 0
             cm.Parameters.Add("?IDBarrica", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?Sucursal", MySqlDbType.VarChar).Value = UsuarioLogeado.Sucursal
             da = New MySqlDataAdapter(cm)
             ds = New DataSet()
             da.Fill(ds)
@@ -692,7 +694,7 @@ Public Class DatosOtros
     Public Function IngresoParcelaCosecha(ByVal nodo As Encapsuladoras.Produccion) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 1)
                 cmd.Parameters.AddWithValue("ID_P", nodo.ID_ParcelaP)
@@ -707,6 +709,7 @@ Public Class DatosOtros
                 cmd.Parameters.AddWithValue("CantidadLitros", 0)
                 cmd.Parameters.AddWithValue("IDTanque", 0)
                 cmd.Parameters.AddWithValue("IDBarrica", 0)
+                cmd.Parameters.AddWithValue("Sucursal", UsuarioLogeado.Sucursal)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
@@ -724,7 +727,7 @@ Public Class DatosOtros
     Public Function AsignarProcesoMP(ByVal nodo As Encapsuladoras.Produccion) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 2)
                 cmd.Parameters.AddWithValue("ID_P", 0)
@@ -739,6 +742,7 @@ Public Class DatosOtros
                 cmd.Parameters.AddWithValue("CantidadLitros", 0)
                 cmd.Parameters.AddWithValue("IDTanque", 0)
                 cmd.Parameters.AddWithValue("IDBarrica", 0)
+                cmd.Parameters.AddWithValue("Sucursal", UsuarioLogeado.Sucursal)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
@@ -757,7 +761,7 @@ Public Class DatosOtros
     Public Function FinalizarProcesoMP(ByVal nodo As Encapsuladoras.Produccion) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 3)
                 cmd.Parameters.AddWithValue("ID_P", 0)
@@ -772,6 +776,7 @@ Public Class DatosOtros
                 cmd.Parameters.AddWithValue("CantidadLitros", 0)
                 cmd.Parameters.AddWithValue("IDTanque", 0)
                 cmd.Parameters.AddWithValue("IDBarrica", 0)
+                cmd.Parameters.AddWithValue("Sucursal", UsuarioLogeado.Sucursal)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
@@ -790,7 +795,7 @@ Public Class DatosOtros
     Public Function AsignarProcesoPI(ByVal nodo As Encapsuladoras.Produccion) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 4)
                 cmd.Parameters.AddWithValue("ID_P", 0)
@@ -805,6 +810,7 @@ Public Class DatosOtros
                 cmd.Parameters.AddWithValue("CantidadLitros", 0)
                 cmd.Parameters.AddWithValue("IDTanque", 0)
                 cmd.Parameters.AddWithValue("IDBarrica", 0)
+                cmd.Parameters.AddWithValue("Sucursal", UsuarioLogeado.Sucursal)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
@@ -823,7 +829,7 @@ Public Class DatosOtros
     Public Function FinalizarProcesoPI(ByVal nodo As Encapsuladoras.Produccion) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 5)
                 cmd.Parameters.AddWithValue("ID_P", 0)
@@ -838,6 +844,7 @@ Public Class DatosOtros
                 cmd.Parameters.AddWithValue("CantidadLitros", 0)
                 cmd.Parameters.AddWithValue("IDTanque", 0)
                 cmd.Parameters.AddWithValue("IDBarrica", 0)
+                cmd.Parameters.AddWithValue("Sucursal", UsuarioLogeado.Sucursal)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
@@ -856,7 +863,7 @@ Public Class DatosOtros
     Public Function AceptarPrensado1(ByVal nodo As Encapsuladoras.Produccion) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 10)
                 cmd.Parameters.AddWithValue("ID_P", 0)
@@ -871,6 +878,7 @@ Public Class DatosOtros
                 cmd.Parameters.AddWithValue("CantidadLitros", nodo.CantidadLitrosP)
                 cmd.Parameters.AddWithValue("IDTanque", 0)
                 cmd.Parameters.AddWithValue("IDBarrica", 0)
+                cmd.Parameters.AddWithValue("Sucursal", UsuarioLogeado.Sucursal)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
@@ -889,7 +897,7 @@ Public Class DatosOtros
     Public Function AceptarPrensado2(ByVal nodo As Encapsuladoras.Produccion) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 11)
                 cmd.Parameters.AddWithValue("ID_P", 0)
@@ -904,6 +912,7 @@ Public Class DatosOtros
                 cmd.Parameters.AddWithValue("CantidadLitros", nodo.CantidadLitrosP)
                 cmd.Parameters.AddWithValue("IDTanque", 0)
                 cmd.Parameters.AddWithValue("IDBarrica", 0)
+                cmd.Parameters.AddWithValue("Sucursal", UsuarioLogeado.Sucursal)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
@@ -920,7 +929,7 @@ Public Class DatosOtros
     End Function
 
     Public Function ListaTanquesBarricas(ByVal ID_P As Integer) As DataSet
-        sql = "CALL `proyecto`.`LABM_Produccion`(?opcion,?ID_P,?FechaCosechado,?Cantidad,?EstadoSanitario,?IDProductoIntermedio,?IDMateriaPrima,?FechaProceso,?IDProceso,?FechaAvance,?CantidadLitros,?IDTanque,?IDBarrica);"
+        sql = "CALL `proyecto`.`LABM_Produccion`(?opcion,?ID_P,?FechaCosechado,?Cantidad,?EstadoSanitario,?IDProductoIntermedio,?IDMateriaPrima,?FechaProceso,?IDProceso,?FechaAvance,?CantidadLitros,?IDTanque,?IDBarrica,?Sucursal);"
         Try
             Con.cn2.Open()
             cm = New MySqlCommand()
@@ -939,6 +948,7 @@ Public Class DatosOtros
             cm.Parameters.Add("?CantidadLitros", MySqlDbType.Int32).Value = 0
             cm.Parameters.Add("?IDTanque", MySqlDbType.Int32).Value = 0
             cm.Parameters.Add("?IDBarrica", MySqlDbType.Int32).Value = 0
+            cm.Parameters.Add("?Sucursal", MySqlDbType.VarChar).Value = UsuarioLogeado.Sucursal
             da = New MySqlDataAdapter(cm)
             ds = New DataSet()
             da.Fill(ds)
@@ -952,7 +962,7 @@ Public Class DatosOtros
     Public Function AsignarTanqueProcesoPI(ByVal nodo As Encapsuladoras.Produccion) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 41)
                 cmd.Parameters.AddWithValue("ID_P", 0)
@@ -967,6 +977,7 @@ Public Class DatosOtros
                 cmd.Parameters.AddWithValue("CantidadLitros", 0)
                 cmd.Parameters.AddWithValue("IDTanque", nodo.ID_TanqueP)
                 cmd.Parameters.AddWithValue("IDBarrica", 0)
+                cmd.Parameters.AddWithValue("Sucursal", UsuarioLogeado.Sucursal)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
@@ -985,7 +996,7 @@ Public Class DatosOtros
     Public Function AsignarBarricaProcesoPI(ByVal nodo As Encapsuladoras.Produccion) As Boolean
         Try
             Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
+                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 41)
                 cmd.Parameters.AddWithValue("ID_P", 0)
@@ -1000,6 +1011,7 @@ Public Class DatosOtros
                 cmd.Parameters.AddWithValue("CantidadLitros", 0)
                 cmd.Parameters.AddWithValue("IDTanque", 0)
                 cmd.Parameters.AddWithValue("IDBarrica", nodo.ID_BarricaP)
+                cmd.Parameters.AddWithValue("Sucursal", UsuarioLogeado.Sucursal)
                 Con.cn1.Open()
                 cmd.ExecuteNonQuery()
             Catch o As OdbcException
