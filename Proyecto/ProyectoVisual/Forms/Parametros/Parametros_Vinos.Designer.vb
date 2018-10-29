@@ -56,6 +56,7 @@ Partial Class Parametros_Vinos
         Me.Tabla2 = New Proyecto.Tabla()
         Me.Menu1 = New Proyecto.Menu()
         Me.Tabla1 = New Proyecto.Tabla()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -385,11 +386,21 @@ Partial Class Parametros_Vinos
         Me.Tabla1.Size = New System.Drawing.Size(568, 592)
         Me.Tabla1.TabIndex = 0
         '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(963, 47)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(224, 13)
+        Me.Label12.TabIndex = 78
+        Me.Label12.Text = "Asignar botellas y cepas al vino en Administrar"
+        '
         'Parametros_Vinos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Tabla3)
         Me.Controls.Add(Me.Tabla2)
         Me.Controls.Add(Me.TabControl1)
@@ -451,4 +462,5 @@ Partial Class Parametros_Vinos
     Friend WithEvents Tabla2 As Proyecto.Tabla
     Friend WithEvents Tabla3 As Proyecto.Tabla
     Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Label12 As System.Windows.Forms.Label
 End Class

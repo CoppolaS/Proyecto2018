@@ -71,13 +71,13 @@ Partial Class Produccion
         Me.Label7 = New System.Windows.Forms.Label()
         Me.DateTimePicker5 = New System.Windows.Forms.DateTimePicker()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
-        Me.Button17 = New System.Windows.Forms.Button()
         Me.Button16 = New System.Windows.Forms.Button()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.Button15 = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.Button17 = New System.Windows.Forms.Button()
         Me.Button14 = New System.Windows.Forms.Button()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -101,6 +101,7 @@ Partial Class Produccion
         Me.Tabla2 = New Proyecto.Tabla()
         Me.Tabla1 = New Proyecto.Tabla()
         Me.Menu1 = New Proyecto.Menu()
+        Me.Label27 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -584,13 +585,14 @@ Partial Class Produccion
         '
         'TabPage6
         '
-        Me.TabPage6.Controls.Add(Me.Label12)
-        Me.TabPage6.Controls.Add(Me.ComboBox5)
-        Me.TabPage6.Controls.Add(Me.Button17)
+        Me.TabPage6.Controls.Add(Me.Label27)
         Me.TabPage6.Controls.Add(Me.Button16)
         Me.TabPage6.Controls.Add(Me.TextBox8)
         Me.TabPage6.Controls.Add(Me.Button15)
         Me.TabPage6.Controls.Add(Me.Label11)
+        Me.TabPage6.Controls.Add(Me.Label12)
+        Me.TabPage6.Controls.Add(Me.ComboBox5)
+        Me.TabPage6.Controls.Add(Me.Button17)
         Me.TabPage6.Controls.Add(Me.Button14)
         Me.TabPage6.Controls.Add(Me.TextBox7)
         Me.TabPage6.Controls.Add(Me.Label10)
@@ -606,10 +608,44 @@ Partial Class Produccion
         Me.TabPage6.Text = "Embotellar"
         Me.TabPage6.UseVisualStyleBackColor = True
         '
+        'Button16
+        '
+        Me.Button16.Location = New System.Drawing.Point(219, 272)
+        Me.Button16.Name = "Button16"
+        Me.Button16.Size = New System.Drawing.Size(110, 23)
+        Me.Button16.TabIndex = 30
+        Me.Button16.Text = "Quitar"
+        Me.Button16.UseVisualStyleBackColor = True
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Location = New System.Drawing.Point(13, 273)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(85, 21)
+        Me.TextBox8.TabIndex = 29
+        '
+        'Button15
+        '
+        Me.Button15.Location = New System.Drawing.Point(103, 272)
+        Me.Button15.Name = "Button15"
+        Me.Button15.Size = New System.Drawing.Size(110, 23)
+        Me.Button15.TabIndex = 28
+        Me.Button15.Text = "Agregar"
+        Me.Button15.UseVisualStyleBackColor = True
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(13, 157)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(51, 15)
+        Me.Label11.TabIndex = 25
+        Me.Label11.Text = "Botellas"
+        '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(303, 249)
+        Me.Label12.Location = New System.Drawing.Point(361, 246)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(103, 15)
         Me.Label12.TabIndex = 24
@@ -618,7 +654,7 @@ Partial Class Produccion
         'ComboBox5
         '
         Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Location = New System.Drawing.Point(147, 267)
+        Me.ComboBox5.Location = New System.Drawing.Point(343, 175)
         Me.ComboBox5.Name = "ComboBox5"
         Me.ComboBox5.Size = New System.Drawing.Size(121, 23)
         Me.ComboBox5.TabIndex = 23
@@ -626,67 +662,33 @@ Partial Class Produccion
         '
         'Button17
         '
-        Me.Button17.Location = New System.Drawing.Point(310, 267)
+        Me.Button17.Location = New System.Drawing.Point(360, 264)
         Me.Button17.Name = "Button17"
         Me.Button17.Size = New System.Drawing.Size(104, 23)
         Me.Button17.TabIndex = 22
         Me.Button17.Text = "Embotellar"
         Me.Button17.UseVisualStyleBackColor = True
         '
-        'Button16
-        '
-        Me.Button16.Location = New System.Drawing.Point(354, 192)
-        Me.Button16.Name = "Button16"
-        Me.Button16.Size = New System.Drawing.Size(60, 23)
-        Me.Button16.TabIndex = 21
-        Me.Button16.Text = "Quitar"
-        Me.Button16.UseVisualStyleBackColor = True
-        '
-        'TextBox8
-        '
-        Me.TextBox8.Location = New System.Drawing.Point(192, 192)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(76, 21)
-        Me.TextBox8.TabIndex = 20
-        '
-        'Button15
-        '
-        Me.Button15.Location = New System.Drawing.Point(288, 192)
-        Me.Button15.Name = "Button15"
-        Me.Button15.Size = New System.Drawing.Size(60, 23)
-        Me.Button15.TabIndex = 19
-        Me.Button15.Text = "Agregar"
-        Me.Button15.UseVisualStyleBackColor = True
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(276, 10)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(51, 15)
-        Me.Label11.TabIndex = 16
-        Me.Label11.Text = "Botellas"
-        '
         'Button14
         '
-        Me.Button14.Location = New System.Drawing.Point(13, 219)
+        Me.Button14.Location = New System.Drawing.Point(240, 16)
         Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(60, 23)
+        Me.Button14.Size = New System.Drawing.Size(98, 23)
         Me.Button14.TabIndex = 13
         Me.Button14.Text = "Quitar"
         Me.Button14.UseVisualStyleBackColor = True
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(13, 31)
+        Me.TextBox7.Location = New System.Drawing.Point(16, 18)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(76, 21)
+        Me.TextBox7.Size = New System.Drawing.Size(114, 21)
         Me.TextBox7.TabIndex = 14
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(13, 13)
+        Me.Label10.Location = New System.Drawing.Point(13, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(69, 15)
         Me.Label10.TabIndex = 13
@@ -694,9 +696,9 @@ Partial Class Produccion
         '
         'Button13
         '
-        Me.Button13.Location = New System.Drawing.Point(95, 29)
+        Me.Button13.Location = New System.Drawing.Point(136, 16)
         Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(60, 23)
+        Me.Button13.Size = New System.Drawing.Size(98, 23)
         Me.Button13.TabIndex = 12
         Me.Button13.Text = "Agregar"
         Me.Button13.UseVisualStyleBackColor = True
@@ -795,23 +797,23 @@ Partial Class Produccion
         '
         'Tabla11
         '
-        Me.Tabla11.Location = New System.Drawing.Point(306, 31)
+        Me.Tabla11.Location = New System.Drawing.Point(174, 175)
         Me.Tabla11.Name = "Tabla11"
-        Me.Tabla11.Size = New System.Drawing.Size(108, 155)
-        Me.Tabla11.TabIndex = 18
+        Me.Tabla11.Size = New System.Drawing.Size(155, 93)
+        Me.Tabla11.TabIndex = 27
         '
         'Tabla10
         '
-        Me.Tabla10.Location = New System.Drawing.Point(192, 31)
+        Me.Tabla10.Location = New System.Drawing.Point(13, 175)
         Me.Tabla10.Name = "Tabla10"
-        Me.Tabla10.Size = New System.Drawing.Size(108, 155)
-        Me.Tabla10.TabIndex = 17
+        Me.Tabla10.Size = New System.Drawing.Size(155, 93)
+        Me.Tabla10.TabIndex = 26
         '
         'Tabla9
         '
-        Me.Tabla9.Location = New System.Drawing.Point(13, 58)
+        Me.Tabla9.Location = New System.Drawing.Point(13, 45)
         Me.Tabla9.Name = "Tabla9"
-        Me.Tabla9.Size = New System.Drawing.Size(142, 155)
+        Me.Tabla9.Size = New System.Drawing.Size(451, 109)
         Me.Tabla9.TabIndex = 15
         '
         'Tabla8
@@ -848,6 +850,15 @@ Partial Class Produccion
         Me.Menu1.Name = "Menu1"
         Me.Menu1.Size = New System.Drawing.Size(1240, 32)
         Me.Menu1.TabIndex = 0
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Location = New System.Drawing.Point(340, 157)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(37, 15)
+        Me.Label27.TabIndex = 31
+        Me.Label27.Text = "Vinos"
         '
         'Produccion
         '
@@ -940,12 +951,6 @@ Partial Class Produccion
     Friend WithEvents Button13 As System.Windows.Forms.Button
     Friend WithEvents Button14 As System.Windows.Forms.Button
     Friend WithEvents Tabla9 As Proyecto.Tabla
-    Friend WithEvents Tabla10 As Proyecto.Tabla
-    Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents Tabla11 As Proyecto.Tabla
-    Friend WithEvents Button16 As System.Windows.Forms.Button
-    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
-    Friend WithEvents Button15 As System.Windows.Forms.Button
     Friend WithEvents Button17 As System.Windows.Forms.Button
     Friend WithEvents ComboBox5 As System.Windows.Forms.ComboBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
@@ -975,4 +980,11 @@ Partial Class Produccion
     Friend WithEvents Label26 As System.Windows.Forms.Label
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Button16 As System.Windows.Forms.Button
+    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
+    Friend WithEvents Button15 As System.Windows.Forms.Button
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Tabla11 As Proyecto.Tabla
+    Friend WithEvents Tabla10 As Proyecto.Tabla
+    Friend WithEvents Label27 As System.Windows.Forms.Label
 End Class

@@ -10,6 +10,7 @@ Public Class Produccion
         ComboBox1.Items.Clear()
         ComboBox3.Items.Clear()
         ComboBox4.Items.Clear()
+        ComboBox5.Items.Clear()
         ComboBox6.SelectedIndex = 0
         ComboBox7.SelectedIndex = 0
         Tabla8.DataGridView1.Columns.Clear()
@@ -28,6 +29,7 @@ Public Class Produccion
         ComboBox2.DropDownStyle = ComboBoxStyle.DropDownList
         ComboBox3.DropDownStyle = ComboBoxStyle.DropDownList
         ComboBox4.DropDownStyle = ComboBoxStyle.DropDownList
+        ComboBox5.DropDownStyle = ComboBoxStyle.DropDownList
         ComboBox6.DropDownStyle = ComboBoxStyle.DropDownList
         ComboBox7.DropDownStyle = ComboBoxStyle.DropDownList
         dv.RowFilter = "Eliminado = 0"
@@ -49,9 +51,19 @@ Public Class Produccion
         For i As Integer = 0 To dv.Count - 1
             ComboBox4.Items.Add(dv(i).Item("ID").ToString())
         Next
+        dv = VerifP.ValidoListaVinos
+        dv.RowFilter = "Eliminado = 0"
+        For i As Integer = 0 To dv.Count - 1
+            ComboBox5.Items.Add(dv(i).Item("ID").ToString())
+        Next
         Tabla8.DataGridView1.Columns.Add("1", "ID de la materia prima seleccionada")
         Tabla8.DataGridView1.Columns.Add("2", "Cepa de la materia prima seleccionada")
         Tabla8.DataGridView1.Columns.Add("3", "Cantidad de kilos a prensar")
+        Tabla9.DataGridView1.Columns.Add("1", "ID del producto intermedio seleccionado")
+        Tabla9.DataGridView1.Columns.Add("2", "Cepa del producto intermedio seleccionado")
+        Tabla9.DataGridView1.Columns.Add("3", "Cantidad de litros a embotellar")
+        Tabla9.DataGridView1.Columns.Add("4", "ID_Cepa")
+        Tabla9.DataGridView1.Columns(3).Visible = False
         TabControl1.SelectedTab = TabPage3
         TabControl2.SelectedTab = TabPage6
     End Sub
@@ -101,6 +113,7 @@ Public Class Produccion
         Tabla3.DataGridView1.Columns(2).Visible = False
         Tabla3.DataGridView1.Columns(7).Visible = False
         Tabla3.DataGridView1.Columns(8).Visible = False
+        Tabla3.DataGridView1.Columns(11).Visible = False
         Tabla3.DataGridView1.ClearSelection()
     End Sub
 
@@ -133,12 +146,25 @@ Public Class Produccion
     End Sub
 
     Private Sub AsignarProcesoPI(sender As System.Object, e As System.EventArgs) Handles Button8.Click
-        encapsuladora.IDProductoIntermedioP = Integer.Parse(Tabla3.DataGridView1.Rows(Tabla3.DataGridView1.CurrentRow.Index).Cells(0).Value.ToString)
-        encapsuladora.FechaProcesoP = DateTimePicker4.Value
-        encapsuladora.ID_ProcesoP = Integer.Parse(ComboBox4.SelectedItem)
-        Verif.ValidoAsignarProcesoPI(encapsuladora)
-        ComboBox4.SelectedIndex = -1
-        CargarTabla3()
+        If Tabla4.DataGridView1.Rows.Count > 0 Then
+            encapsuladora.IDProductoIntermedioP = Integer.Parse(Tabla3.DataGridView1.Rows(Tabla3.DataGridView1.CurrentRow.Index).Cells(0).Value.ToString)
+            encapsuladora.FechaProcesoP = DateTimePicker4.Value
+            encapsuladora.ID_ProcesoP = Integer.Parse(ComboBox4.SelectedItem)
+            Verif.ValidoAsignarProcesoPI(encapsuladora)
+            If Tabla4.DataGridView1.Columns.Count = 6 Then
+                For i As Integer = 0 To Tabla4.DataGridView1.Rows.Count - 1
+                    encapsuladora.ID_TanqueP = Integer.Parse(Tabla4.DataGridView1.Rows(i).Cells(0).Value.ToString)
+                    Verif.ValidoAsignarTanqueProcesoPI(encapsuladora)
+                Next
+            Else
+                For i As Integer = 0 To Tabla4.DataGridView1.Rows.Count - 1
+                    encapsuladora.ID_BarricaP = Integer.Parse(Tabla4.DataGridView1.Rows(i).Cells(0).Value.ToString)
+                    Verif.ValidoAsignarBarricaProcesoPI(encapsuladora)
+                Next
+            End If
+            CargarTabla3()
+            Tabla4.DataGridView1.Rows.Clear()
+        End If
     End Sub
 
     Private Sub FinalizarProcesoPI(sender As System.Object, e As System.EventArgs) Handles Button9.Click
@@ -213,10 +239,15 @@ Public Class Produccion
         For i As Integer = 0 To Tabla5.DataGridView1.Columns.Count - 1
             Tabla4.DataGridView1.Columns.Add(Tabla5.DataGridView1.Columns.Item(i).HeaderText, Tabla5.DataGridView1.Columns.Item(i).HeaderText)
         Next
-        Tabla4.DataGridView1.Columns(0).Visible = False
+        If Tabla5.DataGridView1.Columns.Count = 6 Then
+            Label26.Text = "Agregar los tanques a usar"
+        Else
+            Label26.Text = "Agregar las barricas a usar"
+        End If
+        Tabla4.DataGridView1.Columns(1).Visible = False
         Tabla4.DataGridView1.Columns(2).Visible = False
         Tabla4.DataGridView1.Columns("Eliminado").Visible = False
-        Tabla5.DataGridView1.Columns(0).Visible = False
+        Tabla5.DataGridView1.Columns(1).Visible = False
         Tabla5.DataGridView1.Columns(2).Visible = False
         Tabla5.DataGridView1.Columns("Eliminado").Visible = False
         Tabla4.DataGridView1.ClearSelection()
@@ -224,21 +255,49 @@ Public Class Produccion
     End Sub
 
     Private Sub AgregarProcesoPI(sender As System.Object, e As System.EventArgs) Handles Button2.Click
-        Dim row As New DataGridViewRow
-        If Tabla5.DataGridView1.Columns.Count = 6 Then
-            For i As Integer = 0 To 5
-                row.Cells(i).Value = Tabla5.DataGridView1.Rows(Tabla5.DataGridView1.CurrentRow.Index).Cells(i).Value
-            Next
-        Else
-            For i As Integer = 0 To 6
-                row.Cells(i).Value = Tabla5.DataGridView1.Rows(Tabla5.DataGridView1.CurrentRow.Index).Cells(i).Value
-            Next
+        If Tabla5.DataGridView1.SelectedRows.Count > 0 Then
+            Dim ID As Integer = Integer.Parse(Tabla5.DataGridView1.Rows(Tabla5.DataGridView1.CurrentRow.Index).Cells(0).Value.ToString)
+            Dim Nro As Integer = Integer.Parse(Tabla5.DataGridView1.Rows(Tabla5.DataGridView1.CurrentRow.Index).Cells(1).Value.ToString)
+            Dim Cap As Integer = Integer.Parse(Tabla5.DataGridView1.Rows(Tabla5.DataGridView1.CurrentRow.Index).Cells(3).Value.ToString)
+            Dim Mat As String = Tabla5.DataGridView1.Rows(Tabla5.DataGridView1.CurrentRow.Index).Cells(4).Value.ToString
+            If Tabla5.DataGridView1.Columns.Count = 6 Then
+                Tabla4.DataGridView1.Rows.Add(ID, Nro, 0, Cap, Mat, 0)
+            Else
+                Dim NroUsos As Integer = Integer.Parse(Tabla5.DataGridView1.Rows(Tabla5.DataGridView1.CurrentRow.Index).Cells(5).Value.ToString)
+                Tabla4.DataGridView1.Rows.Add(ID, Nro, 0, Cap, Mat, NroUsos, 0)
+            End If
+            'Tabla5.DataGridView1.CurrentRow.Visible = False
+            Tabla4.DataGridView1.ClearSelection()
         End If
-        Tabla4.DataGridView1.Rows.Add(row)
-        Tabla4.DataGridView1.ClearSelection()
     End Sub
 
     Private Sub QuitarProcesoPI(sender As System.Object, e As System.EventArgs) Handles Button3.Click
-        Tabla4.DataGridView1.Rows.RemoveAt(Tabla4.DataGridView1.CurrentRow.Index)
+        'For i As Integer = 0 To Tabla5.DataGridView1.Rows.Count - 1
+        '    If Integer.Parse(Tabla5.DataGridView1.Rows(i).Cells(0).Value.ToString) = Integer.Parse(Tabla4.DataGridView1.Rows(Tabla4.DataGridView1.CurrentRow.Index).Cells(0).Value.ToString) Then
+        '        Tabla5.DataGridView1.Rows(i).Visible = True
+        '    End If
+        'Next
+        If Tabla4.DataGridView1.SelectedRows.Count > 0 Then
+            Tabla4.DataGridView1.Rows.RemoveAt(Tabla4.DataGridView1.CurrentRow.Index)
+            Tabla4.DataGridView1.ClearSelection()
+        End If
     End Sub
+
+    Private Sub AgregarCepa(sender As System.Object, e As System.EventArgs) Handles Button13.Click
+        If Tabla3.DataGridView1.SelectedRows.Count > 0 And ComboBox7.SelectedIndex = 0 And Integer.Parse(TextBox7.Text) <= Integer.Parse(Tabla3.DataGridView1.Rows(Tabla3.DataGridView1.CurrentRow.Index).Cells(4).Value.ToString) Then
+            Dim ID As Integer = Integer.Parse(Tabla3.DataGridView1.Rows(Tabla3.DataGridView1.CurrentRow.Index).Cells(0).Value.ToString)
+            Dim Cepa As String = Tabla3.DataGridView1.Rows(Tabla3.DataGridView1.CurrentRow.Index).Cells(10).Value.ToString
+            Dim IDCepa As Integer = Integer.Parse(Tabla3.DataGridView1.Rows(Tabla3.DataGridView1.CurrentRow.Index).Cells(11).Value.ToString)
+            Tabla9.DataGridView1.Rows.Add(ID, Cepa, TextBox7.Text, IDCepa)
+            Tabla3.DataGridView1.Rows(Tabla3.DataGridView1.CurrentRow.Index).Cells(4).Value = Integer.Parse(Tabla3.DataGridView1.Rows(Tabla3.DataGridView1.CurrentRow.Index).Cells(4).Value.ToString) - Integer.Parse(TextBox7.Text)
+        End If
+    End Sub
+
+    Private Sub QuitarCepa(sender As System.Object, e As System.EventArgs) Handles Button14.Click
+        If Tabla9.DataGridView1.SelectedRows.Count > 0 Then
+            Tabla3.DataGridView1.Rows(Tabla3.DataGridView1.CurrentRow.Index).Cells(4).Value = Integer.Parse(Tabla3.DataGridView1.Rows(Tabla3.DataGridView1.CurrentRow.Index).Cells(4).Value.ToString) + Integer.Parse(Tabla9.DataGridView1.Rows(Tabla9.DataGridView1.CurrentRow.Index).Cells(2).Value.ToString)
+            Tabla9.DataGridView1.Rows.RemoveAt(Tabla9.DataGridView1.CurrentRow.Index)
+        End If
+    End Sub
+
 End Class

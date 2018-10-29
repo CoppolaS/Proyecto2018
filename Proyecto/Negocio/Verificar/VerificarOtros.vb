@@ -222,6 +222,8 @@ Public Class VerificarOtros
         ds.Tables(0).Columns(7).ColumnName = "Eliminado"
         ds.Tables(0).Columns(8).ColumnName = "Fecha de avance"
         ds.Tables(0).Columns(9).ColumnName = "Fecha de cosechado"
+        ds.Tables(0).Columns(10).ColumnName = "Nombre de cepa"
+        ds.Tables(0).Columns(11).ColumnName = "IDCepa"
         dv = ds.Tables(0).DefaultView
         Return dv
     End Function
@@ -281,6 +283,16 @@ Public Class VerificarOtros
         End If
         dv = ds.Tables(0).DefaultView
         Return dv
+    End Function
+
+    Public Function ValidoAsignarTanqueProcesoPI(ByVal encapsuladora As Encapsuladoras.Produccion)
+        DatosO.AsignarTanqueProcesoPI(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoAsignarBarricaProcesoPI(ByVal encapsuladora As Encapsuladoras.Produccion)
+        DatosO.AsignarBarricaProcesoPI(encapsuladora)
+        Return Nothing
     End Function
 
 End Class
