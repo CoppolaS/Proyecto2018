@@ -369,7 +369,7 @@ Public Class Produccion
     End Sub
 
     Private Sub Embotellar(sender As System.Object, e As System.EventArgs) Handles Button17.Click
-        If Tabla9.DataGridView1.Rows.Count > 0 And Tabla11.DataGridView1.Rows.Count > 0 Then
+        If Tabla9.DataGridView1.Rows.Count > 0 And Tabla11.DataGridView1.Rows.Count > 0 And ComboBox7.SelectedIndex = 0 Then
             Dim min As Integer
             For i As Integer = 0 To Tabla11.DataGridView1.Rows.Count() - 1
                 If i = 0 Then
@@ -380,20 +380,18 @@ Public Class Produccion
                 End If
             Next
             If Label12.Text.Substring(17) <= min Then
+
                 encapsuladora.ID_VinoP = Integer.Parse(ComboBox5.SelectedItem)
-                For i As Integer = 0 To Tabla9.DataGridView1.RowCount - 1
-                    encapsuladora.IDProductoIntermedioP = Integer.Parse(Tabla9.DataGridView1.Rows(i).Cells(0).Value.ToString)
-                    encapsuladora.CantidadLitrosP = Integer.Parse(Tabla9.DataGridView1.Rows(i).Cells(2).Value.ToString)
-                    Verif.ValidoEmbotellarPI(encapsuladora)
-                Next
                 For i As Integer = 0 To Tabla11.DataGridView1.RowCount - 1
                     encapsuladora.ID_BotellaP = Integer.Parse(Tabla11.DataGridView1.Rows(i).Cells(0).Value.ToString)
                     encapsuladora.CantidadP = Integer.Parse(Tabla11.DataGridView1.Rows(i).Cells(4).Value.ToString)
                     For j As Integer = 0 To Tabla9.DataGridView1.RowCount - 1
                         encapsuladora.IDProductoIntermedioP = Integer.Parse(Tabla9.DataGridView1.Rows(j).Cells(0).Value.ToString)
-                        Verif.ValidoEmbotellarBotellas(encapsuladora)
+                        encapsuladora.CantidadLitrosP = Integer.Parse(Tabla9.DataGridView1.Rows(j).Cells(2).Value.ToString)
+                        Verif.ValidoEmbotellar(encapsuladora)
                     Next
                 Next
+
                 CargarTabla3()
                 CargarBotellas()
                 TextBox7.Clear()

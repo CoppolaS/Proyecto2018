@@ -374,6 +374,24 @@ Public Class DatosOtros
         Return False
     End Function
 
+    'producto final
+    Public Function ListaProductosFinales() As DataSet
+        sql = "CALL `proyecto`.`LABM_ProductoFinal`();"
+        Try
+            Con.cn2.Open()
+            cm = New MySqlCommand()
+            cm.CommandText = sql
+            cm.Connection = Con.cn2
+            da = New MySqlDataAdapter(cm)
+            ds = New DataSet()
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Con.cn2.Close()
+        Return ds
+    End Function
+
     'datos cultivos
     Public Function ListaParcelasDatos(Optional ByVal ID_P As Integer = 0) As DataSet
         sql = "CALL `proyecto`.`LABM_DatosCultivos`(?opcion,?ID_P,?fecha,?valor,?dato);"
@@ -1051,48 +1069,12 @@ Public Class DatosOtros
         Return False
     End Function
 
-    Public Function EmbotellarPI(ByVal nodo As Encapsuladoras.Produccion) As Boolean
+    Public Function Embotellar(ByVal nodo As Encapsuladoras.Produccion) As Boolean
         Try
             Try
                 Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("opcion", 13)
-                cmd.Parameters.AddWithValue("ID_P", 0)
-                cmd.Parameters.AddWithValue("FechaCosechado", "0000-00-00")
-                cmd.Parameters.AddWithValue("Cantidad", 0)
-                cmd.Parameters.AddWithValue("EstadoSanitario", 0)
-                cmd.Parameters.AddWithValue("IDProductoIntermedio", nodo.IDProductoIntermedioP)
-                cmd.Parameters.AddWithValue("IDMateriaPrima", 0)
-                cmd.Parameters.AddWithValue("FechaProceso", "0000-00-00")
-                cmd.Parameters.AddWithValue("IDProceso", 0)
-                cmd.Parameters.AddWithValue("FechaAvance", "0000-00-00")
-                cmd.Parameters.AddWithValue("CantidadLitros", nodo.CantidadLitrosP)
-                cmd.Parameters.AddWithValue("IDTanque", 0)
-                cmd.Parameters.AddWithValue("IDBarrica", 0)
-                cmd.Parameters.AddWithValue("Sucursal", "0")
-                cmd.Parameters.AddWithValue("IDBotella", 0)
-                cmd.Parameters.AddWithValue("IDVino", 0)
-                Con.cn1.Open()
-                cmd.ExecuteNonQuery()
-            Catch o As OdbcException
-                MsgBox(o.ToString)
-                Return False
-            Finally
-                Con.cn1.Close()
-            End Try
-            Return True
-        Catch ex As Exception
-            MsgBox("Error al ingresar el embotellado")
-        End Try
-        Return False
-    End Function
-
-    Public Function EmbotellarBotellas(ByVal nodo As Encapsuladoras.Produccion) As Boolean
-        Try
-            Try
-                Dim cmd As OdbcCommand = New OdbcCommand("{call LABM_Produccion (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}", Con.cn1)
-                cmd.CommandType = CommandType.StoredProcedure
-                cmd.Parameters.AddWithValue("opcion", 14)
                 cmd.Parameters.AddWithValue("ID_P", 0)
                 cmd.Parameters.AddWithValue("FechaCosechado", "0000-00-00")
                 cmd.Parameters.AddWithValue("Cantidad", nodo.CantidadP)
@@ -1102,7 +1084,7 @@ Public Class DatosOtros
                 cmd.Parameters.AddWithValue("FechaProceso", "0000-00-00")
                 cmd.Parameters.AddWithValue("IDProceso", 0)
                 cmd.Parameters.AddWithValue("FechaAvance", "0000-00-00")
-                cmd.Parameters.AddWithValue("CantidadLitros", 0)
+                cmd.Parameters.AddWithValue("CantidadLitros", nodo.CantidadLitrosP)
                 cmd.Parameters.AddWithValue("IDTanque", 0)
                 cmd.Parameters.AddWithValue("IDBarrica", 0)
                 cmd.Parameters.AddWithValue("Sucursal", UsuarioLogeado.Sucursal)
@@ -1121,6 +1103,27 @@ Public Class DatosOtros
             MsgBox("Error al ingresar el embotellado")
         End Try
         Return False
+    End Function
+
+    Public Function Trazabilidad(ByVal opcion As Integer, ByVal ID As Integer) As DataSet
+        sql = "CALL `proyecto`.`Trazabilidad`(?opcion,?ID_PF,?ID_PI,?ID_MP);"
+        Try
+            Con.cn2.Open()
+            cm = New MySqlCommand()
+            cm.CommandText = sql
+            cm.Connection = Con.cn2
+            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = opcion
+            cm.Parameters.Add("?ID_PF", MySqlDbType.Int32).Value = ID
+            cm.Parameters.Add("?ID_PI", MySqlDbType.Int32).Value = ID
+            cm.Parameters.Add("?ID_MP", MySqlDbType.Int32).Value = ID
+            da = New MySqlDataAdapter(cm)
+            ds = New DataSet()
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Con.cn2.Close()
+        Return ds
     End Function
 
 End Class

@@ -122,6 +122,18 @@ Public Class VerificarOtros
         Return Nothing
     End Function
 
+    'producto final
+    Public Function ValidoListaProductosFinales() As DataView
+        ds = DatosO.ListaProductosFinales()
+        ds.Tables(0).Columns(0).ColumnName = "ID"
+        ds.Tables(0).Columns(1).ColumnName = "Código de barras"
+        ds.Tables(0).Columns(2).ColumnName = "Eliminado"
+        ds.Tables(0).Columns(3).ColumnName = "Vendido"
+        'ocultar 4
+        dv = ds.Tables(0).DefaultView
+        Return dv
+    End Function
+
     'datos cultivos
     Public Function ValidoListaParcelasDatos(Optional ByVal ID_P As Integer = 0) As DataView
         ds = DatosO.ListaParcelasDatos(ID_P)
@@ -297,14 +309,15 @@ Public Class VerificarOtros
         Return Nothing
     End Function
 
-    Public Function ValidoEmbotellarPI(ByVal encapsuladora As Encapsuladoras.Produccion)
-        DatosO.EmbotellarPI(encapsuladora)
+    Public Function ValidoEmbotellar(ByVal encapsuladora As Encapsuladoras.Produccion)
+        DatosO.Embotellar(encapsuladora)
         Return Nothing
     End Function
 
-    Public Function ValidoEmbotellarBotellas(ByVal encapsuladora As Encapsuladoras.Produccion)
-        DatosO.EmbotellarBotellas(encapsuladora)
-        Return Nothing
+    Public Function Trazabilidad(ByVal opcion As Integer, ByVal ID As Integer) As DataView
+        ds = DatosO.Trazabilidad(opcion, ID)
+        dv = ds.Tables(0).DefaultView
+        Return dv
     End Function
 
 End Class

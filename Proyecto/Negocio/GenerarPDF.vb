@@ -5,9 +5,6 @@ Imports System.Windows.Forms
 
 Public Class GenerarPDF
 
-    'GPDF.Generopdf(Tabla1.DataGridView1, "Funcionarios", "Funcionarios")
-    'es necesario usar rutas relativas aca
-
     Public Sub Generopdf(ByVal dgv As DataGridView, ByVal NombrePDF As String, ByVal TituloPDF As String)
         Dim paragraph As New Paragraph
         Dim PdfFile As New Document(PageSize.A4, 40, 40, 40, 20)

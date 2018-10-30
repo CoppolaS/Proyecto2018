@@ -99,6 +99,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Otros\Trazabilidad.Designer.vb">
+      <DependentUpon>Trazabilidad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Otros\Trazabilidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\Producción\AsignarTratamientos.Designer.vb">
       <DependentUpon>AsignarTratamientos.vb</DependentUpon>
     </Compile>
@@ -291,6 +297,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\Otros\Trazabilidad.resx">
+      <DependentUpon>Trazabilidad.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Producción\AsignarTratamientos.resx">
       <DependentUpon>AsignarTratamientos.vb</DependentUpon>
     </EmbeddedResource>

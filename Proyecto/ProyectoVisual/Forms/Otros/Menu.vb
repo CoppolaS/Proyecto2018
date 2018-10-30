@@ -1,11 +1,7 @@
 ﻿Imports Datos.UsuarioLogeado
 
 Public Class Menu
-    'privilegios
-    '1=Gerente general
-    '2=Gerente de sucursal
-    '3=Técnico
-    '4=Administrativo
+    'agregar eventos para las ventanas proximas
     Private Sub Menu_Load(sender As Object, e As System.EventArgs) Handles Me.Load
         Select Case Datos.UsuarioLogeado.Privilegios
             Case 3
@@ -45,15 +41,6 @@ Public Class Menu
         Else
             GestionCultivos.Show()
             ParentForm.Close()
-        End If
-    End Sub
-
-    Private Sub TrasladosToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles TrasladosToolStripMenuItem.Click
-        If (ParentForm.Name = "Traslados") Then
-            Exit Sub
-        Else
-            'Traslados.Show()
-            'ParentForm.Close()
         End If
     End Sub
 
@@ -223,8 +210,8 @@ Public Class Menu
         If (ParentForm.Name = "Trazabilidad") Then
             Exit Sub
         Else
-            'Trazabilidad.Show()
-            'ParentForm.Close()
+            Trazabilidad.Show()
+            ParentForm.Close()
         End If
     End Sub
 
@@ -235,33 +222,6 @@ Public Class Menu
         Else
             RegistroHistorico.Show()
             ParentForm.Close()
-        End If
-    End Sub
-
-    Private Sub VentasToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles VentasToolStripMenuItem.Click
-        If (ParentForm.Name = "Ventas") Then
-            Exit Sub
-        Else
-            'Ventas.Show()
-            'ParentForm.Close()
-        End If
-    End Sub
-
-    Private Sub ComprasToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ComprasToolStripMenuItem.Click
-        If (ParentForm.Name = "Compras") Then
-            Exit Sub
-        Else
-            'Compras.Show()
-            ParentForm.Close()
-        End If
-    End Sub
-
-    Private Sub ReservasToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs)
-        If (ParentForm.Name = "Reservas") Then
-            Exit Sub
-        Else
-            'Reservas.Show()
-            'ParentForm.Close()
         End If
     End Sub
 
@@ -281,10 +241,6 @@ Public Class Menu
             Estadisticas.Show()
             ParentForm.Close()
         End If
-    End Sub
-
-    Private Sub ManualDeUsuarioToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs)
-
     End Sub
 
 End Class
