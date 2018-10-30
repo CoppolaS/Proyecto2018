@@ -23,6 +23,35 @@ Public Class VerificarOtros
         Return dv
     End Function
 
+    Public Function ValidoListaAlarmas() As DataView
+        ds = DatosO.ListaAlarmas()
+        ds.Tables(0).Columns(0).ColumnName = "ID"
+        ds.Tables(0).Columns(1).ColumnName = "Titulo"
+        ds.Tables(0).Columns(2).ColumnName = "Descripcion"
+        ds.Tables(0).Columns(3).ColumnName = "ID_AP"
+        ds.Tables(0).Columns(4).ColumnName = "Tipo"
+        ds.Tables(0).Columns(5).ColumnName = "Visto"
+        dv = ds.Tables(0).DefaultView
+        Return dv
+    End Function
+
+    Public Function ValidoListaObservaciones() As DataView
+        ds = DatosO.ListaObservaciones()
+        ds.Tables(0).Columns(0).ColumnName = "ID"
+        ds.Tables(0).Columns(1).ColumnName = "Titulo"
+        ds.Tables(0).Columns(2).ColumnName = "Descripcion"
+        ds.Tables(0).Columns(3).ColumnName = "ID_AP"
+        ds.Tables(0).Columns(4).ColumnName = "Tipo"
+        ds.Tables(0).Columns(5).ColumnName = "Visto"
+        dv = ds.Tables(0).DefaultView
+        Return dv
+    End Function
+
+    Public Function ValidarVerAlarmasObservaciones(ByVal op As Integer)
+        DatosO.VerAlarmasObservaciones(op)
+        Return Nothing
+    End Function
+
     'hectareas
     Public Function ValidoListaHectareas() As DataView
         ds = DatosO.ListaHectareas()

@@ -121,6 +121,62 @@ Public Class DatosOtros
         Return ds
     End Function
 
+    Public Function ListaAlarmas() As DataSet
+        sql = "CALL `proyecto`.`AlarmasObservaciones`(?opcion);"
+        Try
+            Con.cn2.Open()
+            cm = New MySqlCommand()
+            cm.CommandText = sql
+            cm.Connection = Con.cn2
+            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 1
+            da = New MySqlDataAdapter(cm)
+            ds = New DataSet()
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Con.cn2.Close()
+        Return ds
+    End Function
+
+    Public Function ListaObservaciones() As DataSet
+        sql = "CALL `proyecto`.`AlarmasObservaciones`(?opcion);"
+        Try
+            Con.cn2.Open()
+            cm = New MySqlCommand()
+            cm.CommandText = sql
+            cm.Connection = Con.cn2
+            cm.Parameters.Add("?opcion", MySqlDbType.Int32).Value = 2
+            da = New MySqlDataAdapter(cm)
+            ds = New DataSet()
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Con.cn2.Close()
+        Return ds
+    End Function
+
+    Public Function VerAlarmasObservaciones(ByVal op As Integer) As Boolean
+        Try
+            Try
+                Dim cmd As OdbcCommand = New OdbcCommand("{call AlarmasObservaciones (?)}", Con.cn1)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("opcion", op)
+                Con.cn1.Open()
+                cmd.ExecuteNonQuery()
+            Catch o As OdbcException
+                Return False
+            Finally
+                Con.cn1.Close()
+            End Try
+            Return True
+        Catch ex As Exception
+            MsgBox("Error")
+        End Try
+        Return False
+    End Function
+
     'hectareas
     Public Function ListaHectareas() As DataSet
         sql = "CALL `proyecto`.`LABM_Hectareas`(?opcion,?ID_H,?cantidad,?numero,?m2libres,?m2ocupados,?sucursal);"

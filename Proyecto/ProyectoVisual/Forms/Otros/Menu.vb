@@ -1,6 +1,10 @@
 ﻿Imports Datos.UsuarioLogeado
+Imports Negocio
 
 Public Class Menu
+    Dim dv As New DataView
+    Dim Verif As New Negocio.VerificarOtros
+
     'agregar eventos para las ventanas proximas
     Private Sub Menu_Load(sender As Object, e As System.EventArgs) Handles Me.Load
         Select Case Datos.UsuarioLogeado.Privilegios
@@ -10,6 +14,58 @@ Public Class Menu
             Case 4
                 TransaccionesToolStripMenuItem.Enabled = False
         End Select
+        CargarAlarmas()
+        CargarObservaciones()
+    End Sub
+
+    Private Sub CargarAlarmas()
+        AlertasToolStripMenuItem.DropDownItems.Clear()
+        dv = Verif.ValidoListaAlarmas
+        Dim CantAlarmas As Integer = 0
+        For i As Integer = 0 To dv.Table.Rows.Count - 1
+            If dv.Table.Rows(i).Item(5) = False Then
+                CantAlarmas = CantAlarmas + 1
+            End If
+            Select Case Integer.Parse(dv.Table.Rows(i).Item(4).ToString)
+                Case 1
+                    AlertasToolStripMenuItem.DropDownItems.Add(dv.Table.Rows(i).Item(0).ToString & " | " & dv.Table.Rows(i).Item(1).ToString & " / " & dv.Table.Rows(i).Item(2).ToString & " / " & "en cosechas")
+                Case 2
+                    AlertasToolStripMenuItem.DropDownItems.Add(dv.Table.Rows(i).Item(0).ToString & " | " & dv.Table.Rows(i).Item(1).ToString & " / " & dv.Table.Rows(i).Item(2).ToString & " / " & "en materia prima")
+                Case 3
+                    AlertasToolStripMenuItem.DropDownItems.Add(dv.Table.Rows(i).Item(0).ToString & " | " & dv.Table.Rows(i).Item(1).ToString & " / " & dv.Table.Rows(i).Item(2).ToString & " / " & "en producto intermedio")
+            End Select
+        Next
+        AlertasToolStripMenuItem.Text = CantAlarmas.ToString
+    End Sub
+
+    Private Sub CargarObservaciones()
+        ObservacionesToolStripMenuItem.DropDownItems.Clear()
+        dv = Verif.ValidoListaObservaciones
+        Dim CantObservaciones As Integer = 0
+        For i As Integer = 0 To dv.Table.Rows.Count - 1
+            If dv.Table.Rows(i).Item(5) = False Then
+                CantObservaciones = CantObservaciones + 1
+            End If
+            Select Case Integer.Parse(dv.Table.Rows(i).Item(4).ToString)
+                Case 1
+                    ObservacionesToolStripMenuItem.DropDownItems.Add(dv.Table.Rows(i).Item(0).ToString & " | " & dv.Table.Rows(i).Item(1).ToString & " / " & dv.Table.Rows(i).Item(2).ToString & " / " & "en cosechas")
+                Case 2
+                    ObservacionesToolStripMenuItem.DropDownItems.Add(dv.Table.Rows(i).Item(0).ToString & " | " & dv.Table.Rows(i).Item(1).ToString & " / " & dv.Table.Rows(i).Item(2).ToString & " / " & "en materia prima")
+                Case 3
+                    ObservacionesToolStripMenuItem.DropDownItems.Add(dv.Table.Rows(i).Item(0).ToString & " | " & dv.Table.Rows(i).Item(1).ToString & " / " & dv.Table.Rows(i).Item(2).ToString & " / " & "en producto intermedio")
+            End Select
+        Next
+        ObservacionesToolStripMenuItem.Text = CantObservaciones.ToString
+    End Sub
+
+    Private Sub AlertasToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles AlertasToolStripMenuItem.Click
+        Verif.ValidarVerAlarmasObservaciones(3)
+        CargarAlarmas()
+    End Sub
+
+    Private Sub ObservacionesToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ObservacionesToolStripMenuItem.Click
+        Verif.ValidarVerAlarmasObservaciones(4)
+        CargarObservaciones()
     End Sub
 
     Private Sub InicioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InicioToolStripMenuItem.Click

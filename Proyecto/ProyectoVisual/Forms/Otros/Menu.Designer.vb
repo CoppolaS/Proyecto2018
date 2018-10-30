@@ -23,7 +23,7 @@ Partial Class Menu
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.ObservacionesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ObservacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AlertasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProducciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -66,7 +66,7 @@ Partial Class Menu
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.Control
         Me.MenuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.MenuStrip1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ObservacionesToolStripMenuItem1, Me.AlertasToolStripMenuItem, Me.InicioToolStripMenuItem, Me.ProducciónToolStripMenuItem, Me.EmpresaToolStripMenuItem, Me.ParámetrosToolStripMenuItem, Me.TrazabilidadToolStripMenuItem, Me.RegistroHistóricoToolStripMenuItem, Me.TransaccionesToolStripMenuItem, Me.AyudaToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ObservacionesToolStripMenuItem, Me.AlertasToolStripMenuItem, Me.InicioToolStripMenuItem, Me.ProducciónToolStripMenuItem, Me.EmpresaToolStripMenuItem, Me.ParámetrosToolStripMenuItem, Me.TrazabilidadToolStripMenuItem, Me.RegistroHistóricoToolStripMenuItem, Me.TransaccionesToolStripMenuItem, Me.AyudaToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Margin = New System.Windows.Forms.Padding(0, 0, 0, 10)
         Me.MenuStrip1.Name = "MenuStrip1"
@@ -76,20 +76,20 @@ Partial Class Menu
         Me.MenuStrip1.TabIndex = 11
         Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'ObservacionesToolStripMenuItem1
+        'ObservacionesToolStripMenuItem
         '
-        Me.ObservacionesToolStripMenuItem1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ObservacionesToolStripMenuItem1.AutoToolTip = True
-        Me.ObservacionesToolStripMenuItem1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ObservacionesToolStripMenuItem1.Image = Global.Proyecto.My.Resources.Resources.Custom_Icon_Design_Mono_General_4_Eye
-        Me.ObservacionesToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.White
-        Me.ObservacionesToolStripMenuItem1.Margin = New System.Windows.Forms.Padding(0, 1, 5, 0)
-        Me.ObservacionesToolStripMenuItem1.Name = "ObservacionesToolStripMenuItem1"
-        Me.ObservacionesToolStripMenuItem1.Padding = New System.Windows.Forms.Padding(4, 0, 0, 5)
-        Me.ObservacionesToolStripMenuItem1.Size = New System.Drawing.Size(40, 25)
-        Me.ObservacionesToolStripMenuItem1.Text = "0"
-        Me.ObservacionesToolStripMenuItem1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ObservacionesToolStripMenuItem1.ToolTipText = "Observaciones"
+        Me.ObservacionesToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ObservacionesToolStripMenuItem.AutoToolTip = True
+        Me.ObservacionesToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ObservacionesToolStripMenuItem.Image = Global.Proyecto.My.Resources.Resources.Custom_Icon_Design_Mono_General_4_Eye
+        Me.ObservacionesToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.White
+        Me.ObservacionesToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 1, 5, 0)
+        Me.ObservacionesToolStripMenuItem.Name = "ObservacionesToolStripMenuItem"
+        Me.ObservacionesToolStripMenuItem.Padding = New System.Windows.Forms.Padding(4, 0, 0, 5)
+        Me.ObservacionesToolStripMenuItem.Size = New System.Drawing.Size(40, 25)
+        Me.ObservacionesToolStripMenuItem.Text = "0"
+        Me.ObservacionesToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.ObservacionesToolStripMenuItem.ToolTipText = "Observaciones"
         '
         'AlertasToolStripMenuItem
         '
@@ -306,7 +306,7 @@ Partial Class Menu
         'CerrarSesiónToolStripMenuItem
         '
         Me.CerrarSesiónToolStripMenuItem.Name = "CerrarSesiónToolStripMenuItem"
-        Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
         Me.CerrarSesiónToolStripMenuItem.Text = "Cerrar sesión"
         '
         'Menu
@@ -326,7 +326,7 @@ Partial Class Menu
     Friend WithEvents InicioToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AyudaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CerrarSesiónToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ObservacionesToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ObservacionesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AlertasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ProducciónToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents EmpresaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
