@@ -159,6 +159,12 @@
     <Compile Include="Forms\Producción\GestionCultivos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\Producción\Traslados.Designer.vb">
+      <DependentUpon>Traslados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Producción\Traslados.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\Transacciones\GestionProduccion.Designer.vb">
       <DependentUpon>GestionProduccion.vb</DependentUpon>
     </Compile>
