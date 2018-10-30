@@ -223,7 +223,9 @@ Public Class VerificarOtros
         ds.Tables(0).Columns(8).ColumnName = "Fecha de avance"
         ds.Tables(0).Columns(9).ColumnName = "Fecha de cosechado"
         ds.Tables(0).Columns(10).ColumnName = "Nombre de cepa"
-        ds.Tables(0).Columns(11).ColumnName = "IDCepa"
+        If Filtro = 8 Then
+            ds.Tables(0).Columns(11).ColumnName = "IDCepa"
+        End If
         dv = ds.Tables(0).DefaultView
         Return dv
     End Function
@@ -292,6 +294,16 @@ Public Class VerificarOtros
 
     Public Function ValidoAsignarBarricaProcesoPI(ByVal encapsuladora As Encapsuladoras.Produccion)
         DatosO.AsignarBarricaProcesoPI(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoEmbotellarPI(ByVal encapsuladora As Encapsuladoras.Produccion)
+        DatosO.EmbotellarPI(encapsuladora)
+        Return Nothing
+    End Function
+
+    Public Function ValidoEmbotellarBotellas(ByVal encapsuladora As Encapsuladoras.Produccion)
+        DatosO.EmbotellarBotellas(encapsuladora)
         Return Nothing
     End Function
 

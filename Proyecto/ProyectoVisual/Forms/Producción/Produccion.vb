@@ -6,7 +6,7 @@ Public Class Produccion
     Dim encapsuladora As New Encapsuladoras.Produccion
     Dim dv As New DataView
 
-    Private Sub GestionCultivos_Load(sender As System.Object, e As System.EventArgs) Handles Me.Load, ComboBoxSucursales1.SeleccionCambio
+    Private Sub Produccion_Load(sender As System.Object, e As System.EventArgs) Handles Me.Load, ComboBoxSucursales1.SeleccionCambio
         ComboBox1.Items.Clear()
         ComboBox3.Items.Clear()
         ComboBox4.Items.Clear()
@@ -15,6 +15,7 @@ Public Class Produccion
         ComboBox7.SelectedIndex = 0
         Tabla8.DataGridView1.Columns.Clear()
         Tabla9.DataGridView1.Columns.Clear()
+        Tabla11.DataGridView1.Columns.Clear()
         DateTimePicker1.Format = DateTimePickerFormat.Custom
         DateTimePicker1.CustomFormat = "yyyy-MM-dd"
         DateTimePicker2.Format = DateTimePickerFormat.Custom
@@ -57,6 +58,7 @@ Public Class Produccion
         For i As Integer = 0 To dv.Count - 1
             ComboBox5.Items.Add(dv(i).Item("ID").ToString())
         Next
+        ComboBox5.SelectedIndex = 0
         Tabla8.DataGridView1.Columns.Add("1", "ID de la materia prima seleccionada")
         Tabla8.DataGridView1.Columns.Add("2", "Cepa de la materia prima seleccionada")
         Tabla8.DataGridView1.Columns.Add("3", "Cantidad de kilos a prensar")
@@ -114,7 +116,9 @@ Public Class Produccion
         Tabla3.DataGridView1.Columns(2).Visible = False
         Tabla3.DataGridView1.Columns(7).Visible = False
         Tabla3.DataGridView1.Columns(8).Visible = False
-        Tabla3.DataGridView1.Columns(11).Visible = False
+        If ComboBox7.SelectedIndex = 0 Then
+            Tabla3.DataGridView1.Columns(11).Visible = False
+        End If
         Tabla3.DataGridView1.ClearSelection()
     End Sub
 
@@ -210,6 +214,7 @@ Public Class Produccion
         Else
             Button12.Enabled = False
         End If
+
     End Sub
 
     Private Sub AceptarPrensado(sender As System.Object, e As System.EventArgs) Handles Button12.Click
@@ -273,11 +278,6 @@ Public Class Produccion
     End Sub
 
     Private Sub QuitarProcesoPI(sender As System.Object, e As System.EventArgs) Handles Button3.Click
-        'For i As Integer = 0 To Tabla5.DataGridView1.Rows.Count - 1
-        '    If Integer.Parse(Tabla5.DataGridView1.Rows(i).Cells(0).Value.ToString) = Integer.Parse(Tabla4.DataGridView1.Rows(Tabla4.DataGridView1.CurrentRow.Index).Cells(0).Value.ToString) Then
-        '        Tabla5.DataGridView1.Rows(i).Visible = True
-        '    End If
-        'Next
         If Tabla4.DataGridView1.SelectedRows.Count > 0 Then
             Tabla4.DataGridView1.Rows.RemoveAt(Tabla4.DataGridView1.CurrentRow.Index)
             Tabla4.DataGridView1.ClearSelection()
@@ -286,18 +286,122 @@ Public Class Produccion
 
     Private Sub AgregarCepa(sender As System.Object, e As System.EventArgs) Handles Button13.Click
         If Tabla3.DataGridView1.SelectedRows.Count > 0 And ComboBox7.SelectedIndex = 0 And Integer.Parse(TextBox7.Text) <= Integer.Parse(Tabla3.DataGridView1.Rows(Tabla3.DataGridView1.CurrentRow.Index).Cells(4).Value.ToString) Then
+            Dim LRestantes As Integer
             Dim ID As Integer = Integer.Parse(Tabla3.DataGridView1.Rows(Tabla3.DataGridView1.CurrentRow.Index).Cells(0).Value.ToString)
             Dim Cepa As String = Tabla3.DataGridView1.Rows(Tabla3.DataGridView1.CurrentRow.Index).Cells(10).Value.ToString
             Dim IDCepa As Integer = Integer.Parse(Tabla3.DataGridView1.Rows(Tabla3.DataGridView1.CurrentRow.Index).Cells(11).Value.ToString)
             Tabla9.DataGridView1.Rows.Add(ID, Cepa, TextBox7.Text, IDCepa)
             Tabla3.DataGridView1.Rows(Tabla3.DataGridView1.CurrentRow.Index).Cells(4).Value = Integer.Parse(Tabla3.DataGridView1.Rows(Tabla3.DataGridView1.CurrentRow.Index).Cells(4).Value.ToString) - Integer.Parse(TextBox7.Text)
+            For i As Integer = 0 To Tabla9.DataGridView1.Rows.Count - 1
+                LRestantes = LRestantes + Integer.Parse(Tabla9.DataGridView1.Rows(i).Cells(2).Value.ToString)
+            Next
+            Label12.Text = "Litros restantes: " & LRestantes
+            Tabla9.DataGridView1.ClearSelection()
         End If
     End Sub
 
     Private Sub QuitarCepa(sender As System.Object, e As System.EventArgs) Handles Button14.Click
         If Tabla9.DataGridView1.SelectedRows.Count > 0 Then
+            Dim LRestantes As Integer
             Tabla3.DataGridView1.Rows(Tabla3.DataGridView1.CurrentRow.Index).Cells(4).Value = Integer.Parse(Tabla3.DataGridView1.Rows(Tabla3.DataGridView1.CurrentRow.Index).Cells(4).Value.ToString) + Integer.Parse(Tabla9.DataGridView1.Rows(Tabla9.DataGridView1.CurrentRow.Index).Cells(2).Value.ToString)
             Tabla9.DataGridView1.Rows.RemoveAt(Tabla9.DataGridView1.CurrentRow.Index)
+            For i As Integer = 0 To Tabla9.DataGridView1.Rows.Count - 1
+                LRestantes = LRestantes + Integer.Parse(Tabla9.DataGridView1.Rows(i).Cells(2).Value.ToString)
+            Next
+            Label12.Text = "Litros restantes: " & LRestantes
+            Tabla9.DataGridView1.ClearSelection()
+        End If
+    End Sub
+
+    Private Sub CargarBotellas() Handles ComboBox5.SelectedIndexChanged
+        Tabla11.DataGridView1.Columns.Clear()
+        Tabla11.DataGridView1.Columns.Add("1", "ID")
+        Tabla11.DataGridView1.Columns.Add("2", "Capacidad")
+        Tabla11.DataGridView1.Columns.Add("3", "Foto")
+        Tabla11.DataGridView1.Columns.Add("4", "Precio")
+        Tabla11.DataGridView1.Columns.Add("5", "Cantidad")
+        dv = VerifP.ValidoListaBotellas(Integer.Parse(ComboBox5.SelectedItem))
+        Tabla10.DataGridView1.DataSource = dv
+        Tabla11.DataGridView1.Columns(2).Visible = False
+        Tabla11.DataGridView1.Columns(3).Visible = False
+        Tabla10.DataGridView1.Columns(2).Visible = False
+        Tabla10.DataGridView1.Columns(3).Visible = False
+        Tabla11.DataGridView1.ClearSelection()
+        Tabla10.DataGridView1.ClearSelection()
+    End Sub
+
+    Private Sub AgregarBotella(sender As System.Object, e As System.EventArgs) Handles Button15.Click
+        If Tabla10.DataGridView1.SelectedRows.Count > 0 And TextBox8.TextLength > 0 Then
+            Dim ID As Integer = Integer.Parse(Tabla10.DataGridView1.Rows(Tabla10.DataGridView1.CurrentRow.Index).Cells(0).Value.ToString)
+            Dim Cant As Integer = Integer.Parse(TextBox8.Text)
+            Dim Cap As Integer = Integer.Parse(Tabla10.DataGridView1.Rows(Tabla10.DataGridView1.CurrentRow.Index).Cells(1).Value.ToString)
+            Tabla11.DataGridView1.Rows.Add(ID, Cap, 0, 0, Cant)
+            Tabla11.DataGridView1.ClearSelection()
+            Tabla10.DataGridView1.ClearSelection()
+            Dim LRestantes As Integer = Integer.Parse(Label12.Text.Substring(17))
+            If Tabla9.DataGridView1.Rows.Count > 0 And Tabla11.DataGridView1.Rows.Count > 0 Then
+                Dim min As Integer
+                For i As Integer = 0 To Tabla11.DataGridView1.Rows.Count() - 1
+                    If i = 0 Then
+                        min = ((Tabla11.DataGridView1.Rows(i).Cells(1).Value) * (Tabla11.DataGridView1.Rows(i).Cells(4).Value))
+                    End If
+                    If min > ((Tabla11.DataGridView1.Rows(i).Cells(1).Value) * (Tabla11.DataGridView1.Rows(i).Cells(4).Value)) Then
+                        min = ((Tabla11.DataGridView1.Rows(i).Cells(1).Value) * (Tabla11.DataGridView1.Rows(i).Cells(4).Value))
+                    End If
+                Next
+                Label12.Text = "Litros restantes: " & LRestantes
+                If LRestantes <= min Then
+                    Button17.Enabled = True
+                Else
+                    Button17.Enabled = False
+                End If
+            End If
+
+        End If
+    End Sub
+
+    Private Sub QuitarBotella(sender As System.Object, e As System.EventArgs) Handles Button16.Click
+        If Tabla11.DataGridView1.SelectedRows.Count > 0 Then
+            Tabla11.DataGridView1.Rows.RemoveAt(Tabla11.DataGridView1.CurrentRow.Index)
+            Tabla11.DataGridView1.ClearSelection()
+            Tabla10.DataGridView1.ClearSelection()
+        End If
+    End Sub
+
+    Private Sub Embotellar(sender As System.Object, e As System.EventArgs) Handles Button17.Click
+        If Tabla9.DataGridView1.Rows.Count > 0 And Tabla11.DataGridView1.Rows.Count > 0 Then
+            Dim min As Integer
+            For i As Integer = 0 To Tabla11.DataGridView1.Rows.Count() - 1
+                If i = 0 Then
+                    min = ((Tabla11.DataGridView1.Rows(i).Cells(1).Value) * (Tabla11.DataGridView1.Rows(i).Cells(4).Value))
+                End If
+                If min > ((Tabla11.DataGridView1.Rows(i).Cells(1).Value) * (Tabla11.DataGridView1.Rows(i).Cells(4).Value)) Then
+                    min = ((Tabla11.DataGridView1.Rows(i).Cells(1).Value) * (Tabla11.DataGridView1.Rows(i).Cells(4).Value))
+                End If
+            Next
+            If Label12.Text.Substring(17) <= min Then
+                encapsuladora.ID_VinoP = Integer.Parse(ComboBox5.SelectedItem)
+                For i As Integer = 0 To Tabla9.DataGridView1.RowCount - 1
+                    encapsuladora.IDProductoIntermedioP = Integer.Parse(Tabla9.DataGridView1.Rows(i).Cells(0).Value.ToString)
+                    encapsuladora.CantidadLitrosP = Integer.Parse(Tabla9.DataGridView1.Rows(i).Cells(2).Value.ToString)
+                    Verif.ValidoEmbotellarPI(encapsuladora)
+                Next
+                For i As Integer = 0 To Tabla11.DataGridView1.RowCount - 1
+                    encapsuladora.ID_BotellaP = Integer.Parse(Tabla11.DataGridView1.Rows(i).Cells(0).Value.ToString)
+                    encapsuladora.CantidadP = Integer.Parse(Tabla11.DataGridView1.Rows(i).Cells(4).Value.ToString)
+                    For j As Integer = 0 To Tabla9.DataGridView1.RowCount - 1
+                        encapsuladora.IDProductoIntermedioP = Integer.Parse(Tabla9.DataGridView1.Rows(j).Cells(0).Value.ToString)
+                        Verif.ValidoEmbotellarBotellas(encapsuladora)
+                    Next
+                Next
+                CargarTabla3()
+                CargarBotellas()
+                TextBox7.Clear()
+                TextBox8.Clear()
+                Tabla9.DataGridView1.Rows.Clear()
+                Label12.Text = "Litros restantes: 0"
+                ComboBox5.SelectedIndex = 0
+            End If
         End If
     End Sub
 
